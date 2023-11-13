@@ -4,20 +4,20 @@ import type { Project } from './types';
 
 const MY_PROJECTS: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'liah',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'Project Management and Requirements engineering for eCommerce site with customization feature. Built on a WooCommerce backend.',
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
+			'l animi quisquam. Sit vero quod laborum!',
+		links: [{ to: 'https://liah.design', label: 'LiAH' }],
 		logo: Assets.Unknown,
-		name: 'Slick Portfolio',
+		name: 'LiAH',
 		period: {
 			from: new Date()
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template'
+		skills: getSkills('woocommerce', 'js', 'tailwind'),
+		type: 'eCommerce & customizer'
 	},
 	{
 		slug: 'slick-portfolio-svelte',
