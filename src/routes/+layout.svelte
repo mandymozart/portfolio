@@ -1,20 +1,37 @@
 <script lang="ts">
-	import 'uno.css';
+	import { page } from '$app/stores';
 	import NavMenu from '$lib/components/NavMenu/NavMenu.svelte';
 	import '$lib/index.scss';
+	import { repositoryName } from '$lib/prismicio';
 	import { onHydrated, theme } from '$lib/stores/theme';
+	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { onMount } from 'svelte';
+	import 'uno.css';
 
 	export const prerender = true;
 
 	onMount(() => onHydrated());
 </script>
 
+<svelte:head>
+	<title>{$page.data.title}</title>
+	{#if $page.data.meta_description}
+		<meta name="description" content={$page.data.meta_description} />
+	{/if}
+	{#if $page.data.meta_title}
+		<meta name="og:title" content={$page.data.meta_title} />
+	{/if}
+	{#if $page.data.meta_image}
+		<meta name="og:image" content={$page.data.meta_image.url} />
+		<meta name="twitter:card" content="summary_large_image" />
+	{/if}
+</svelte:head>
+
 <div class={`body contents ${$theme ? 'theme-dark' : 'theme-light'}`}>
 	<NavMenu />
-	<div class="content container"><slot /></div>
+	<div class="content"><slot /></div>
 </div>
-
+<PrismicPreview {repositoryName} />
 <style lang="scss">
 	.content {
 		display: flex;

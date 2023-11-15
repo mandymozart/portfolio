@@ -1,0 +1,79 @@
+{
+	"id": "project",
+	"label": "project",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "slug",
+					"placeholder": ""
+				},
+				"type": "UID"
+			},
+			"name": {
+				"type": "Text",
+				"config": {
+					"label": "name",
+					"placeholder": ""
+				}
+			},
+			"description": {
+				"type": "StructuredText",
+				"config": {
+					"label": "description",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"type": {
+				"type": "Text",
+				"config": {
+					"label": "type",
+					"placeholder": ""
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "link",
+					"placeholder": "",
+					"select": null
+				}
+			},
+			"fromDate": {
+				"type": "Date",
+				"config": {
+					"label": "fromDate",
+					"placeholder": ""
+				}
+			},
+			"toDate": {
+				"type": "Date",
+				"config": {
+					"label": "toDate",
+					"placeholder": ""
+				}
+			},
+			"images": {
+				"type": "Group",
+				"config": {
+					"label": "images",
+					"fields": {
+						"image": {
+							"type": "Image",
+							"config": {
+								"label": "image",
+								"constraint": {},
+								"thumbnails": []
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
