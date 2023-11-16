@@ -1,13 +1,11 @@
 <script lang="ts">
 	import Icon from '$lib/components/Icon/Icon.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import { getAssetURL } from '$lib/data/assets';
 	import { HOME, TITLE_SUFFIX, getPlatfromIcon } from '$lib/params';
-	import MY_SKILLS from '$lib/skills.params';
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
 
-	const { description, lastName, links, name, title, skills } = HOME;
+	const { description, lastName, links, name, title } = HOME;
 
 	export let data;
 	const { projects } = data;
@@ -43,11 +41,5 @@
 				</a>
 			{/each}
 		</div>
-		{#each skills ?? MY_SKILLS as item}
-			<div class="box-content w-150px p-15px col-center">
-				<img class="w-120px h-120px aspect-square" src={getAssetURL(item.logo)} alt={item.name} />
-				<span class="text-center m-t-20px">{item.name}</span>
-			</div>
-		{/each}
 	</div>
 </div>

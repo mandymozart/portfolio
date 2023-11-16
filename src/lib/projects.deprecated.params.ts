@@ -1,5 +1,4 @@
 import Assets from './data/assets';
-import { getSkills } from './skills.params';
 import type { Project } from './types';
 
 const MY_PROJECTS: Array<Project> = [

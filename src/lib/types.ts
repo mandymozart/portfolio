@@ -38,10 +38,6 @@ export interface IconLink extends Link {
 	icon: Asset;
 }
 
-export interface Skill extends Omit<Item, 'shortDescription'> {
-	color: string;
-}
-
 export interface Project extends Item {
 	links: Array<Link>;
 	color: string;
@@ -50,7 +46,6 @@ export interface Project extends Item {
 		to?: Date;
 	};
 	type: string;
-	skills: Array<Skill>;
 }
 
 export interface Experience extends Project {
@@ -77,7 +72,6 @@ export interface HomePageParams extends PageParams {
 	lastName: string;
 	description: string;
 	links: Array<HomeLink>;
-	skills?: Array<Skill>;
 }
 
 export type SearchPageParams = PageParams;
@@ -85,8 +79,6 @@ export type SearchPageParams = PageParams;
 export type ProjectPageParams = PageWithSearchParams<Project>;
 
 export type ExperiencePageParams = PageWithSearchParams<Experience>;
-
-export type SkillsPageParams = PageWithSearchParams<Skill>;
 
 export interface ResumePageParams extends PageParams {
 	item: string;

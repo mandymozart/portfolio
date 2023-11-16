@@ -1,17 +1,15 @@
 <script lang="ts">
-	import CardLogo from '$lib/components/Card/CardLogo.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
 
-	import { base } from '$app/paths';
-	import type { Experience } from '$lib/types';
-	import { getAssetURL } from '$lib/data/assets';
-	import { EXPERIENCES } from '$lib/params';
+	import Banner from '$lib/components/Banner/Banner.svelte';
+	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+	import Chip from '$lib/components/Chip/Chip.svelte';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+	import { getAssetURL } from '$lib/data/assets';
+	import { EXPERIENCES } from '$lib/params';
+	import type { Experience } from '$lib/types';
 	import { getTimeDiff } from '$lib/utils';
 
 	export let data: { experience?: Experience };
@@ -52,23 +50,6 @@
 									<UIcon icon="i-carbon-link" />
 									<span>{item.label}</span>
 								</div>
-							</Chip>
-						{/each}
-					</div>
-					<div class="row-center flex-wrap m-b-2">
-						{#each data.experience.skills as item}
-							<Chip
-								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
-							>
-								<CardLogo
-									src={getAssetURL(item.logo)}
-									alt={item.name}
-									radius={'0px'}
-									size={15}
-									classes="mr-2"
-								/>
-								<span class="text-[0.9em]">{item.name}</span>
 							</Chip>
 						{/each}
 					</div>
