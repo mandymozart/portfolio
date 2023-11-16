@@ -25,20 +25,14 @@
 				{/each}
 				{/if}
 				<SplideSlide class="flex flex-col items-center justify-center overflow-x-hidden h-screen">
-					<div class="px-10px m-y-5">
-						<p>
-							{project.data.name} / {project.data.type}<br />
-							<PrismicLink field={project.data.link}>Live Preview</PrismicLink>
-						</p>
-						{#if project.data.description}
+						<div class="font-mono">
+                            <p>
+
+                                {project.data.name} / {project.data.type}<br />
+                                <PrismicLink field={project.data.link}>Visit app</PrismicLink>
+                            </p>
 							<PrismicRichText field={project.data.description} />
-						{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<p class="font-300">No description</p>
-						</div>
-						{/if}
-						
-					</div>
+                        </div>
 				</SplideSlide>
 			
 		</Splide>
@@ -57,16 +51,5 @@
 			
 		}
 	}
-	:global(.splide__pagination__page.is-active) {
-		background-color: black;
-	}
-	:global(.splide__pagination) {
-		top: 0.5em;
-		bottom: auto;
-		left: auto;
-		padding: 0 1em;
-		position: absolute;
-		right: 0;
-		z-index: 1;
-}
+	
 </style>

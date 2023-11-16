@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import ProjectCard from '$lib/components/ProjectCard/ProjectCard.svelte';
+	import ProjectRow from '$lib/components/ProjectRow/ProjectRow.svelte';
 
 	export let data;
 	const { items, title } = data;
@@ -16,9 +16,9 @@
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
-		<div class="projects-list mt-5">
+		<div class="projects-list">
 			{#each items as project}
-				<ProjectCard {project} />
+				<ProjectRow {project} />
 			{/each}
 		</div>
 	{/if}
@@ -26,15 +26,7 @@
 
 <style lang="scss">
 	.projects-list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
 
-		@media (max-width: 1350px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (max-width: 850px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
+
 	}
 </style>

@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { PrismicLink } from '@prismicio/svelte';
 	import Card from '../Card/Card.svelte';
 	import CardDivider from '../Card/CardDivider.svelte';
-	import CardTitle from '../Card/CardTitle.svelte';
 	import Chip from '../Chip/Chip.svelte';
 
 	export let project: any;
 </script>
 
 <Card href={`${base}/projects/${project.uid}`}>
-	<div class="m-t-20px row justify-between items-center">
-		<CardTitle title={project.data.name} />
+	<div class="row justify-between items-center">
+		{project.data.name}
 		<div class="row">
-			Link
+			<PrismicLink field={project.data.link}>Visit website</PrismicLink>
 		</div>
 	</div>
 	<CardDivider />

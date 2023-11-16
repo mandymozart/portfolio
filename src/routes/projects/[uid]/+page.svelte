@@ -1,6 +1,7 @@
 <script lang="ts">
 	
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import SliderPage from '$lib/components/SliderPage.svelte';
 	import TabTitle from '$lib/components/TabTitle.svelte';
 	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
@@ -15,7 +16,7 @@
 
 <TabTitle title={project.data.name} />
 
-<div class="flex flex-col items-center overflow-x-hiddenw-full h-screen">
+<SliderPage>
 	{#if project === undefined}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
@@ -58,7 +59,7 @@
 		</Splide>
 
 	{/if}
-</div>
+	</SliderPage>
 <style lang="scss">
 	:global(.screenshot){
 		height: auto;
