@@ -25,7 +25,7 @@
 	{/if}
 </svelte:head>
 
-<div class={`body contents ${$theme ? 'theme-dark' : 'theme-light'}`}>
+<div class={`body contents ${$theme ? 'theme-light' : 'theme-light'}`}>
 	<NavMenu />
 	<div class="content"><slot /></div>
 </div>
