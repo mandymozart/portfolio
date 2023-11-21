@@ -2,9 +2,16 @@
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import ProjectRow from '$lib/components/ProjectRow/ProjectRow.svelte';
+	import { PrismicImage } from '@prismicio/svelte';
 
 	export let data;
 	const { items, title } = data;
+
+	let uid:string = "empty";
+
+	const handleMouseOver = (newUid:string) => {
+		uid = newUid
+	}
 
 </script>
 
@@ -16,17 +23,49 @@
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
-		<div class="projects-list">
+	
+		<div class="preview-list">
 			{#each items as project}
+				<div class:active={uid===project.uid} class:preview={true}>
+					<PrismicImage field={project.data.images[0].image} class={"preview-image"}/>
+				</div>
+			{/each}
+		</div>
+		<div class="project-list">
+			{#each items as project}
+			<div on:mouseover={()=>(uid=project.uid)}>
 				<ProjectRow {project} />
+			</div>
 			{/each}
 		</div>
 	{/if}
 </CommonPage>
 
 <style lang="scss">
-	.projects-list {
-
-
+	.project-list {
+		z-index: 1000;
+		position: relative;
+		width: 100%;
 	}
+	.preview-list {
+		z-index: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		display: flex;
+		div {
+			display: none;
+		}
+	}
+	:global(.preview-list) {
+		.active {
+			display: block;
+		}
+		}
+		:global(.preview-image) {
+			width: 100vw;
+			height: 100vh;
+			object-fit: contain;
+		}
+
 </style>

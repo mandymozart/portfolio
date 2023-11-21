@@ -6,12 +6,10 @@
 </script>
 
 <TabTitle bind:title />
-<div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12">
-	<MainTitle>{title}</MainTitle>
-	<div class="col body flex-1">
+	<div class="body">
+		<h2 class="font-mono">{title}</h2>
 		<slot />
 	</div>
-</div>
 <style lang="scss">
 	.body {
 		margin: 4rem 4rem;

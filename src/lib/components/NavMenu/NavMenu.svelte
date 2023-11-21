@@ -22,10 +22,10 @@
 </script>
 
 <div class="nav-menu">
-	<nav class="!space-between flex flex-row items-center text-sm">
+	<nav class="!space-between flex flex-row items-center text-sm ">
 		<a
 			href={`${base}/`}
-			class="nav-menu-left  decoration-none flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch"
+			class="nav-menu-left mb6 decoration-none flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch"
 		>
 			<span class="text-md font-bold font-mono">{HOME.name} {HOME.lastName}</span>
 		</a>

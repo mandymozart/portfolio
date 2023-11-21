@@ -5,7 +5,8 @@ export enum Platform {
 	Linkedin = 'linkedin',
 	Email = 'email',
 	Facebook = 'facebook',
-	Youtube = 'youtube'
+	Youtube = 'youtube',
+	Website = 'website'
 }
 
 export enum ContractType {
@@ -72,6 +73,7 @@ export interface HomePageParams extends PageParams {
 	lastName: string;
 	description: string;
 	links: Array<HomeLink>;
+	skills: string[];
 }
 
 export type SearchPageParams = PageParams;
@@ -81,5 +83,5 @@ export type ProjectPageParams = PageWithSearchParams<Project>;
 export type ExperiencePageParams = PageWithSearchParams<Experience>;
 
 export interface ResumePageParams extends PageParams {
-	item: string;
+	link: string;
 }

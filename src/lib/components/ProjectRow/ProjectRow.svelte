@@ -8,19 +8,18 @@
 <a class="font-mono" href={`${base}/projects/${project.uid}`}>
 		{project.data.name}
 	<span>{project.data.type}</span>
-	<span class="tags">
-		{#each project.tags as tag}
-            <Chip>{tag}</Chip>
-        {/each}
-    </span>
 </a>
 
 <style lang="scss">
     a {
         display: block;
         cursor: pointer;
-        line-height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        line-height: 3rem;
+        text-decoration: none;
         font-size: 1em;
+        border-bottom: 2px solid black;
         @media (max-width: 1350px) {
 
 		}

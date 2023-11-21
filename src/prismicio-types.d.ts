@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type PageDocumentDataSlicesSlice = never;
 
 /**
  * Content for Page documents
@@ -20,6 +20,17 @@ interface PageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	title: prismic.TitleField;
+
+	/**
+	 * content field in *Page*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page.content
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	content: prismic.RichTextField;
 
 	/**
 	 * Slice Zone field in *Page*

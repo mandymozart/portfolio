@@ -59,4 +59,11 @@
 	:global(h1, h2, h3, h4, h5, h6) {
 		margin: 5px 0px;
 	}
+	:global(a) {
+		color: var(--main);
+		&:hover {
+			color: red;
+			background-color: hsla(0, 0, 255,0.7);
+		}
+	}
 </style>

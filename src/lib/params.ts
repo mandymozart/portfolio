@@ -40,7 +40,7 @@ export const HOME: HomePageParams = {
 	name: 'Tilman',
 	lastName: 'PORSCHÜTZ',
 	description:
-		'Frontend Developer, UI/UX Architect, Requirements Engineer',
+		'As a dedicated web developer I make projects possible. With a communication design background it is my focus is to build UI/UX on top of legacy systems as well as state of the art frameworks and JAMStacks. If applicable I use experiences I collected as CTO with design thinking and agile methodologies to built sustainable and responsible software. I have a passion for experimental interfaces, real time tools and feminist design theory and art.',
 	links: [
 		{ platform: Platform.GitHub, link: 'https://github.com/mandymozart' },
 		{
@@ -51,6 +51,13 @@ export const HOME: HomePageParams = {
 			platform: Platform.Email,
 			link: 'mandymozart@viennastruggle.com'
 		},
+		{
+			platform: Platform.Website,
+			link: 'https://www.mandymozart.com'
+		}
+	], 
+	skills: [
+		"Svelte","React","ReactNative","Angular","Threejs","TypeScript","Dart","Flutter","PixiJS"
 	]
 };
 
@@ -61,5 +68,5 @@ export const EXPERIENCES: ExperiencePageParams = {
 
 export const RESUME: ResumePageParams = {
 	title: 'Resumé',
-	item: ''
+	link: 'https://docs.google.com/document/d/1bN_f-HRh0CEjE9PzOSdaPVhWmVmaSXegHH65dNL9TIE/edit?usp=sharing'
 };
