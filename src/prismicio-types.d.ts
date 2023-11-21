@@ -80,26 +80,26 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 >;
 
 /**
- * Item in *project → images*
+ * Item in *Project → images*
  */
 export interface ProjectDocumentDataImagesItem {
 	/**
-	 * image field in *project → images*
+	 * image field in *Project → images*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: project.images[].image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	image: prismic.ImageField<never>;
+	image: prismic.ImageField<'mobile'>;
 }
 
 /**
- * Content for project documents
+ * Content for Project documents
  */
 interface ProjectDocumentData {
 	/**
-	 * name field in *project*
+	 * name field in *Project*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -110,7 +110,7 @@ interface ProjectDocumentData {
 	name: prismic.KeyTextField;
 
 	/**
-	 * description field in *project*
+	 * description field in *Project*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
@@ -121,7 +121,7 @@ interface ProjectDocumentData {
 	description: prismic.RichTextField;
 
 	/**
-	 * type field in *project*
+	 * type field in *Project*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -132,7 +132,7 @@ interface ProjectDocumentData {
 	type: prismic.KeyTextField;
 
 	/**
-	 * link field in *project*
+	 * link field in *Project*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
@@ -143,7 +143,7 @@ interface ProjectDocumentData {
 	link: prismic.LinkField;
 
 	/**
-	 * fromDate field in *project*
+	 * fromDate field in *Project*
 	 *
 	 * - **Field Type**: Date
 	 * - **Placeholder**: *None*
@@ -154,7 +154,7 @@ interface ProjectDocumentData {
 	fromDate: prismic.DateField;
 
 	/**
-	 * toDate field in *project*
+	 * toDate field in *Project*
 	 *
 	 * - **Field Type**: Date
 	 * - **Placeholder**: *None*
@@ -165,7 +165,7 @@ interface ProjectDocumentData {
 	toDate: prismic.DateField;
 
 	/**
-	 * images field in *project*
+	 * images field in *Project*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
@@ -177,7 +177,7 @@ interface ProjectDocumentData {
 }
 
 /**
- * project document from Prismic
+ * Project document from Prismic
  *
  * - **API ID**: `project`
  * - **Repeatable**: `true`

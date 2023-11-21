@@ -1,6 +1,6 @@
 {
 	"id": "project",
-	"label": "project",
+	"label": "Project",
 	"format": "custom",
 	"repeatable": true,
 	"status": true,
@@ -68,7 +68,13 @@
 							"config": {
 								"label": "image",
 								"constraint": {},
-								"thumbnails": []
+								"thumbnails": [
+									{
+										"name": "mobile",
+										"width": 1080,
+										"height": 1920
+									}
+								]
 							}
 						}
 					}
