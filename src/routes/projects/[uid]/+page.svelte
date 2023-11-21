@@ -62,8 +62,10 @@
 	</SliderPage>
 <style lang="scss">
 	:global(.screenshot){
-		height: auto;
-		max-height: 100vh;
+		height: 100%;
+		width: 100%;
+		/* max-width: 100%; */
+		object-fit: scale-down;
 
 		@media (max-width: 1350px) {
 			
