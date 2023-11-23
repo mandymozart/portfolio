@@ -16,15 +16,13 @@
 		</div>
 	{:else}
 		<Splide aria-label="Project Slideshow" class="h-screen ">
-
 				{#if screenshots.length > 0}
-				
-				{#each screenshots as item}
-				<SplideSlide class=" flex items-center justify-center">
-					<PrismicImage class="screenshot screenshot--desktop w-full" field={item.image} />
-					{#if item.image.mobile}<PrismicImage class="screenshot screenshot--mobile w-full" field={item.image.mobile} />{/if}
-				</SplideSlide>
-				{/each}
+					{#each screenshots as item}
+					<SplideSlide class=" flex items-center justify-center">
+						<PrismicImage class="screenshot screenshot--desktop w-full" field={item.image} />
+						{#if item.image.mobile}<PrismicImage class="screenshot screenshot--mobile w-full" field={item.image.mobile} />{/if}
+					</SplideSlide>
+					{/each}
 				{/if}
 				<SplideSlide class="flex flex-col items-center justify-center overflow-x-hidden h-screen">
 						<div class="project-info font-mono">
@@ -43,6 +41,9 @@
 			<div class="info">
 				<div class="title font-mono">
 						{project.data.name} / {project.data.type}
+				</div>
+				<div class="description">
+					<PrismicRichText field={project.data.description}/>
 				</div>
 				<div class="tags">
 					{#each project.tags as tag}

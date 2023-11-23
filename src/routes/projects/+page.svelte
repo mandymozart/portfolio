@@ -7,7 +7,7 @@
 	export let data;
 	const { items, title } = data;
 
-	let uid:string = "empty";
+	let uid:string = '';
 
 	const handleMouseOver = (newUid:string) => {
 		uid = newUid
@@ -26,14 +26,16 @@
 	
 		<div class="preview-list">
 			{#each items as project}
-				<div class:active={uid===project.uid} class:preview={true}>
-					<PrismicImage field={project.data.images[0].image} class={"preview-image"}/>
-				</div>
+				{#if project.data.images[0]?.image}
+					<div class:active={uid===project.uid} class:preview={true}>
+						<PrismicImage field={project.data.images[0].image} class={"preview-image"}/>
+					</div>
+				{/if}
 			{/each}
 		</div>
 		<div class="project-list">
 			{#each items as project}
-			<div on:mouseover={()=>(uid=project.uid)}>
+			<div on:mouseover={()=>handleMouseOver(project.uid)} role="listitem" on:focus={()=>handleMouseOver(project.uid)}>
 				<ProjectRow {project} />
 			</div>
 			{/each}
