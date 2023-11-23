@@ -1,18 +1,13 @@
 <script lang="ts">
-	
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import ProjectSlider from '$lib/components/ProjectSlider/ProjectSlider.svelte';
 	import SliderPage from '$lib/components/SliderPage.svelte';
 	import TabTitle from '$lib/components/TabTitle.svelte';
-	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-// Default theme
+	// Default theme
 	import '@splidejs/svelte-splide/css';
 
 	export let data: { project?: any };
 	const { project } = data;
-
-	const screenshots = project?.data.images ?? [];
 </script>
 
 <TabTitle title={project.data.name} />
@@ -24,21 +19,20 @@
 			<p class="font-300">Could not load project data...</p>
 		</div>
 	{:else}
-		<ProjectSlider project={project}/>
+		<ProjectSlider {project} />
 	{/if}
-	</SliderPage>
+</SliderPage>
+
 <style lang="scss">
-	:global(.screenshot){
+	:global(.screenshot) {
 		height: 100%;
 		width: 100%;
 		/* max-width: 100%; */
 		object-fit: scale-down;
 
 		@media (max-width: 1350px) {
-			
 		}
 		@media (max-width: 850px) {
-			
 		}
 	}
 	:global(.splide__pagination__page.is-active) {
@@ -52,5 +46,5 @@
 		position: absolute;
 		right: 0;
 		z-index: 1;
-}
+	}
 </style>

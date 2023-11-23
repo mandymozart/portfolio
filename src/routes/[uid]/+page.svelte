@@ -5,21 +5,18 @@
 
 	export let data;
 	const { page } = data;
-
 </script>
 
-<CommonPage>
-
+<CommonPage title={page?.data.title}>
 	{#if page === undefined}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
-	<div class="font-mono content">
-		<PrismicRichText field={page.data.content}/>
-	</div>
-
+		<div class="font-mono content description">
+			<PrismicRichText field={page.data.content} />
+		</div>
 	{/if}
 </CommonPage>
 
@@ -29,9 +26,9 @@
 		top: 0;
 		background: #ffffff;
 		line-height: 4rem;
-		border-bottom: 2px solid var(--text);	
+		border-bottom: 2px solid var(--text);
 	}
-	:global(.content img) {
+	:global(.content.description img) {
 		max-width: 25vw;
 		height: auto;
 	}

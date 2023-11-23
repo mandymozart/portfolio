@@ -4,22 +4,180 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = never;
+/**
+ * Item in *Experience → projects*
+ */
+export interface ExperienceDocumentDataProjectsItem {
+	/**
+	 * project field in *Experience → projects*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.projects[].project
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	project: prismic.ContentRelationshipField<'project'>;
+}
+
+/**
+ * Content for Experience documents
+ */
+interface ExperienceDocumentData {
+	/**
+	 * company field in *Experience*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Employer
+	 * - **API ID Path**: experience.company
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	company: prismic.KeyTextField;
+
+	/**
+	 * name field in *Experience*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * type field in *Experience*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.type
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	type: prismic.KeyTextField;
+
+	/**
+	 * description field in *Experience*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * shortDescription field in *Experience*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.shortdescription
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	shortdescription: prismic.KeyTextField;
+
+	/**
+	 * logo field in *Experience*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * contract field in *Experience*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: Contract
+	 * - **API ID Path**: experience.contract
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	contract: prismic.SelectField<
+		'Contract' | 'FullTime' | 'PartTime' | 'SelfEmployed' | 'Freelance' | 'Internship',
+		'filled'
+	>;
+
+	/**
+	 * location field in *Experience*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.location
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	location: prismic.KeyTextField;
+
+	/**
+	 * startDate field in *Experience*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.startdate
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	startdate: prismic.DateField;
+
+	/**
+	 * endDate field in *Experience*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.enddate
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	enddate: prismic.DateField;
+
+	/**
+	 * projects field in *Experience*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experience.projects[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	projects: prismic.GroupField<Simplify<ExperienceDocumentDataProjectsItem>>;
+}
+
+/**
+ * Experience document from Prismic
+ *
+ * - **API ID**: `experience`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ExperienceDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<ExperienceDocumentData>,
+	'experience',
+	Lang
+>;
 
 /**
  * Content for Page documents
  */
 interface PageDocumentData {
 	/**
-	 * Title field in *Page*
+	 * title field in *Page*
 	 *
-	 * - **Field Type**: Title
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: page.title
 	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	title: prismic.TitleField;
+	title: prismic.KeyTextField;
 
 	/**
 	 * content field in *Page*
@@ -30,18 +188,7 @@ interface PageDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	content: prismic.RichTextField;
-
-	/**
-	 * Slice Zone field in *Page*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: page.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+	content: prismic.RichTextField /**
 	 * Meta Title field in *Page*
 	 *
 	 * - **Field Type**: Text
@@ -202,7 +349,60 @@ export type ProjectDocument<Lang extends string = string> = prismic.PrismicDocum
 	Lang
 >;
 
-export type AllDocumentTypes = PageDocument | ProjectDocument;
+/**
+ * Content for Skill documents
+ */
+interface SkillDocumentData {
+	/**
+	 * name field in *Skill*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Tech/Method
+	 * - **API ID Path**: skill.name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * years field in *Skill*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: skill.years
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	years: prismic.NumberField;
+
+	/**
+	 * logo field in *Skill*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: skill.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+}
+
+/**
+ * Skill document from Prismic
+ *
+ * - **API ID**: `skill`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SkillDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<SkillDocumentData>,
+	'skill',
+	Lang
+>;
+
+export type AllDocumentTypes = ExperienceDocument | PageDocument | ProjectDocument | SkillDocument;
 
 /**
  * Primary content in *Project → Primary*
@@ -323,12 +523,16 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			ExperienceDocument,
+			ExperienceDocumentData,
+			ExperienceDocumentDataProjectsItem,
 			PageDocument,
 			PageDocumentData,
-			PageDocumentDataSlicesSlice,
 			ProjectDocument,
 			ProjectDocumentData,
 			ProjectDocumentDataImagesItem,
+			SkillDocument,
+			SkillDocumentData,
 			AllDocumentTypes,
 			ProjectSlice,
 			ProjectSliceDefaultPrimary,

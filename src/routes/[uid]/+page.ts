@@ -5,7 +5,6 @@ export async function load({ fetch, cookies, params }: { fetch: any, cookies: an
 
 	if (params.uid) {
 		const page = await client.getByUID('page', params.uid);
-		console.log(page)
 		return { page };
 	}
 

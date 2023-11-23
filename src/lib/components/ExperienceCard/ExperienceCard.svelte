@@ -1,29 +1,37 @@
 <script lang="ts">
-	import type { Experience } from '$lib/types';
-	import { getMonthName, getTimeDiff } from '$lib/utils/helpers';
-
-	export let experience: Experience;
-
-	const months = getTimeDiff(experience.period.from, experience.period.to);
-
-	const from = `${getMonthName(
-		experience.period.from.getMonth()
-	)} ${experience.period.from.getFullYear()}`;
-	const to = experience.period.to
-		? `${getMonthName(experience.period.to.getMonth())} ${experience.period.to.getFullYear()}`
-		: 'Present';
-
-	const period = `${from} - ${to} · ${months}`;
+	import dayjs from 'dayjs';
+	import Chip from '../Chip/Chip.svelte';
+	export let experience;
+	console.log(experience);
 </script>
 
-<div>
-<span class="period">{period}</span><br />
-<span>{experience.name}</span>
-	<p class="description">{experience.description}</p>
-</div>
+<section class="font-mono flex items-center gap-lg">
+	<div class="logo">
+		<img src={experience.data.logo.url} alt={experience.data.logo.alt} />
+	</div>
+	<div class="meta">
+		<span class="period"
+			>{dayjs(experience.startdate).format('YYYY')}&mdash;{dayjs(experience.enddate).format(
+				'YYYY'
+			)}</span
+		><br />
+		<span>{experience.data.name}</span>
+		<div class="description">{experience.data.shortdescription}</div>
+		{#each experience.data.projects as project}
+			<Chip>{project.project.uid}</Chip>
+		{/each}
+	</div>
+</section>
+
 <style lang="scss">
-	div{
+	section {
 		margin-bottom: 1rem;
 	}
+	.logo {
+		img {
+			width: 12rem;
+			height: 12rem;
+			object-fit: contain;
+		}
+	}
 </style>
-
