@@ -56,7 +56,8 @@ export interface Experience extends Project {
 }
 
 export interface PageParams {
-	title: string;
+	uid: string;
+	data: any;
 }
 
 export interface PageWithSearchParams<T> extends PageParams {

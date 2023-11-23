@@ -5,12 +5,7 @@ export async function load({ fetch, cookies, params }: { fetch: any, cookies: an
 	const client = createClient({ fetch, cookies });
 
 	if (params.uid) {
-		// const project = MY_PROJECTS.find((item) => {
-		// 	return item.slug === params.uid;
-		// });
-
 		const project = await client.getByUID('project', params.uid);
-		console.log(project)
 		return { project };
 	}
 

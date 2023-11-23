@@ -2,12 +2,13 @@
 	import ProjectSlider from '$lib/components/ProjectSlider/ProjectSlider.svelte';
 	import { HOME, TITLE_SUFFIX } from '$lib/params';
 	import { useTitle } from '$lib/utils/helpers';
+	import { PrismicRichText } from '@prismicio/svelte';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 
 	const { title } = HOME;
 
 	export let data;
-	const { projects } = data;
+	const { projects, page } = data;
 
 	
 </script>
@@ -23,9 +24,11 @@
 		<p class="font-mono">Could not find anything...</p>
 	</SplideSlide>
 	{:else}
+	<SplideSlide class="flex items-center justify-center w-full h-screen font-mono">
+		<PrismicRichText field={page.data.content}/>
+	</SplideSlide>
 		{#each projects as project}
 		<SplideSlide >
-			
 			<ProjectSlider {project} />
 		</SplideSlide>
 		{/each}
