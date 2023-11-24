@@ -5,7 +5,8 @@ export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 
 	const experiences = await client.getAllByType('experience');
 	const skills = await client.getAllByType('skill');
-	return { experiences, skills }
+	const clients = await client.getAllByType('client');
+	return { experiences, skills, clients }
 
 }
 

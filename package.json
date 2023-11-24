@@ -59,6 +59,8 @@
 		"@splidejs/splide-extension-intersection": "^0.2.0",
 		"@splidejs/splide-extension-video": "^0.8.0",
 		"@splidejs/svelte-splide": "^0.2.9",
-		"dayjs": "^1.11.10"
+		"dayjs": "^1.11.10",
+		"three": "^0.158.0",
+		"three-buffer-geometry-utils": "^1.0.0"
 	}
 }

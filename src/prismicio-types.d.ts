@@ -5,6 +5,37 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Content for Client documents
+ */
+interface ClientDocumentData {
+	/**
+	 * logo field in *Client*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: client.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+}
+
+/**
+ * Client document from Prismic
+ *
+ * - **API ID**: `client`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ClientDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<ClientDocumentData>,
+	'client',
+	Lang
+>;
+
+/**
  * Item in *Experience → projects*
  */
 export interface ExperienceDocumentDataProjectsItem {
@@ -402,7 +433,12 @@ export type SkillDocument<Lang extends string = string> = prismic.PrismicDocumen
 	Lang
 >;
 
-export type AllDocumentTypes = ExperienceDocument | PageDocument | ProjectDocument | SkillDocument;
+export type AllDocumentTypes =
+	| ClientDocument
+	| ExperienceDocument
+	| PageDocument
+	| ProjectDocument
+	| SkillDocument;
 
 /**
  * Primary content in *Project → Primary*
@@ -523,6 +559,8 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			ClientDocument,
+			ClientDocumentData,
 			ExperienceDocument,
 			ExperienceDocumentData,
 			ExperienceDocumentDataProjectsItem,

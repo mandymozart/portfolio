@@ -77,6 +77,11 @@ export interface HomePageParams extends PageParams {
 	skills: string[];
 }
 
+export interface Client {
+	logo: { url: string, alt: string }
+	uid: string;
+}
+
 export type SearchPageParams = PageParams;
 
 export type ProjectPageParams = PageWithSearchParams<Project>;

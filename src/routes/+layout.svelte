@@ -30,6 +30,7 @@
 	<div class="content"><slot /></div>
 </div>
 <PrismicPreview {repositoryName} />
+
 <style lang="scss">
 	.content {
 		display: flex;
@@ -63,7 +64,7 @@
 		color: var(--main);
 		&:hover {
 			color: red;
-			background-color: hsla(0, 0, 255,0.7);
+			background-color: hsla(0, 0%, 100%);
 		}
 	}
 </style>

@@ -1,10 +1,11 @@
 <script lang="ts">
-	import Chip from '$lib/components/Chip/Chip.svelte';
+	import ClientsGrid from '$lib/components/ClientsGrid/ClientsGrid.svelte';
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import ExperienceCard from '$lib/components/ExperienceCard/ExperienceCard.svelte';
+	import SkillsGrid from '$lib/components/SkillsGrid/SkillsGrid.svelte';
 
-	export let data: { experiences: any[]; skills: any[] };
-	const { experiences, skills } = data;
+	export let data: { experiences: any[]; skills: any[]; clients: any[] };
+	const { experiences, skills, clients } = data;
 </script>
 
 <CommonPage title={'Experiences'}>
@@ -13,8 +14,7 @@
 			<ExperienceCard experience={job} />
 		{/each}
 
-		{#each skills as skill}
-			<Chip>{skill}</Chip>
-		{/each}
+		<SkillsGrid {skills} />
+		<ClientsGrid {clients} />
 	</div>
 </CommonPage>

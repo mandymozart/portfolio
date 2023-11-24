@@ -50,6 +50,9 @@
 </main>
 
 <style lang="scss">
+	main {
+		/* background: rgba(50, 102, 150, 1); */
+	}
 	:global(.splide__pagination__page.is-active) {
 		background-color: transparent;
 		color: red;
