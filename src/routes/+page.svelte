@@ -43,7 +43,7 @@
 			<SplideSlide class="flex items-center justify-center flex-col font-mono w-full h-screen">
 				<h3>Story telling</h3>
 				<p>Being passionate about user journeys and art, I developed a sense for story telling.</p>
-				<a href={`${base}story`}><Chip>Read more</Chip></a>
+				<a href={`${base}/story`}><Chip>Read more</Chip></a>
 			</SplideSlide>
 		{/if}
 	</Splide>

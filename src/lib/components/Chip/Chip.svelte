@@ -32,3 +32,10 @@
 >
 	<slot />
 </svelte:element>
+
+<style lang="scss">
+	a,
+	button {
+		background: #fff;
+	}
+</style>
