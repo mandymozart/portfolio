@@ -280,7 +280,7 @@ export interface ProjectDocumentDataImagesItem {
 	 * - **API ID Path**: project.images[].image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	image: prismic.ImageField<'mobile'>;
+	image: prismic.ImageField<'mobile' | 'thumbnail'>;
 }
 
 /**
@@ -308,6 +308,17 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	description: prismic.RichTextField;
+
+	/**
+	 * industry field in *Project*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.industry
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	industry: prismic.KeyTextField;
 
 	/**
 	 * type field in *Project*
@@ -352,6 +363,28 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#date
 	 */
 	toDate: prismic.DateField;
+
+	/**
+	 * video field in *Project*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: Walkthrough Video
+	 * - **API ID Path**: project.video
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	video: prismic.LinkToMediaField;
+
+	/**
+	 * transcript field in *Project*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.transcript
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	transcript: prismic.RichTextField;
 
 	/**
 	 * images field in *Project*

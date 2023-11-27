@@ -64,11 +64,12 @@
 		top: 1rem;
 		bottom: auto;
 		left: auto;
-		padding: 0 1em;
+		padding: 0;
 		position: absolute;
 		right: 1rem;
 		z-index: 1;
 	}
+
 	:global(.splide__pagination__page:before) {
 		counter-increment: pagination-num;
 		content: counter(pagination-num);
@@ -86,19 +87,44 @@
 	:global(.splide__arrow:disabled) {
 		opacity: 0;
 	}
+	:global(.splide__pagination--ltr) {
+		right: 6rem;
+	}
+	:global(.splide__pagination--ttb .splide__pagination__page) {
+		transform: rotate(90deg) translate(0, -0.25rem);
+	}
 	:global(.splide__pagination--ttb) {
-		top: 3rem;
+		top: 0;
+		right: 0;
+		width: 4rem;
+		bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 0;
+		align-items: center;
+	}
+	:global(.splide__arrows) {
 	}
 	:global(.splide__arrows.splide__arrows--ltr .splide__arrow--next) {
-		right: 4rem;
+		right: 6rem;
+		border: 1px solid black;
+		background-color: white;
 	}
 	:global(.splide__arrows.splide__arrows--ltr .splide__arrow--prev) {
-		left: 4rem;
+		left: 6rem;
+		border: 1px solid black;
+		background-color: white;
 	}
 	:global(.splide__arrows.splide__arrows--ttb .splide__arrow--next) {
-		bottom: 4rem;
+		bottom: 2rem;
+		border: 1px solid black;
+		background-color: white;
 	}
 	:global(.splide__arrows.splide__arrows--ttb .splide__arrow--prev) {
-		top: 4rem;
+		border: 1px solid black;
+		background-color: white;
+		right: 0 !important;
+		width: 2rem;
+		height: 2rem;
 	}
 </style>

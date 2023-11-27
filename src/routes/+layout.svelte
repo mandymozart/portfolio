@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+	import Clouds from '$lib/components/Clouds/Clouds.svelte';
 	import NavMenu from '$lib/components/NavMenu/NavMenu.svelte';
 	import '$lib/index.scss';
 	import { repositoryName } from '$lib/prismicio';
 	import { onHydrated, theme } from '$lib/stores/theme';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
+	import '@splidejs/svelte-splide/css';
 	import { onMount } from 'svelte';
 	import 'uno.css';
 
@@ -24,10 +27,16 @@
 		<meta name="twitter:card" content="summary_large_image" />
 	{/if}
 </svelte:head>
-
+<Clouds />
 <div class={`body contents ${$theme ? 'theme-light' : 'theme-light'}`}>
+	<a
+		href={`${base}/`}
+		class="home font-mono row-center font-mono cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms]"
+		>Home</a
+	>
 	<NavMenu />
 	<div class="content"><slot /></div>
+	<div class="sidebar"></div>
 </div>
 <PrismicPreview {repositoryName} />
 
@@ -38,7 +47,21 @@
 		flex: 1;
 		padding: 0px 0px;
 	}
-
+	.home {
+		position: fixed;
+		bottom: 2rem;
+		left: 6rem;
+		z-index: 10;
+		text-decoration: none;
+	}
+	.sidebar {
+		width: 4rem;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		border-left: 1px solid black;
+	}
 	.body {
 		margin: 0px;
 		background-color: var(--main);
@@ -58,7 +81,7 @@
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
-		margin: 5px 0px;
+		margin: 0;
 	}
 	:global(a) {
 		color: var(--main);

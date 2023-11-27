@@ -1,29 +1,31 @@
 <script lang="ts">
+	import Header from '../Header/Header.svelte';
+	import ClientItem from './ClientItem.svelte';
+
 	export let clients: any[];
 	console.log(clients);
 </script>
 
-<section class="grid row-a">
-	<h3>Clients</h3>
-	<div class="client-list">
-		{#each clients as client}
-			<img src={client.data.logo.url} alt={client.data.logo.alt} class="w-full" />
-		{/each}
-	</div>
-</section>
+<Header title={'Clients'} />
+<div class="client-list">
+	{#each clients as client}
+		<ClientItem {client} />
+	{/each}
+</div>
 
 <style lang="scss">
-	h3 {
-		position: sticky;
-		line-height: 4rem;
-	}
 	.client-list {
+		margin: 2rem;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(12, 1fr);
 		gap: 2rem;
 		align-items: center;
-		/* img {
-            width: 100%;
-        } */
+		@media (max-width: 1350px) {
+			grid-template-columns: repeat(6, 1fr);
+		}
+		@media (max-width: 850px) {
+			grid-template-columns: repeat(4, 1fr);
+			gap: 1rem;
+		}
 	}
 </style>

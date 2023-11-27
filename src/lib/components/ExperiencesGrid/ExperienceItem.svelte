@@ -2,7 +2,6 @@
 	import dayjs from 'dayjs';
 	import Chip from '../Chip/Chip.svelte';
 	export let experience;
-	console.log(experience);
 </script>
 
 <section class="font-mono flex items-center gap-lg">
@@ -11,9 +10,9 @@
 	</div>
 	<div class="meta">
 		<span class="period"
-			>{dayjs(experience.startdate).format('YYYY')}&mdash;{dayjs(experience.enddate).format(
-				'YYYY'
-			)}</span
+			>{dayjs(experience.data.startdate).format('YYYY')}&mdash;{dayjs(
+				experience.data.enddate
+			).format('YYYY')}</span
 		><br />
 		<span>{experience.data.name}</span>
 		<div class="description">{experience.data.shortdescription}</div>

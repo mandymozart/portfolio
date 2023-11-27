@@ -1,6 +1,6 @@
 <script lang="ts">
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import ProjectSlider from '$lib/components/ProjectSlider/ProjectSlider.svelte';
+	import ProjectDetail from '$lib/components/ProjectSlider/ProjectDetail.svelte';
 	import SliderPage from '$lib/components/SliderPage.svelte';
 	import TabTitle from '$lib/components/TabTitle.svelte';
 	// Default theme
@@ -19,7 +19,7 @@
 			<p class="font-300">Could not load project data...</p>
 		</div>
 	{:else}
-		<ProjectSlider {project} />
+		<ProjectDetail {project} />
 	{/if}
 </SliderPage>
 

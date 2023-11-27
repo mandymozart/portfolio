@@ -29,6 +29,13 @@
 					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
 				}
 			},
+			"industry": {
+				"type": "Text",
+				"config": {
+					"label": "industry",
+					"placeholder": ""
+				}
+			},
 			"type": {
 				"type": "Text",
 				"config": {
@@ -58,6 +65,23 @@
 					"placeholder": ""
 				}
 			},
+			"video": {
+				"type": "Link",
+				"config": {
+					"label": "video",
+					"placeholder": "Walkthrough Video",
+					"select": "media"
+				}
+			},
+			"transcript": {
+				"type": "StructuredText",
+				"config": {
+					"label": "transcript",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
 			"images": {
 				"type": "Group",
 				"config": {
@@ -73,6 +97,11 @@
 										"name": "mobile",
 										"width": 1080,
 										"height": 1920
+									},
+									{
+										"name": "thumbnail",
+										"width": 960,
+										"height": 540
 									}
 								]
 							}

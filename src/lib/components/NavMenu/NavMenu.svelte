@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { HOME, NavBar } from '$lib/params';
+	import { NavBar } from '$lib/params';
 
 	import { base } from '$app/paths';
-	
+
 	let currentRoute = '/';
 
 	$: {
@@ -15,23 +15,17 @@
 	}
 
 	const items = [
-		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube' },
+		{ title: NavBar.resume, to: '/resume', icon: 'i-carbon-result' },
 		{ title: NavBar.career, to: '/experience', icon: 'i-carbon-development' },
-		{ title: NavBar.resume, to: '/resume', icon: 'i-carbon-result' }
+		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube' }
 	];
 </script>
 
 <div class="nav-menu">
-	<nav class="!space-between flex flex-row items-center text-sm ">
-		<a
-			href={`${base}/`}
-			class="nav-menu-left mb6 decoration-none flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch"
-		>
-			<span class="text-md font-bold font-mono">{HOME.name} {HOME.lastName}</span>
-		</a>
+	<nav class="flex flex-row items-center text-sm">
 		<div class="flex flex-row flex-1 self-center justify-center">
 			{#each items as item}
-				<a href={`${base}${item.to}`} class="nav-menu-item !text-[var(--secondary-text)]">
+				<a href={`${base}${item.to}`} class="nav-menu-item text-[var(--secondary-text)]">
 					<span class="nav-menu-item-label font-mono">{item.title}</span>
 				</a>
 			{/each}
@@ -42,26 +36,36 @@
 <style lang="scss">
 	.nav-menu {
 		display: flex;
-		justify-content: left;
+		justify-content: center;
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		top: 0;
+		width: 4rem;
 		writing-mode: tb-rl;
-		transform: rotate(-180deg) translate(0,0);
+		transform: rotate(-180deg) translate(0, 0);
 		z-index: 10;
 		padding: 1rem 0;
 		margin: 0;
 		background-color: transparent;
-		border-left: 1px solid var(--secondary-text);
+		border-left: 1px solid black;
+		nav {
+			height: 100vh;
+			> div {
+				justify-content: space-between;
+			}
+		}
 
 		&-item {
 			text-decoration: none;
 			font-weight: 400;
-			padding: 1rem;
+			padding: 1rem 0.5rem;
+			margin: 1rem 0.5rem;
+			border-radius: 4rem;
+			border: 1px solid transparent;
+			background: transparent;
 			color: inherit;
 			display: flex;
-			margin: 0;
 			align-items: center;
 
 			&-label {
@@ -70,6 +74,8 @@
 
 			&:hover {
 				color: var(--main-hover);
+				border: 1px solid black;
+				background: white;
 			}
 		}
 	}

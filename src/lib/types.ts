@@ -18,6 +18,11 @@ export enum ContractType {
 	Internship = 'Internship'
 }
 
+export interface Breadcrumb {
+	path?: string; 
+	label: string
+}
+
 export type Asset = string | { light: string; dark: string };
 
 export interface Item {

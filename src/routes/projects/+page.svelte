@@ -7,37 +7,38 @@
 	export let data;
 	const { items, title } = data;
 
-	let uid:string = '';
+	let uid: string = '';
 
-	const handleMouseOver = (newUid:string) => {
-		uid = newUid
-	}
-
+	const handleMouseOver = (newUid: string) => {
+		uid = newUid;
+	};
 </script>
 
-<CommonPage {title}>
-
+<CommonPage {title} breadcrumbs={[{ label: title }]}>
 	{#if items.length === 0}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
-	
 		<div class="preview-list">
 			{#each items as project}
 				{#if project.data.images[0]?.image}
-					<div class:active={uid===project.uid} class:preview={true}>
-						<PrismicImage field={project.data.images[0].image} class={"preview-image"}/>
+					<div class:active={uid === project.uid} class:preview={true}>
+						<PrismicImage field={project.data.images[0].image} class={'preview-image'} />
 					</div>
 				{/if}
 			{/each}
 		</div>
 		<div class="project-list">
 			{#each items as project}
-			<div on:mouseover={()=>handleMouseOver(project.uid)} role="listitem" on:focus={()=>handleMouseOver(project.uid)}>
-				<ProjectRow {project} />
-			</div>
+				<div
+					on:mouseover={() => handleMouseOver(project.uid)}
+					role="listitem"
+					on:focus={() => handleMouseOver(project.uid)}
+				>
+					<ProjectRow {project} />
+				</div>
 			{/each}
 		</div>
 	{/if}
@@ -52,8 +53,10 @@
 	.preview-list {
 		z-index: 0;
 		position: fixed;
-		top: 0;
-		right: 0;
+		top: 6rem;
+		bottom: 6rem;
+		right: 6rem;
+		left: 6rem;
 		display: flex;
 		div {
 			display: none;
@@ -63,11 +66,10 @@
 		.active {
 			display: block;
 		}
-		}
-		:global(.preview-image) {
-			width: 100vw;
-			height: 100vh;
-			object-fit: contain;
-		}
-
+	}
+	:global(.preview-image) {
+		width: calc(100vw - 12rem);
+		height: calc(100vh - 12rem);
+		object-fit: contain;
+	}
 </style>

@@ -1,32 +1,43 @@
 <script lang="ts">
-	import Chip from '../Chip/Chip.svelte';
+	import Header from '../Header/Header.svelte';
+	import SkillItem from './SkillItem.svelte';
 
 	export let skills: any[];
 	console.log(skills);
+	let textOnly: boolean = false;
+	const toggleDisplay = () => {
+		textOnly = !textOnly;
+	};
 </script>
 
-<section class="grid row-a">
-	<h3>Skills</h3>
-	<div class="skills-list">
-		{#each skills as skill}
-			<Chip>{skill.data.name}</Chip>
-			<img src={skill.data.logo.url} alt={skill.data.logo.alt} class="w-full" />
-		{/each}
-	</div>
-</section>
+<Header title={'Skills'} />
+<div class="skill-list {textOnly ? 'textOnly' : ''}">
+	<button on:click={() => toggleDisplay()}
+		>{#if textOnly}List{:else}Text{/if}</button
+	>
+	{#each skills as skill}
+		<SkillItem {skill} {textOnly} />
+	{/each}
+</div>
 
 <style lang="scss">
-	h3 {
-		position: sticky;
-		line-height: 4rem;
-	}
 	.skill-list {
+		position: relative;
+		margin: 2rem;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(12, 1fr);
 		gap: 2rem;
 		align-items: center;
-		/* img {
-            width: 100%;
-        } */
+		img {
+			max-width: 100%;
+		}
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		&.textOnly {
+			display: block;
+		}
 	}
 </style>
