@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { fade } from 'svelte/transition';
-	export let title;
-	export let message;
+
 	export let videoid;
 	let video: HTMLVideoElement;
-	$: playing = false;
-	const togglePlay = () => {
+	export let playing = false;
+	export const togglePlay = () => {
 		if (playing) {
 			video.pause();
 			playing = false;
@@ -32,42 +31,7 @@
 	{/if}
 </div>
 
-<div id="overlay" class:playing>
-	<h1 class="title font-mono">{title}</h1>
-	<div class="message font-mono">
-		{message}
-	</div>
-	<button class="font-mono" id="startButton" on:click={() => togglePlay()}
-		>{#if playing}Pause{:else}Play Intro{/if}</button
-	>
-</div>
-
 <style lang="scss">
-	h1 {
-	}
-	#overlay {
-		position: absolute;
-		top: 6rem;
-		left: 6rem;
-		right: 6rem;
-		bottom: 6rem;
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		flex-direction: column;
-		justify-content: center;
-		transition: all 0.7s ease-in-out;
-		transform: translateY(0);
-		&.playing {
-			opacity: 0;
-			transform: translateY(3rem);
-		}
-	}
-	button {
-		border: 1px solid black;
-		border-radius: 2rem;
-		padding: 0.5rem 1rem;
-	}
 	.stage {
 		position: absolute;
 		margin: auto;

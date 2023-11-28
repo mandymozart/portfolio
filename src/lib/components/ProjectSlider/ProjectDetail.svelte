@@ -9,11 +9,13 @@
 	import CommonPage from '../CommonPage.svelte';
 	import SkillItem from '../ExperiencesGrid/SkillItem.svelte';
 	import PartnerItem from '../Partner/PartnerItem.svelte';
+	import VideoReaction from '../Videos/VideoReaction.svelte';
 
 	export let project: ProjectDocument;
 	export let skills: SkillDocument[] | undefined;
 	export let partners: CollaboratorDocument[] | ClientDocument[] | undefined;
 	const screenshots = project?.data.images ?? [];
+	console.log(project.data.video_id);
 </script>
 
 {#if project === undefined}
@@ -72,7 +74,12 @@
 				</section>
 			{/each}
 		{/if}
-
+		{project.data.video_id}
+		{#if project.data.video_id}
+			<div class="video-reaction">
+				<VideoReaction videoid={project.data.video_id.toString()} />
+			</div>
+		{/if}
 		<div
 			class="link font-mono row-center font-mono cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms]"
 		>
@@ -99,6 +106,15 @@
 	}
 	.project-info {
 		padding: 6rem;
+	}
+	.video-reaction {
+		width: auto;
+		height: 20rem;
+		position: fixed;
+		bottom: 0;
+		left: 4rem;
+		z-index: 10000;
+		cursor: pointer;
 	}
 	.link {
 		position: fixed;
