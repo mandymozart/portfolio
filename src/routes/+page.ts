@@ -4,7 +4,9 @@ export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 	const client = createClient({ fetch, cookies });
 
 	const projects = await client.getAllByType('project');
-	const page = await client.getByUID('page','home');
+	
+	const page = await client.getSingle('home');
+	console.log(page)
 	return { projects, page }
 
 }

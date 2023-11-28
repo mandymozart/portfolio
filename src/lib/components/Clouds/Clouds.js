@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 import CloudsShader from '$lib/shaders/clouds';
 import * as THREE from 'three';
 import { mergeBufferGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
@@ -53,12 +54,12 @@ function render() {
 export let loading;
 export let error;
 
-export const createScene = async (el, video) => {
+export const createScene = async (el) => {
 
   camera.position.z = 6000;
 
   // Cloud
-  var texture = await new THREE.TextureLoader().load('textures/cloud10.png', loading, error);
+  var texture = await new THREE.TextureLoader().load(base + '/textures/cloud10.png', loading, error);
   texture.magFilter = THREE.LinearMipMapLinearFilter;
   texture.minFilter = THREE.LinearMipMapLinearFilter;
 

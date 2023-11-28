@@ -1,18 +1,21 @@
 <script lang="ts">
+	import type { ExperienceDocument, ProjectDocument } from '../../../prismicio-types';
 	import ExperienceItem from './ExperienceItem.svelte';
 
-	export let experiences: any[];
-	console.log(experiences);
+	export let experiences: ExperienceDocument[];
+	export let projects: ProjectDocument[];
 </script>
 
 <div class="experience-list">
-	{#each experiences as experience}
-		<ExperienceItem {experience} />
-	{/each}
+	{#if experiences}
+		{#each experiences as experience}
+			<ExperienceItem {experience} {projects} />
+		{/each}
+	{/if}
 </div>
 
 <style lang="scss">
 	.experience-list {
-		margin: 2rem;
+		width: calc(100% - 4rem);
 	}
 </style>

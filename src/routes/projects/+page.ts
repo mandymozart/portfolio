@@ -4,7 +4,7 @@ export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 	const client = createClient({ fetch, cookies });
 
 	const projects = await client.getAllByType('project');
-	return { items: projects, title: "Projects" }
+	return { projects: projects }
 
 }
 

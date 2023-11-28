@@ -55,16 +55,18 @@
 			"contract": {
 				"type": "Select",
 				"config": {
+					"label": "contract",
+					"placeholder": "",
 					"options": [
 						"Contract",
 						"FullTime",
 						"PartTime",
 						"SelfEmployed",
 						"Freelance",
-						"Internship"
+						"Internship",
+						"Founder"
 					],
-					"default_value": "Contract",
-					"label": "contract"
+					"default_value": "Contract"
 				}
 			},
 			"location": {

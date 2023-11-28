@@ -1,17 +1,33 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+
+	import '$lib/assets/scss/global.scss';
 	import Clouds from '$lib/components/Clouds/Clouds.svelte';
 	import NavMenu from '$lib/components/NavMenu/NavMenu.svelte';
-	import '$lib/index.scss';
 	import { repositoryName } from '$lib/prismicio';
 	import { onHydrated, theme } from '$lib/stores/theme';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
-	import '@splidejs/svelte-splide/css';
+
 	import { onMount } from 'svelte';
 	import 'uno.css';
 
-	onMount(() => onHydrated());
+	import { preloadCode } from '$app/navigation';
+	import { navItems } from '$lib/params.js';
+	import { isMenuOpen } from '$lib/stores/store';
+	import { fade } from 'svelte/transition';
+
+	export let data;
+
+	const transitionIn = { delay: 150, duration: 150 };
+	const transitionOut = { duration: 100 };
+
+	export const prerender = true;
+
+	onMount(() => {
+		onHydrated();
+		const navRoutes = navItems.map((item) => item.route);
+		preloadCode(...navRoutes);
+	});
 </script>
 
 <svelte:head>
@@ -28,16 +44,18 @@
 	{/if}
 </svelte:head>
 <Clouds />
-<div class={`body contents ${$theme ? 'theme-light' : 'theme-light'}`}>
-	<a
-		href={`${base}/`}
-		class="home font-mono row-center font-mono cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms]"
-		>Home</a
-	>
+<div
+	class={`body contents layout ${$theme ? 'theme-light' : 'theme-light'}`}
+	class:open={$isMenuOpen}
+>
 	<NavMenu />
-	<div class="content"><slot /></div>
-	<div class="sidebar"></div>
+	{#key data.path}
+		<main id="main" tabindex="-1" in:fade={transitionIn} out:fade={transitionOut} class="content">
+			<slot />
+		</main>
+	{/key}
 </div>
+
 <PrismicPreview {repositoryName} />
 
 <style lang="scss">
@@ -46,21 +64,9 @@
 		flex-direction: column;
 		flex: 1;
 		padding: 0px 0px;
-	}
-	.home {
-		position: fixed;
-		bottom: 2rem;
-		left: 6rem;
-		z-index: 10;
-		text-decoration: none;
-	}
-	.sidebar {
-		width: 4rem;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		border-left: 1px solid black;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
 	}
 	.body {
 		margin: 0px;
@@ -74,20 +80,5 @@
 		letter-spacing: 1px;
 
 		min-height: 100vh;
-	}
-
-	:global(p) {
-		margin: 0px;
-	}
-
-	:global(h1, h2, h3, h4, h5, h6) {
-		margin: 0;
-	}
-	:global(a) {
-		color: var(--main);
-		&:hover {
-			color: red;
-			background-color: hsla(0, 0%, 100%);
-		}
 	}
 </style>

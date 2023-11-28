@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { NavBar } from '$lib/params';
 
 	import { base } from '$app/paths';
+	import { navItems } from '$lib/params';
 
 	let currentRoute = '/';
 
@@ -13,19 +13,13 @@
 			// console.log(currentRoute);
 		}
 	}
-
-	const items = [
-		{ title: NavBar.resume, to: '/resume', icon: 'i-carbon-result' },
-		{ title: NavBar.career, to: '/experience', icon: 'i-carbon-development' },
-		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube' }
-	];
 </script>
 
 <div class="nav-menu">
 	<nav class="flex flex-row items-center text-sm">
 		<div class="flex flex-row flex-1 self-center justify-center">
-			{#each items as item}
-				<a href={`${base}${item.to}`} class="nav-menu-item text-[var(--secondary-text)]">
+			{#each navItems as item}
+				<a href={`${base}${item.route}`} class="nav-menu-item text-[var(--secondary-text)]">
 					<span class="nav-menu-item-label font-mono">{item.title}</span>
 				</a>
 			{/each}

@@ -5,7 +5,7 @@
 	import { PrismicImage } from '@prismicio/svelte';
 
 	export let data;
-	const { items, title } = data;
+	const { projects, collaborators } = data;
 
 	let uid: string = '';
 
@@ -14,15 +14,15 @@
 	};
 </script>
 
-<CommonPage {title} breadcrumbs={[{ label: title }]}>
-	{#if items.length === 0}
+<CommonPage title={'Projects'} breadcrumbs={[{ label: 'Projects' }]}>
+	{#if projects.length === 0}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
 		<div class="preview-list">
-			{#each items as project}
+			{#each projects as project}
 				{#if project.data.images[0]?.image}
 					<div class:active={uid === project.uid} class:preview={true}>
 						<PrismicImage field={project.data.images[0].image} class={'preview-image'} />
@@ -31,7 +31,7 @@
 			{/each}
 		</div>
 		<div class="project-list">
-			{#each items as project}
+			{#each projects as project}
 				<div
 					on:mouseover={() => handleMouseOver(project.uid)}
 					role="listitem"

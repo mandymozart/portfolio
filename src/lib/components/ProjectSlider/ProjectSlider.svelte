@@ -1,67 +1,64 @@
 <script lang="ts">
-	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import Chip from '../Chip/Chip.svelte';
+	import { base } from '$app/paths';
+	import Swipe from '$lib/components/Swiper/Swipe.svelte';
+	import SwipeItem from '$lib/components/Swiper/SwipeItem.svelte';
+	import VideoReaction from '$lib/components/Videos/VideoReaction.svelte';
+	import { PrismicImage, PrismicRichText } from '@prismicio/svelte';
+	import type { ProjectDocument } from '../../../prismicio-types';
 
-	export let project: any;
+	export let project: ProjectDocument | undefined;
 	const screenshots = project?.data.images ?? [];
 </script>
 
-<div class="flex flex-col items-center overflow-x-hiddenw-full h-screen">
-	{#if project === undefined}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<p class="font-300">Could not load project data...</p>
-		</div>
-	{:else}
-		<Splide aria-label="Project Slideshow" class="h-screen ">
+{#if project === undefined}
+	<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
+		<p class="font-300">Could not load project data...</p>
+	</div>
+{:else}
+	<a href={`${base}/projects/${project.uid}`}>
+		<Swipe>
 			{#if screenshots.length > 0}
 				{#each screenshots as item}
-					<SplideSlide class=" flex items-center justify-center h-screen">
+					<SwipeItem>
 						<PrismicImage class="screenshot screenshot--desktop w-full" field={item.image} />
-						{#if item.image.mobile}{/if}
-					</SplideSlide>
+					</SwipeItem>
 				{/each}
 			{/if}
-		</Splide>
-		<div class="sidebar font-mono">
+		</Swipe>
+		<div class="overlay font-mono">
 			<div class="info">
-				<div class="title font-mono">
+				<h3 class="title font-mono">
 					{project.data.name} / {project.data.type}
-				</div>
+				</h3>
 				<div class="description">
 					<PrismicRichText field={project.data.description} />
 				</div>
-				<div class="tags">
-					{#each project.tags as tag}
-						<Chip>{tag}</Chip>
-					{/each}
-				</div>
 			</div>
 		</div>
-		<div
-			class="link font-mono row-center font-mono cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms]"
-		>
-			{#if project.data.link}
-				<PrismicLink field={project.data.link}>Visit project</PrismicLink>
-			{/if}
-		</div>
-	{/if}
-</div>
+		{#if project.data.videoid}
+			<div class="video-reaction">
+				<VideoReaction videoid={project.data.videoid} />
+			</div>
+		{/if}
+	</a>
+{/if}
 
 <style lang="scss">
 	.project-info {
 		padding: 6rem;
 	}
-	.sidebar {
+	.overlay {
 		position: absolute;
-		top: 1rem;
-		left: 5rem;
-		right: 50vw;
+		left: 4rem;
+		top: 0;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+		.info {
+			padding: 2rem;
+		}
 	}
 	.link {
-		position: absolute;
-		bottom: 2rem;
-		right: 6rem;
 		text-align: right;
 		a {
 			text-decoration: none;
@@ -70,8 +67,16 @@
 			background: white;
 		}
 	}
+	h3 {
+		margin-bottom: 3rem;
+	}
 	p {
 		margin-bottom: 2rem;
+	}
+	a {
+		&:hover {
+			background: none;
+		}
 	}
 	:global(.screenshot) {
 		max-height: 100vh;
@@ -81,9 +86,6 @@
 		@media (max-width: 1350px) {
 		}
 		@media (max-width: 850px) {
-			// &.screenshot--desktop {
-			// 	display: none;
-			// }
 		}
 	}
 </style>

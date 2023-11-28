@@ -6,7 +6,34 @@ export async function load({ fetch, cookies, params }: { fetch: any, cookies: an
 
 	if (params.uid) {
 		const project = await client.getByUID('project', params.uid);
-		return { project };
+		const collaborators = await client.getAllByType('collaborator');
+		const clients = await client.getAllByType('client');
+		const allSkills = await client.getAllByType('skill');
+
+		// partners
+		let partners: any[] = [];
+		project.data.partners.forEach((p) =>{
+			let partner = collaborators.find(c => { 
+				if(p.partner.uid === c.uid) return true; else  return false
+			})
+			if(partner) partners.push(partner)
+		})
+		project.data.partners.forEach((p) =>{
+			let partner = clients.find(c => { 
+				if(p.partner.uid === c.uid) return true; else  return false
+			})
+			if(partner) partners.push(partner)
+		})
+		console.log(partners)
+		// skills
+		let skills: any[] = [];
+		project.data.skills.forEach((s) =>{
+			let skill = allSkills.find(aS => { 
+				if(aS.uid === s.skill.uid) return aS; else  return false
+			})
+			if(skill) skills.push(skill)
+		})
+		return { project, collaborators, partners, skills };
 	}
 
 }

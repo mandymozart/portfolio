@@ -55,9 +55,6 @@
 	"dependencies": {
 		"@prismicio/client": "^7.3.1",
 		"@prismicio/svelte": "^1.0.2",
-		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
-		"@splidejs/splide-extension-intersection": "^0.2.0",
-		"@splidejs/splide-extension-video": "^0.8.0",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"dayjs": "^1.11.10",
 		"three": "^0.158.0",

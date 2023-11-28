@@ -65,12 +65,11 @@
 					"placeholder": ""
 				}
 			},
-			"video": {
-				"type": "Link",
+			"video_id": {
+				"type": "Text",
 				"config": {
-					"label": "video",
-					"placeholder": "Walkthrough Video",
-					"select": "media"
+					"label": "Video ID",
+					"placeholder": "(video id for external storage)"
 				}
 			},
 			"transcript": {
@@ -104,6 +103,38 @@
 										"height": 540
 									}
 								]
+							}
+						}
+					}
+				}
+			},
+			"skills": {
+				"type": "Group",
+				"config": {
+					"label": "Skills",
+					"fields": {
+						"skill": {
+							"type": "Link",
+							"config": {
+								"label": "skill",
+								"select": "document",
+								"customtypes": ["skill"]
+							}
+						}
+					}
+				}
+			},
+			"partners": {
+				"type": "Group",
+				"config": {
+					"label": "Partners",
+					"fields": {
+						"partner": {
+							"type": "Link",
+							"config": {
+								"label": "Partner",
+								"select": "document",
+								"customtypes": ["client", "collaborator"]
 							}
 						}
 					}

@@ -15,7 +15,6 @@
 			field={project.data.images[0].image.mobile}
 		/>
 	</div>
-
 	<div class="industry">{project.data.industry}</div>
 	<div class="type">{project.data.type}</div>
 </a>
@@ -35,6 +34,9 @@
 			img {
 				width: 100%;
 			}
+		}
+		&:hover {
+			background: transparent;
 		}
 
 		@media (max-width: 1350px) {

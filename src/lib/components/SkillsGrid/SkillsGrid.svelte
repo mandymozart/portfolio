@@ -3,7 +3,6 @@
 	import SkillItem from './SkillItem.svelte';
 
 	export let skills: any[];
-	console.log(skills);
 	let textOnly: boolean = false;
 	const toggleDisplay = () => {
 		textOnly = !textOnly;
@@ -12,9 +11,9 @@
 
 <Header title={'Skills'} />
 <div class="skill-list {textOnly ? 'textOnly' : ''}">
-	<button on:click={() => toggleDisplay()}
+	<!-- <button on:click={() => toggleDisplay()}
 		>{#if textOnly}List{:else}Text{/if}</button
-	>
+	> -->
 	{#each skills as skill}
 		<SkillItem {skill} {textOnly} />
 	{/each}

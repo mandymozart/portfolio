@@ -1,43 +1,66 @@
 <script lang="ts">
 	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
-	import Breadcrumbs from '../Breadcrumbs/Breadcrumbs.svelte';
-	import Chip from '../Chip/Chip.svelte';
-	import Header from '../Header/Header.svelte';
+	import type {
+		ClientDocument,
+		CollaboratorDocument,
+		ProjectDocument,
+		SkillDocument
+	} from '../../../prismicio-types';
+	import CommonPage from '../CommonPage.svelte';
+	import SkillItem from '../ExperiencesGrid/SkillItem.svelte';
+	import PartnerItem from '../Partner/PartnerItem.svelte';
 
-	export let project: any;
+	export let project: ProjectDocument;
+	export let skills: SkillDocument[] | undefined;
+	export let partners: CollaboratorDocument[] | ClientDocument[] | undefined;
 	const screenshots = project?.data.images ?? [];
 </script>
 
-<div class="body w-full">
-	{#if project === undefined}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<p class="font-300">Could not load project data...</p>
-		</div>
-	{:else}
-		<Breadcrumbs
-			breadcrumbs={[
-				{
-					path: '/projects',
-					label: 'Projects'
-				},
-				{
-					label: project.data.name
-				}
-			]}
-		/>
-		<Header title={project.data.name}>{project.data.industry} / {project.data.type}</Header>
-		<section class="section-text font-mono">
-			<div class="info">
-				<div class="description">
-					<PrismicRichText field={project.data.description} />
-				</div>
+{#if project === undefined}
+	<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
+		<p class="font-300">Could not load project data...</p>
+	</div>
+{:else}
+	<CommonPage
+		title={project.data.name?.toString()}
+		subtitle="{project.data.industry} / {project.data.type}"
+		breadcrumbs={[
+			{ path: '/projects', label: 'Projects' },
+			{ label: project.data.name ? project.data.name?.toString() : 'Untitled' }
+		]}
+	>
+		<div class="info font-mono">
+			<div class="description">
+				<PrismicRichText field={project.data.description} />
 				<div class="tags">
 					{#each project.tags as tag}
-						<Chip>{tag}</Chip>
+						#{tag}&nbsp;
 					{/each}
 				</div>
 			</div>
-		</section>
+
+			{#if partners?.length > 0}
+				<div class="partners">
+					<h4>Partners</h4>
+					<div class="partner-list">
+						{#each partners as partner}
+							<PartnerItem {partner} />
+						{/each}
+					</div>
+				</div>
+			{/if}
+
+			{#if skills?.length > 0}
+				<div class="skills">
+					<h4>Tech Stack</h4>
+					<div class="skill-list">
+						{#each skills as skill}
+							<SkillItem {skill} />
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</div>
 		{#if screenshots.length > 0}
 			{#each screenshots as item}
 				<section>
@@ -57,11 +80,11 @@
 				<PrismicLink field={project.data.link}>Visit project</PrismicLink>
 			{/if}
 		</div>
-	{/if}
-</div>
+	</CommonPage>
+{/if}
 
 <style lang="scss">
-	.body h3.title {
+	h3.title {
 		height: 4rem;
 		position: sticky;
 		padding: 0 2rem;
@@ -77,13 +100,10 @@
 	.project-info {
 		padding: 6rem;
 	}
-	.section-text {
-		padding: 2rem 2rem;
-	}
 	.link {
 		position: fixed;
 		bottom: 2rem;
-		right: 6rem;
+		right: 2rem;
 		text-align: right;
 		background: white;
 		a {
@@ -93,13 +113,34 @@
 			background: white;
 		}
 	}
-	.tags {
-		margin-top: 2rem;
+	.info {
+		display: grid;
+		width: calc(100% - 4rem);
+		grid-template-columns: 3fr 1fr 1fr 1fr;
+		.description {
+			padding: 2rem;
+			.tags {
+			}
+		}
+		.skills,
+		.partners {
+			padding: 2rem;
+			h4 {
+				margin-bottom: 2rem;
+			}
+			.skill-list,
+			.partner-list {
+				align-items: center;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+			}
+		}
 	}
 	p {
 		margin-bottom: 2rem;
 	}
-	:global(.screenshot) {
+	.screenshot {
 		width: 100%;
 		display: block;
 

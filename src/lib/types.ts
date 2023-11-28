@@ -20,7 +20,7 @@ export enum ContractType {
 
 export interface Breadcrumb {
 	path?: string; 
-	label: string
+	label: string;
 }
 
 export type Asset = string | { light: string; dark: string };

@@ -6,10 +6,11 @@
 
 <TabTitle bind:title />
 <div class="body">
-		<slot />
+	<slot />
 </div>
+
 <style lang="scss">
 	.body {
-		margin: 0 4rem;
+		margin: 0 0 0 4rem;
 	}
 </style>

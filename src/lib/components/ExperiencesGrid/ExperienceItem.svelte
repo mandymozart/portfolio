@@ -1,10 +1,26 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import dayjs from 'dayjs';
-	import Chip from '../Chip/Chip.svelte';
-	export let experience;
+	import type { ExperienceDocument, ProjectDocument } from '../../../prismicio-types';
+	export let experience: ExperienceDocument;
+	export let projects: ProjectDocument[] | undefined;
+	const getProject = (uid: string) => {
+		if (projects) {
+			let pro: ProjectDocument | undefined = projects.find((p) => {
+				if (p.uid === uid) {
+					return p;
+				} else {
+					return;
+				}
+			});
+			if (pro) return pro;
+		} else {
+			return undefined;
+		}
+	};
 </script>
 
-<section class="font-mono flex items-center gap-lg">
+<div class="item font-mono">
 	<div class="logo">
 		<img src={experience.data.logo.url} alt={experience.data.logo.alt} />
 	</div>
@@ -13,24 +29,49 @@
 			>{dayjs(experience.data.startdate).format('YYYY')}&mdash;{dayjs(
 				experience.data.enddate
 			).format('YYYY')}</span
-		><br />
+		>
+		/ {experience.data.contract}<br />
+
 		<span>{experience.data.name}</span>
 		<div class="description">{experience.data.shortdescription}</div>
+	</div>
+	<div class="related">
 		{#each experience.data.projects as project}
-			<Chip>{project.project.uid}</Chip>
+			{#if getProject(project.project.uid)}
+				<a href="{base}/projects/{project.project.uid}"
+					>{getProject(project.project.uid)?.data.name}</a
+				>,
+			{/if}
 		{/each}
 	</div>
-</section>
+</div>
 
 <style lang="scss">
-	section {
-		margin-bottom: 1rem;
+	.item {
+		display: grid;
+		grid-template-columns: 1fr 3fr 2fr;
 	}
 	.logo {
+		&:after {
+			background: black;
+			border-radius: 2rem;
+		}
+		padding: 2rem 4rem;
+		border-right: 1px solid black;
+		height: 10rem;
 		img {
-			width: 12rem;
-			height: 12rem;
+			width: 100%;
+			height: auto;
 			object-fit: contain;
+		}
+	}
+	.meta {
+		padding: 2rem;
+	}
+	.related {
+		padding: 2rem;
+		a img {
+			width: 100% !important;
 		}
 	}
 </style>

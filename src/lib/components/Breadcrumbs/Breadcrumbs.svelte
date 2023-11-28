@@ -1,25 +1,36 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { Breadcrumb } from '$lib/types';
-	export let breadcrumbs: Array<Breadcrumb>;
+	export let breadcrumbs: Array<Breadcrumb> | [];
 </script>
 
 <div class="breadcrumbs font-mono">
-	<a href="{base}/">Home</a>
-	&gt;
+	<div>
+		<a href="{base}/">Home </a> &gt;
+	</div>
+
 	{#each breadcrumbs as breadcrumb}
 		{#if breadcrumb.path}
-			<a href="{base}{breadcrumb.path}">{breadcrumb.label}</a>
-			&gt;&nbsp;
+			<div>
+				<a href="{base}{breadcrumb.path}">{breadcrumb.label}</a> &gt;
+			</div>
 		{:else}
-			{breadcrumb.label}
+			<div>
+				{breadcrumb.label}
+			</div>
 		{/if}
 	{/each}
 </div>
 
 <style lang="scss">
 	.breadcrumbs {
-		padding: 1rem 2rem 0 2rem;
 		text-transform: capitalize;
+		display: grid;
+		height: 4rem;
+		width: calc(100% - 4rem);
+		grid-template-columns: repeat(6, 1fr);
+		> div {
+			padding: 2rem 2rem 1rem 2rem;
+		}
 	}
 </style>

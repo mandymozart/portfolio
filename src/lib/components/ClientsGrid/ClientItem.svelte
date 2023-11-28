@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let client: any;
-	console.log(client);
 </script>
 
 <div>

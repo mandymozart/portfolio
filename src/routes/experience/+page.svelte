@@ -3,22 +3,33 @@
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import ExperiencesGrid from '$lib/components/ExperiencesGrid/ExperiencesGrid.svelte';
 	import SkillsGrid from '$lib/components/SkillsGrid/SkillsGrid.svelte';
+	import type {
+		ClientDocument,
+		ExperienceDocument,
+		ProjectDocument,
+		SkillDocument
+	} from '../../prismicio-types';
 
-	export let data: { experiences: any[]; skills: any[]; clients: any[] };
-	const { experiences, skills, clients } = data;
+	export let data: {
+		experiences: ExperienceDocument[];
+		skills: SkillDocument[];
+		clients: ClientDocument[];
+		projects: ProjectDocument[];
+	};
+	const { experiences, skills, clients, projects } = data;
 </script>
 
 <CommonPage title={'Experiences'} breadcrumbs={[{ label: 'Experiences' }]}>
-	<ExperiencesGrid {experiences} />
-	<SkillsGrid {skills} />
+	<ExperiencesGrid {experiences} {projects} />
 	<ClientsGrid {clients} />
+	<SkillsGrid {skills} />
 </CommonPage>
 
 <style lang="scss">
 	h3.title {
 		height: 4rem;
 		position: sticky;
-		padding: 0 2rem;
+		padding: 0;
 		border-bottom: 1px solid black;
 		display: flex;
 		align-items: center;

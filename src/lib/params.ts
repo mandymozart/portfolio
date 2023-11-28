@@ -9,12 +9,19 @@ import { Icons } from './utils';
 
 export const TITLE_SUFFIX = 'Tilman Porschütz <Frontend Developer>';
 
-export const NavBar = {
+const NavBar = {
 	home: 'Home',
 	personal: 'Projects',
 	career: 'Experiences',
 	resume: 'Resume',
 };
+
+export const navItems = [
+	{ title: NavBar.resume, route: '/resume' },
+	{ title: NavBar.career, route: '/experience' },
+	{ title: NavBar.personal, route: '/projects' },
+	{ title: NavBar.home, route: '/'},
+];
 
 export const getPlatfromIcon = (platform: Platform): Icons => {
 	switch (platform) {

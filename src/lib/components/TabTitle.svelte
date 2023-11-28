@@ -2,7 +2,7 @@
 	import { TITLE_SUFFIX } from '$lib/params';
 	import { useTitle } from '$lib/utils/helpers';
 
-	export let title: string;
+	export let title: string | undefined;
 </script>
 
 <svelte:head>

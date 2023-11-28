@@ -3,7 +3,6 @@
 	import ClientItem from './ClientItem.svelte';
 
 	export let clients: any[];
-	console.log(clients);
 </script>
 
 <Header title={'Clients'} />
