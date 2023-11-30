@@ -57,7 +57,7 @@
 			border-radius: 2rem;
 		}
 		padding: 2rem 4rem;
-		border-right: 1px solid black;
+		/* border-right: 1px solid black; */
 		height: 10rem;
 		img {
 			width: 100%;

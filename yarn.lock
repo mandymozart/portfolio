@@ -590,6 +590,17 @@
     tiny-glob "^0.2.9"
     undici "~5.26.2"
 
+"@sveltejs/package@^2.0.2":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@sveltejs/package/-/package-2.2.3.tgz#bcfc360c726a9cdcbaa189e8b997147a1e827db3"
+  integrity sha512-iZEC5qw+2RIjfIAHR3O+IeokJIjVM/ieoxPxj6YmZCwu5JKFADtC4jzjSUJ7GkCMUQ4HqE7u4/3cCxXBocxi8A==
+  dependencies:
+    chokidar "^3.5.3"
+    kleur "^4.1.5"
+    sade "^1.8.1"
+    semver "^7.5.3"
+    svelte2tsx "~0.6.19"
+
 "@sveltejs/vite-plugin-svelte-inspector@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte-inspector/-/vite-plugin-svelte-inspector-1.0.4.tgz#c99fcb73aaa845a3e2c0563409aeb3ee0b863add"
@@ -609,6 +620,11 @@
     magic-string "^0.30.3"
     svelte-hmr "^0.15.3"
     vitefu "^0.2.4"
+
+"@threlte/core@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@threlte/core/-/core-6.1.1.tgz#56fd812848124439face564528b2d4bc42912ea5"
+  integrity sha512-bEsZIZzmP6vOg4bWbUg5EKxEid3KhO6YZ69bQM1NrtSC467KxXMxNorPGiAr2e5Z0L3w5++aRoSKmYjeUMLZ0g==
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -1479,6 +1495,11 @@ decode-named-character-reference@^1.0.0:
   integrity sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==
   dependencies:
     character-entities "^2.0.0"
+
+dedent-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dedent-js/-/dedent-js-1.0.1.tgz#bee5fb7c9e727d85dffa24590d10ec1ab1255305"
+  integrity sha512-OUepMozQULMLUmhxS95Vudo0jb0UchLimi3+pQ2plj61Fcy8axbP9hbiD4Sz6DPqn6XG3kfmziVfQ1rSys5AJQ==
 
 deep-is@^0.1.3:
   version "0.1.4"
@@ -3504,7 +3525,7 @@ parseurl@~1.3.3:
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
   integrity sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
 
-pascal-case@^3.1.2:
+pascal-case@^3.1.1, pascal-case@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/pascal-case/-/pascal-case-3.1.2.tgz#b48e0ef2b98e205e7c1dae747d0b1508237660eb"
   integrity sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==
@@ -4244,6 +4265,29 @@ svelte-preprocess@^5.0.4:
     sorcery "^0.11.0"
     strip-indent "^3.0.0"
 
+svelte-use-helpers@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/svelte-use-helpers/-/svelte-use-helpers-0.0.2.tgz#13c6c67202bc9bec127bb7756517b32329363837"
+  integrity sha512-Hk12+M4cjTFXnoHy0VXQp9lnv9pGSEE/aF/bo2ZxPcPl3RA7HR7c6zeZ/wM2loxhNe5nDawMKNpod5bR7rf8/Q==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+
+svelte-use-helpers@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/svelte-use-helpers/-/svelte-use-helpers-0.0.4.tgz#d050f4c5037421b5be20be4ed0add88cddd32370"
+  integrity sha512-h7EJSDRAganaMqEgkEKK02VFeo0XagTwVTE/152hPlHck4fhAQCGwL70THZwbDqyURDupkys+Vtl6QURXuta/Q==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+    svelte-use-helpers "^0.0.2"
+
+svelte2tsx@~0.6.19:
+  version "0.6.27"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.6.27.tgz#5b2c21f38608be51cd32de177722f123e57919e5"
+  integrity sha512-E1uPW1o6VsbRz+nUk3fznZ2lSmCITAJoNu8AYefWSvIwE2pSB01i5sId4RMbWNzfcwCQl1DcgGShCPcldl4rvg==
+  dependencies:
+    dedent-js "^1.0.1"
+    pascal-case "^3.1.1"
+
 svelte@4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-4.2.1.tgz#33d603af4da103a5ad988d7fcc992a87421a1e6e"
@@ -4262,6 +4306,38 @@ svelte@4.2.1:
     locate-character "^3.0.0"
     magic-string "^0.30.0"
     periscopic "^3.1.0"
+
+sveltronics@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/sveltronics/-/sveltronics-0.0.10.tgz#ed80dc03f3847c964583106f215eb876a8343fb2"
+  integrity sha512-UeailXE5yK6I3aUJ0hoJwRXsUeP3zG/12Ge5C7kCDswa+WChQ2+oWaAeBEgNlAbEd3vY2w2u1e5MIxPyLDEarw==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+    sveltronics "^0.0.6"
+
+sveltronics@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/sveltronics/-/sveltronics-0.0.12.tgz#b34b63efffe6d14362d15bf9a506314dff490321"
+  integrity sha512-vfFZr+g5wI4vCLZyKWEUx3Esnqnl9k47OYYOYgztOH+qASOtFF4FKDwgZRNcUlJo+6JNHNrIV304goO+e9biOw==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+    sveltronics "^0.0.10"
+
+sveltronics@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/sveltronics/-/sveltronics-0.0.13.tgz#163042727424750e58deec9bc69a25eea543497e"
+  integrity sha512-24Yi41cuVhLmB2RMyXts6vjWqhBM9dsCuDkDETBXpHKcxnCP/iwTalq9Nz99JA/eXK74PuKF7Z36PeVihVjsXg==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+    sveltronics "^0.0.12"
+
+sveltronics@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/sveltronics/-/sveltronics-0.0.6.tgz#078be7929fa59c06145cd7b386d72db6c894b011"
+  integrity sha512-ss83MrSe6oYxpIN9f5xIIi0mOB++VTNSJd3K7h3l6UnjD6kPSXRXbupVRctVIVgU7p4rLCdCp0MvAnJz+b6RuQ==
+  dependencies:
+    "@sveltejs/package" "^2.0.2"
+    svelte-use-helpers "^0.0.4"
 
 text-table@^0.2.0:
   version "0.2.0"

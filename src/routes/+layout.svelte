@@ -12,6 +12,7 @@
 	import 'uno.css';
 
 	import { preloadCode } from '$app/navigation';
+	import Cursor from '$lib/components/Cursor/Cursor.svelte';
 	import { navItems } from '$lib/params.js';
 	import { isMenuOpen } from '$lib/stores/store';
 	import { fade } from 'svelte/transition';
@@ -53,6 +54,8 @@
 		</main>
 	{/key}
 </div>
+
+<Cursor />
 
 <PrismicPreview {repositoryName} />
 
