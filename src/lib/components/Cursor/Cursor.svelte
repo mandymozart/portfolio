@@ -25,21 +25,4 @@
 </div>
 
 <style lang="scss">
-	.cursor {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: fixed;
-		left: 0;
-		top: 0;
-		pointer-events: none;
-	}
-	.icon-cursor {
-		width: 28px;
-		height: 28px;
-	}
-	.is-blend {
-		mix-blend-mode: exclusion;
-	}
 </style>

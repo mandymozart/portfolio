@@ -1,4 +1,5 @@
 @use "./animation";
+@use "./cursor";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,12 +55,11 @@
 
 body {
 	margin: 0px;
-	background: rgb(255,255,255);
-	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(238,174,202,0.2945553221288515) 50%, rgba(148,187,233,0.3477766106442577) 100%);
+	background: lab(99 0 0 / 0.77) 50%;
+	background: linear-gradient(154deg, lab(55 -13.67 -50.83) 0%, lab(99 0 0 / 0.77) 50%, lab(80 21.83 94.48 / 0.51) 100%);
 	overflow-x: hidden;
-	> div {
-		scroll-snap-align: y mandatory;
-	}
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 * {

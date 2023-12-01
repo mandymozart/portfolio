@@ -5,8 +5,11 @@
 
 	export let slice: Content.FeaturedProjectSlice;
 	export let project: Content.ProjectDocument | undefined;
-	console.log();
+	let scrollY: number;
+	// $: scrollY, console.log(scrollY);
 </script>
+
+<svelte:window bind:scrollY />
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	{#if slice.primary.background.url}

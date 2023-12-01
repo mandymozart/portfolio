@@ -43,10 +43,7 @@
 	{/if}
 </svelte:head>
 <Clouds />
-<div
-	class={`body contents layout ${$theme ? 'theme-light' : 'theme-light'}`}
-	class:open={$isMenuOpen}
->
+<div class={`layout ${$theme ? 'theme-light' : 'theme-light'}`} class:open={$isMenuOpen}>
 	<NavMenu />
 	{#key data.path}
 		<main id="main" tabindex="-1" in:fade={transitionIn} out:fade={transitionOut} class="content">
@@ -69,9 +66,9 @@
 		height: 100vh;
 		overflow: hidden;
 	}
-	.body {
+	.layout {
 		margin: 0px;
-		background-color: var(--main);
+		/* background-color: var(--main); */
 		color: var(--main-text);
 		font-family: var(--text-f);
 		display: flex;

@@ -2,8 +2,12 @@
 	import { base } from '$app/paths';
 	import { fade } from 'svelte/transition';
 
-	export let videoid;
+	export let videoid = 'sample';
+	let duration: number;
+	let currentTime: number;
+	$: currentTime, console.log(duration, currentTime);
 	let video: HTMLVideoElement;
+	export const onEnded: () => void();
 	export let playing = false;
 	export const togglePlay = () => {
 		if (playing) {
@@ -21,11 +25,15 @@
 		<video
 			transition:fade={{ delay: 250, duration: 300 }}
 			bind:this={video}
-			loop
+			bind:currentTime
+			bind:duration
+			on:ended={onEnded}
+			id="video"
 			playsinline
 			class:playing
 		>
 			<source src="{base}/videos/{videoid}.webm" type="video/webm" />
+			<source src="{base}/videos/{videoid}.mov" type="video/webm" />
 			<track default kind="captions" srclang="en" src="{base}/videos/{videoid}.vtt" />
 		</video>
 	{/if}
