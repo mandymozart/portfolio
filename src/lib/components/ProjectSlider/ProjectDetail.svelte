@@ -61,7 +61,8 @@
 		</div>
 		{#if screenshots.length > 0}
 			{#each screenshots as item}
-				<section style="margin-left: 4rem; width: calc(100% - 4rem);">
+				<section style="margin-left: 4rem; width: calc(100% - 4rem); position: relative;">
+					<Grid />
 					{#if item.desktop}
 						<PrismicImage class="screenshot screenshot--desktop" field={item.desktop} />
 					{/if}

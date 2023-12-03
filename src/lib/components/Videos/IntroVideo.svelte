@@ -7,7 +7,7 @@
 	let currentTime: number;
 	$: currentTime, console.log(duration, currentTime);
 	let video: HTMLVideoElement;
-	export let onEnded: () => void = () => {
+	export let onEnded: () => {
 		playing = false;
 	};
 	export let playing = false;

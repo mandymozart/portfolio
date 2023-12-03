@@ -16,6 +16,6 @@
 
 <style lang="scss">
 	.experience-list {
-		width: calc(100% - 4rem);
+		width: 100%;
 	}
 </style>

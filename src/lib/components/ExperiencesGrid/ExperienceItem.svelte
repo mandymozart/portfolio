@@ -58,6 +58,12 @@
 		position: relative;
 		margin-left: 4rem;
 		width: calc(100% - 4rem);
+		@media (max-width: 1350px) {
+			grid-template-columns: 2fr 1fr 1fr;
+		}
+		@media (max-width: 850px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	.logo {
 		&:after {
