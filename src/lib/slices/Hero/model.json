@@ -64,6 +64,20 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "grid": {
+          "type": "Select",
+          "config": {
+            "label": "grid",
+            "placeholder": "",
+            "options": [
+              "default",
+              "fadeIn",
+              "fadeOut",
+              "none"
+            ],
+            "default_value": "default"
+          }
         }
       },
       "items": {}
@@ -119,6 +133,20 @@
             "label": "Background",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "grid": {
+          "type": "Select",
+          "config": {
+            "label": "grid",
+            "placeholder": "",
+            "options": [
+              "default",
+              "fadeIn",
+              "fadeOut",
+              "none"
+            ],
+            "default_value": "default"
           }
         }
       },
@@ -183,6 +211,19 @@
             "label": "Background",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "grid": {
+          "type": "Select",
+          "config": {
+            "label": "grid",
+            "placeholder": "",
+            "options": [
+              "default",
+              "fadeIn",
+              "fadeOut",
+              "none"
+            ]
           }
         }
       },

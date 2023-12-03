@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Breadcrumb } from '$lib/types';
 	import Breadcrumbs from './Breadcrumbs/Breadcrumbs.svelte';
-	import Grid from './Grid/Grid.svelte';
+	import Footer from './Footer/Footer.svelte';
 	import Header from './Header/Header.svelte';
 	import TabTitle from './TabTitle.svelte';
 
@@ -17,15 +17,15 @@
 	<Header {title} {subtitle}></Header>
 
 	<slot />
+	<Footer />
 </div>
-<Grid />
 
 <style lang="scss">
 	.body {
-		margin: 0 0 8rem 4rem;
+		font-family: var(--font);
 		position: absolute;
 		top: 0;
-		width: calc(100% - 4rem);
+		width: 100%;
 		overflow: hidden;
 	}
 </style>

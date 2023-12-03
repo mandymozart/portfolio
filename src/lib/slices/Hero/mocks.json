@@ -75,6 +75,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"grid": {
+				"__TYPE__": "FieldContent",
+				"value": "none",
+				"type": "Select"
 			}
 		},
 		"items": []
@@ -132,6 +137,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"grid": {
+				"__TYPE__": "FieldContent",
+				"value": "default",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -173,7 +183,6 @@
 				"type": "Text"
 			},
 			"illustration": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
@@ -191,10 +200,12 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"background": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
@@ -212,7 +223,15 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"grid": {
+				"__TYPE__": "FieldContent",
+				"value": "fadeOut",
+				"type": "Select"
 			}
 		},
 		"items": [

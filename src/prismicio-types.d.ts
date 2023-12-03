@@ -97,6 +97,17 @@ interface ClientDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	name: prismic.KeyTextField;
+
+	/**
+	 * Link field in *Client*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: client.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
 }
 
 /**
@@ -360,7 +371,12 @@ export type ExperienceDocument<Lang extends string = string> = prismic.PrismicDo
 	Lang
 >;
 
-type HomeDocumentDataSlicesSlice = ProcessSlice | FeaturedProjectSlice | ContactSlice | HeroSlice;
+type HomeDocumentDataSlicesSlice =
+	| TransitionSlice
+	| ProcessSlice
+	| FeaturedProjectSlice
+	| ContactSlice
+	| HeroSlice;
 
 /**
  * Content for Home documents
@@ -502,6 +518,26 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
  */
 export interface ProjectDocumentDataImagesItem {
 	/**
+	 * desktop field in *Project → images*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.images[].desktop
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	desktop: prismic.ImageField<never>;
+
+	/**
+	 * mobile field in *Project → images*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.images[].mobile
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	mobile: prismic.ImageField<never>;
+
+	/**
 	 * image field in *Project → images*
 	 *
 	 * - **Field Type**: Image
@@ -509,7 +545,7 @@ export interface ProjectDocumentDataImagesItem {
 	 * - **API ID Path**: project.images[].image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	image: prismic.ImageField<'mobile' | 'thumbnail'>;
+	image: prismic.ImageField<never>;
 }
 
 /**
@@ -780,6 +816,17 @@ export interface ContactSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	description: prismic.KeyTextField;
+
+	/**
+	 * grid field in *Contact → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: contact.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
 }
 
 /**
@@ -857,6 +904,17 @@ export interface FeaturedProjectSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	videoid: prismic.KeyTextField;
+
+	/**
+	 * grid field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: featured_project.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
 }
 
 /**
@@ -962,6 +1020,17 @@ export interface HeroSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background: prismic.ImageField<never>;
+
+	/**
+	 * grid field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: hero.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
 }
 
 /**
@@ -1040,6 +1109,17 @@ export interface HeroSliceHeroSectionPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background: prismic.ImageField<never>;
+
+	/**
+	 * grid field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: hero.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
 }
 
 /**
@@ -1128,6 +1208,16 @@ export interface HeroSliceSectionPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background: prismic.ImageField<never>;
+
+	/**
+	 * grid field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none'>;
 }
 
 /**
@@ -1180,6 +1270,17 @@ export interface ProcessSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	description: prismic.RichTextField;
+
+	/**
+	 * grid field in *Process → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: process.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
 }
 
 /**
@@ -1264,6 +1365,69 @@ type ProcessSliceVariation = ProcessSliceDefault;
  */
 export type ProcessSlice = prismic.SharedSlice<'process', ProcessSliceVariation>;
 
+/**
+ * Primary content in *Transition → Primary*
+ */
+export interface TransitionSliceDefaultPrimary {
+	/**
+	 * image field in *Transition → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: transition.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * video_id field in *Transition → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: transition.primary.video_id
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	video_id: prismic.KeyTextField;
+
+	/**
+	 * grid field in *Transition → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: transition.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
+}
+
+/**
+ * Default variation for Transition Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TransitionSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<TransitionSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Transition*
+ */
+type TransitionSliceVariation = TransitionSliceDefault;
+
+/**
+ * Transition Shared Slice
+ *
+ * - **API ID**: `transition`
+ * - **Description**: Transition
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TransitionSlice = prismic.SharedSlice<'transition', TransitionSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -1318,7 +1482,11 @@ declare module '@prismicio/client' {
 			ProcessSliceDefaultPrimary,
 			ProcessSliceDefaultItem,
 			ProcessSliceVariation,
-			ProcessSliceDefault
+			ProcessSliceDefault,
+			TransitionSlice,
+			TransitionSliceDefaultPrimary,
+			TransitionSliceVariation,
+			TransitionSliceDefault
 		};
 	}
 }

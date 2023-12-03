@@ -19,5 +19,6 @@
 		h4 {
 			margin-bottom: 2rem;
 		}
+		margin-bottom: 4rem;
 	}
 </style>

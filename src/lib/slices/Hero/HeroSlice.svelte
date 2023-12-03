@@ -11,9 +11,11 @@
 	function handleClick() {
 		togglePlay();
 	}
+	console.log('primary', slice.primary);
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+	<Grid grid={slice.primary.grid} />
 	<IntroVideo videoid={slice.primary.videoid} bind:togglePlay bind:playing />
 	<div id="overlay" class:playing>
 		<h1 class="title font-mono">{slice.primary.title}</h1>
@@ -30,36 +32,31 @@
 			>
 		{/if}
 		{#if slice.variation === 'section'}
-			{#if slice.primary.cta}
-				<PrismicLink field={slice.primary.cta} class="font-mono" id="cta"
+			{#if slice.primary.cta?.link_type !== 'Any'}
+				<PrismicLink field={slice.primary.cta} class="font-mono button" id="cta"
 					>{slice.primary.cta_label}</PrismicLink
 				>
 			{/if}
 		{/if}
 	</div>
-
-	<Grid fadeIn={true} />
 </section>
 
 <style lang="scss">
 	section {
 		position: relative;
 		height: 100vh;
-		width: 100vw;
+		width: calc(100% - 4rem);
+		margin-left: 4rem;
 		scroll-snap-align: start;
-		border-top: 1px solid black;
-		&:first-of-type {
-			border-bottom: 1px solid black;
-			border-top: none;
-		}
 		h1 {
 		}
 		#overlay {
 			position: absolute;
-			top: 6rem;
-			left: 6rem;
-			right: 6rem;
-			bottom: 6rem;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 12rem;
 			display: flex;
 			align-items: center;
 			gap: 1rem;
@@ -67,13 +64,23 @@
 			justify-content: center;
 			transition: all 0.7s ease-in-out;
 			transform: translateY(0);
+			.message {
+				text-align: center;
+			}
 			&.playing {
 				opacity: 0;
 				transform: translateY(3rem);
 			}
+			@media (max-width: 1350px) {
+				margin: 6rem;
+			}
+			@media (max-width: 850px) {
+				margin: 2rem;
+			}
 		}
 		button {
-			border: 1px solid black;
+			cursor: pointer;
+			border: 0;
 			border-radius: 2rem;
 			padding: 0.5rem 1rem;
 		}

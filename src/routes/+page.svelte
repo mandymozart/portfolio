@@ -2,6 +2,7 @@
 	import { TITLE_SUFFIX } from '$lib/params';
 	import { useTitle } from '$lib/utils/helpers';
 
+	import Footer from '$lib/components/Footer/Footer.svelte';
 	import ContactSlice from '$lib/slices/Contact/ContactSlice.svelte';
 	import FeaturedProjectSlice from '$lib/slices/FeaturedProject/FeaturedProjectSlice.svelte';
 	import HeroSlice from '$lib/slices/Hero/HeroSlice.svelte';
@@ -13,11 +14,8 @@
 	const { projects, page } = data;
 
 	const getProjectById = (id: string) => {
-		console.log(projects);
-
 		return projects.find((p: ProjectDocument) => p.id === id);
 	};
-	console.log(page.data.slices);
 </script>
 
 <svelte:head>
@@ -41,6 +39,7 @@
 		{/if}
 	{/each}
 {/if}
+<Footer />
 
 <style lang="scss">
 	.sections {

@@ -40,56 +40,33 @@
 <style lang="scss">
 	#overlay {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		left: 2rem;
+		bottom: 2rem;
 		display: flex;
 		align-items: start;
 		gap: 1rem;
 		flex-direction: column;
 		justify-content: flex-end;
 		button {
-			transition: all 0.7s ease-in-out;
+			pointer-events: all;
 			transform: translateY(0);
-			border: 1px solid black;
-			border-radius: 2rem;
-			padding: 0.5rem 1rem;
 			cursor: pointer;
 		}
-
 		&.playing {
 			opacity: 1;
 			button {
-				transform: translateY(2rem) translateX(0);
+				transform: translateY(0) translateX(0);
 			}
 		}
 	}
 	.stage {
-		/* position: absolute; */
-		/* margin: auto;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-		clip-path: 0 0;
-		transform: translatez(0); */
+		pointer-events: none;
 	}
 	video {
 		opacity: 0.1;
-		/* transform: translatez(0);
-		transition: all 2s ease-in-out;
-		transform: translateY(5rem);
-		position: absolute;
-		top: -100%;
-		bottom: -100%;
-		left: -100%;
-		right: -100%;
-		filter: blur(15px);
-		object-fit: cover; */
-		transform: scale(1.06); /* scale up to hide the edge blur */
-		/* margin: auto;
-		min-width: 100%;
-		min-height: 100%; */
+		pointer-events: none;
+		cursor: default;
+		transform: scale(1.06);
 		height: 20rem;
 		&.playing {
 			opacity: 1;

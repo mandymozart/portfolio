@@ -24,7 +24,6 @@ export async function load({ fetch, cookies, params }: { fetch: any, cookies: an
 			})
 			if(partner) partners.push(partner)
 		})
-		console.log(partners)
 		// skills
 		let skills: any[] = [];
 		project.data.skills.forEach((s) =>{

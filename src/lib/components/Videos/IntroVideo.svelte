@@ -7,7 +7,9 @@
 	let currentTime: number;
 	$: currentTime, console.log(duration, currentTime);
 	let video: HTMLVideoElement;
-	export const onEnded: () => void();
+	export let onEnded: () => void = () => {
+		playing = false;
+	};
 	export let playing = false;
 	export const togglePlay = () => {
 		if (playing) {
@@ -33,7 +35,7 @@
 			class:playing
 		>
 			<source src="{base}/videos/{videoid}.webm" type="video/webm" />
-			<source src="{base}/videos/{videoid}.mov" type="video/webm" />
+			<source src="{base}/videos/{videoid}.mov" type={'video/mp4; codecs="hvc1"'} />
 			<track default kind="captions" srclang="en" src="{base}/videos/{videoid}.vtt" />
 		</video>
 	{/if}
@@ -50,7 +52,7 @@
 		transform: translatez(0);
 	}
 	video {
-		opacity: 0.1;
+		opacity: 0;
 		transform: translatez(0);
 		transition: all 2s ease-in-out;
 		transform: translateY(5rem);

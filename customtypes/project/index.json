@@ -86,23 +86,28 @@
 				"config": {
 					"label": "images",
 					"fields": {
+						"desktop": {
+							"type": "Image",
+							"config": {
+								"label": "desktop",
+								"constraint": {},
+								"thumbnails": []
+							}
+						},
+						"mobile": {
+							"type": "Image",
+							"config": {
+								"label": "mobile",
+								"constraint": {},
+								"thumbnails": []
+							}
+						},
 						"image": {
 							"type": "Image",
 							"config": {
 								"label": "image",
 								"constraint": {},
-								"thumbnails": [
-									{
-										"name": "mobile",
-										"width": 1080,
-										"height": 1920
-									},
-									{
-										"name": "thumbnail",
-										"width": 960,
-										"height": 540
-									}
-								]
+								"thumbnails": []
 							}
 						}
 					}

@@ -26,6 +26,14 @@
 					"label": "Name",
 					"placeholder": ""
 				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "Link",
+					"placeholder": "",
+					"select": null
+				}
 			}
 		}
 	}

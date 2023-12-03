@@ -3,7 +3,11 @@ import { createClient } from '$lib/prismicio';
 export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 	const client = createClient({ fetch, cookies });
 
-	const projects = await client.getAllByType('project');
+	const projects = await client.getAllByType('project',{orderings: [
+		{
+		  field: 'my.project.toDate',
+		  direction: 'desc',
+		}]});
 	return { projects: projects }
 
 }

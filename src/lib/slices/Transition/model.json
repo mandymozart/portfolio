@@ -1,0 +1,48 @@
+{
+  "id": "transition",
+  "type": "SharedSlice",
+  "name": "Transition",
+  "description": "Transition",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "video_id": {
+          "type": "Text",
+          "config": {
+            "label": "video_id",
+            "placeholder": ""
+          }
+        },
+        "grid": {
+          "type": "Select",
+          "config": {
+            "label": "grid",
+            "placeholder": "",
+            "options": [
+              "default",
+              "fadeIn",
+              "fadeOut",
+              "none"
+            ],
+            "default_value": "default"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -12,8 +12,8 @@
 	data-slice-variation={slice.variation}
 	class="font-mono"
 >
+	<Grid grid={slice.primary.grid} />
 	<div class="inner">
-		<Grid />
 		<h3>{slice.primary.title}</h3>
 		<div class="description">
 			<PrismicRichText field={slice.primary.description} />
@@ -29,12 +29,10 @@
 <style lang="scss">
 	section {
 		position: relative;
-		height: 100vh;
-		width: 100%;
+		min-height: 100vh;
+		width: calc(100% - 4rem);
+		margin-left: 4rem;
 		scroll-snap-align: start;
-		.inner {
-			margin: 6rem 4rem;
-		}
 		h3 {
 			margin: 2rem 2rem;
 		}
@@ -44,6 +42,13 @@
 		.processes {
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
+			@media (max-width: 1350px) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+			@media (max-width: 850px) {
+				grid-template-columns: repeat(1, 1fr);
+				gap: 1rem;
+			}
 		}
 	}
 </style>

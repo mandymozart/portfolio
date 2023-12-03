@@ -5,7 +5,7 @@
 	import { PrismicImage } from '@prismicio/svelte';
 
 	export let data;
-	const { projects, collaborators } = data;
+	const { projects } = data;
 
 	let uid: string = '';
 
@@ -55,7 +55,7 @@
 		position: fixed;
 		top: 6rem;
 		bottom: 6rem;
-		right: 6rem;
+		right: 2rem;
 		left: 6rem;
 		display: flex;
 		div {
@@ -68,8 +68,8 @@
 		}
 	}
 	:global(.preview-image) {
-		width: calc(100vw - 12rem);
-		height: calc(100vh - 12rem);
+		width: calc(100vw - 10rem);
+		height: calc(100vh - 10rem);
 		object-fit: contain;
 	}
 </style>

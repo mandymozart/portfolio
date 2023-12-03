@@ -25,6 +25,20 @@
             "label": "description",
             "placeholder": ""
           }
+        },
+        "grid": {
+          "type": "Select",
+          "config": {
+            "label": "grid",
+            "placeholder": "",
+            "options": [
+              "default",
+              "fadeIn",
+              "fadeOut",
+              "none"
+            ],
+            "default_value": "default"
+          }
         }
       },
       "items": {

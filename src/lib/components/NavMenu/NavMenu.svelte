@@ -10,7 +10,7 @@
 		if ($page) {
 			currentRoute = $page.url.pathname;
 
-			// console.log(currentRoute);
+			console.log(currentRoute);
 		}
 	}
 </script>
@@ -20,7 +20,11 @@
 		<div class="flex flex-row flex-1 self-center justify-center">
 			<div class="blend"></div>
 			{#each navItems as item}
-				<a href={`${base}${item.route}`} class="nav-menu-item text-[var(--secondary-text)]">
+				<a
+					href={`${base}${item.route}`}
+					class="nav-menu-item text-[var(--secondary-text)]"
+					class:active={currentRoute === item.route}
+				>
 					<span class="nav-menu-item-label font-mono">{item.title}</span>
 				</a>
 			{/each}
@@ -42,11 +46,10 @@
 		width: 4rem;
 		writing-mode: tb-rl;
 		transform: rotate(-180deg) translate(0, 0);
-		z-index: 10;
+		z-index: 100000;
 		padding: 1rem 0;
 		margin: 0;
 		background-color: transparent;
-		border-left: 1px solid black;
 		nav {
 			height: 100vh;
 			> div {
@@ -74,7 +77,7 @@
 			bottom: 4rem;
 			right: 1.95rem;
 			z-index: -1;
-			border: 0px solid transparent;
+			border: 0;
 			background: var(--background-color);
 		}
 
@@ -83,8 +86,8 @@
 			font-weight: 400;
 			padding: 1rem 0.5rem;
 			margin: 1rem 0.5rem;
-			border-radius: 4rem;
-			border: 0px solid transparent;
+			border-radius: 2rem 1rem 2rem 1rem;
+			border: 0;
 			background: var(--background-color);
 			color: inherit;
 			display: flex;
@@ -95,12 +98,15 @@
 				margin-left: 0;
 			}
 
+			&.active,
 			&:hover {
 				color: var(--main-hover);
-				border: 1px solid var(--background-color);
 				padding: 1.5rem 0.5rem;
 				background: white;
 				letter-spacing: 0.2rem;
+			}
+			&.active {
+				cursor: not-allowed;
 			}
 		}
 	}

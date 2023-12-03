@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import dayjs from 'dayjs';
 	import type { ExperienceDocument, ProjectDocument } from '../../../prismicio-types';
+	import Grid from '../Grid/Grid.svelte';
 	export let experience: ExperienceDocument;
 	export let projects: ProjectDocument[] | undefined;
 	const getProject = (uid: string) => {
@@ -21,10 +22,12 @@
 </script>
 
 <div class="item font-mono">
+	<Grid />
 	<div class="logo">
 		<img src={experience.data.logo.url} alt={experience.data.logo.alt} />
 	</div>
 	<div class="meta">
+		<h4>{experience.data.company}</h4>
 		<span class="period"
 			>{dayjs(experience.data.startdate).format('YYYY')}&mdash;{dayjs(
 				experience.data.enddate
@@ -38,9 +41,11 @@
 	<div class="related">
 		{#each experience.data.projects as project}
 			{#if getProject(project.project.uid)}
-				<a href="{base}/projects/{project.project.uid}"
-					>{getProject(project.project.uid)?.data.name}</a
-				>,
+				<div>
+					<a href="{base}/projects/{project.project.uid}"
+						>{getProject(project.project.uid)?.data.name}</a
+					>
+				</div>
 			{/if}
 		{/each}
 	</div>
@@ -50,6 +55,9 @@
 	.item {
 		display: grid;
 		grid-template-columns: 1fr 3fr 2fr;
+		position: relative;
+		margin-left: 4rem;
+		width: calc(100% - 4rem);
 	}
 	.logo {
 		&:after {

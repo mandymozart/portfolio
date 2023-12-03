@@ -6,7 +6,6 @@ export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 	const projects = await client.getAllByType('project');
 	
 	const page = await client.getSingle('home');
-	console.log(page)
 	return { projects, page }
 
 }

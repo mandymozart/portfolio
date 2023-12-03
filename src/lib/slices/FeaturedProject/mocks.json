@@ -37,6 +37,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "paid",
 				"type": "Text"
+			},
+			"grid": {
+				"__TYPE__": "FieldContent",
+				"value": "default",
+				"type": "Select"
 			}
 		},
 		"items": []

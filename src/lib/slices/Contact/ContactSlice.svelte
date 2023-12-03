@@ -12,7 +12,7 @@
 	class="font-mono"
 >
 	<div class="inner">
-		<Grid fadeOut={true} />
+		<Grid grid={slice.primary.grid} />
 		<h3>{slice.primary.title}</h3>
 		<p class="description">{slice.primary.description}</p>
 		<div class="addresses">
@@ -27,11 +27,8 @@
 	section {
 		position: relative;
 		height: 100vh;
-		width: 100%;
-		scroll-snap-align: start;
-		.inner {
-			margin: 6rem 4rem;
-		}
+		width: calc(100% - 4rem);
+		margin-left: 4rem;
 		h3 {
 			margin: 2rem 2rem;
 		}
@@ -41,6 +38,12 @@
 		.addresses {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			@media (max-width: 1350px) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+			@media (max-width: 850px) {
+				grid-template-columns: repeat(1, 1fr);
+			}
 		}
 	}
 </style>

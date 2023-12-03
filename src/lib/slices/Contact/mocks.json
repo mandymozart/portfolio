@@ -12,6 +12,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "everywhere",
 				"type": "Text"
+			},
+			"grid": {
+				"__TYPE__": "FieldContent",
+				"value": "fadeIn",
+				"type": "Select"
 			}
 		},
 		"items": [

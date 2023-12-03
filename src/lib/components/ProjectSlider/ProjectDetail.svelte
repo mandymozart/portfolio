@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
+	import { PrismicImage, PrismicRichText } from '@prismicio/svelte';
 	import type {
 		ClientDocument,
 		CollaboratorDocument,
@@ -8,6 +8,7 @@
 	} from '../../../prismicio-types';
 	import CommonPage from '../CommonPage.svelte';
 	import SkillItem from '../ExperiencesGrid/SkillItem.svelte';
+	import Grid from '../Grid/Grid.svelte';
 	import PartnerItem from '../Partner/PartnerItem.svelte';
 	import VideoReaction from '../Videos/VideoReaction.svelte';
 
@@ -15,7 +16,7 @@
 	export let skills: SkillDocument[] | undefined;
 	export let partners: CollaboratorDocument[] | ClientDocument[] | undefined;
 	const screenshots = project?.data.images ?? [];
-	console.log(project.data.video_id);
+	console.log(project.data.images);
 </script>
 
 {#if project === undefined}
@@ -32,15 +33,10 @@
 		]}
 	>
 		<div class="info font-mono">
+			<Grid />
 			<div class="description">
 				<PrismicRichText field={project.data.description} />
-				<div class="tags">
-					{#each project.tags as tag}
-						#{tag}&nbsp;
-					{/each}
-				</div>
 			</div>
-
 			{#if partners?.length > 0}
 				<div class="partners">
 					<h4>Partners</h4>
@@ -65,74 +61,62 @@
 		</div>
 		{#if screenshots.length > 0}
 			{#each screenshots as item}
-				<section>
-					<PrismicImage class="screenshot screenshot--desktop w-full" field={item.image} />
-					{#if item.image.mobile}<PrismicImage
-							class="screenshot screenshot--mobile w-full"
-							field={item.image.mobile}
-						/>{/if}
+				<section style="margin-left: 4rem; width: calc(100% - 4rem);">
+					{#if item.desktop}
+						<PrismicImage class="screenshot screenshot--desktop" field={item.desktop} />
+					{/if}
+					{#if item.mobile}
+						<PrismicImage class="screenshot screenshot--mobile" field={item.mobile} />
+					{/if}
 				</section>
 			{/each}
 		{/if}
-		{project.data.video_id}
 		{#if project.data.video_id}
 			<div class="video-reaction">
 				<VideoReaction videoid={project.data.video_id.toString()} />
 			</div>
 		{/if}
-		<div
-			class="link font-mono row-center font-mono cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms]"
-		>
+		<div class="link">
 			{#if project.data.link}
-				<PrismicLink field={project.data.link}>Visit project</PrismicLink>
+				<a href={project.data.link.url} target="_blank" rel="noopener noreferrer" class=" button">
+					Visit project
+				</a>
 			{/if}
 		</div>
 	</CommonPage>
 {/if}
 
 <style lang="scss">
-	h3.title {
-		height: 4rem;
-		position: sticky;
-		padding: 0 2rem;
-		border-bottom: 1px solid black;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		span {
-			font-size: 1rem;
-			font-weight: 400;
-		}
-	}
-	.project-info {
-		padding: 6rem;
-	}
-	.video-reaction {
-		width: auto;
-		height: 20rem;
-		position: fixed;
-		bottom: 0;
-		left: 4rem;
-		z-index: 10000;
-		cursor: pointer;
-	}
-	.link {
-		position: fixed;
-		bottom: 2rem;
-		right: 2rem;
-		text-align: right;
-		background: white;
-		a {
-			text-decoration: none;
-		}
-		&:hover {
-			background: white;
-		}
-	}
 	.info {
 		display: grid;
+		position: relative;
 		width: calc(100% - 4rem);
+		margin-left: 4rem;
 		grid-template-columns: 3fr 1fr 1fr 1fr;
+		@media (max-width: 850px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		@media (max-width: 1350px) {
+			grid-template-columns: 2fr 1fr 1fr;
+		}
+		h3.title {
+			height: 4rem;
+			position: sticky;
+			padding: 0 2rem;
+			border-bottom: 1px solid black;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			span {
+				font-size: 1rem;
+				font-weight: 400;
+			}
+		}
+		.project-info {
+			padding: 6rem;
+		}
+
 		.description {
 			padding: 2rem;
 			.tags {
@@ -152,20 +136,21 @@
 				gap: 1rem;
 			}
 		}
-	}
-	p {
-		margin-bottom: 2rem;
-	}
-	.screenshot {
-		width: 100%;
-		display: block;
-
-		@media (max-width: 1350px) {
+		p {
+			margin-bottom: 2rem;
 		}
-		@media (max-width: 850px) {
-			// &.screenshot--desktop {
-			// 	display: none;
-			// }
-		}
+	}
+	.video-reaction {
+		width: auto;
+		height: 20rem;
+		position: fixed;
+		bottom: 0;
+		left: 4rem;
+		z-index: 10000;
+	}
+	.link {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
 	}
 </style>

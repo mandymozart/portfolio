@@ -7,6 +7,8 @@
 	export let project: Content.ProjectDocument | undefined;
 	let scrollY: number;
 	// $: scrollY, console.log(scrollY);
+
+	console.log(slice.primary.grid);
 </script>
 
 <svelte:window bind:scrollY />
@@ -15,16 +17,19 @@
 	{#if slice.primary.background.url}
 		<img src={slice.primary.background.url} alt="background" />
 	{/if}
-	<Grid />
+	<Grid grid={slice.primary.grid} />
 	<ProjectSlider {project} />
 </section>
 
 <style lang="scss">
 	section {
 		position: relative;
-		height: 100vh;
-		width: 100vw;
-		scroll-snap-align: start;
+		min-height: 100vh;
+		width: calc(100% - 4rem);
+		margin-left: 4rem;
+		@media (max-width: 850px) {
+			min-height: 100vh;
+		}
 		img {
 			width: 100%;
 			height: 100vh;
