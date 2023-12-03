@@ -14,6 +14,7 @@
 <style lang="scss">
 	div {
 		display: flex;
+		padding: 0 2rem;
 		flex-direction: column;
 		&.textOnly {
 			display: inline;

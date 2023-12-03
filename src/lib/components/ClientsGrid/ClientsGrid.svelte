@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Grid from '../Grid/Grid.svelte';
 	import Header from '../Header/Header.svelte';
 	import ClientItem from './ClientItem.svelte';
 
@@ -10,14 +11,16 @@
 	{#each clients as client}
 		<ClientItem {client} />
 	{/each}
+	<Grid />
 </div>
 
 <style lang="scss">
 	.client-list {
-		margin: 2rem;
+		position: relative;
+		margin-left: 4rem;
+		width: calc(100% - 4rem);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		gap: 2rem;
 		align-items: center;
 		@media (max-width: 1350px) {
 			grid-template-columns: repeat(6, 1fr);

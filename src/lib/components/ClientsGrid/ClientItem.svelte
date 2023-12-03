@@ -8,6 +8,7 @@
 
 <style lang="scss">
 	div {
+		padding: 0 2rem;
 		display: flex;
 		flex-direction: column;
 	}

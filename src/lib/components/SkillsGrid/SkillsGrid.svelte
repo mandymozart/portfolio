@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Grid from '../Grid/Grid.svelte';
 	import Header from '../Header/Header.svelte';
 	import SkillItem from './SkillItem.svelte';
 
@@ -17,12 +18,14 @@
 	{#each skills as skill}
 		<SkillItem {skill} {textOnly} />
 	{/each}
+	<Grid />
 </div>
 
 <style lang="scss">
 	.skill-list {
 		position: relative;
-		margin: 2rem;
+		margin-left: 4rem;
+		width: calc(100% - 4rem);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 2rem;
