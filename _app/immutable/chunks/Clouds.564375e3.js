@@ -1,4 +1,4 @@
-import{b as po}from"./paths.33b24b50.js";const es={name:"Clouds",vertexShader:`
+import{b as po}from"./paths.2cf78569.js";const es={name:"Clouds",vertexShader:`
   varying vec2 vUv;
 
   void main() {
