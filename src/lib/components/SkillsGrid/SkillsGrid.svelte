@@ -28,8 +28,14 @@
 		width: calc(100% - 4rem);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		gap: 2rem;
 		align-items: center;
+		@media (max-width: 1350px) {
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+		@media (max-width: 850px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
 		img {
 			max-width: 100%;
 		}

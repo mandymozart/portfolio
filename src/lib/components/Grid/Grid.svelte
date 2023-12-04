@@ -4,11 +4,11 @@
 
 <div class="grid {grid}">
 	<div class="column"></div>
-	<div class="column column--tablet"></div>
-	<div class="column column--tablet"></div>
-	<div class="column column--tablet"></div>
-	<div class="column column--desktop"></div>
-	<div class="column column--desktop"></div>
+	<div class="column hidden--mobile"></div>
+	<div class="column hidden--mobile"></div>
+	<div class="column hidden--mobile"></div>
+	<div class="column hidden--mobile hidden--tablet"></div>
+	<div class="column hidden--mobile hidden--tablet"></div>
 </div>
 
 <style lang="scss">
@@ -26,7 +26,7 @@
 			box-sizing: border-box;
 			border-right: 1px solid transparent;
 			border-image: linear-gradient(to bottom, var(--grid-color), var(--grid-color)) 1 100%;
-			&:last-of-type {
+			&:nth-child(6) {
 				border: none;
 			}
 			/* &:nth-child(1) {
@@ -62,8 +62,8 @@
 		@media (max-width: 1350px) {
 			grid-template-columns: repeat(4, 1fr);
 			.column {
-				&.column--desktop {
-					display: none;
+				&:nth-child(4) {
+					border: none;
 				}
 			}
 		}
@@ -71,12 +71,6 @@
 			grid-template-columns: repeat(1, 1fr);
 			.column {
 				border: 0;
-				&.column--tablet {
-					display: none;
-				}
-				&.column--desktop {
-					display: none;
-				}
 			}
 		}
 	}

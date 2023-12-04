@@ -59,7 +59,7 @@
 		margin-left: 4rem;
 		width: calc(100% - 4rem);
 		@media (max-width: 1350px) {
-			grid-template-columns: 2fr 1fr 1fr;
+			grid-template-columns: 1fr 2fr 1fr;
 		}
 		@media (max-width: 850px) {
 			grid-template-columns: repeat(1, 1fr);
@@ -70,7 +70,7 @@
 			background: black;
 			border-radius: 2rem;
 		}
-		padding: 2rem 4rem;
+		padding: var(--grid-padding);
 		/* border-right: 1px solid black; */
 		height: 10rem;
 		img {
@@ -80,10 +80,10 @@
 		}
 	}
 	.meta {
-		padding: 2rem;
+		padding: var(--grid-padding);
 	}
 	.related {
-		padding: 2rem;
+		padding: var(--grid-padding);
 		a img {
 			width: 100% !important;
 		}

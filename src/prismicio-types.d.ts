@@ -886,6 +886,26 @@ export interface FeaturedProjectSliceDefaultPrimary {
 	project: prismic.ContentRelationshipField<'project'>;
 
 	/**
+	 * Cover Desktop field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.cover_desktop
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	cover_desktop: prismic.ImageField<never>;
+
+	/**
+	 * Cover Mobile field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.cover_mobile
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	cover_mobile: prismic.ImageField<never>;
+
+	/**
 	 * Background field in *FeaturedProject → Primary*
 	 *
 	 * - **Field Type**: Image

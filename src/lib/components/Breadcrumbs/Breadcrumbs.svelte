@@ -34,7 +34,7 @@
 		margin-left: 4rem;
 		grid-template-columns: repeat(6, 1fr);
 		> div {
-			padding: 2rem 2rem 1rem 2rem;
+			padding: 2rem var(--grid-padding) 1rem var(--grid-padding);
 		}
 		@media (max-width: 1350px) {
 			grid-template-columns: repeat(4, 1fr);

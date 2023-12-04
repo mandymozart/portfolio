@@ -1,23 +1,22 @@
 .screenshot {
-    max-height: 100vh;
-    width: 100%;
-    object-fit: contain;
-    &.screenshot--mobile {
-        display: none;
-    }
-    &.screenshot--desktop {
-        display: block;
-    }
+	height: auto;
+	width: 100%;
+	&.screenshot--mobile {
+		display: none;
+	}
+	&.screenshot--desktop {
+		display: block;
+	}
 
-    @media (max-width: 1350px) {
-    }
-    @media (max-width: 850px) {
-        &.screenshot--mobile {
-            display: block;
-            max-height: auto;
-        }
-        &.screenshot--desktop {
-            display: none;
-        }
-    }
+	@media (max-width: 1350px) {
+	}
+	@media (max-width: 850px) {
+		&.screenshot--mobile {
+			display: block;
+			max-height: auto;
+		}
+		&.screenshot--desktop {
+			display: none;
+		}
+	}
 }

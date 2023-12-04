@@ -22,6 +22,28 @@
             ]
           }
         },
+        "cover_desktop": {
+          "type": "Image",
+          "config": {
+            "label": "Cover Desktop",
+            "constraint": {
+              "width": 1920,
+              "height": 1080
+            },
+            "thumbnails": []
+          }
+        },
+        "cover_mobile": {
+          "type": "Image",
+          "config": {
+            "label": "Cover Mobile",
+            "constraint": {
+              "width": 1080,
+              "height": 1920
+            },
+            "thumbnails": []
+          }
+        },
         "background": {
           "type": "Image",
           "config": {

@@ -116,6 +116,14 @@
 		margin: auto;
 		min-width: 100%;
 		min-height: 100%;
+		@media (max-width: 1350px) {
+			--grid-padding: 2rem;
+		}
+
+		@media (max-width: 850px) {
+			max-width: 100%;
+			max-height: 100%;
+		}
 		&.playing {
 			opacity: 1;
 			filter: blur(0px);

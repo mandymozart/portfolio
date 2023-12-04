@@ -104,7 +104,7 @@
 		h3.title {
 			height: 4rem;
 			position: sticky;
-			padding: 0 2rem;
+			padding: 0 var(--grid-padding);
 			border-bottom: 1px solid black;
 			display: flex;
 			align-items: center;
@@ -114,18 +114,12 @@
 				font-weight: 400;
 			}
 		}
-		.project-info {
-			padding: 6rem;
-		}
-
 		.description {
-			padding: 2rem;
-			.tags {
-			}
+			padding: var(--grid-padding);
 		}
 		.skills,
 		.partners {
-			padding: 2rem;
+			padding: var(--grid-padding);
 			h4 {
 				margin-bottom: 2rem;
 			}
@@ -151,7 +145,7 @@
 	}
 	.link {
 		position: fixed;
-		bottom: 2rem;
-		right: 2rem;
+		bottom: var(--grid-padding);
+		right: var(--grid-padding);
 	}
 </style>

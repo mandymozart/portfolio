@@ -22,7 +22,7 @@
 		display: grid;
 		position: relative;
 		div {
-			padding: 4rem 2rem;
+			padding: var(--grid-padding) var(--grid-padding);
 		}
 		@media (max-width: 1350px) {
 			grid-template-columns: repeat(4, 1fr);

@@ -30,10 +30,10 @@
 		width: calc(100% - 4rem);
 		margin-left: 4rem;
 		h3 {
-			margin: 2rem 2rem;
+			margin: 2rem var(--grid-padding);
 		}
 		.description {
-			margin: 2rem 2rem 4rem 2rem;
+			margin: 2rem var(--grid-padding) 4rem var(--grid-padding);
 		}
 		.addresses {
 			display: grid;

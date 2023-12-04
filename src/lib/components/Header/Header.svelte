@@ -26,7 +26,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 2rem 2rem 1rem 2rem;
+			padding: 2rem var(--grid-padding) 1rem var(--grid-padding);
 		}
 		span {
 			font-size: 1rem;

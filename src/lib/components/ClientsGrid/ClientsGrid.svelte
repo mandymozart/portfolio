@@ -23,11 +23,10 @@
 		grid-template-columns: repeat(12, 1fr);
 		align-items: center;
 		@media (max-width: 1350px) {
-			grid-template-columns: repeat(6, 1fr);
+			grid-template-columns: repeat(8, 1fr);
 		}
 		@media (max-width: 850px) {
 			grid-template-columns: repeat(4, 1fr);
-			gap: 1rem;
 		}
 	}
 </style>
