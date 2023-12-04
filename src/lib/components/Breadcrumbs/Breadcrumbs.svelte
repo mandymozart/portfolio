@@ -13,7 +13,7 @@
 	{#each breadcrumbs as breadcrumb}
 		{#if breadcrumb.path}
 			<div>
-				<a href="{base}{breadcrumb.path}">{breadcrumb.label}</a> &gt;
+				<a href="{base}{breadcrumb.path}">{breadcrumb.label}</a> &gt;&nbsp;
 			</div>
 		{:else}
 			<div>
@@ -38,9 +38,15 @@
 		}
 		@media (max-width: 1350px) {
 			grid-template-columns: repeat(4, 1fr);
+			height: auto;
 		}
 		@media (max-width: 850px) {
-			grid-template-columns: repeat(1, 1fr);
+			display: block;
+			padding: 2rem var(--grid-padding) var(--grid-padding);
+			> div {
+				display: inline;
+				padding: 0;
+			}
 		}
 	}
 </style>

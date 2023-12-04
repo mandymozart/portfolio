@@ -1,29 +1,26 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { PrismicImage } from '@prismicio/svelte';
 	import Grid from '../Grid/Grid.svelte';
 
 	export let project: any;
+	console.log(project.data);
 </script>
 
-<a class="font-mono" href={`${base}/projects/${project.uid}`}>
+<a href={`${base}/projects/${project.uid}`}>
 	<span class="title">
 		<span class="label title--label" class:relatedIndustry={project.data.industry}>
 			{project.data.name}
 		</span>
 	</span>
-	<div class="image">
-		<PrismicImage
-			class="project-row-image-prismic project-row-image-prismic--mobile"
-			field={project.data.images[0].image.mobile}
-		/>
-	</div>
+	<span class="hidden--desktop hidden--tablet">&mdash;<br /></span>
 	<div class="industry">
 		<span class="label industry--label">
 			{project.data.industry}
 		</span>
 	</div>
-	<div class="type"><span class="label industry--label">{project.data.type}</span></div>
+	<div class="type hidden--mobile">
+		<span class="label industry--label">{project.data.type}</span>
+	</div>
 	<Grid />
 </a>
 
@@ -55,26 +52,30 @@
 		}
 		&:hover .label {
 			background-color: var(--background-color);
-			padding: 0.5rem 2rem;
+			padding: 0.5rem var(--grid-padding);
 		}
 		> * {
-			padding: 0 2rem;
+			padding: 0 var(--grid-padding);
 		}
 		.type {
 			text-align: right;
-		}
-		.image {
-			display: none;
-			img {
-				width: 100%;
-			}
 		}
 		&:hover {
 			background: transparent;
 		}
 
 		@media (max-width: 850px) {
-			grid-template-columns: repeat(1, 1fr);
+			.title,
+			.industry,
+			.type,
+			span {
+				display: inline;
+				.label {
+					padding: 0;
+				}
+			}
+			display: block;
+			padding: var(--grid-padding) 0;
 		}
 
 		@media (max-width: 1350px) {

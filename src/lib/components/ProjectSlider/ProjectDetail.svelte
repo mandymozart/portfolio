@@ -97,12 +97,12 @@
 		width: calc(100% - 4rem);
 		margin-left: 4rem;
 		grid-template-columns: 3fr 1fr 1fr 1fr;
-		@media (max-width: 850px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
 
 		@media (max-width: 1350px) {
 			grid-template-columns: 2fr 1fr 1fr;
+		}
+		@media (max-width: 850px) {
+			grid-template-columns: repeat(1, 1fr);
 		}
 		h3.title {
 			height: 4rem;
@@ -132,6 +132,9 @@
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				gap: 1rem;
+				@media (max-width: 850px) {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
 			}
 		}
 		p {

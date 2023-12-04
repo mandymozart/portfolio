@@ -3,7 +3,11 @@
 </script>
 
 <div>
-	<img src={skill.data.logo.url} alt={skill.data.logo.alt} class="w-full" />
+	{#if skill.data.logo.url}
+		<img src={skill.data.logo.url} alt={skill.data.logo.alt} />
+	{:else}
+		{skill.data.name}
+	{/if}
 </div>
 
 <style lang="scss">
@@ -13,5 +17,6 @@
 	}
 	img {
 		margin-bottom: 1rem;
+		width: 100%;
 	}
 </style>
