@@ -64,10 +64,13 @@
 				<section style="margin-left: 4rem; width: calc(100% - 4rem); position: relative;">
 					<Grid />
 					{#if item.desktop}
-						<PrismicImage class="screenshot screenshot--desktop" field={item.desktop} />
+						<PrismicImage class="screenshot hidden--mobile" field={item.desktop} />
 					{/if}
 					{#if item.mobile}
-						<PrismicImage class="screenshot screenshot--mobile" field={item.mobile} />
+						<PrismicImage class="screenshot hidden--desktop hidden--tablet" field={item.mobile} />
+					{/if}
+					{#if item.image}
+						<PrismicImage class="screenshot" field={item.image} />
 					{/if}
 				</section>
 			{/each}
