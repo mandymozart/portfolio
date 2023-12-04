@@ -18,14 +18,13 @@
 	<Grid grid={slice.primary.grid} />
 	<IntroVideo videoid={slice.primary.videoid} bind:togglePlay bind:playing />
 	<div id="overlay" class:playing>
-		<h1 class="title font-mono">{slice.primary.title}</h1>
-		<div class="message font-mono">
+		<h1 class="title">{slice.primary.title}</h1>
+		<div class="message">
 			{slice.primary.message}
 		</div>
 		{#if slice.primary.videoid}
 			<button
 				transition:fade={{ delay: 250, duration: 300 }}
-				class="font-mono"
 				id="startButton"
 				on:click={handleClick}
 				>{#if playing}Pause{:else}Play{/if}</button
@@ -33,7 +32,7 @@
 		{/if}
 		{#if slice.variation === 'section'}
 			{#if slice.primary.cta?.link_type !== 'Any'}
-				<PrismicLink field={slice.primary.cta} class="font-mono button" id="cta"
+				<PrismicLink field={slice.primary.cta} class="button" id="cta"
 					>{slice.primary.cta_label}</PrismicLink
 				>
 			{/if}
@@ -49,6 +48,7 @@
 		margin-left: 4rem;
 		scroll-snap-align: start;
 		h1 {
+			text-align: center;
 		}
 		#overlay {
 			position: absolute;

@@ -4,10 +4,10 @@
 </script>
 
 <div class="font-mono {textOnly ? 'textOnly' : ''}">
-	{#if !textOnly}
+	{#if skill.data.logo.url}
 		<img src={skill.data.logo.url} alt={skill.data.logo.alt} class="w-full" />
 	{:else}
-		{skill.data.name},&nbsp;
+		{skill.data.name}
 	{/if}
 </div>
 

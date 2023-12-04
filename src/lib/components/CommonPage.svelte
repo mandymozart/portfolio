@@ -22,7 +22,7 @@
 
 <style lang="scss">
 	.body {
-		font-family: var(--font);
+		font-family: var(--font-mono);
 		position: absolute;
 		top: 0;
 		width: 100%;

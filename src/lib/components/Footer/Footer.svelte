@@ -14,7 +14,7 @@
 
 <style lang="scss">
 	footer {
-		font-family: var(--font);
+		font-family: var(--font-mono);
 		margin-left: 4rem;
 		width: calc(100% - 4rem);
 		position: relative;

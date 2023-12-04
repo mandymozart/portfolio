@@ -16,8 +16,10 @@
 	}
 
 	--grid-color: rgba(0, 0, 0, 1);
-	--font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-		monospace;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+		'Courier New', monospace;
+	--font-sans-serif: system-ui, sans-serif;
+	--font-serif: serif;
 
 	overflow-y: scroll;
 }
@@ -29,6 +31,7 @@ html {
 
 body {
 	margin: 0px;
+	font-family: var(--font-mono);
 	background: lab(99 0 0 / 0.77) 50%;
 	background: linear-gradient(
 		154deg,
@@ -60,6 +63,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
+	font-family: var(--font-mono);
 }
 a {
 	color: var(--main);
@@ -67,91 +71,6 @@ a {
 	&:hover {
 		letter-spacing: 0.2rem;
 	}
-}
-
-.splide__pagination__page.is-active {
-	background-color: transparent;
-	color: red;
-	transform: scale(1);
-}
-.splide__pagination {
-	counter-reset: pagination-num;
-	color: black;
-	top: 1rem;
-	bottom: auto;
-	left: auto;
-	padding: 0;
-	position: absolute;
-	right: 1rem;
-	z-index: 1;
-}
-
-.splide__pagination__page:before {
-	counter-increment: pagination-num;
-	content: counter(pagination-num);
-	font-family: monospace;
-	font-size: 1rem;
-	background: none;
-}
-.splide__pagination__page {
-	background-color: transparent;
-}
-.splide__arrow {
-	transition: opacity 0.1s ease-in;
-	background: none;
-}
-.splide__arrow:disabled {
-	opacity: 0;
-}
-.splide__pagination--ltr {
-	right: 6rem;
-}
-.splide__pagination--ttb .splide__pagination__page {
-	transform: rotate(90deg) translate(0, -0.25rem);
-}
-.splide__pagination--ttb {
-	top: 0;
-	right: 0;
-	width: 4rem;
-	bottom: 0;
-	display: flex;
-	justify-content: space-between;
-	padding: 2rem 0;
-	align-items: center;
-}
-.splide__arrows {
-}
-.splide__arrows.splide__arrows--ltr .splide__arrow--next {
-	right: 6rem;
-	border: 1px solid black;
-	background-color: white;
-}
-.splide__arrows.splide__arrows--ltr .splide__arrow--prev {
-	left: 6rem;
-	border: 1px solid black;
-	background-color: white;
-}
-.splide__arrows.splide__arrows--ttb .splide__arrow--next {
-	bottom: 2rem;
-	border: 1px solid black;
-	background-color: white;
-}
-.splide__arrows.splide__arrows--ttb .splide__arrow--prev {
-	border: 1px solid black;
-	background-color: white;
-	right: 0 !important;
-	width: 2rem;
-	height: 2rem;
-}
-.splide__progress {
-	background: #ccc;
-}
-
-.splide__progress__bar {
-	background: greenyellow;
-	height: 2px;
-	transition: width 400ms ease;
-	width: 0;
 }
 
 img {

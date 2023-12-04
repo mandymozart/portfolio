@@ -78,7 +78,7 @@
 			</div>
 		{/if}
 		<div class="link">
-			{#if project.data.link}
+			{#if project.data.link.url}
 				<a href={project.data.link.url} target="_blank" rel="noopener noreferrer" class=" button">
 					Visit project
 				</a>

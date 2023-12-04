@@ -34,10 +34,10 @@
 		margin-left: 4rem;
 		scroll-snap-align: start;
 		h3 {
-			margin: 2rem 2rem;
+			padding: 2rem var(--grid-padding);
 		}
 		.description {
-			margin: 2rem 2rem 4rem 2rem;
+			padding: 2rem var(--grid-padding) 4rem var(--grid-padding);
 		}
 		.processes {
 			display: grid;
@@ -47,7 +47,6 @@
 			}
 			@media (max-width: 850px) {
 				grid-template-columns: repeat(1, 1fr);
-				gap: 1rem;
 			}
 		}
 	}
