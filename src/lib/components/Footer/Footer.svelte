@@ -15,8 +15,8 @@
 <style lang="scss">
 	footer {
 		font-family: var(--font-mono);
-		margin-left: 4rem;
-		width: calc(100% - 4rem);
+		margin-left: var(--content-margin-left);
+		width: var(--content-width);
 		position: relative;
 		grid-template-columns: repeat(6, 1fr);
 		display: grid;

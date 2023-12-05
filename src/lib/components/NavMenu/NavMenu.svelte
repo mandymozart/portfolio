@@ -105,9 +105,6 @@
 				background: white;
 				letter-spacing: 0.2rem;
 			}
-			&.active {
-				cursor: not-allowed;
-			}
 		}
 	}
 </style>

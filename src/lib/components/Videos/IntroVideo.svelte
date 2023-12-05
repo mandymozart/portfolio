@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import type { KeyTextField } from '@prismicio/client';
 	import { fade } from 'svelte/transition';
 
-	export let videoid = 'sample';
+	export let videoid: KeyTextField = 'sample';
 	let duration: number;
 	let currentTime: number;
 	// $: currentTime, console.log(duration, currentTime);
 	let video: HTMLVideoElement;
 	let caption: string = '';
-	export let end = () => {
+	export const end = () => {
 		video.pause();
 		playing = false;
 	};
@@ -60,7 +61,6 @@
 	};
 
 	let cueEnter = (e: any) => {
-		console.log(e.target.text);
 		replaceText(e.target.text);
 		visible = true;
 	};

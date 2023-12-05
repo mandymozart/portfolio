@@ -27,8 +27,8 @@
 	section {
 		position: relative;
 		height: 100vh;
-		width: calc(100% - 4rem);
-		margin-left: 4rem;
+		width: var(--content-width);
+		margin-left: var(--content-margin-left);
 		h3 {
 			margin: 2rem var(--grid-padding);
 		}

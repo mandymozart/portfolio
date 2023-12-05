@@ -30,8 +30,8 @@
 	section {
 		position: relative;
 		min-height: 100vh;
-		width: calc(100% - 4rem);
-		margin-left: 4rem;
+		width: var(--content-width);
+		margin-left: var(--content-margin-left);
 		scroll-snap-align: start;
 		h3 {
 			padding: 2rem var(--grid-padding);

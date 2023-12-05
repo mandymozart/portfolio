@@ -16,12 +16,9 @@
 <style lang="scss">
 	h3 {
 		position: relative;
-		width: calc(100% - 4rem);
+		width: var(--content-width);
 		margin: 0;
-		margin-left: 4rem;
-
-		/* border-bottom: 1px solid black; */
-
+		margin-left: var(--content-margin-left); /* border-bottom: 1px solid black; */
 		> div {
 			display: flex;
 			align-items: center;

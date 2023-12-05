@@ -11,7 +11,6 @@
 	function handleClick() {
 		togglePlay();
 	}
-	console.log('primary', slice.primary);
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
@@ -44,8 +43,8 @@
 	section {
 		position: relative;
 		height: 100vh;
-		width: calc(100% - 4rem);
-		margin-left: 4rem;
+		width: var(--content-width);
+		margin-left: var(--content-margin-left);
 		scroll-snap-align: start;
 		h1 {
 			text-align: center;

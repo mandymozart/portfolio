@@ -56,8 +56,8 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr 2fr;
 		position: relative;
-		margin-left: 4rem;
-		width: calc(100% - 4rem);
+		margin-left: var(--content-margin-left);
+		width: var(--content-width);
 		@media (max-width: 1350px) {
 			grid-template-columns: 1fr 2fr 1fr;
 		}

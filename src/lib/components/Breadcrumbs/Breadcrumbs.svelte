@@ -30,8 +30,8 @@
 		text-transform: capitalize;
 		display: grid;
 		height: 4rem;
-		width: calc(100% - 4rem);
-		margin-left: 4rem;
+		width: var(--content-width);
+		margin-left: var(--content-margin-left);
 		grid-template-columns: repeat(6, 1fr);
 		> div {
 			padding: 2rem var(--grid-padding) 1rem var(--grid-padding);

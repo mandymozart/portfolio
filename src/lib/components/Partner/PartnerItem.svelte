@@ -1,15 +1,12 @@
 <script lang="ts">
+	import { isNotEmptyLinkField } from '$lib/typeguards/typeguards';
 	import type { ClientDocument, CollaboratorDocument } from '../../../prismicio-types';
 
 	export let partner: CollaboratorDocument | ClientDocument;
-	console.log(partner.data);
 </script>
 
 <div>
-	<!-- {#if partner.data.name}
-		{partner.data.name}
-	{/if} -->
-	<a href={partner.data.link?.url ? partner.data.link.url : '#'} target="_blank">
+	<a href={isNotEmptyLinkField(partner.data.link) ? partner.data.link.url : '#'} target="_blank">
 		{#if partner.data.logo.url}
 			<img src={partner.data.logo.url} alt={partner.data.logo.alt} class="w-full" />
 		{:else}

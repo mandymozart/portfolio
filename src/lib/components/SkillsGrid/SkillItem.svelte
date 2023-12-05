@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let skill: any;
+	import type { SkillDocument } from '../../../prismicio-types';
+
+	export let skill: SkillDocument;
 	export let textOnly: boolean;
 </script>
 
@@ -22,5 +24,9 @@
 	}
 	img {
 		margin-bottom: 1rem;
+		/* filter: brightness(0.5) saturate(0%);
+		&:hover {
+			filter: brightness(1) saturate(100%);
+		} */
 	}
 </style>

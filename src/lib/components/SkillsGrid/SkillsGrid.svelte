@@ -24,8 +24,8 @@
 <style lang="scss">
 	.skill-list {
 		position: relative;
-		margin-left: 4rem;
-		width: calc(100% - 4rem);
+		margin-left: var(--content-margin-left);
+		width: var(--content-width);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		align-items: center;
@@ -35,9 +35,6 @@
 
 		@media (max-width: 850px) {
 			grid-template-columns: repeat(4, 1fr);
-		}
-		img {
-			max-width: 100%;
 		}
 		button {
 			position: absolute;

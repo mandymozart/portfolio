@@ -7,12 +7,16 @@
 :root {
 	--main: black;
 	--grid-padding: 2rem;
+	--content-margin-left: 6rem;
+	--content-width: calc(100% - var(--content-margin-left));
 	@media (max-width: 1350px) {
 		--grid-padding: 2rem;
+		--content-margin-left: 4rem;
 	}
 
 	@media (max-width: 850px) {
 		--grid-padding: 1rem;
+		--content-margin-left: 3rem;
 	}
 
 	--grid-color: rgba(0, 0, 0, 1);

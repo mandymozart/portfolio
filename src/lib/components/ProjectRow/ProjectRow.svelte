@@ -3,7 +3,6 @@
 	import Grid from '../Grid/Grid.svelte';
 
 	export let project: any;
-	console.log(project.data);
 </script>
 
 <a href={`${base}/projects/${project.uid}`}>
@@ -31,7 +30,7 @@
 		grid-template-columns: 4fr 1fr 1fr;
 		text-decoration: none;
 		font-size: 1rem;
-		margin-left: 4rem;
+		margin-left: var(--content-margin-left);
 		padding: 0.5rem 0;
 		position: relative;
 		transition: all 0.2s ease-in;

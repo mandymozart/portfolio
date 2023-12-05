@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let grid: 'default' | 'fadeIn' | 'fadeOut' | 'none' = 'default';
+	import type { SelectField } from '@prismicio/client';
+
+	export let grid: SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none'> = 'default';
 </script>
 
 <div class="grid {grid}">

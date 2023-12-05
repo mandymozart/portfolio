@@ -17,8 +17,8 @@
 <style lang="scss">
 	.client-list {
 		position: relative;
-		margin-left: 4rem;
-		width: calc(100% - 4rem);
+		margin-left: var(--content-margin-left);
+		width: var(--content-width);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		align-items: center;

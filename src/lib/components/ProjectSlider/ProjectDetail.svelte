@@ -13,10 +13,11 @@
 	import VideoReaction from '../Videos/VideoReaction.svelte';
 
 	export let project: ProjectDocument;
-	export let skills: SkillDocument[] | undefined;
-	export let partners: CollaboratorDocument[] | ClientDocument[] | undefined;
+	export let skills: SkillDocument[];
+	export let methods: SkillDocument[];
+	export let partners: CollaboratorDocument[] | ClientDocument[];
 	const screenshots = project?.data.images ?? [];
-	console.log(project.data.images);
+	console.log(methods, skills);
 </script>
 
 {#if project === undefined}
@@ -58,10 +59,22 @@
 					</div>
 				</div>
 			{/if}
+			{#if methods?.length > 0}
+				<div class="skills">
+					<h4>Methodology</h4>
+					<div class="skill-list">
+						{#each methods as skill}
+							<SkillItem {skill} />
+						{/each}
+					</div>
+				</div>
+			{/if}
 		</div>
 		{#if screenshots.length > 0}
 			{#each screenshots as item}
-				<section style="margin-left: 4rem; width: calc(100% - 4rem); position: relative;">
+				<section
+					style="margin-left: var(--content-margin-left); width: var(--content-width); position: relative;"
+				>
 					<Grid />
 					{#if item.desktop}
 						<PrismicImage class="screenshot hidden--mobile" field={item.desktop} />
@@ -94,8 +107,8 @@
 	.info {
 		display: grid;
 		position: relative;
-		width: calc(100% - 4rem);
-		margin-left: 4rem;
+		width: var(--content-width);
+		margin-left: var(--content-margin-left);
 		grid-template-columns: 3fr 1fr 1fr 1fr;
 
 		@media (max-width: 1350px) {

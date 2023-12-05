@@ -7,7 +7,7 @@
 	export let slice: Content.FeaturedProjectSlice;
 	export let project: Content.ProjectDocument | undefined;
 	let scrollY: number;
-	// $: scrollY, console.log(scrollY);
+	// $: scrollY, margin-left: var(--content-margin-left);scrollY);
 </script>
 
 <svelte:window bind:scrollY />

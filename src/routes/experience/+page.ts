@@ -1,4 +1,5 @@
 import { createClient } from '$lib/prismicio';
+import * as prismic from '@prismicio/client';
 
 export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 	const client = createClient({ fetch, cookies });
@@ -17,7 +18,11 @@ export async function load({ fetch, cookies }: { fetch: any, cookies: any}) {
 			  direction: 'desc',
 			}]
 	});
-	const skills = await client.getAllByType('skill');
+	const skills = await client.getAllByType('skill', {
+		filters: [prismic.filter.not('document.tags', ['Method']
+		)],
+	});
+
 	const clients = await client.getAllByType('client');
 	return { experiences, skills, clients, projects }
 
