@@ -15,17 +15,18 @@
 		project?: ProjectDocument;
 		partners: CollaboratorDocument[] | ClientDocument[];
 		skills: SkillDocument[];
+		methods: SkillDocument[];
 	};
-	const { project, partners, skills } = data;
+	const { project, partners, skills, methods } = data;
 </script>
 
 <TabTitle title={project?.data.name?.toString()} />
 
 {#if project === undefined}
-	<div class="font-mono">
+	<div>
 		<UIcon icon="i-carbon-cube" classes="text-3.5em" />
 		<p class="font-300">Could not load project data...</p>
 	</div>
 {:else}
-	<ProjectDetail {project} {partners} {skills} />
+	<ProjectDetail {project} {partners} {skills} {methods} />
 {/if}

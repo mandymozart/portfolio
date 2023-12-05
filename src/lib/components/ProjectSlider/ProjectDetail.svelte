@@ -33,7 +33,7 @@
 			{ label: project.data.name ? project.data.name?.toString() : 'Untitled' }
 		]}
 	>
-		<div class="info font-mono">
+		<div class="info">
 			<Grid />
 			<div class="description">
 				<PrismicRichText field={project.data.description} />

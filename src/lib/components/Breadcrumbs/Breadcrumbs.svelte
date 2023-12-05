@@ -5,7 +5,7 @@
 	export let breadcrumbs: Array<Breadcrumb> | [];
 </script>
 
-<div class="breadcrumbs font-mono">
+<div class="breadcrumbs">
 	<div>
 		<a href="{base}/">Home </a> &gt;
 	</div>

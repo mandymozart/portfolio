@@ -21,7 +21,7 @@
 	};
 </script>
 
-<div class="item font-mono">
+<div class="item">
 	<Grid />
 	<div class="logo">
 		<img src={experience.data.logo.url} alt={experience.data.logo.alt} />

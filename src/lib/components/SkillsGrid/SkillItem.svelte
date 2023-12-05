@@ -5,7 +5,7 @@
 	export let textOnly: boolean;
 </script>
 
-<div class="font-mono {textOnly ? 'textOnly' : ''}">
+<div class={textOnly ? 'textOnly' : ''}>
 	{#if skill.data.logo.url}
 		<img src={skill.data.logo.url} alt={skill.data.logo.alt} class="w-full" />
 	{:else}

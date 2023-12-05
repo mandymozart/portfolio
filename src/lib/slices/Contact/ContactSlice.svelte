@@ -6,11 +6,7 @@
 	export let slice: Content.ContactSlice;
 </script>
 
-<section
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
-	class="font-mono"
->
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<div class="inner">
 		<Grid grid={slice.primary.grid} />
 		<h3>{slice.primary.title}</h3>

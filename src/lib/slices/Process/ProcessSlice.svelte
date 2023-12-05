@@ -7,11 +7,7 @@
 	export let slice: Content.ProcessSlice;
 </script>
 
-<section
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
-	class="font-mono"
->
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<Grid grid={slice.primary.grid} />
 	<div class="inner">
 		<h3>{slice.primary.title}</h3>

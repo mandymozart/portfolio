@@ -4,7 +4,7 @@
 	export let content: any;
 </script>
 
-<div class="font-mono content description">
+<div class="content description">
 	<PrismicRichText field={content} />
 </div>
 

@@ -23,7 +23,7 @@
 </svelte:head>
 
 {#if page.data.slices.length === 0}
-	<p class="font-mono">Could not find anything...</p>
+	<p>Could not find anything...</p>
 {:else}
 	{#each page.data.slices as slice}
 		{#if slice.slice_type === 'hero'}

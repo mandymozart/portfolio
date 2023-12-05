@@ -5,10 +5,10 @@
 	export let subtitle: string | undefined;
 </script>
 
-<h3 class="font-mono">
+<h3>
 	<div>
 		{title}
-		<span class="font-mono"><slot />{subtitle ? subtitle : ''}</span>
+		<span><slot />{subtitle ? subtitle : ''}</span>
 	</div>
 	<Grid />
 </h3>

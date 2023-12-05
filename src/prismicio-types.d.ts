@@ -951,9 +951,88 @@ export type FeaturedProjectSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *FeaturedProject → Primary*
+ */
+export interface FeaturedProjectSliceSixPrimary {
+	/**
+	 * project field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.project
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	project: prismic.ContentRelationshipField<'project'>;
+
+	/**
+	 * Cover Desktop field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.cover_desktop
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	cover_desktop: prismic.ImageField<never>;
+
+	/**
+	 * Cover Mobile field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.cover_mobile
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	cover_mobile: prismic.ImageField<never>;
+
+	/**
+	 * Background field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: featured_project.primary.background
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	background: prismic.ImageField<never>;
+
+	/**
+	 * Video ID field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: (video id for external storage)
+	 * - **API ID Path**: featured_project.primary.videoid
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	videoid: prismic.KeyTextField;
+
+	/**
+	 * grid field in *FeaturedProject → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: featured_project.primary.grid
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	grid: prismic.SelectField<'default' | 'fadeIn' | 'fadeOut' | 'none', 'filled'>;
+}
+
+/**
+ * Six variation for FeaturedProject Slice
+ *
+ * - **API ID**: `six`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturedProjectSliceSix = prismic.SharedSliceVariation<
+	'six',
+	Simplify<FeaturedProjectSliceSixPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *FeaturedProject*
  */
-type FeaturedProjectSliceVariation = FeaturedProjectSliceDefault;
+type FeaturedProjectSliceVariation = FeaturedProjectSliceDefault | FeaturedProjectSliceSix;
 
 /**
  * FeaturedProject Shared Slice
@@ -1268,6 +1347,33 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroSection | HeroSliceSec
 export type HeroSlice = prismic.SharedSlice<'hero', HeroSliceVariation>;
 
 /**
+ * Default variation for Layout Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LayoutSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	never
+>;
+
+/**
+ * Slice variation for *Layout*
+ */
+type LayoutSliceVariation = LayoutSliceDefault;
+
+/**
+ * Layout Shared Slice
+ *
+ * - **API ID**: `layout`
+ * - **Description**: Layout
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LayoutSlice = prismic.SharedSlice<'layout', LayoutSliceVariation>;
+
+/**
  * Primary content in *Process → Primary*
  */
 export interface ProcessSliceDefaultPrimary {
@@ -1488,8 +1594,10 @@ declare module '@prismicio/client' {
 			ContactSliceDefault,
 			FeaturedProjectSlice,
 			FeaturedProjectSliceDefaultPrimary,
+			FeaturedProjectSliceSixPrimary,
 			FeaturedProjectSliceVariation,
 			FeaturedProjectSliceDefault,
+			FeaturedProjectSliceSix,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceHeroSectionPrimary,
@@ -1498,6 +1606,9 @@ declare module '@prismicio/client' {
 			HeroSliceDefault,
 			HeroSliceHeroSection,
 			HeroSliceSection,
+			LayoutSlice,
+			LayoutSliceVariation,
+			LayoutSliceDefault,
 			ProcessSlice,
 			ProcessSliceDefaultPrimary,
 			ProcessSliceDefaultItem,

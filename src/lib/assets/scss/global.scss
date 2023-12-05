@@ -4,6 +4,16 @@
 @use './button';
 @use './responsive-utils';
 
+@font-face {
+	font-family: Till-Normal;
+	src: url(https://res.cloudinary.com/ddqo2y6zh/raw/upload/v1622309781/visrel007-lfw/Till-Normal.woff);
+	src:
+		url(https://res.cloudinary.com/ddqo2y6zh/raw/upload/v1622309781/visrel007-lfw/Till-Normal.woff2)
+			format('woff2'),
+		url(https://res.cloudinary.com/ddqo2y6zh/raw/upload/v1622309781/visrel007-lfw/Till-Normal.woff)
+			format('woff');
+}
+
 :root {
 	--main: black;
 	--grid-padding: 2rem;
@@ -20,10 +30,10 @@
 	}
 
 	--grid-color: rgba(0, 0, 0, 1);
-	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-		'Courier New', monospace;
+	--font-mono: 'Till-Normal', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		'Liberation Mono', 'Courier New', monospace;
 	--font-sans-serif: system-ui, sans-serif;
-	--font-serif: serif;
+	--font-serif: 'Till-Normal', serif;
 
 	overflow-y: scroll;
 }
@@ -35,7 +45,7 @@ html {
 
 body {
 	margin: 0px;
-	font-family: var(--font-mono);
+	font-family: var(--font-serif);
 	background: lab(99 0 0 / 0.77) 50%;
 	// background: linear-gradient(
 	// 	154deg,
@@ -68,6 +78,7 @@ h5,
 h6 {
 	margin: 0;
 	font-family: var(--font-mono);
+	font-weight: normal;
 }
 a {
 	color: var(--main);

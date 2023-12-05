@@ -136,7 +136,7 @@
 		top: 2rem;
 		left: 6rem;
 		right: 2rem;
-		font-family: var(--font-mono-system);
+		font-family: var(--font-mono);
 		text-align: center;
 		color: yellow;
 		font-size: 3rem;
