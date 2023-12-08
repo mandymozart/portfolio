@@ -18,7 +18,7 @@
 		position: relative;
 		width: var(--content-width);
 		margin: 0;
-		margin-left: var(--content-margin-left); /* border-bottom: 1px solid black; */
+		margin-left: var(--content-margin-left); /* border-bottom: 1px solid var(--primary); */
 		> div {
 			display: flex;
 			align-items: center;

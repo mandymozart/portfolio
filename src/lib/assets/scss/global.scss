@@ -15,18 +15,20 @@
 }
 
 :root {
-	--main: black;
+	--primary: hsl(0 0 12, 100%);
+	--background: hsl(0 0 99, 100%);
 	--grid-padding: 2rem;
-	--content-margin-left: 6rem;
+	--header-height: 4rem;
+	--content-margin-left: 0;
 	--content-width: calc(100% - var(--content-margin-left));
 	@media (max-width: 1350px) {
 		--grid-padding: 2rem;
-		--content-margin-left: 4rem;
+		--content-margin-left: 0;
 	}
 
 	@media (max-width: 850px) {
 		--grid-padding: 1rem;
-		--content-margin-left: 3rem;
+		--content-margin-left: 0;
 	}
 
 	--grid-color: rgba(0, 0, 0, 1);
@@ -46,7 +48,7 @@ html {
 body {
 	margin: 0px;
 	font-family: var(--font-serif);
-	background: lab(99 0 0 / 0.77) 50%;
+	background: lab(99 0 0 / 0.77);
 	// background: linear-gradient(
 	// 	154deg,
 	// 	lab(55 -13.67 -50.83) 0%,
@@ -77,14 +79,20 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: var(--font-mono);
+	font-family: var(--font-serif);
 	font-weight: normal;
+}
+strong {
+	font-weight: normal;
+}
+h3 {
+	font-size: 3rem;
 }
 a {
 	color: var(--main);
 	transition: all 0.2s ease-in;
 	&:hover {
-		letter-spacing: 0.2rem;
+		// letter-spacing: 0.2rem;
 	}
 }
 

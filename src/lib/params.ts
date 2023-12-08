@@ -10,17 +10,16 @@ import { Icons } from './utils';
 export const TITLE_SUFFIX = 'Tilman Porschütz <Frontend Developer>';
 
 const NavBar = {
-	home: 'Home',
+	home: 'tilman@porschuetz.de',
 	personal: 'Projects',
 	career: 'Experiences',
-	resume: 'Resume',
+	resume: 'Resume'
 };
 
 export const navItems = [
-	{ title: NavBar.resume, route: '/resume' },
-	{ title: NavBar.career, route: '/experience' },
 	{ title: NavBar.personal, route: '/projects' },
-	{ title: NavBar.home, route: '/'},
+	{ title: NavBar.career, route: '/experience' },
+	{ title: NavBar.resume, route: '/resume' }
 ];
 
 export const getPlatfromIcon = (platform: Platform): Icons => {
@@ -62,9 +61,17 @@ export const HOME: HomePageParams = {
 			platform: Platform.Website,
 			link: 'https://www.mandymozart.com'
 		}
-	], 
+	],
 	skills: [
-		"Svelte","React","ReactNative","Angular","Threejs","TypeScript","Dart","Flutter","PixiJS"
+		'Svelte',
+		'React',
+		'ReactNative',
+		'Angular',
+		'Threejs',
+		'TypeScript',
+		'Dart',
+		'Flutter',
+		'PixiJS'
 	]
 };
 

@@ -3,10 +3,11 @@
 	import { useTitle } from '$lib/utils/helpers';
 
 	import Footer from '$lib/components/Footer/Footer.svelte';
-	import ContactSlice from '$lib/slices/Contact/ContactSlice.svelte';
-	import FeaturedProjectSlice from '$lib/slices/FeaturedProject/FeaturedProjectSlice.svelte';
-	import HeroSlice from '$lib/slices/Hero/HeroSlice.svelte';
-	import ProcessSlice from '$lib/slices/Process/ProcessSlice.svelte';
+	import ContactSlice from '$lib/slices/Contact/index.svelte';
+	import FeaturedProjectSlice from '$lib/slices/FeaturedProject/index.svelte';
+	import HeroSection from '$lib/slices/Hero/HeroSection.svelte';
+	import HeroSlice from '$lib/slices/Hero/index.svelte';
+	import ProcessSlice from '$lib/slices/Process/index.svelte';
 	import type { ProjectDocument } from '../prismicio-types.js';
 
 	export let data;
@@ -21,7 +22,7 @@
 <svelte:head>
 	<title>{useTitle('Tilman Porschütz', TITLE_SUFFIX)}</title>
 </svelte:head>
-
+<HeroSection />
 {#if page.data.slices.length === 0}
 	<p>Could not find anything...</p>
 {:else}

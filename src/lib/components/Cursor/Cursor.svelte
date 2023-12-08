@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	export let size = 20;
-	export let color = 'black';
+	export let color = 'var(--primary)';
 	export let shape = 'circle';
 	export let mixBlendMode = 'none';
 
@@ -65,10 +65,9 @@
 
 <style>
 	.custom-cursor {
-		--background-color: 'black';
 		--mix-blend-mode: 'none';
 		--size: 20;
-		background-color: var(--background-color);
+		background-color: var(--background);
 		mix-blend-mode: var(--mix-blend-mode);
 		width: var(--size);
 		height: var(--size);

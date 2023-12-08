@@ -121,7 +121,7 @@
 			height: 4rem;
 			position: sticky;
 			padding: 0 var(--grid-padding);
-			border-bottom: 1px solid black;
+			border-bottom: 1px solid var(--primary);
 			display: flex;
 			align-items: center;
 			justify-content: space-between;

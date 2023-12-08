@@ -24,7 +24,7 @@
 	.body {
 		font-family: var(--font-mono);
 		position: absolute;
-		top: 0;
+		top: 4rem;
 		width: 100%;
 		overflow: hidden;
 	}

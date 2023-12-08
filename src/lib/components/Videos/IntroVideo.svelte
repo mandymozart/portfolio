@@ -133,12 +133,12 @@
 	.caption {
 		opacity: 0;
 		position: absolute;
-		top: 2rem;
+		bottom: 2rem;
 		left: 6rem;
 		right: 2rem;
 		font-family: var(--font-mono);
 		text-align: center;
-		color: yellow;
+		color: rgb(255, 230, 0);
 		font-size: 3rem;
 		&.visible {
 			opacity: 1;

@@ -67,11 +67,11 @@
 	}
 	.logo {
 		&:after {
-			background: black;
+			background: var(--primary);
 			border-radius: 2rem;
 		}
 		padding: var(--grid-padding);
-		/* border-right: 1px solid black; */
+		/* border-right: 1px solid var(--primary); */
 		height: 10rem;
 		img {
 			width: 100%;

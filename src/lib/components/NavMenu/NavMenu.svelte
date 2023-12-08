@@ -16,93 +16,88 @@
 </script>
 
 <div class="nav-menu">
-	<nav class="flex flex-row items-center text-sm">
-		<div class="flex flex-row flex-1 self-center justify-center">
-			<div class="blend"></div>
-			{#each navItems as item}
-				<a
-					href={`${base}${item.route}`}
-					class="nav-menu-item text-[var(--secondary-text)]"
-					class:active={currentRoute === item.route}
-				>
-					<span class="nav-menu-item-label font-mono">{item.title}</span>
-				</a>
-			{/each}
-		</div>
+	<nav>
+		<a class="nav-menu-item nav-menu-item--home" href={`${base}/`}>
+			<span>/</span>
+		</a>
+		{#each navItems as item}
+			<a
+				href={`${base}${item.route}`}
+				class="nav-menu-item"
+				class:active={currentRoute === item.route}
+			>
+				<span>{item.title}</span>
+			</a>
+		{/each}
 	</nav>
 </div>
 
 <style lang="scss">
-	:root {
-		--background-color: #edeff6;
-	}
 	.nav-menu {
-		display: flex;
-		justify-content: center;
 		position: fixed;
-		bottom: 0;
+		right: 0;
 		left: 0;
 		top: 0;
-		width: 4rem;
-		writing-mode: tb-rl;
-		transform: rotate(-180deg) translate(0, 0);
 		z-index: 100000;
-		padding: 1rem 0;
 		margin: 0;
-		background-color: transparent;
 		nav {
-			height: 100vh;
-			> div {
-				justify-content: space-between;
-			}
+			height: 4rem;
+			display: grid;
+			grid-template-columns: 3fr 1fr 1fr 1fr;
 			&:hover {
 				cursor: pointer;
-				.blend,
-				.nav-menu-item {
-					border: 0px solid var(--background-color);
-					background: white;
-				}
-				.blend {
-					top: 5rem;
-					left: 1.3rem;
-					bottom: 4rem;
-					right: 1.3rem;
-				}
 			}
-		}
-		.blend {
-			position: absolute;
-			top: 5rem;
-			left: 1.95rem;
-			bottom: 4rem;
-			right: 1.95rem;
-			z-index: -1;
-			border: 0;
-			background: var(--background-color);
+			@media (max-width: 1350px) {
+			}
+			@media (max-width: 850px) {
+				grid-template-columns: 1fr 1fr;
+			}
 		}
 
 		&-item {
 			text-decoration: none;
 			font-weight: 400;
-			padding: 1rem 0.5rem;
-			margin: 1rem 0.5rem;
-			border-radius: 2rem 1rem 2rem 1rem;
+			font-family: var(--font-serif);
+
+			border-radius: 2rem;
 			border: 0;
-			background: var(--background-color);
+
 			color: inherit;
 			display: flex;
 			align-items: center;
 			transition: all 0.2s ease-in;
 
-			&-label {
+			span {
 				margin-left: 0;
+				padding: 0.5rem 2rem;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 2rem;
+				border-radius: 2rem;
+				background: rgba(255, 255, 255, 0.0001);
+				backdrop-filter: blur(10px);
+				height: 2rem;
+			}
+			&--home {
+				padding: 0 2rem;
+				span {
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					padding: 0;
+					border-radius: 2rem;
+					background: rgba(255, 255, 255, 0.0001);
+					backdrop-filter: blur(10px);
+				}
 			}
 
 			&.active,
 			&:hover {
-				color: var(--main-hover);
-				padding: 1.5rem 0.5rem;
-				background: white;
+				background: var(--background);
 				letter-spacing: 0.2rem;
 			}
 		}

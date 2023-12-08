@@ -13,7 +13,9 @@ const config = {
 			showToggleButton: 'always'
 		}
 	},
-
+	ssr: {
+		noExternal: ['three']
+	},
 	kit: {
 		adapter: adapter({ fallback: '404.html' }),
 		paths: {
