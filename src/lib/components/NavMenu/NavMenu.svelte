@@ -17,7 +17,11 @@
 
 <div class="nav-menu">
 	<nav>
-		<a class="nav-menu-item nav-menu-item--home" href={`${base}/`}>
+		<a
+			class="nav-menu-item nav-menu-item--home"
+			class:active={currentRoute === '/'}
+			href={`${base}/`}
+		>
 			<span>/</span>
 		</a>
 		{#each navItems as item}
@@ -79,7 +83,7 @@
 				backdrop-filter: blur(10px);
 				height: 2rem;
 			}
-			&--home {
+			&--home.nav-menu-item {
 				padding: 0 2rem;
 				span {
 					display: block;
@@ -93,11 +97,17 @@
 					background: rgba(255, 255, 255, 0.0001);
 					backdrop-filter: blur(10px);
 				}
+				&.active span,
+				&:hover span {
+					background: var(--primary);
+
+					letter-spacing: normal;
+				}
 			}
 
 			&.active,
 			&:hover {
-				background: var(--background);
+				color: var(--secondary);
 				letter-spacing: 0.2rem;
 			}
 		}
