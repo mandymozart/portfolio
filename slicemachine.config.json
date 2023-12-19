@@ -1,0 +1,5 @@
+{
+  "repositoryName": "mandymozart-dev",
+  "libraries": ["./src/lib/slices"],
+  "localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
+}
