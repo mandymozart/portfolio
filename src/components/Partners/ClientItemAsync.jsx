@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { usePrismicDocumentByUID } from '@prismicio/react';
-import React from 'react';
 import { isNotEmptyLinkField } from '../../typeguards';
 
 const Container = styled.div`
@@ -13,8 +12,8 @@ const Container = styled.div`
 `;
 
 const ClientItemAsync = ({ uid }) => {
-  if (!uid) return <></>;
   const [document] = usePrismicDocumentByUID('client', uid);
+  if (!uid) return <></>;
   const data = document?.data;
   console.log('client', document?.data, uid);
   if (!data) return <></>;

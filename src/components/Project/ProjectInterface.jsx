@@ -81,21 +81,13 @@ const Container = styled.div`
 `;
 
 export const ProjectInterface = ({ uid }) => {
-  if (!uid) return <>Nothing Selected yet</>;
   const [document] = usePrismicDocumentByUID('project', uid);
+  if (!uid) return <>Nothing Selected yet</>;
   const project = document?.data;
   if (!project) return <div>Error</div>;
-  console.log(project);
   return (
     <Container>
       <section className='page page-hero'>
-        {/* <Breadcrumbs
-          breadcrumbs={[
-            { path: '/', label: 'Home' },
-            { path: '/projects', label: 'Projects' },
-            { label: project.name },
-          ]}
-        /> */}
         <header>
           <h2>{project.name}</h2>
           <div>

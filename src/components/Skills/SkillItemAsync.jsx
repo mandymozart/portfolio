@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { usePrismicDocumentByUID } from '@prismicio/react';
 import clsx from 'clsx';
-import React from 'react';
 
 const Container = styled.div`
   display: flex;
@@ -17,8 +16,8 @@ const Container = styled.div`
 `;
 
 const SkillItemAsync = ({ uid, textOnly }) => {
-  if (!uid) return <></>;
   const [document] = usePrismicDocumentByUID('skill', uid);
+  if (!uid) return <></>;
   const data = document?.data;
   console.log('skill', document?.data, uid);
   if (!data) return <></>;

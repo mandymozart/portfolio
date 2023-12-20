@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import React from 'react';
 
 const Container = styled.div`
   height: 100vh;
@@ -36,7 +35,7 @@ const ContactSection = () => {
     <Container>
       <div className='body'>
         <div className='inner'>
-          <h3>Let's work together!</h3>
+          <h3>Let&apos;s work together!</h3>
           <p>
             Please reach out for jobs, contracts and collaborations. I am very
             friendly and excited to hear from you.

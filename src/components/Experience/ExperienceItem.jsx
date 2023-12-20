@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
-import React from 'react';
 import useMenuStore from '../../stores/MenuStore';
 import useProjectStore from '../../stores/ProjectStore';
 
@@ -43,6 +42,8 @@ const Container = styled.div`
 `;
 
 const ExperienceItem = ({ experience, projects }) => {
+  const setActiveProject = useProjectStore(state => state.setActiveProject);
+  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
   if (!experience) return <></>;
   if (!projects) return <></>;
   const getProject = uid => {
@@ -60,8 +61,6 @@ const ExperienceItem = ({ experience, projects }) => {
     }
   };
 
-  const setActiveProject = useProjectStore(state => state.setActiveProject);
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
   const navigateTo = uid => () => {
     setActiveMenuItem('project');
     setActiveProject(uid);

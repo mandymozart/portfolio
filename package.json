@@ -50,6 +50,7 @@
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.31",
     "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.1",
     "slice-machine-ui": "^1.22.1"
   }

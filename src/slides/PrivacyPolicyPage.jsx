@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
         However, Internet-based data transmissions may in principle have
         security gaps, so absolute protection may not be guaranteed. For this
         reason, every data subject is free to transfer personal data to us via
-        alternative means, e.g. by telephone.{' '}
+        alternative means, e.g. by telephone.
       </p>
 
       <h4>1. Definitions</h4>
@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
           </p>
         </li>
         <li>
-          <h4>c)    Processing</h4>
+          <h4>c) Processing</h4>
           <p>
             Processing is any operation or set of operations which is performed
             on personal data or on sets of personal data, whether or not by
@@ -92,29 +92,29 @@ const PrivacyPolicy = () => {
             structuring, storage, adaptation or alteration, retrieval,
             consultation, use, disclosure by transmission, dissemination or
             otherwise making available, alignment or combination, restriction,
-            erasure or destruction.{' '}
+            erasure or destruction.
           </p>
         </li>
         <li>
-          <h4>d)    Restriction of processing</h4>
+          <h4>d Restriction of processing</h4>
           <p>
             Restriction of processing is the marking of stored personal data
-            with the aim of limiting their processing in the future.{' '}
+            with the aim of limiting their processing in the future.
           </p>
         </li>
         <li>
-          <h4>e)    Profiling</h4>
+          <h4>e Profiling</h4>
           <p>
             Profiling means any form of automated processing of personal data
             consisting of the use of personal data to evaluate certain personal
             aspects relating to a natural person, in particular to analyse or
-            predict aspects concerning that natural person's performance at
+            predict aspects concerning that natural person&apos;s performance at
             work, economic situation, health, personal preferences, interests,
-            reliability, behaviour, location or movements.{' '}
+            reliability, behaviour, location or movements.
           </p>
         </li>
         <li>
-          <h4>f)     Pseudonymisation</h4>
+          <h4>f) Pseudonymisation</h4>
           <p>
             Pseudonymisation is the processing of personal data in such a manner
             that the personal data can no longer be attributed to a specific
@@ -122,11 +122,11 @@ const PrivacyPolicy = () => {
             that such additional information is kept separately and is subject
             to technical and organisational measures to ensure that the personal
             data are not attributed to an identified or identifiable natural
-            person.{' '}
+            person.
           </p>
         </li>
         <li>
-          <h4>g)    Controller or controller responsible for the processing</h4>
+          <h4>g) Controller or controller responsible for the processing</h4>
           <p>
             Controller or controller responsible for the processing is the
             natural or legal person, public authority, agency or other body
@@ -134,19 +134,19 @@ const PrivacyPolicy = () => {
             means of the processing of personal data; where the purposes and
             means of such processing are determined by Union or Member State
             law, the controller or the specific criteria for its nomination may
-            be provided for by Union or Member State law.{' '}
+            be provided for by Union or Member State law.
           </p>
         </li>
         <li>
-          <h4>h)    Processor</h4>
+          <h4>h) Processor</h4>
           <p>
             Processor is a natural or legal person, public authority, agency or
             other body which processes personal data on behalf of the
-            controller.{' '}
+            controller.
           </p>
         </li>
         <li>
-          <h4>i)      Recipient</h4>
+          <h4>i) Recipient</h4>
           <p>
             Recipient is a natural or legal person, public authority, agency or
             another body, to which the personal data are disclosed, whether a
@@ -155,11 +155,11 @@ const PrivacyPolicy = () => {
             with Union or Member State law shall not be regarded as recipients;
             the processing of those data by those public authorities shall be in
             compliance with the applicable data protection rules according to
-            the purposes of the processing.{' '}
+            the purposes of the processing.
           </p>
         </li>
         <li>
-          <h4>j)      Third party</h4>
+          <h4>j) Third party</h4>
           <p>
             Third party is a natural or legal person, public authority, agency
             or body other than the data subject, controller, processor and
@@ -168,12 +168,13 @@ const PrivacyPolicy = () => {
           </p>
         </li>
         <li>
-          <h4>k)    Consent</h4>
+          <h4>k) Consent</h4>
           <p>
             Consent of the data subject is any freely given, specific, informed
-            and unambiguous indication of the data subject's wishes by which he
-            or she, by a statement or by a clear affirmative action, signifies
-            agreement to the processing of personal data relating to him or her.{' '}
+            and unambiguous indication of the data subject&apos;s wishes by
+            which he or she, by a statement or by a clear affirmative action,
+            signifies agreement to the processing of personal data relating to
+            him or her.
           </p>
         </li>
       </ul>
@@ -228,16 +229,17 @@ const PrivacyPolicy = () => {
       <h4>4. Subscription to our newsletters</h4>
       <p>
         On the website of the Tilman Porschütz Developer, users are given the
-        opportunity to subscribe to our enterprise's newsletter. The input mask
-        used for this purpose determines what personal data are transmitted, as
-        well as when the newsletter is ordered from the controller.
+        opportunity to subscribe to our enterprise&apos;s newsletter. The input
+        mask used for this purpose determines what personal data are
+        transmitted, as well as when the newsletter is ordered from the
+        controller.
       </p>
 
       <p>
         The Tilman Porschütz Developer informs its customers and business
         partners regularly by means of a newsletter about enterprise offers. The
-        enterprise's newsletter may only be received by the data subject if (1)
-        the data subject has a valid e-mail address and (2) the data subject
+        enterprise&apos;s newsletter may only be received by the data subject if
+        (1) the data subject has a valid e-mail address and (2) the data subject
         registers for the newsletter shipping. A confirmation e-mail will be
         sent to the e-mail address registered by a data subject for the first
         time for newsletter shipping, for legal reasons, in the double opt-in
@@ -426,7 +428,7 @@ const PrivacyPolicy = () => {
             data concerning him or her without undue delay, and the controller
             shall have the obligation to erase personal data without undue delay
             where one of the following grounds applies, as long as the
-            processing is not necessary:{' '}
+            processing is not necessary:
           </p>
 
           <ul>
@@ -444,7 +446,7 @@ const PrivacyPolicy = () => {
               The data subject objects to the processing pursuant to Article
               21(1) of the GDPR and there are no overriding legitimate grounds
               for the processing, or the data subject objects to the processing
-              pursuant to Article 21(2) of the GDPR.{' '}
+              pursuant to Article 21(2) of the GDPR.
             </li>
             <li>The personal data have been unlawfully processed.</li>
             <li>
@@ -491,7 +493,7 @@ const PrivacyPolicy = () => {
             <li>
               The accuracy of the personal data is contested by the data
               subject, for a period enabling the controller to verify the
-              accuracy of the personal data.{' '}
+              accuracy of the personal data.
             </li>
             <li>
               The processing is unlawful and the data subject opposes the
@@ -514,7 +516,7 @@ const PrivacyPolicy = () => {
             wishes to request the restriction of the processing of personal data
             stored by the Tilman Porschütz Developer, he or she may at any time
             contact any employee of the controller. The employee of the Tilman
-            Porschütz Developer will arrange the restriction of the processing.{' '}
+            Porschütz Developer will arrange the restriction of the processing.
           </p>
         </li>
         <li>
@@ -608,18 +610,18 @@ const PrivacyPolicy = () => {
             into, or the performance of, a contract between the data subject and
             a data controller, or (2) is not authorised by Union or Member State
             law to which the controller is subject and which also lays down
-            suitable measures to safeguard the data subject's rights and
+            suitable measures to safeguard the data subject&apos;s rights and
             freedoms and legitimate interests, or (3) is not based on the data
-            subject's explicit consent.
+            subject&apos;s explicit consent.
           </p>
 
           <p>
             If the decision (1) is necessary for entering into, or the
             performance of, a contract between the data subject and a data
-            controller, or (2) it is based on the data subject's explicit
+            controller, or (2) it is based on the data subject&apos;s explicit
             consent, the Tilman Porschütz Developer shall implement suitable
-            measures to safeguard the data subject's rights and freedoms and
-            legitimate interests, at least the right to obtain human
+            measures to safeguard the data subject&apos;s rights and freedoms
+            and legitimate interests, at least the right to obtain human
             intervention on the part of the controller, to express his or her
             point of view and contest the decision.
           </p>
@@ -635,7 +637,7 @@ const PrivacyPolicy = () => {
           <p>
             Each data subject shall have the right granted by the European
             legislator to withdraw his or her consent to processing of his or
-            her personal data at any time.{' '}
+            her personal data at any time.
           </p>
 
           <p>
@@ -788,7 +790,7 @@ const PrivacyPolicy = () => {
         14. Provision of personal data as statutory or contractual requirement;
         Requirement necessary to enter into a contract; Obligation of the data
         subject to provide the personal data; possible consequences of failure
-        to provide such data{' '}
+        to provide such data
       </h4>
       <p>
         We clarify that the provision of personal data is partly required by law
