@@ -1,3 +1,4 @@
+'use client';
 import styled from '@emotion/styled';
 import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl';
 import useMenuStore from '../../stores/MenuStore';

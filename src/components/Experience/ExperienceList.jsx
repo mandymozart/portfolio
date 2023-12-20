@@ -1,6 +1,6 @@
+'use client';
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
-import React from 'react';
 import ExperienceItem from './ExperienceItem';
 
 const Container = styled.div`
@@ -38,7 +38,7 @@ const ExperienceList = () => {
             role='listitem'
             key={index}
             experience={experience}
-            projects={projects.results}
+            projects={projects?.results}
           />
         ))}
       </div>

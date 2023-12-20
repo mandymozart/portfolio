@@ -1,3 +1,4 @@
+'use client';
 import styled from '@emotion/styled';
 import { PrismicRichText, usePrismicDocumentByUID } from '@prismicio/react';
 import PartnerItem from '../Partners/PartnerItem';

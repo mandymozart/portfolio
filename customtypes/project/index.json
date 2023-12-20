@@ -1,0 +1,166 @@
+{
+  "id": "project",
+  "label": "Project",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "slug",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "name",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "industry": {
+        "type": "Text",
+        "config": {
+          "label": "industry",
+          "placeholder": ""
+        }
+      },
+      "type": {
+        "type": "Text",
+        "config": {
+          "label": "type",
+          "placeholder": ""
+        }
+      },
+      "link": {
+        "type": "Link",
+        "config": {
+          "label": "link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "fromDate": {
+        "type": "Date",
+        "config": {
+          "label": "fromDate",
+          "placeholder": ""
+        }
+      },
+      "toDate": {
+        "type": "Date",
+        "config": {
+          "label": "toDate",
+          "placeholder": ""
+        }
+      },
+      "video_id": {
+        "type": "Text",
+        "config": {
+          "label": "Video ID",
+          "placeholder": "(video id for external storage)"
+        }
+      },
+      "transcript": {
+        "type": "StructuredText",
+        "config": {
+          "label": "transcript",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "images",
+          "fields": {
+            "desktop": {
+              "type": "Image",
+              "config": {
+                "label": "desktop",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "mobile": {
+              "type": "Image",
+              "config": {
+                "label": "mobile",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "skills": {
+        "type": "Group",
+        "config": {
+          "label": "Skills",
+          "fields": {
+            "skill": {
+              "type": "Link",
+              "config": {
+                "label": "skill",
+                "select": "document",
+                "customtypes": ["skill"]
+              }
+            }
+          }
+        }
+      },
+      "partners": {
+        "type": "Group",
+        "config": {
+          "label": "Partners",
+          "fields": {
+            "partner": {
+              "type": "Link",
+              "config": {
+                "label": "Partner",
+                "select": "document",
+                "customtypes": ["client", "collaborator"]
+              }
+            }
+          }
+        }
+      },
+      "methods": {
+        "type": "Group",
+        "config": {
+          "label": "Methods",
+          "fields": {
+            "method": {
+              "type": "Link",
+              "config": {
+                "label": "Method",
+                "select": "document",
+                "customtypes": ["method"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

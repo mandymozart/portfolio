@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import { ProjectInterface } from '../components/Project/ProjectInterface';
 import useProjectStore from '../stores/ProjectStore';
 

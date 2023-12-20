@@ -1,13 +1,17 @@
 {
-  "name": "portfolio",
+  "name": "nextjs-starter-prismic-minimal-ts",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
+    "next:dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
@@ -15,11 +19,14 @@
     "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.11.0",
     "@prismicio/client": "^7.3.1",
+    "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.3",
     "@react-three/drei": "^9.92.1",
     "@react-three/fiber": "^8.15.12",
     "@react-three/rapier": "^1.2.1",
-    "@slicemachine/init": "^2.9.7",
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
     "@types/three": "^0.159.0",
     "add": "^2.0.6",
     "clsx": "^2.0.0",
@@ -29,6 +36,7 @@
     "framer-motion-3d": "^10.16.16",
     "gsap": "^3.12.3",
     "leva": "^0.9.35",
+    "next": "^14.0.1",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,21 +44,13 @@
     "react-router-dom": "^6.20.1",
     "react-top-loading-bar": "^2.3.1",
     "three": "^0.159.0",
-    "usehooks-ts": "^2.9.1",
-    "yarn": "^1.22.21"
+    "typescript": "^5.2.2",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
-    "@react-three/eslint-plugin": "^0.1.1",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "@vitejs/plugin-react": "^4.2.0",
-    "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0"
+    "@slicemachine/adapter-next": "^0.3.31",
+    "concurrently": "^8.2.2",
+    "eslint-config-next": "^14.0.1",
+    "slice-machine-ui": "^1.22.1"
   }
 }

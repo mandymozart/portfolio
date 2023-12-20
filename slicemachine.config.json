@@ -1,5 +1,6 @@
 {
+  "libraries": ["./src/slices"],
+  "adapter": "@slicemachine/adapter-next",
   "repositoryName": "mandymozart-dev",
-  "libraries": ["./src/lib/slices"],
-  "localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }

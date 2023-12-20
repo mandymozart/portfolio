@@ -1,3 +1,4 @@
+'use client';
 import styled from '@emotion/styled';
 import { useAllPrismicDocumentsByType } from '@prismicio/react';
 import React from 'react';

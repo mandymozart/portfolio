@@ -1,0 +1,40 @@
+{
+	"id": "client",
+	"label": "Client",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"logo": {
+				"type": "Image",
+				"config": {
+					"label": "logo",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"name": {
+				"type": "Text",
+				"config": {
+					"label": "Name",
+					"placeholder": ""
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "Link",
+					"placeholder": "",
+					"select": null
+				}
+			}
+		}
+	}
+}

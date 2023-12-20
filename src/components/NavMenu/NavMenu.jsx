@@ -1,5 +1,5 @@
+'use client';
 import styled from '@emotion/styled';
-import React from 'react';
 import useMenuStore from '../../stores/MenuStore';
 import Loader from '../Loader/Loader';
 

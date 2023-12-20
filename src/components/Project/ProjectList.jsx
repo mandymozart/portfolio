@@ -1,6 +1,6 @@
+'use client';
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
-import React from 'react';
 import ProjectItem from './ProjectItem';
 
 const Container = styled.div`

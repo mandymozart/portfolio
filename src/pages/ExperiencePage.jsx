@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import ExperienceList from '../components/Experience/ExperienceList';
 import ListHeader from '../components/ListHeader/ListHeader';
 import ClientList from '../components/Partners/ClientList';
