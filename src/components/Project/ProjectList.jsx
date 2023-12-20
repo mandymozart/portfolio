@@ -7,13 +7,13 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   .list {
-    padding: var(--grid-padding);
+    padding: 0 var(--grid-padding);
   }
 `;
 
 const ProjectList = () => {
   const [documents] = usePrismicDocumentsByType('project');
-  if (!documents) return <>No Projects found</>;
+  if (!documents) return <>...</>;
   console.log(documents);
   return (
     <Container>

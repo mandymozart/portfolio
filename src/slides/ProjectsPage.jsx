@@ -1,23 +1,16 @@
 'use client';
 import styled from '@emotion/styled';
-import { useAllPrismicDocumentsByType } from '@prismicio/react';
-import React from 'react';
-import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
+import ProjectList from '../components/Project/ProjectList';
 
 const Container = styled.div`
   /* Add your styles here */
+  margin-top: var(--header-height);
 `;
 
 function ProjectsPage() {
-  const [documents] = useAllPrismicDocumentsByType('project');
-  console.log(JSON.stringify(documents));
-  if (!documents) return <></>;
   return (
     <Container>
-      <Breadcrumbs
-        breadcrumbs={[{ path: '/', label: 'Home' }, { label: 'Projects' }]}
-      />
-      {/* <ProjectList projects={documents} /> */}
+      <ProjectList />
     </Container>
   );
 }

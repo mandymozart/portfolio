@@ -4,8 +4,7 @@ import clsx from 'clsx';
 import Footer from './components/Footer/Footer';
 import LoadingScreenSimple from './components/LoadingScreen/LoadingScreenSimple';
 import NavMenu from './components/NavMenu/NavMenu';
-import ProjectList from './components/Project/ProjectList';
-import { SlideIn } from './components/SlideIn/SlideIn';
+import SlideIn from './components/SlideIn/SlideIn';
 import './index.css';
 import { createClient } from './prismicio';
 import AttributionsPage from './slides/AttributionsPage';
@@ -14,6 +13,7 @@ import HomePage from './slides/HomePage';
 import ImprintPage from './slides/ImprintPage';
 import PrivacyPolicy from './slides/PrivacyPolicyPage';
 import ProjectDetailPage from './slides/ProjectDetailPage';
+import ProjectsPage from './slides/ProjectsPage';
 import ResumePage from './slides/ResumePage';
 import useMenuStore from './stores/MenuStore';
 function App() {
@@ -29,7 +29,7 @@ function App() {
           <ProjectDetailPage />
         </SlideIn>
         <SlideIn className={clsx({ isActive: activeMenuItem === 'projects' })}>
-          <ProjectList />
+          <ProjectsPage />
         </SlideIn>
         <SlideIn
           className={clsx({ isActive: activeMenuItem === 'experiences' })}

@@ -84,19 +84,19 @@ export const ProjectInterface = ({ uid }) => {
   const [document] = usePrismicDocumentByUID('project', uid);
   if (!uid) return <>Nothing Selected yet</>;
   const project = document?.data;
-  if (!project) return <div>Error</div>;
+  if (!project) return <>...</>;
   return (
     <Container>
       <section className='page page-hero'>
         <header>
-          <h2>{project.name}</h2>
+          <h2>{project?.name}</h2>
           <div>
-            {project.industry}/{project.type}
+            {project?.industry}/{project?.type}
           </div>
         </header>
         <div className='meta'>
           <div className='description'>
-            <PrismicRichText field={project.description} />
+            <PrismicRichText field={project?.description} />
           </div>
           <div className='partners'>
             <h3>Partners</h3>
@@ -111,7 +111,7 @@ export const ProjectInterface = ({ uid }) => {
           <div className='tech-stack'>
             <h3>Tech Stack</h3>
             <div className='tech-stack-list'>
-              {project.skills.map((edges, index) => (
+              {project?.skills.map((edges, index) => (
                 <SkillItemAsync
                   key={index}
                   uid={edges.skill.uid}
@@ -122,25 +122,25 @@ export const ProjectInterface = ({ uid }) => {
           <div className='participation'>
             <div className='roles'>
               <h3>Roles</h3>
-              <div>{project.roles}</div>
+              <div>{project?.roles}</div>
             </div>
             <div className='methods'>
               <h3>Methods</h3>
-              {/* <div>{project.methods}</div> */}
+              {/* <div>{project?.methods}</div> */}
             </div>
           </div>
         </div>
       </section>
-      <ScreenshotsSection screenshots={project.images} />
-      {project.video_id && (
+      <ScreenshotsSection screenshots={project?.images} />
+      {project?.video_id && (
         <div className='video-reaction'>
-          {/* <VideoReaction videoid={project.video_id.toString()} /> */}
+          {/* <VideoReaction videoid={project?.video_id.toString()} /> */}
         </div>
       )}
       <div className='link'>
-        {project.link.url && (
+        {project?.link.url && (
           <a
-            href={project.link.url}
+            href={project?.link.url}
             target='_blank'
             rel='noopener noreferrer'
             className='button'
