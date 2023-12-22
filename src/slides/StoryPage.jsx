@@ -29,8 +29,8 @@ function StoryPage() {
       </ul>
       <h3 dir='ltr'>Experience</h3>
       <p dir='ltr'>
-        Tilman's clients and collaborators range from big tech to scientific to
-        artistic backgrounds.{' '}
+        Tilman&apos;s clients and collaborators range from big tech to
+        scientific to artistic backgrounds.{' '}
       </p>
       <h3 dir='ltr'>Methods</h3>
       <p dir='ltr'>
