@@ -1,5 +1,8 @@
+import { emitRouteChange } from '@/events/routerEvents';
+import useMonoSynth from '@/hooks/useMonoSynth';
+import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import React from 'react';
+import { FC } from 'react';
 import useMenuStore from '../../stores/MenuStore';
 import useProjectStore from '../../stores/ProjectStore';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
@@ -72,14 +75,20 @@ const project = {
   type: 'WebApp',
 };
 
-const FeatureProjectResRadio2Section = ({ children, ...props }) => {
+const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
   const setActiveProject = useProjectStore(state => state.setActiveProject);
   const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-  const navigateTo = uid => () => {
-    setActiveMenuItem('project');
-    setActiveProject(uid);
+
+  const { playToneAtRoute } = useMonoSynth();
+
+  function navigateTo(uid: string) {
     console.log('navigateTo', uid);
-  };
+    playToneAtRoute(routes.PROJECT.key);
+    emitRouteChange({ to: routes.PROJECT });
+    setActiveMenuItem(routes.PROJECT);
+    setActiveProject(uid);
+  }
+
   return (
     <Container {...props}>
       {/* <img
@@ -89,7 +98,7 @@ const FeatureProjectResRadio2Section = ({ children, ...props }) => {
 
       <a
         href='#'
-        onClick={navigateTo(project.uid)}
+        onClick={() => navigateTo(project.uid)}
       >
         <div className='overlay'>
           <div className='info'>
@@ -112,7 +121,6 @@ const FeatureProjectResRadio2Section = ({ children, ...props }) => {
           </div>
         </div>
       </a>
-      {children}
     </Container>
   );
 };

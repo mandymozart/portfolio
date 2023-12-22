@@ -1,3 +1,6 @@
+import { emitRouteChange } from '@/events/routerEvents';
+import useMonoSynth from '@/hooks/useMonoSynth';
+import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import useMenuStore from '../../stores/MenuStore';
@@ -42,6 +45,7 @@ const Container = styled.div`
 `;
 
 const ExperienceItem = ({ experience, projects }) => {
+  const { playToneAtRoute } = useMonoSynth();
   const setActiveProject = useProjectStore(state => state.setActiveProject);
   const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
   if (!experience) return <></>;
@@ -62,9 +66,13 @@ const ExperienceItem = ({ experience, projects }) => {
   };
 
   const navigateTo = uid => () => {
-    setActiveMenuItem('project');
+    const rC = { to: routes.PROJECT, params: { uid: uid } };
+    rC.to.params = { uid: uid };
+    console.log('navigateTo', rC);
+    playToneAtRoute(rC.key);
+    setActiveMenuItem(routes.PROJECT);
     setActiveProject(uid);
-    console.log('navigateTo', uid);
+    emitRouteChange(rC);
   };
   return (
     <Container>

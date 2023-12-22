@@ -19,7 +19,6 @@ const SkillItemAsync = ({ uid, textOnly }) => {
   const [document] = usePrismicDocumentByUID('skill', uid);
   if (!uid) return <></>;
   const data = document?.data;
-  console.log('skill', document?.data, uid);
   if (!data) return <></>;
   return (
     <Container className={clsx({ textOnly: textOnly })}>

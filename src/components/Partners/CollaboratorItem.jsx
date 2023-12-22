@@ -14,7 +14,6 @@ const CollaboratorItem = ({ uid }) => {
   const [document] = usePrismicDocumentByUID('collaborator', uid);
   if (!uid) return <></>;
   const data = document?.data;
-  console.log('collaborator', document?.data, uid);
   if (!data) return <></>;
   return (
     <Container>

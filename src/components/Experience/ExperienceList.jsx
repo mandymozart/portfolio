@@ -29,7 +29,6 @@ const ExperienceList = () => {
     ],
   });
   if (!experiences) return <>No Experiences found</>;
-  console.log(experiences, projects);
   return (
     <Container>
       <div className='list'>

@@ -1,20 +1,12 @@
 'use client';
+import { sameRouteTone } from '@/audioConfig';
+import { emitRouteChange } from '@/events/routerEvents';
+import useMonoSynth from '@/hooks/useMonoSynth';
+import { SlideInRoute, SlideInRouteName, routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
+import { MonoSynth } from 'tone';
 import useMenuStore from '../../stores/MenuStore';
 import Loader from '../Loader/Loader';
-
-const NavBar = {
-  home: 'tilman@porschuetz.de',
-  personal: 'Projects',
-  career: 'Experiences',
-  resume: 'Resume',
-};
-
-export const navItems = [
-  { title: NavBar.personal, route: 'projects' },
-  { title: NavBar.career, route: 'experiences' },
-  { title: NavBar.resume, route: 'resume' },
-];
 
 const Container = styled.div`
   position: fixed;
@@ -97,32 +89,44 @@ const Container = styled.div`
   }
 `;
 
+const navItems = [routes.PROJECTS, routes.EXPERIENCES, routes.RESUME];
+
 const NavMenu = () => {
   const activeMenuItem = useMenuStore(store => store.activeMenuItem);
   const setActiveMenuItem = useMenuStore(store => store.setActiveMenuItem);
 
-  const navigateTo = to => {
-    setActiveMenuItem(to);
+  const { playToneAtRoute } = useMonoSynth();
+
+  const navigateTo = (to: SlideInRoute) => {
+    if (activeMenuItem.key === to.key) {
+      playToneAtRoute();
+    } else {
+      playToneAtRoute(to.key);
+      emitRouteChange({ to });
+      setActiveMenuItem(to);
+    }
   };
 
   return (
     <Container>
       <nav>
         <button
-          onClick={() => navigateTo('home')}
+          onClick={() => navigateTo(routes.HOME)}
           className={`item item--home ${
-            activeMenuItem === '/' ? 'active' : ''
+            activeMenuItem.key === routes.HOME.key ? 'active' : ''
           }`}
         >
           <Loader />
         </button>
-        {navItems.map(item => (
+        {navItems.map(route => (
           <button
-            onClick={() => navigateTo(item.route)}
-            key={item.route}
-            className={`item ${activeMenuItem === item.route ? 'active' : ''}`}
+            onClick={() => navigateTo(route)}
+            key={route.key}
+            className={`item ${
+              activeMenuItem.key === route.key ? 'active' : ''
+            }`}
           >
-            <span>{item.title}</span>
+            <span>{route.label}</span>
           </button>
         ))}
       </nav>
@@ -131,3 +135,9 @@ const NavMenu = () => {
 };
 
 export default NavMenu;
+
+export function playToneAtRoute(synth: MonoSynth, key?: SlideInRouteName) {
+  const selectedRoute = Object.values(routes).find(route => route.key === key);
+  const tone = selectedRoute ? selectedRoute.tone : sameRouteTone;
+  synth.triggerAttackRelease(tone.note, tone.duration);
+}

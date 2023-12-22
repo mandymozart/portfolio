@@ -13,8 +13,10 @@ const Container = styled.div`
 
 const ProjectList = () => {
   const [documents] = usePrismicDocumentsByType('project');
+  const handleMouseOver = uid => {
+    console.log(uid);
+  };
   if (!documents) return <>...</>;
-  console.log(documents);
   return (
     <Container>
       <div className='list'>

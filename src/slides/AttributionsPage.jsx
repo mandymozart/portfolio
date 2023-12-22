@@ -13,7 +13,7 @@ const AttributionsPage = () => {
         aknowledge their work:
       </p>
       <p>Font: Till - Pauline Le Papge</p>
-      <p>3D: Pixel Pizza</p>
+      <p>3D: Poly Pizza, Quaternius</p>
       <p>Scroll Boilerplate: WaWaSensei</p>
       <p>Cloud Shader: pmndr drei</p>
     </Container>

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
-import React from 'react';
 import ClientItem from './ClientItem';
 
 const Container = styled.div`
@@ -27,7 +26,6 @@ const Container = styled.div`
 
 const ClientList = () => {
   const [document] = usePrismicDocumentsByType('client');
-  console.log('clients', document);
   if (!document) return <></>;
   return (
     <Container>

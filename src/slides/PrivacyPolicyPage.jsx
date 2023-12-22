@@ -7,7 +7,7 @@ const Container = styled.div`
   }
 `;
 
-const PrivacyPolicy = () => {
+const PrivacyPolicyPage = () => {
   return (
     <Container>
       <h4>Privacy Policy</h4>
@@ -818,4 +818,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;

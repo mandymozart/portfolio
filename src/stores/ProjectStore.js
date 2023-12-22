@@ -1,8 +1,8 @@
 import create from 'zustand';
 
 const useProjectStore = create((set) => ({
-    activeProject: null,
-    setActiveProject: (project) => set({ activeProject: project }),
+    activeProject: '', // UID of the active project
+    setActiveProject: (activeProject) => set({ activeProject }),
 }));
 
 export default useProjectStore;

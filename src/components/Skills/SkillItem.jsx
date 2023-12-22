@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import React from 'react';
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +16,6 @@ const Container = styled.div`
 
 const SkillItem = ({ skill, textOnly }) => {
   if (!skill) return <></>;
-  console.log('skill', skill);
   return (
     <Container className={clsx({ textOnly: textOnly })}>
       {skill.logo.url ? (

@@ -1,6 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
-import { PrismicRichText, usePrismicDocumentByUID } from '@prismicio/react';
+import { PrismicRichText } from '@prismicio/react';
 import PartnerItem from '../Partners/PartnerItem';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
 import SkillItemAsync from '../Skills/SkillItemAsync';
@@ -80,11 +80,8 @@ const Container = styled.div`
   }
 `;
 
-export const ProjectInterface = ({ uid }) => {
-  const [document] = usePrismicDocumentByUID('project', uid);
-  if (!uid) return <>Nothing Selected yet</>;
-  const project = document?.data;
-  if (!project) return <>...</>;
+export const ProjectInterface = ({ project }) => {
+  if (!project) return <></>;
   return (
     <Container>
       <section className='page page-hero'>

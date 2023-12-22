@@ -15,7 +15,6 @@ const ClientItemAsync = ({ uid }) => {
   const [document] = usePrismicDocumentByUID('client', uid);
   if (!uid) return <></>;
   const data = document?.data;
-  console.log('client', document?.data, uid);
   if (!data) return <></>;
   return (
     <Container>

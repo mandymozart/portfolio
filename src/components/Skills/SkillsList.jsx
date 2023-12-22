@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
-import React from 'react';
 import SkillItem from './SkillItem';
 
 const Container = styled.div`
@@ -28,7 +27,6 @@ const Container = styled.div`
 
 const SkillsList = () => {
   const [document] = usePrismicDocumentsByType('skill');
-  console.log('skills', document);
   if (!document) return <></>;
   return (
     <Container>

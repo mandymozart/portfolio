@@ -1,5 +1,7 @@
+import { emitRouteChange } from '@/events/routerEvents';
+import useMonoSynth from '@/hooks/useMonoSynth';
+import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import React from 'react';
 import useMenuStore from '../../stores/MenuStore';
 import useProjectStore from '../../stores/ProjectStore';
 
@@ -34,13 +36,24 @@ const Container = styled.div`
 const ProjectItem = ({ project, ...props }) => {
   const setActiveProject = useProjectStore(state => state.setActiveProject);
   const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
+
+  const { playToneAtRoute } = useMonoSynth();
+
   const navigateTo = uid => () => {
-    setActiveMenuItem('project');
+    const rC = { to: routes.PROJECT, params: { uid: uid } };
+    rC.to.params = { uid: uid };
+    console.log('navigateTo', rC);
+    playToneAtRoute(rC.key);
+    setActiveMenuItem(routes.PROJECT);
     setActiveProject(uid);
+    emitRouteChange(rC);
   };
   if (!project) return <></>;
   return (
-    <Container onClick={navigateTo(project.uid)}>
+    <Container
+      onClick={navigateTo(project.uid)}
+      {...props}
+    >
       {project.data.name}
       <span>&mdash;</span>
     </Container>

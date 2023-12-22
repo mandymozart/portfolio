@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { PrismicImage } from '@prismicio/react';
-import React from 'react';
 
 const Container = styled.div`
   /* Add your styles here */
@@ -23,8 +22,8 @@ const ScreenshotsSection = ({ screenshots }) => {
     <Container>
       {screenshots &&
         screenshots.length > 0 &&
-        screenshots.map(item => (
-          <section key={item.id}>
+        screenshots.map((item, index) => (
+          <section key={index}>
             {item.desktop && (
               <PrismicImage
                 className='screenshot hidden--mobile'

@@ -1,5 +1,5 @@
+import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import React from 'react';
 import useMenuStore from '../../stores/MenuStore';
 import useProjectStore from '../../stores/ProjectStore';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
@@ -91,7 +91,7 @@ const FeatureProjectFourthGardenSection = ({ children, ...props }) => {
   const setActiveProject = useProjectStore(state => state.setActiveProject);
   const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
   const navigateTo = uid => () => {
-    setActiveMenuItem('project');
+    setActiveMenuItem(routes.PROJECT);
     setActiveProject(uid);
     console.log('navigateTo', uid);
   };

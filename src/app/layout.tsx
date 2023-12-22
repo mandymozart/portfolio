@@ -13,7 +13,7 @@ export default function RootLayout({
           rel='icon'
           type='image/png'
           sizes='any'
-          href='https://prismic.io/favicon.ico'
+          href='/favicon.ico'
         />
       </head>
       <body>
