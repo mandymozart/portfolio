@@ -3,7 +3,6 @@ import useMonoSynth from '@/hooks/useMonoSynth';
 import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
 import useMenuStore from '../../stores/MenuStore';
-import useProjectStore from '../../stores/ProjectStore';
 
 const Container = styled.div`
   border: 0;
@@ -33,20 +32,19 @@ const Container = styled.div`
   }
 `;
 
-const ProjectItem = ({ project, ...props }) => {
-  const setActiveProject = useProjectStore(state => state.setActiveProject);
+interface Props extends React.ComponentPropsWithoutRef<'div'> {
+  project: any;
+}
+
+const ProjectItem = ({ project, ...props }: Props) => {
   const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
 
   const { playToneAtRoute } = useMonoSynth();
 
-  const navigateTo = uid => () => {
-    const rC = { to: routes.PROJECT, params: { uid: uid } };
-    rC.to.params = { uid: uid };
-    console.log('navigateTo', rC);
-    playToneAtRoute(rC.key);
+  const navigateTo = (uid: string) => () => {
+    playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
-    setActiveProject(uid);
-    emitRouteChange(rC);
+    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
   };
   if (!project) return <></>;
   return (

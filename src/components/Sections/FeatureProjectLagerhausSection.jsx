@@ -1,7 +1,4 @@
-import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import useMenuStore from '../../stores/MenuStore';
-import useProjectStore from '../../stores/ProjectStore';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 const Container = styled.section`
@@ -12,16 +9,6 @@ const Container = styled.section`
   margin: 0 auto;
   @media (max-width: 850px) {
     height: 100vh;
-  }
-  a {
-    z-index: 2;
-    display: block;
-    color: var(--primary);
-    cursor: pointer;
-    text-decoration: none;
-    &:hover {
-      background: none;
-    }
   }
   .overlay {
     width: 100%;
@@ -80,39 +67,27 @@ const project = {
 };
 
 const FeatureProjectLagerhausSection = ({ children, ...props }) => {
-  const setActiveProject = useProjectStore(state => state.setActiveProject);
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-  const navigateTo = uid => () => {
-    setActiveMenuItem(routes.PROJECT);
-    setActiveProject(uid);
-    console.log('navigateTo', uid);
-  };
   return (
     <Container {...props}>
-      <a
-        href='#'
-        onClick={navigateTo(project.uid)}
-      >
-        <div className='overlay'>
-          <div className='info'>
-            <FeatureProjectHeader project={project} />
-            <div className='lead'>
-              <p>
-                Cooperative B2C shop and content platform built on Bloomreach
-                Experience and SAP Hybris.
-              </p>
-            </div>
-            <div className='presentation'>
-              <div className='image image--1'>
-                <img
-                  src={'/images/feature-lagerhaus-1.png'}
-                  alt={'Lagerhaus - Mobile view'}
-                />
-              </div>
+      <div className='overlay'>
+        <div className='info'>
+          <FeatureProjectHeader project={project} />
+          <div className='lead'>
+            <p>
+              Cooperative B2C shop and content platform built on Bloomreach
+              Experience and SAP Hybris.
+            </p>
+          </div>
+          <div className='presentation'>
+            <div className='image image--1'>
+              <img
+                src={'/images/feature-lagerhaus-1.png'}
+                alt={'Lagerhaus - Mobile view'}
+              />
             </div>
           </div>
         </div>
-      </a>
+      </div>
       {children}
     </Container>
   );

@@ -1,7 +1,4 @@
-import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import useMenuStore from '../../stores/MenuStore';
-import useProjectStore from '../../stores/ProjectStore';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 const Container = styled.section`
@@ -12,15 +9,6 @@ const Container = styled.section`
   margin: 0 auto;
   @media (max-width: 850px) {
     height: 100vh;
-  }
-  a {
-    display: block;
-    cursor: pointer;
-    color: var(--primary);
-    text-decoration: none;
-    &:hover {
-      background: none;
-    }
   }
   .overlay {
     width: 100%;
@@ -76,69 +64,57 @@ const project = {
 };
 
 const FeatureProjectSwmaSection = ({ children, ...props }) => {
-  const setActiveProject = useProjectStore(state => state.setActiveProject);
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-  const navigateTo = uid => () => {
-    setActiveMenuItem(routes.PROJECT);
-    setActiveProject(uid);
-    console.log('navigateTo', uid);
-  };
   return (
     <Container {...props}>
-      <a
-        href='#'
-        onClick={navigateTo(project.uid)}
-      >
-        <div className='overlay'>
-          <div className='info'>
-            <FeatureProjectHeader project={project} />
-            <div className='lead'>
-              <p>
-                Design centric portfolio, magazine and online Shopify shop for
-                Stuttgart based brand.
-              </p>
+      <div className='overlay'>
+        <div className='info'>
+          <FeatureProjectHeader project={project} />
+          <div className='lead'>
+            <p>
+              Design centric portfolio, magazine and online Shopify shop for
+              Stuttgart based brand.
+            </p>
+          </div>
+          <div className='presentation'>
+            <div className='image image--1'>
+              <img
+                src={'/images/feature-swma-1.png'}
+                alt={'SWAM - Mobile view'}
+              />
             </div>
-            <div className='presentation'>
-              <div className='image image--1'>
-                <img
-                  src={'/images/feature-swma-1.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
-              <div className='image image--2'>
-                <img
-                  src={'/images/feature-swma-2.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
-              <div className='image image--3'>
-                <img
-                  src={'/images/feature-swma-3.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
-              <div className='image image--4'>
-                <img
-                  src={'/images/feature-swma-4.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
-              <div className='image image--5'>
-                <img
-                  src={'/images/feature-swma-5.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
-              <div className='image image--6'>
-                <img
-                  src={'/images/feature-swma-6.png'}
-                  alt={'SWAM - Mobile view'}
-                />
-              </div>
+            <div className='image image--2'>
+              <img
+                src={'/images/feature-swma-2.png'}
+                alt={'SWAM - Mobile view'}
+              />
+            </div>
+            <div className='image image--3'>
+              <img
+                src={'/images/feature-swma-3.png'}
+                alt={'SWAM - Mobile view'}
+              />
+            </div>
+            <div className='image image--4'>
+              <img
+                src={'/images/feature-swma-4.png'}
+                alt={'SWAM - Mobile view'}
+              />
+            </div>
+            <div className='image image--5'>
+              <img
+                src={'/images/feature-swma-5.png'}
+                alt={'SWAM - Mobile view'}
+              />
+            </div>
+            <div className='image image--6'>
+              <img
+                src={'/images/feature-swma-6.png'}
+                alt={'SWAM - Mobile view'}
+              />
             </div>
           </div>
         </div>
-      </a>
+      </div>
       {children}
     </Container>
   );

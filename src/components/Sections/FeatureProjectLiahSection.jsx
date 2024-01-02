@@ -1,7 +1,4 @@
-import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import useMenuStore from '../../stores/MenuStore';
-import useProjectStore from '../../stores/ProjectStore';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 const Container = styled.section`
@@ -13,16 +10,7 @@ const Container = styled.section`
   @media (max-width: 850px) {
     height: 100vh;
   }
-  a {
-    z-index: 2;
-    display: block;
-    color: var(--primary);
-    cursor: pointer;
-    text-decoration: none;
-    &:hover {
-      background: none;
-    }
-  }
+
   .overlay {
     width: 100%;
 
@@ -75,43 +63,31 @@ const project = {
 };
 
 const FeatureProjectLiahSection = ({ children, ...props }) => {
-  const setActiveProject = useProjectStore(state => state.setActiveProject);
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-  const navigateTo = uid => () => {
-    setActiveMenuItem(routes.PROJECT);
-    setActiveProject(uid);
-    console.log('navigateTo', uid);
-  };
   return (
     <Container {...props}>
-      <a
-        href='#'
-        onClick={navigateTo(project.uid)}
-      >
-        <div className='overlay'>
-          <div className='info'>
-            <FeatureProjectHeader project={project} />
-            <div className='presentation'>
-              <div className='lead'>
-                <p>Transnational furniture shop and configurator.</p>
-                <p>Quality made in Switzerland.</p>
-              </div>
-              <div className='image image--1'>
-                <img
-                  src={'/images/feature-liah-1.png'}
-                  alt={'LiAH - Browser view'}
-                />
-              </div>
-              <div className='image image--2'>
-                <img
-                  src={'/images/feature-liah-2.png'}
-                  alt={'LiAH - Mobile view'}
-                />
-              </div>
+      <div className='overlay'>
+        <div className='info'>
+          <FeatureProjectHeader project={project} />
+          <div className='presentation'>
+            <div className='lead'>
+              <p>Transnational furniture shop and configurator.</p>
+              <p>Quality made in Switzerland.</p>
+            </div>
+            <div className='image image--1'>
+              <img
+                src={'/images/feature-liah-1.png'}
+                alt={'LiAH - Browser view'}
+              />
+            </div>
+            <div className='image image--2'>
+              <img
+                src={'/images/feature-liah-2.png'}
+                alt={'LiAH - Mobile view'}
+              />
             </div>
           </div>
         </div>
-      </a>
+      </div>
       {children}
     </Container>
   );

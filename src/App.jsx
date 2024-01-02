@@ -1,5 +1,6 @@
 'use client';
 import { PrismicProvider } from '@prismicio/react';
+import { HashRouter } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import LoadingScreenSimple from './components/LoadingScreen/LoadingScreenSimple';
 import NavMenu from './components/NavMenu/NavMenu';
@@ -12,13 +13,15 @@ function App() {
   const client = createClient();
   return (
     <>
-      <NavMenu />
-      <LoadingScreenSimple />
-      <HomePage route={routes.HOME} />
-      <PrismicProvider client={client}>
-        <Slides />
-      </PrismicProvider>
-      <Footer />
+      <HashRouter>
+        <NavMenu />
+        <LoadingScreenSimple />
+        <HomePage route={routes.HOME} />
+        <PrismicProvider client={client}>
+          <Slides />
+        </PrismicProvider>
+        <Footer />
+      </HashRouter>
     </>
   );
 }

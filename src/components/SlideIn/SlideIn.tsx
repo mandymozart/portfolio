@@ -1,5 +1,15 @@
-import { useRouteChangeListener } from '@/events/routerEvents';
-import { SlideInRoute, SlideInRouteVariant } from '@/slideInRoutes';
+import {
+  RouteChangeEvent,
+  RouteLoadedEvent,
+  useRouteChangeListener,
+  useRouteLoadedListener,
+} from '@/events/routerEvents';
+import {
+  SlideInRoute,
+  SlideInRouteType,
+  SlideInRouteVariant,
+} from '@/slideInRoutes';
+import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
 import clsx from 'clsx';
 import { distance2D, motion, useMotionValue, useSpring } from 'framer-motion';
@@ -10,7 +20,7 @@ const Container = styled.div`
   left: 0;
   right: 0;
   pointer-events: all;
-  height: calc(100vh + 10rem);
+  height: calc(100vh);
   padding: 0;
   border-radius: 4rem 4rem 0 0;
   overflow: hidden;
@@ -47,7 +57,7 @@ const Container = styled.div`
       bottom: 0;
       background: linear-gradient(
         to top,
-        rgba(255, 217, 0, 0.533),
+        rgba(255, 217, 0, 1),
         rgba(255, 217, 0, 0)
       );
     }
@@ -73,6 +83,7 @@ const variant = {
 };
 
 const SlideIn = ({ children, route, ...props }: Props) => {
+  const { preloadedKeys } = useMenuStore();
   const y = useMotionValue('100vh');
   const sY = useSpring(y);
   const deltaY = useMotionValue(0);
@@ -95,16 +106,26 @@ const SlideIn = ({ children, route, ...props }: Props) => {
     }
   };
 
-  useRouteChangeListener(routeChange => {
-    if (routeChange.to.key !== route.key) {
-      // console.log('hide:', route.key);
+  useRouteLoadedListener((event: RouteLoadedEvent) => {
+    if (event.to.key !== route.key) return;
+    sY.set(variant.visible.y);
+  });
+
+  useRouteChangeListener((event: RouteChangeEvent) => {
+    if (event.to.key !== route.key) {
       sY.set(variant.hidden.y);
       return;
     }
-    if (routeChange.to.key === route.key) {
-      // console.log('show', route.key);
-      sY.set(variant.visible.y);
-      return;
+    if (event.to.key === route.key) {
+      if (
+        route.type === SlideInRouteType.STATIC ||
+        route.type === SlideInRouteType.ROOT ||
+        preloadedKeys.indexOf(route.key) > -1
+      ) {
+        console.log('nothing to load');
+        sY.set(variant.visible.y);
+        return;
+      }
     }
   });
 

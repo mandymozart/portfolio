@@ -1,53 +1,39 @@
 'use client';
 import { useRouteChangeListener } from '@/events/routerEvents';
-import { routes } from '@/slideInRoutes';
-import { usePrismicClient } from '@prismicio/react';
-import { useCallback, useEffect, useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { ProjectInterface } from '../components/Project/ProjectInterface';
 
 function ProjectDetailPage() {
-  const client = usePrismicClient();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [data, setData] = useState(null);
-
-  // TODO loses closure
-  const routeChangeHandler = useCallback(({ to }) => {
-    console.log('params.uid:', to.params?.uid);
-    if (to.key === routes.PROJECT) {
-      getData(to.params?.uid);
-    }
-  }, []);
-
-  useRouteChangeListener(routeChangeHandler);
-
-  const getData = async uid => {
-    console.log('getData', uid);
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await client.getByUID('project', uid);
-      setData(response);
-    } catch (err) {
-      setError(err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []); // dependencies
-
-  if (loading) return 'Loading...';
-  if (error) return `Error: ${error.message}`;
-  if (!data) return 'No data';
-
   return (
     <>
-      <ProjectInterface project={project} />
+      <ProjectRouterBridge />
+      <Routes>
+        <Route
+          path='/'
+          element={<>No project selected</>}
+        />
+        <Route
+          path='/:uid'
+          element={<ProjectInterface />}
+        />
+      </Routes>
     </>
   );
 }
 
 export default ProjectDetailPage;
+function ProjectRouterBridge() {
+  const navigate = useNavigate();
+
+  // TODO loses closure
+  const routeChangeHandler = routeChange => {
+    console.log('requested ...', routeChange);
+    if (routeChange.to.key !== 'project') return;
+    navigate({
+      pathname: routeChange.params.uid,
+    });
+  };
+
+  useRouteChangeListener(routeChangeHandler);
+  return <></>;
+}

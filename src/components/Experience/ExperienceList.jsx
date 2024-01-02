@@ -1,6 +1,8 @@
 'use client';
+import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
+import { useEffect } from 'react';
 import ExperienceItem from './ExperienceItem';
 
 const Container = styled.div`
@@ -12,7 +14,7 @@ const Container = styled.div`
 `;
 
 const ExperienceList = () => {
-  const [experiences] = usePrismicDocumentsByType('experience', {
+  const [experiences, { state }] = usePrismicDocumentsByType('experience', {
     orderings: [
       {
         field: 'my.experience.enddate',
@@ -28,6 +30,14 @@ const ExperienceList = () => {
       },
     ],
   });
+  const { addPreloadedKey } = useMenuStore();
+
+  useEffect(() => {
+    if (state === 'loading') return;
+    if (state === 'error') return;
+    if (state === 'idle') return;
+    if (state === 'loaded') addPreloadedKey('ExperienceList');
+  }, [state]);
   if (!experiences) return <>No Experiences found</>;
   return (
     <Container>

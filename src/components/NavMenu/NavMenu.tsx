@@ -1,10 +1,8 @@
 'use client';
-import { sameRouteTone } from '@/audioConfig';
 import { emitRouteChange } from '@/events/routerEvents';
 import useMonoSynth from '@/hooks/useMonoSynth';
-import { SlideInRoute, SlideInRouteName, routes } from '@/slideInRoutes';
+import { SlideInRoute, routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import { MonoSynth } from 'tone';
 import useMenuStore from '../../stores/MenuStore';
 import Loader from '../Loader/Loader';
 
@@ -135,9 +133,3 @@ const NavMenu = () => {
 };
 
 export default NavMenu;
-
-export function playToneAtRoute(synth: MonoSynth, key?: SlideInRouteName) {
-  const selectedRoute = Object.values(routes).find(route => route.key === key);
-  const tone = selectedRoute ? selectedRoute.tone : sameRouteTone;
-  synth.triggerAttackRelease(tone.note, tone.duration);
-}

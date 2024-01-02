@@ -1,21 +1,32 @@
+'use client';
+
 import { SlideInRoute, routes } from '@/slideInRoutes';
-import { PrismicClientHookState } from '@prismicio/react';
+import zukeeper from 'zukeeper';
 import create, { SetState, State } from 'zustand';
 
 interface MenuStoreState extends State {
-  state: PrismicClientHookState; // "idle" | "loading" | "loaded" | "failed"
-  setState: (state: MenuStoreState['state']) => void;
+  preloadedKeys: string[];
+  addPreloadedKey: (key: string) => void;
   activeMenuItem: SlideInRoute;
   setActiveMenuItem: (menuItem: SlideInRoute) => void;
 }
 
 const useMenuStore = create<MenuStoreState>(
-  (set: SetState<MenuStoreState>) => ({
-    state: 'idle',
-    setState: state => set({ state }),
+  zukeeper((set: SetState<MenuStoreState>) => ({
+    preloadedKeys: [],
+    addPreloadedKey: (key: string) =>
+      set(state => ({ preloadedKeys: [...state.preloadedKeys, key] })),
     activeMenuItem: routes.HOME,
-    setActiveMenuItem: menuItem => set({ activeMenuItem: menuItem }),
-  })
+    setActiveMenuItem: (menuItem: SlideInRoute) =>
+      set({ activeMenuItem: menuItem }),
+  }))
 );
 
+declare const window: {
+  store: any;
+} & Window;
+
+window.store = window.store || {};
+
+window.store = useMenuStore;
 export default useMenuStore;

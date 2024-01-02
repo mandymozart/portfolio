@@ -38,6 +38,8 @@ export interface SlideInRoute {
   type: SlideInRouteType;
   variant?: SlideInRouteVariant;
   tone: SynthTone;
+  backgroundColor?: string;
+  color?: string;
   path?: string; // this is used to relink to the next page router if required
   params?: SlideInRouteParams;
   requiredParams?: string[];
@@ -55,6 +57,8 @@ export const routes: SlideInRoutesMap = {
       note: 'B#2',
       duration: 0.3,
     },
+    backgroundColor: '',
+    color: '',
   },
   IMPRINT: {
     key: SlideInRouteName.IMPRINT,
@@ -80,14 +84,14 @@ export const routes: SlideInRoutesMap = {
   PROJECTS: {
     key: SlideInRouteName.PROJECTS,
     label: 'Projects',
-    type: SlideInRouteType.ASYNC,
+    type: SlideInRouteType.STATIC,
     tone: { note: 'F4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,
   },
   EXPERIENCES: {
     key: SlideInRouteName.EXPERIENCES,
     label: 'Experiences',
-    type: SlideInRouteType.ASYNC,
+    type: SlideInRouteType.STATIC,
     tone: { note: 'G#4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,
   },

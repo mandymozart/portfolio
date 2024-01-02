@@ -1,7 +1,12 @@
+import { emitRouteChange } from '@/events/routerEvents';
+import useMonoSynth from '@/hooks/useMonoSynth';
+import { routes } from '@/slideInRoutes';
+import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
 import Arrow from '../Icons/Arrow';
 
 const Container = styled.header`
+  cursor: pointer;
   h3 {
     margin: 0;
     padding: 2rem var(--grid-padding);
@@ -33,8 +38,15 @@ const Container = styled.header`
 `;
 
 export const FeatureProjectHeader = ({ project }) => {
+  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
+  const { playToneAtRoute } = useMonoSynth();
+  const navigateTo = uid => () => {
+    playToneAtRoute(routes.PROJECT.key);
+    setActiveMenuItem(routes.PROJECT);
+    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
+  };
   return (
-    <Container>
+    <Container onClick={navigateTo(project.uid)}>
       <h3 className='title'>
         {project.name} <Arrow />
       </h3>

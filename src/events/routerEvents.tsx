@@ -4,9 +4,14 @@ import { createEvent } from 'react-event-hook';
 
 export enum RouterEvents {
   ROUTE_CHANGE = 'routeChange',
+  ROUTE_LOADED = 'routeLoaded',
 }
 
-interface RouteChangeEvent {
+export interface RouteChangeEvent {
+  to: SlideInRoute;
+  params?: SlideInRouteParams;
+}
+export interface RouteLoadedEvent {
   to: SlideInRoute;
   params?: SlideInRouteParams;
 }
@@ -15,9 +20,6 @@ export const { useRouteChangeListener, emitRouteChange } = createEvent(
   RouterEvents.ROUTE_CHANGE
 )<RouteChangeEvent>();
 
-/* Example usage:
-emitRouteChange({
-  route: slideInRoutes.PROJECT,
-  params: { uid: 'resradio-2', lang: 'en-us' },
-});
-*/
+export const { useRouteLoadedListener, emitRouteLoaded } = createEvent(
+  RouterEvents.ROUTE_LOADED
+)<RouteLoadedEvent>();

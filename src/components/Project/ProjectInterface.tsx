@@ -1,6 +1,10 @@
 'use client';
+import { RouteLoadedEvent, emitRouteLoaded } from '@/events/routerEvents';
+import { routes } from '@/slideInRoutes';
 import styled from '@emotion/styled';
-import { PrismicRichText } from '@prismicio/react';
+import { PrismicRichText, usePrismicClient } from '@prismicio/react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import PartnerItem from '../Partners/PartnerItem';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
 import SkillItemAsync from '../Skills/SkillItemAsync';
@@ -80,25 +84,57 @@ const Container = styled.div`
   }
 `;
 
-export const ProjectInterface = ({ project }) => {
-  if (!project) return <></>;
+export const ProjectInterface = () => {
+  let location = useLocation();
+
+  const client = usePrismicClient();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+  const [data, setData] = useState<any>(null);
+
+  const getData = async (uid: string) => {
+    setLoading(true);
+    const event: RouteLoadedEvent = {
+      to: routes.PROJECT,
+      params: { uid: uid },
+    };
+    setError(null);
+    try {
+      const response = await client.getByUID('project', uid);
+      setData(response.data);
+    } catch (err: any) {
+      setError(err);
+    } finally {
+      emitRouteLoaded(event);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getData(location.pathname.replace('/', ''));
+  }, [location]); // dependencies
+
+  if (loading) return 'Loading...';
+  if (error) return `Error: ${error?.message}`;
+  if (!data) return 'No data';
+
   return (
     <Container>
       <section className='page page-hero'>
         <header>
-          <h2>{project?.name}</h2>
+          <h2>{data?.name}</h2>
           <div>
-            {project?.industry}/{project?.type}
+            {data?.industry}/{data?.type}
           </div>
         </header>
         <div className='meta'>
           <div className='description'>
-            <PrismicRichText field={project?.description} />
+            <PrismicRichText field={data?.description} />
           </div>
           <div className='partners'>
             <h3>Partners</h3>
             <div className='partners-list'>
-              {project?.partners.map((partner, index) => (
+              {data?.partners?.map((partner, index) => (
                 <div key={index}>
                   <PartnerItem partner={partner.partner} />
                 </div>
@@ -108,7 +144,7 @@ export const ProjectInterface = ({ project }) => {
           <div className='tech-stack'>
             <h3>Tech Stack</h3>
             <div className='tech-stack-list'>
-              {project?.skills.map((edges, index) => (
+              {data?.skills?.map((edges, index) => (
                 <SkillItemAsync
                   key={index}
                   uid={edges.skill.uid}
@@ -119,25 +155,25 @@ export const ProjectInterface = ({ project }) => {
           <div className='participation'>
             <div className='roles'>
               <h3>Roles</h3>
-              <div>{project?.roles}</div>
+              <div>{data?.roles}</div>
             </div>
             <div className='methods'>
               <h3>Methods</h3>
-              {/* <div>{project?.methods}</div> */}
+              {/* <div>{data?.methods}</div> */}
             </div>
           </div>
         </div>
       </section>
-      <ScreenshotsSection screenshots={project?.images} />
-      {project?.video_id && (
+      <ScreenshotsSection screenshots={data?.images} />
+      {data?.video_id && (
         <div className='video-reaction'>
-          {/* <VideoReaction videoid={project?.video_id.toString()} /> */}
+          {/* <VideoReaction videoid={data?.video_id.toString()} /> */}
         </div>
       )}
       <div className='link'>
-        {project?.link.url && (
+        {data?.link?.url && (
           <a
-            href={project?.link.url}
+            href={data?.link.url}
             target='_blank'
             rel='noopener noreferrer'
             className='button'

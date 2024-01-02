@@ -1,6 +1,8 @@
 'use client';
+import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
 import { usePrismicDocumentsByType } from '@prismicio/react';
+import { useEffect } from 'react';
 import ProjectItem from './ProjectItem';
 
 const Container = styled.div`
@@ -12,11 +14,20 @@ const Container = styled.div`
 `;
 
 const ProjectList = () => {
-  const [documents] = usePrismicDocumentsByType('project');
+  const [documents, { state }] = usePrismicDocumentsByType('project');
+  const { addPreloadedKey } = useMenuStore();
   const handleMouseOver = uid => {
-    console.log(uid);
+    // console.log(uid);
   };
+  useEffect(() => {
+    console.log('state', state);
+    if (state === 'loading') return;
+    if (state === 'error') return;
+    if (state === 'idle') return;
+    if (state === 'loaded') addPreloadedKey('ProjectList');
+  }, [state]);
   if (!documents) return <>...</>;
+
   return (
     <Container>
       <div className='list'>
