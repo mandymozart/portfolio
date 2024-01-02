@@ -122,7 +122,6 @@ const SlideIn = ({ children, route, ...props }: Props) => {
         route.type === SlideInRouteType.ROOT ||
         preloadedKeys.indexOf(route.key) > -1
       ) {
-        console.log('nothing to load');
         sY.set(variant.visible.y);
         return;
       }
