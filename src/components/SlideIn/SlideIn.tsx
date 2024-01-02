@@ -12,7 +12,7 @@ import {
 import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import { distance2D, motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const Container = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ const Container = styled.div`
   left: 0;
   right: 0;
   pointer-events: all;
-  height: calc(100vh);
+  height: calc(100vh + 10rem);
   padding: 0;
   border-radius: 4rem 4rem 0 0;
   overflow: hidden;
@@ -37,13 +37,20 @@ const Container = styled.div`
   &.isFooter {
     background-color: var(--primary);
     color: var(--background);
+    .shadow-overlay--bottom {
+      background: linear-gradient(
+        to top,
+        rgb(30, 30, 30) 50%,
+        rgba(30, 30, 30, 0)
+      );
+    }
   }
   .shadow-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 15rem;
+    height: 25rem;
     background: linear-gradient(
       to bottom,
       rgba(255, 217, 0, 1),
@@ -57,7 +64,7 @@ const Container = styled.div`
       bottom: 0;
       background: linear-gradient(
         to top,
-        rgba(255, 217, 0, 1),
+        rgba(255, 217, 0, 1) 50%,
         rgba(255, 217, 0, 0)
       );
     }
@@ -86,25 +93,6 @@ const SlideIn = ({ children, route, ...props }: Props) => {
   const { preloadedKeys } = useMenuStore();
   const y = useMotionValue('100vh');
   const sY = useSpring(y);
-  const deltaY = useMotionValue(0);
-
-  const handleDrag = (ev: MouseEvent | PointerEvent | DragEvent) => {
-    sY.set(ev.y);
-  };
-
-  const handleDragStart = (ev: MouseEvent | PointerEvent | DragEvent) => {
-    deltaY.set(ev.y);
-  };
-
-  const handleDragEnd = (ev: MouseEvent | PointerEvent | DragEvent) => {
-    const d = distance2D({ x: 0, y: ev.y }, { x: 0, y: deltaY.get() });
-    // console.log(ev.y, deltaY.get(), d);
-    if (deltaY.get() < ev.y) {
-      sY.set(variant.hidden.y);
-    } else {
-      sY.set(variant.visible.y);
-    }
-  };
 
   useRouteLoadedListener((event: RouteLoadedEvent) => {
     if (event.to.key !== route.key) return;
@@ -130,16 +118,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
 
   if (!route) return <></>;
   return (
-    <motion.div
-      style={{ y: sY }}
-      drag
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-      dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
-      dragElastic={1}
-      onDrag={handleDrag}
-      onDragStart={handleDragStart}
-      onDragEnd={handleDragEnd}
-    >
+    <motion.div style={{ y: sY }}>
       <Container
         className={clsx({
           isFooter: route.variant === SlideInRouteVariant.FOOTER,

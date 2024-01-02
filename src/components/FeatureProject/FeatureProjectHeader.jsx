@@ -1,8 +1,10 @@
+import { staggerVariants } from '@/animations/site';
 import { emitRouteChange } from '@/events/routerEvents';
 import useMonoSynth from '@/hooks/useMonoSynth';
 import { routes } from '@/slideInRoutes';
 import useMenuStore from '@/stores/MenuStore';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 import Arrow from '../Icons/Arrow';
 
 const Container = styled.header`
@@ -47,14 +49,40 @@ export const FeatureProjectHeader = ({ project }) => {
   };
   return (
     <Container onClick={navigateTo(project.uid)}>
-      <h3 className='title'>
-        {project.name} <Arrow />
-      </h3>
-      <div className='subheader'>
-        <span className='subtitle'>Roles → {project?.roles}</span>
-        <span className='industry'>{project?.industry}</span>
-        <span className='type'>{project?.type}</span>
-      </div>
+      <motion.div
+        className='info'
+        initial='offscreen'
+        whileInView='onscreen'
+        viewport={{ once: true, amount: 0.8 }}
+        variants={staggerVariants}
+      >
+        <motion.h3
+          className='title'
+          custom={0}
+        >
+          {project.name} <Arrow />
+        </motion.h3>
+        <div className='subheader'>
+          <motion.span
+            className='subtitle'
+            custom={1}
+          >
+            Roles → {project?.roles}
+          </motion.span>
+          <motion.span
+            className='industry'
+            custom={2}
+          >
+            {project?.industry}
+          </motion.span>
+          <motion.span
+            className='type'
+            custom={3}
+          >
+            {project?.type}
+          </motion.span>
+        </div>
+      </motion.div>
     </Container>
   );
 };

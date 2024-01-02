@@ -1,4 +1,6 @@
+import { staggerVariants } from '@/animations/site';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 import { FC } from 'react';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
@@ -69,24 +71,41 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
         /> */}
 
       <div className='overlay'>
-        <div className='info'>
+        <motion.div
+          className='info'
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.8 }}
+        >
           <FeatureProjectHeader project={project} />
           <div className='presentation'>
-            <div className='image'>
+            <motion.div
+              className='image'
+              custom={0}
+              variants={staggerVariants}
+            >
               <img
                 src={'/images/resradio-2-feature-1.png'}
                 alt={'ResRadio'}
               />
-            </div>
+            </motion.div>
             <div className='lead'>
-              <p>
+              <motion.p
+                custom={1}
+                variants={staggerVariants}
+              >
                 A contemporary webradio website and back-office in React on top
                 of Mixlr, Sanity, Prismic, Ably, Github and Netlify.
-              </p>
-              <p>Brutalist design meets scaleability.</p>
+              </motion.p>
+              <motion.p
+                custom={2}
+                variants={staggerVariants}
+              >
+                Brutalist design meets scaleability.
+              </motion.p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Container>
   );

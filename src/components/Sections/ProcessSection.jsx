@@ -1,5 +1,6 @@
+import { staggerVariants } from '@/animations/site';
 import styled from '@emotion/styled';
-import React from 'react';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
   height: 100vh;
@@ -44,45 +45,70 @@ const ProcessSection = () => {
       </header>
       <div className='body'>
         <div className='left'></div>
-        <div className='process-list'>
-          <div className='process'>
+        <motion.div
+          className='process-list'
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            className='process'
+            variants={staggerVariants}
+            custom={0}
+          >
             <h3>Proof the concept</h3>
             <p>
               I will always research and built a rapid prototype to proof your
               idea is possible. Some ideas are just a few years too ahead of
               their time.
             </p>
-          </div>
-          <div className='process'>
+          </motion.div>
+          <motion.div
+            className='process'
+            variants={staggerVariants}
+            custom={1}
+          >
             <h3>Trust the team</h3>
             <p>
               My job is to spot the talent needed to build diverse perspectives
               and facilitate smart decision making.
             </p>
-          </div>
-          <div className='process'>
+          </motion.div>
+          <motion.div
+            className='process'
+            variants={staggerVariants}
+            custom={2}
+          >
             <h3>Design in code</h3>
             <p>
               Business logic and frameworks are dictating designers today.
               Together we are moulding UX like clay in an iterative process.
             </p>
-          </div>
-          <div className='process'>
+          </motion.div>
+          <motion.div
+            className='process'
+            variants={staggerVariants}
+            custom={3}
+          >
             <h3>Optimize workflows</h3>
             <p>
               Continuous integration, design tools and utilities will not only
               optimize your supply chain but save you time to fully focus on
               your enterprise!
             </p>
-          </div>
-          <div className='process'>
+          </motion.div>
+          <motion.div
+            className='process'
+            variants={staggerVariants}
+            custom={4}
+          >
             <h3>Tell a beautiful story</h3>
             <p>
               I built vibes and narratives. My craft is to write poetry guiding
               users through your world.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className='right'></div>
       </div>
     </Container>

@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
+import { revealVariants } from '@/animations/site';
+import { motion } from 'framer-motion';
+
 const Container = styled.section`
   position: relative;
   font-family: var(--font-mono);
@@ -67,7 +70,13 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
   return (
     <Container {...props}>
       <div className='overlay'>
-        <div className='info'>
+        <motion.div
+          className='info'
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true }}
+          variants={revealVariants}
+        >
           <FeatureProjectHeader project={project} />
           <div className='lead'>
             <p>
@@ -113,7 +122,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {children}
     </Container>

@@ -1,7 +1,11 @@
 'use client';
 import styled from '@emotion/styled';
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-top: var(--header-height);
+
+  padding: 0 var(--grid-padding);
+`;
 
 const AttributionsPage = () => {
   return (

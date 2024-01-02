@@ -2,6 +2,14 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
+  margin-top: var(--header-height);
+
+  padding: 0 var(--grid-padding);
+  font-size: 3rem;
+  p {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
   ul {
     list-style: none;
   }
@@ -186,13 +194,21 @@ const PrivacyPolicyPage = () => {
         European Union and other provisions related to data protection is:
       </p>
 
-      <p>Tilman Porschütz Developer</p>
-      <p>Operngasse 25/12</p>
-      <p>1040 Vienna</p>
-      <p>Austria</p>
-      <p>Phone: +436608366059</p>
-      <p>Email: mandymozart@viennastruggle.com</p>
-      <p>Website: https://porschuetz.de</p>
+      <p>
+        Tilman Porschütz Developer
+        <br />
+        Operngasse 25/12
+        <br />
+        1040 Vienna
+        <br />
+        Austria
+        <br />
+        Phone: +436608366059
+        <br />
+        Email: mandymozart@viennastruggle.com
+        <br />
+        Website: https://porschuetz.de
+      </p>
 
       <h4>3. Collection of general data and information</h4>
       <p>
