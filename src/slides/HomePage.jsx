@@ -1,6 +1,6 @@
 'use client';
 import {
-  PerspectiveCamera,
+  OrbitControls,
   Scroll,
   ScrollControls,
   Stats,
@@ -14,12 +14,12 @@ function HomePage() {
 
   return (
     <>
-      <Canvas>
-        <PerspectiveCamera
-          makeDefault
-          position={[0, 2, 12]}
-          fov={42}
-        />
+      <Canvas
+        shadows
+        raycaster={{ params: { Line: { threshold: 0.15 } } }}
+        camera={{ position: [0, 2, 12], fov: 42 }}
+      >
+        <OrbitControls makeDefault />
         <ScrollControls pages={PAGES}>
           <Suspense>
             <HomeExperience />

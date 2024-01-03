@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 const modelUrl = `/models/map.glb`;
 const Map = ({ props }) => {
   const gltf = useGLTF(modelUrl, true);
+
   return (
     <Suspense fallback={null}>
       <primitive
