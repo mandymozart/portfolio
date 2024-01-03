@@ -5,14 +5,14 @@ Command: npx gltfjsx@6.2.15 public/models/avatar-winter.glb -o src/components/Av
 
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { useControls } from 'leva';
-import React, { Suspense, useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 
 export function AvatarWinter(props) {
   const group = useRef();
 
   const { animations, scene } = useGLTF('/models/avatar-winter.glb');
   const { actions } = useAnimations(animations, group);
-  const { animation, timeScale } = useControls('ANIMATION', {
+  const { animation, timeScale, position, scale } = useControls('ANIMATION', {
     animation: {
       value: 'SwaggerWalkInPlace',
       options: Object.keys(actions),
@@ -22,6 +22,17 @@ export function AvatarWinter(props) {
       min: -1,
       max: 1,
       step: 0.01,
+    },
+    scale: {
+      value: 1,
+      min: 0.1,
+      max: 100,
+      step: 0.01,
+    },
+    position: {
+      x: 2.5,
+      y: 50,
+      z: 0,
     },
   });
 
@@ -38,6 +49,9 @@ export function AvatarWinter(props) {
       <primitive
         object={scene}
         ref={group}
+        {...props}
+        scale={scale}
+        position={[position.x, position.y, position.z]}
       />
     </Suspense>
   );

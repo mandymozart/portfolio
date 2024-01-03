@@ -7,11 +7,10 @@ import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 const Container = styled.section`
   position: relative;
   font-family: var(--font-mono);
-  height: 100vh;
+
   max-width: var(--content-width);
   margin: 0 auto;
   @media (max-width: 850px) {
-    height: 100vh;
   }
   .overlay {
     width: 100%;
@@ -19,7 +18,7 @@ const Container = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+
       .presentation {
         margin-top: 3rem;
         display: grid;
@@ -65,11 +64,6 @@ const project = {
 const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
   return (
     <Container {...props}>
-      {/* <img
-          src={slice.primary.background.url}
-          alt='background'
-        /> */}
-
       <div className='overlay'>
         <motion.div
           className='info'
@@ -81,6 +75,8 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
           <div className='presentation'>
             <motion.div
               className='image'
+              initial='offscreen'
+              whileInView='onscreen'
               custom={0}
               variants={staggerVariants}
             >
@@ -92,6 +88,8 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
             <div className='lead'>
               <motion.p
                 custom={1}
+                initial='offscreen'
+                whileInView='onscreen'
                 variants={staggerVariants}
               >
                 A contemporary webradio website and back-office in React on top
@@ -99,6 +97,8 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
               </motion.p>
               <motion.p
                 custom={2}
+                initial='offscreen'
+                whileInView='onscreen'
                 variants={staggerVariants}
               >
                 Brutalist design meets scaleability.

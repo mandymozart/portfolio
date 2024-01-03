@@ -1,21 +1,29 @@
 import { Cloud } from '@react-three/drei';
 import { useControls } from 'leva';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 
 export function Heaven({ ...props }) {
-  const { speed } = useControls('CLOUDS', {
+  const { speed, position } = useControls('CLOUDS', {
     speed: {
       value: 0.1,
       min: 0,
       max: 1,
       step: 0.01,
     },
+    position: {
+      x: 0,
+      y: 30,
+      z: -20,
+    },
   });
   return (
     <>
       <Suspense>
-        <group {...props}>
-          <group position-z={-20}>
+        <group
+          {...props}
+          position={[position.x, position.y, position.z]}
+        >
+          <group>
             <Cloud
               position={[-20, 0, 0]}
               speed={speed}

@@ -7,11 +7,10 @@ import { motion } from 'framer-motion';
 const Container = styled.section`
   position: relative;
   font-family: var(--font-mono);
-  height: 100vh;
+
   max-width: var(--content-width);
   margin: 0 auto;
   @media (max-width: 850px) {
-    height: 100vh;
   }
   .overlay {
     width: 100%;
@@ -20,7 +19,7 @@ const Container = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;

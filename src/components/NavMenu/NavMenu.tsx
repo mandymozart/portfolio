@@ -11,7 +11,7 @@ const Container = styled.div`
   right: 0;
   left: 0;
   top: 0;
-  z-index: 100000;
+  z-index: 1;
   margin: 0;
   nav {
     height: 4rem;

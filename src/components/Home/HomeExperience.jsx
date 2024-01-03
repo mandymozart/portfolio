@@ -2,7 +2,6 @@ import {
   Environment,
   Scroll,
   Sky,
-  Sparkles,
   useGLTF,
   useScroll,
 } from '@react-three/drei';
@@ -12,6 +11,8 @@ import { Suspense, useRef } from 'react';
 import { foodItems } from '../../mockData/food';
 import { AvatarWinter } from '../AvatarWinter';
 import { Heaven } from '../Heaven';
+import { FireFlies } from '../Models/Home/FireFlies';
+import Map from '../Models/Home/Map';
 
 export const HomeExperience = () => {
   const scrollData = useScroll();
@@ -23,11 +24,11 @@ export const HomeExperience = () => {
     <>
       <Suspense>
         {/* <OrbitControls
-        maxPolarAngle={Math.PI / 2}
-        minAzimuthAngle={-Math.PI / 2}
-        maxAzimuthAngle={Math.PI / 2}
-        enableZoom={false}
-      /> */}
+          maxPolarAngle={Math.PI / 2}
+          minAzimuthAngle={-Math.PI / 2}
+          maxAzimuthAngle={Math.PI / 2}
+          enableZoom={true}
+        /> */}
         {/* <ContactShadows
         position-y={0}
         opacity={0.5}
@@ -53,7 +54,7 @@ export const HomeExperience = () => {
           inclination={0}
           azimuth={0.25}
         />
-        <Sparkles position={[0, 0, 0]} />
+        <FireFlies />
         <Scroll>
           {foodItems.map((foodItem, idx) => (
             <FoodItem
@@ -62,11 +63,13 @@ export const HomeExperience = () => {
             />
           ))}
         </Scroll>
-        <AvatarWinter
-          position={[2.5, 0, 0]}
-          rotation-y={-Math.PI / 6}
-        />
+        <Map position={[0, 0, 0]} />
+        <AvatarWinter rotation-y={-Math.PI / 6} />
         <Heaven position={[0, 0, 0]} />
+        <fog
+          attach='fog'
+          args={['#e2f1fd', 1, 90]}
+        />
       </Suspense>
     </>
   );

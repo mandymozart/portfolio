@@ -6,11 +6,10 @@ import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 const Container = styled.section`
   position: relative;
   font-family: var(--font-mono);
-  height: 100vh;
+
   max-width: var(--content-width);
   margin: 0 auto;
   @media (max-width: 850px) {
-    height: 100vh;
   }
 
   .overlay {
@@ -20,7 +19,7 @@ const Container = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+
       .presentation {
         margin-top: 3rem;
         display: grid;

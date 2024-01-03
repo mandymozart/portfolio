@@ -1,7 +1,11 @@
 'use client';
-import { PerspectiveCamera, Scroll, ScrollControls } from '@react-three/drei';
+import {
+  PerspectiveCamera,
+  Scroll,
+  ScrollControls,
+  Stats,
+} from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { HomeExperience } from '../components/Home/HomeExperience';
 import { HomeInterface } from '../components/Home/HomeInterface';
@@ -24,11 +28,8 @@ function HomePage() {
             </Scroll>
           </Suspense>
         </ScrollControls>
-        {/* <Stats /> */}
-        <Leva
-          collapsed
-          hidden
-        />
+        <Stats />
+        {/* <Leva /> */}
       </Canvas>
     </>
   );

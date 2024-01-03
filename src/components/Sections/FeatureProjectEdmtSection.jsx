@@ -5,7 +5,6 @@ import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 const Container = styled.section`
   position: relative;
-  height: 100vh;
 
   .overlay {
     width: 100%;
@@ -14,7 +13,7 @@ const Container = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
