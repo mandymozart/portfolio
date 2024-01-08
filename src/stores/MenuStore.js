@@ -19,7 +19,7 @@ const useMenuStore = create(
     activeMenuItem: routes.HOME,
     setActiveMenuItem: (menuItem) =>
       set({ activeMenuItem: menuItem }),
-    colors: {foreground: '#1e1e1e', background: '#fdfdfd'},
+    colors: {foreground: '#fdfdfd', background: '#fdfdfd'},
     setColors: (colors)=> set({colors})
   })
 );

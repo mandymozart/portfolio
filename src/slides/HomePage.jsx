@@ -1,32 +1,44 @@
 'use client';
-import { Scroll, ScrollControls, Stats } from '@react-three/drei';
+import { Scroll, ScrollControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { getProject } from '@theatre/core';
+import { SheetProvider } from '@theatre/r3f';
 import { Suspense } from 'react';
-import { HomeExperience } from '../components/Home/HomeExperience';
-import { HomeInterface } from '../components/Home/HomeInterface';
+import { Interface } from '../components/Home/Interface';
+import { Scene } from '../components/Home/Scene';
+
+import extension from '@theatre/r3f/dist/extension';
+import studio from '@theatre/studio';
+import { Leva } from 'leva';
+studio.extend(extension);
+studio.initialize();
 
 function HomePage() {
   const PAGES = 16; // count of slices
+  const sheet = getProject('Tour').sheet('Scene');
 
   return (
     <>
       <Canvas
-        shadows={'soft'}
-        raycaster={{ params: { Line: { threshold: 0.15 } } }}
-        camera={{ fov: 50, near: 0.1, far: 200, position: [0, 20, 60] }}
+        // shadows={'soft'}
+        // gl={{ preserveDrawingBuffer: true }}
+        raycaster={{ params: { Line: { threshold: 0.15 } } }} // important for click events
+        // camera={{ fov: 42, near: 0.1, far: 200, position: [0, 20, 60] }}
         fog={'true'}
       >
         {/* <OrbitControls makeDefault /> */}
         <ScrollControls pages={PAGES}>
-          <Suspense>
-            <HomeExperience />
-            <Scroll html>
-              <HomeInterface />
-            </Scroll>
-          </Suspense>
+          <SheetProvider sheet={sheet}>
+            <Suspense>
+              <Scene />
+              <Scroll html>
+                <Interface />
+              </Scroll>
+            </Suspense>
+          </SheetProvider>
         </ScrollControls>
-        <Stats />
-        {/* <Leva /> */}
+        {/* <Stats /> */}
+        <Leva hidden />
       </Canvas>
     </>
   );

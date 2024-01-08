@@ -26,7 +26,12 @@ const Container = styled.div`
 `;
 
 const SkillsList = () => {
-  const [document] = usePrismicDocumentsByType('skill');
+  const [document] = usePrismicDocumentsByType('skill', {
+    params: {
+      pageSize: 100,
+    },
+  });
+  console.log(JSON.stringify(document));
   if (!document) return <></>;
   return (
     <Container>

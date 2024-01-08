@@ -1,6 +1,7 @@
 'use client';
 import { useRouteChangeListener } from '@/events/routerEvents';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import { ExportPrismic } from '../components/ExportPrismic/ExportPrismic';
 import { ProjectInterface } from '../components/Project/ProjectInterface';
 
 function ProjectDetailPage() {
@@ -15,6 +16,10 @@ function ProjectDetailPage() {
         <Route
           path='/:uid'
           element={<ProjectInterface />}
+        />
+        <Route
+          path='/export'
+          element={<ExportPrismic />}
         />
       </Routes>
     </>

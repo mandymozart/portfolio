@@ -7,8 +7,8 @@ export const PointLight = ({ ...props }) => {
   const ref = useRef();
   useHelper(ref, BoxHelper, 'red');
   const controls = useControls('LIGHT', {
-    position: [10, 10, -20],
-    intensity: 100,
+    position: [0, 10, 10],
+    intensity: 1000,
     color: '#ffffff',
     distance: 10000,
     decay: 1,

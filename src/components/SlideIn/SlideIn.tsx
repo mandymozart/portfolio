@@ -24,7 +24,7 @@ const Container = styled.div`
   padding: 0;
   border-radius: 4rem 4rem 0 0;
   overflow: hidden;
-  background: var(--background-accent-gradient);
+  /* background: var(--background-accent-gradient); */
 
   .inner {
     /* scrollbar-gutter: stable both-edges;
@@ -38,19 +38,19 @@ const Container = styled.div`
   &.isFooter {
     background-color: var(--primary);
     color: var(--background);
-    background: #0f0c29; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
+    /* background: #0f0c29; /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(
       to right,
       #24243e,
       #302b63,
-      #0f0c29
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
+      #0f0c29 
+    ); */
+    /* background: linear-gradient(
       to right,
       #24243e,
       #302b63,
-      #0f0c29
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      #0f0c29 
+    );  */
 
     .shadow-overlay--bottom {
       background: linear-gradient(
@@ -66,22 +66,22 @@ const Container = styled.div`
     left: 0;
     width: 100%;
     height: 25rem;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to bottom,
       rgba(255, 217, 0, 1),
       rgba(255, 217, 0, 0)
-    );
+    ); */
     opacity: 1;
     transition: opacity 0.3s;
     pointer-events: none;
     &--bottom {
       top: auto;
       bottom: 0;
-      background: linear-gradient(
+      /* background: linear-gradient(
         to top,
         rgba(255, 217, 0, 1) 50%,
         rgba(255, 217, 0, 0)
-      );
+      ); */
     }
     &:hover {
       opacity: 0;

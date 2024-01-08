@@ -23,7 +23,6 @@ import { useFrame } from '@react-three/fiber';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Vector3 } from 'three';
 import { SkeletonUtils } from 'three-stdlib';
-import { Cameras } from './Cameras/Cameras';
 
 const ChatBubble = styled.div`
   p.hidden {
@@ -108,9 +107,8 @@ export function Avatar({ ...props }) {
   const [chatMessage, setChatMessage] = useState('');
   const [path, setPath] = useState();
 
-  const position = useMemo(() => [20, 21.15, 40], []);
+  const position = useMemo(() => [20, 21.15, 5], []);
   const scale = useMemo(() => 1, []);
-  const [init, setInit] = useState(false);
   const [animation, setAnimation] = useState('Idle');
   const [isDancing, setIsDancing] = useState(false);
   const [showChatBubble, setShowChatBubble] = useState(false);
@@ -128,12 +126,11 @@ export function Avatar({ ...props }) {
 
   useEffect(() => {
     actions[animation].reset().fadeIn(0.32).play();
-    setInit(true);
     return () => actions[animation]?.fadeOut(0.32);
   }, [animation]);
 
   function onPlayerDance(value) {
-    setIsDancing(true);
+    // setIsDancing(true);
   }
 
   function onPlayerMove(value) {
@@ -164,45 +161,45 @@ export function Avatar({ ...props }) {
   useFrame((state, delta) => {
     const hips = avatar.current.getObjectByName('Hips');
     hips.position.set(0, hips.position.y, 0);
-    const pageScroll = scrollData.offset;
+    // const pageScroll = scrollData.offset;
 
-    if (camera === 'SCROLL') {
-      const cameraPosition = new Vector3();
-      cameraPosition.copy(group.current.position);
-      cameraPosition.z += 5 + pageScroll * 5;
-      cameraPosition.y += 1.65 + pageScroll * 9;
+    // if (camera === 'SCROLL') {
+    //   const cameraPosition = new Vector3();
+    //   cameraPosition.copy(group.current.position);
+    //   cameraPosition.z += 5 + pageScroll * 5;
+    //   cameraPosition.y += 1.65 + pageScroll * 9;
 
-      const cameraTarget = new Vector3();
-      cameraTarget.copy(group.current.position);
-      cameraTarget.y += 1.25;
+    //   const cameraTarget = new Vector3();
+    //   cameraTarget.copy(group.current.position);
+    //   cameraTarget.y += 1.25;
 
-      smoothedCameraPosition.lerp(cameraPosition, 0.1);
-      smoothedCameraTarget.lerp(cameraTarget, 0.1);
+    //   smoothedCameraPosition.lerp(cameraPosition, 0.1);
+    //   smoothedCameraTarget.lerp(cameraTarget, 0.1);
 
-      state.camera.position.copy(smoothedCameraPosition);
-      state.camera.lookAt(smoothedCameraTarget);
-    }
+    //   state.camera.position.copy(smoothedCameraPosition);
+    //   state.camera.lookAt(smoothedCameraTarget);
+    // }
 
-    if (path?.length && group.current.position.distanceTo(path[0]) > 0.1) {
-      // console.log(path);
-      const direction = group.current.position
-        .clone()
-        .sub(path[0])
-        .normalize()
-        .multiplyScalar(LOCOMOTION[locomotionType].speed * delta);
-      group.current.position.sub(direction);
-      group.current.lookAt(path[0]);
-      setAnimation(LOCOMOTION[locomotionType].animations.moving);
-      setIsDancing(false);
-    } else if (path?.length) {
-      path.shift();
-    } else {
-      if (isDancing) {
-        setAnimation('Dancing');
-      } else {
-        setAnimation(LOCOMOTION[locomotionType].animations.idle);
-      }
-    }
+    // if (path?.length && group.current.position.distanceTo(path[0]) > 0.1) {
+    //   // console.log(path);
+    //   const direction = group.current.position
+    //     .clone()
+    //     .sub(path[0])
+    //     .normalize()
+    //     .multiplyScalar(LOCOMOTION[locomotionType].speed * delta);
+    //   group.current.position.sub(direction);
+    //   group.current.lookAt(path[0]);
+    //   setAnimation(LOCOMOTION[locomotionType].animations.moving);
+    //   setIsDancing(false);
+    // } else if (path?.length) {
+    //   path.shift();
+    // } else {
+    //   if (isDancing) {
+    //     setAnimation('Dancing');
+    //   } else {
+    //     setAnimation(LOCOMOTION[locomotionType].animations.idle);
+    //   }
+    // }
   });
 
   useEffect(() => {
@@ -222,10 +219,11 @@ export function Avatar({ ...props }) {
       ref={group}
       {...props}
       dispose={null}
+      theatreKey='Avatar'
     >
-      <Cameras />
+      {/* <Cameras /> */}
       <pointLight
-        position={[0, 3, 0]}
+        position={[0, 3, 1]}
         intensity={50}
         castShadow
       />
