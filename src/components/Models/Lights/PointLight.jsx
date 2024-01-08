@@ -12,6 +12,9 @@ export const PointLight = ({ ...props }) => {
     color: '#ffffff',
     distance: 10000,
     decay: 1,
+    active: {
+      value: true,
+    },
   });
   return (
     <PivotControls
@@ -37,10 +40,12 @@ export const PointLight = ({ ...props }) => {
           transparent
           opacity={1}
         />
-        <pointLight
-          castShadow
-          {...controls}
-        />
+        {controls.active && (
+          <pointLight
+            castShadow
+            {...controls}
+          />
+        )}
       </mesh>
     </PivotControls>
   );

@@ -17,10 +17,15 @@
   --secondary-400: var(--secondary); /*  alias */
   --secondary-600: rgb(207, 24, 0);
   --accent: rgb(255, 217, 0);
-  --accent-600: rgb(197, 161, 0);
+  --accent-600: #c67700;
   --color-captions: rgb(255, 217, 0); /* deprecated */
   --background: rgb(253, 253, 253);
   --background-600: rgb(212, 212, 212);
+  --background-accent-gradient: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-600) 100%
+  );
   --grid-padding: 2rem;
   --header-height: 4rem;
   --content-margin-left: 0;

@@ -1,136 +1,139 @@
 import {
+  ContactShadows,
+  KeyboardControls,
   MeshReflectorMaterial,
+  OrbitControls,
+  PerspectiveCamera,
   Scroll,
-  Sky,
-  useGLTF,
+  useCursor,
   useScroll,
 } from '@react-three/drei';
 
-import { useFrame, useThree } from '@react-three/fiber';
+import { AvatarActions, emitMove } from '@/events/avatarEvents';
+import { useToggle } from '@/hooks/useTogle';
+import useGameStore, { cameras } from '@/stores/GameStore';
+import useMenuStore from '@/stores/MenuStore';
 import { useControls } from 'leva';
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import { Avatar } from '../Avatar';
 import { FireFlies } from '../Models/Home/FireFlies';
 import { Island } from '../Models/Home/Island';
+import { MountainAndRiver } from '../Models/Home/MountainAndRiver';
 import { MovingClouds } from '../Models/Home/MovingClouds';
 import { MovingSpot } from '../Models/Lights/MovingSpot';
 import { PointLight } from '../Models/Lights/PointLight';
 
 export const HomeExperience = () => {
+  const { colors, setColors } = useMenuStore();
+  const { editor, setEditor, camera, setCamera } = useGameStore();
   const scrollData = useScroll();
-  useFrame(state => {
-    // state.camera.position.x = -2 + scrollData.offset * 4;
-    console.log(scrollData.offset);
-  });
+  const planeMaterial = useRef();
 
-  const skyControls = useControls('SKY', {
-    position: [0, 10, 300],
-    distance: 450000,
-    inclination: 0,
-    azimuth: { value: Math.PI / 4 },
-    mieCoefficient: { value: 0.005 },
-    mieDirectionalG: { value: 0.8 },
-    rayleigh: { value: 0.04 },
-    turbidity: { value: 10 },
-    active: {
-      value: true,
+  const ToggledOrbitControls = useToggle(OrbitControls, 'editor');
+
+  const [onFloor, setOnFloor] = useState(false);
+  useCursor(onFloor);
+
+  const envControls = useControls('ENVIRONMENT', {
+    foreground: {
+      value: colors.foreground,
+      onChange: color => {
+        // planeMaterial.current.color = color;
+        setColors({ ...colors, foreground: color });
+      },
+    },
+    background: {
+      value: colors.background,
+      onChange: color => {
+        setColors({ ...colors, background: color });
+      },
+    },
+    editor: {
+      value: editor,
+      onChange: value => {
+        setEditor(value);
+      },
+    },
+    camera: {
+      value: camera,
+      options: cameras,
+      onChange: value => {
+        setCamera(value);
+      },
     },
   });
+
+  const onPlaneClicked = e => {
+    // console.log(e);
+    emitMove({
+      path: [[e.point?.x, 1.15, e.point?.z]],
+      action: AvatarActions.SWIM,
+    });
+  };
 
   return (
     <>
       <Suspense>
-        {/* <OrbitControls
-          // maxPolarAngle={Math.PI / 2}
-          // minAzimuthAngle={-Math.PI / 2}
-          // maxAzimuthAngle={Math.PI / 2}
-          enableZoom={true}
-        /> */}
-        {/* <ContactShadows
-        position-y={0}
-        opacity={0.5}
-        blur={2}
-        color={"pink"}
-        scale={40}
-      /> */}
-        {/* <ambientLight intensity={0.9} /> */}
-        {/* <directionalLight
-          position={[5, 5, 5]}
-          intensity={0.5}
-        />
-        <directionalLight
-          position={[-5, 5, 5]}
-          intensity={0.5}
-          color='lightblue'
-        /> */}
-        {/* <Environment preset='dawn' /> */}
-        <PointLight />
-        <MovingSpot />
-        <gridHelper />
-
-        {skyControls.active && <Sky {...skyControls} />}
-        <FireFlies />
-        <Scroll>
-          {/* {foodItems.map((foodItem, idx) => (
-            <FoodItem
-              key={idx}
-              {...foodItem}
-            />
-          ))} */}
-        </Scroll>
-        <Island position={[0, 0, 0]} />
-        <mesh
-          position={[0, -1, 0]}
-          rotation-x={-Math.PI / 2}
+        <KeyboardControls
+          map={[
+            { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
+            { name: 'backward', keys: ['ArrowDown', 'KeyS'] },
+            { name: 'leftward', keys: ['ArrowLeft', 'KeyA'] },
+            { name: 'rightward', keys: ['ArrowRight', 'KeyD'] },
+            { name: 'dance', keys: ['Space'] },
+          ]}
         >
-          <planeGeometry args={[1000, 1000]} />
-          <MeshReflectorMaterial
-            color='#ffffff'
-            resolution={1024}
-            mixStrength={3}
-            roughness={0.6}
+          <PerspectiveCamera
+            makeDefault={editor}
+            fov={75}
+            position={[0, 20, 20]}
           />
-        </mesh>
-        <Avatar
-          rotation-y={-Math.PI / 6}
-          castShadow
-        />
-        <MovingClouds />
-        <fog
-          attach='fog'
-          args={['#1c1c1c', 1, 90]}
-        />
+          <ToggledOrbitControls />
+          <Scroll>
+            <ContactShadows
+              position-y={0}
+              opacity={0.5}
+              blur={2}
+              color={'pink'}
+              scale={40}
+            />
+
+            <PointLight />
+            <MovingSpot />
+            <FireFlies />
+            <mesh
+              position={[0, 1.15, 0]}
+              rotation-x={-Math.PI / 2}
+              receiveShadow
+              onDoubleClick={onPlaneClicked}
+              onPointerEnter={() => setOnFloor(true)}
+              onPointerLeave={() => setOnFloor(false)}
+            >
+              <planeGeometry args={[1000, 1000]} />
+              <MeshReflectorMaterial
+                ref={planeMaterial}
+                color={colors.foreground}
+                resolution={1024}
+                mixStrength={10}
+                roughness={0.5}
+              />
+            </mesh>
+            <MountainAndRiver />
+            <Avatar />
+            <MovingClouds />
+            <Island position={[0, 0, 0]} />
+
+            <fog
+              attach='fog'
+              args={[colors.background, 1, 200]}
+            />
+            <color
+              attach='background'
+              args={[colors.background]}
+            />
+          </Scroll>
+        </KeyboardControls>
       </Suspense>
     </>
-  );
-};
-
-const FoodItem = ({ model, page, scale }) => {
-  const gltf = useGLTF(model);
-  const viewport = useThree(state => state.viewport);
-  const ref = useRef();
-  const scrollData = useScroll();
-
-  useFrame(() => {
-    const pageScroll = scrollData.offset;
-    ref.current.rotation.y = pageScroll * Math.PI * 2;
-    const pages = scrollData.pages - 1;
-    const offsetX = 2;
-
-    // ref.current.position.x =
-    //   scrollData.range((page - 1) / pages, 1 / pages) * offsetX;
-
-    ref.current.position.x =
-      scrollData.curve((page - 1) / pages, 2 / pages) * offsetX;
-  });
-
-  return (
-    <group ref={ref}>
-      <primitive
-        object={gltf.scene}
-        scale={scale ? scale : 0.5}
-        position={[0, -viewport.height * page, 0]}
-      />
-    </group>
   );
 };

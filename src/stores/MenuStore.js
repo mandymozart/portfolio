@@ -1,6 +1,7 @@
 'use client';
 
 import { routes } from '@/slideInRoutes';
+import { mountStoreDevtool } from 'simple-zustand-devtools';
 import create from 'zustand';
 
 // interface MenuStoreState extends State {
@@ -18,7 +19,13 @@ const useMenuStore = create(
     activeMenuItem: routes.HOME,
     setActiveMenuItem: (menuItem) =>
       set({ activeMenuItem: menuItem }),
+    colors: {foreground: '#1e1e1e', background: '#fdfdfd'},
+    setColors: (colors)=> set({colors})
   })
 );
 
 export default useMenuStore;
+
+if (process.env.NODE_ENV === 'development') {
+  mountStoreDevtool('MenuStore', useMenuStore);
+}

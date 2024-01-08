@@ -2,9 +2,10 @@
 
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useIsMounted } from 'usehooks-ts';
 import { BASE } from '../../../config';
+import { AvatarChatMessageType, emitChat } from '../../events/avatarEvents';
 
 const Container = styled.div`
   position: relative;
@@ -104,7 +105,7 @@ export const IntroVideo = ({ playing, setPlaying }) => {
 
   const [visible, setVisible] = useState(false);
 
-  const replaceText = fragment => {
+  const removeHtml = fragment => {
     const regex = /<b[^>]*>(.*?)<\/b>/g;
 
     // Initialize an array to store matched content
@@ -120,10 +121,18 @@ export const IntroVideo = ({ playing, setPlaying }) => {
   };
 
   const cueEnter = e => {
-    replaceText(e.target.text);
+    removeHtml(e.target.text);
+    emitChat({
+      message: removeHtml(e.target.text),
+      type: AvatarChatMessageType.ENTER,
+    });
     setVisible(true);
   };
-  const cueExit = () => {
+  const cueExit = e => {
+    emitChat({
+      message: removeHtml(e.target.text),
+      type: AvatarChatMessageType.EXIT,
+    });
     setVisible(false);
   };
 
