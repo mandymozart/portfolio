@@ -24,6 +24,7 @@ import { Island } from '../Models/Home/Island';
 import { MountainAndRiver } from '../Models/Home/MountainAndRiver';
 import { MovingClouds } from '../Models/Home/MovingClouds';
 import { PointLight } from '../Models/Lights/PointLight';
+import { TrashBag } from '../Models/TrashBag';
 import useMenuStore from './../../stores/MenuStore';
 
 export const Scene = () => {
@@ -126,7 +127,7 @@ export const Scene = () => {
         <Avatar />
         <MovingClouds />
         <Island position={[0, 0, 0]} />
-
+        <TrashBag position={[0, 1.15, 0]} />
         <e.fog
           attach='fog'
           ref={fogRef}

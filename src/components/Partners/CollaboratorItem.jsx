@@ -12,8 +12,9 @@ const Container = styled.div`
 
 const CollaboratorItem = ({ uid }) => {
   const collaborator = collaborators.find(
-    collaborator => collaborator.uid === uid
-  );
+    (collaborator) => collaborator.uid === uid,
+  )?.data;
+  console.log(collaborator);
   if (!collaborator) return <>Not found</>;
   return (
     <Container>
@@ -21,8 +22,7 @@ const CollaboratorItem = ({ uid }) => {
         href={
           isNotEmptyLinkField(collaborator.link) ? collaborator.link.url : '#'
         }
-        target='_blank'
-      >
+        target='_blank'>
         {collaborator.logo?.url ? (
           <img
             src={collaborator.logo.url}

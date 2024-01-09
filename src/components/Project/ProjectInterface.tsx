@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import PartnerItem from '../Partners/PartnerItem';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
 import { projects } from './../../mockData/data.json';
+import SkillItemAsync from './../Skills/SkillItemAsync';
 
 const Container = styled.div`
   padding-top: var(--header-height);
@@ -134,9 +135,9 @@ export const ProjectInterface = () => {
           <div className='partners'>
             <h3>Partners</h3>
             <div className='partners-list'>
-              {project?.partners?.map((partner, index) => (
+              {project?.partners?.map((edges, index) => (
                 <div key={index}>
-                  <PartnerItem partner={partner.partner} />
+                  <PartnerItem partnerLink={edges.partner} />
                 </div>
               ))}
             </div>
@@ -144,12 +145,12 @@ export const ProjectInterface = () => {
           <div className='tech-stack'>
             <h3>Tech Stack</h3>
             <div className='tech-stack-list'>
-              {/* {project?.skills?.map((edges, index) => (
+              {project?.skills?.map((edges, index) => (
                 <SkillItemAsync
                   key={index}
                   uid={edges.skill.uid}
                 />
-              ))} */}
+              ))}
             </div>
           </div>
           <div className='participation'>

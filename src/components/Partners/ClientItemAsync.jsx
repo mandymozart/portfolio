@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { isNotEmptyLinkField } from '../../typeguards';
-import { collaborators } from './../../mockData/data.json';
+import { clients } from './../../mockData/data.json';
 
 const Container = styled.div`
   display: flex;
@@ -12,14 +12,14 @@ const Container = styled.div`
 `;
 
 const ClientItemAsync = ({ uid }) => {
-  const client = collaborators.find(collaborator => collaborator.uid === uid);
+  const client = clients.find((client) => client.uid === uid)?.data;
+  console.log(client);
   if (!client) return <>Not found</>;
   return (
     <Container>
       <a
         href={isNotEmptyLinkField(client.link) ? client.link.url : '#'}
-        target='_blank'
-      >
+        target='_blank'>
         {client.logo.url ? (
           <img
             src={client.logo.url}

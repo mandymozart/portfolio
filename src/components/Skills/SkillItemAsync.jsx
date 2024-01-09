@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { usePrismicDocumentByUID } from '@prismicio/react';
 import clsx from 'clsx';
+import { skills } from '../../mockData/data.json';
 
 const Container = styled.div`
   display: flex;
@@ -16,13 +16,12 @@ const Container = styled.div`
 `;
 
 const SkillItemAsync = ({ uid, textOnly }) => {
-  const [document] = usePrismicDocumentByUID('skill', uid);
-  if (!uid) return <></>;
-  const data = document?.data;
+  const data = skills.find((skill) => skill.uid === uid)?.data;
+  console.log(data);
   if (!data) return <></>;
   return (
     <Container className={clsx({ textOnly: textOnly })}>
-      {data.logo.url ? (
+      {data.logo?.url ? (
         <img
           src={data.logo.url}
           alt={data.logo.alt}
