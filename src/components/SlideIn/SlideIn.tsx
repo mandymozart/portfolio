@@ -24,6 +24,8 @@ const Container = styled.div`
   padding: 0;
   border-radius: 4rem 4rem 0 0;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.0001);
+  backdrop-filter: blur(10px);
   /* background: var(--background-accent-gradient); */
 
   .inner {
@@ -138,8 +140,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
         className={clsx({
           isFooter: route.variant === SlideInRouteVariant.FOOTER,
         })}
-        {...props}
-      >
+        {...props}>
         <div className='inner scrollable scrollable-hint'>{children}</div>
         {/* <div className='shadow-overlay shadow-overlay--top'></div> */}
         <div className='shadow-overlay shadow-overlay--bottom'></div>
