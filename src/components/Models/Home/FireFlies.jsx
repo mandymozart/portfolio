@@ -2,7 +2,7 @@ import { Sparkles } from '@react-three/drei';
 import { useControls } from 'leva';
 export const FireFlies = () => {
   const controls = useControls('FIREFLIES', {
-    position: [10, 5, 10],
+    position: [10, 0, 10],
     size: {
       value: 10,
       min: 0,
@@ -21,9 +21,9 @@ export const FireFlies = () => {
       max: 1,
       step: 0.01,
     },
-    count: { value: 1000 },
+    count: { value: 100 },
     noise: {
-      value: 1,
+      value: 10,
       min: 0,
       max: 10,
       step: 1,

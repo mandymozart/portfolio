@@ -117,7 +117,7 @@ export function Avatar({ ...props }) {
   const scrollData = useScroll();
 
   useEffect(() => {
-    clone.traverse(child => {
+    clone.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
         child.receiveShadow = true;
@@ -137,7 +137,7 @@ export function Avatar({ ...props }) {
   function onPlayerMove(value) {
     console.log(value);
     const path = [];
-    value.path?.forEach(pos => {
+    value.path?.forEach((pos) => {
       // TODO add grid to world position conversion to avoid walking through walls
       // OR add pathfinding, or both, or make clicking on obstacles impossible
       path.push(new Vector3(pos[0], pos[1], pos[2]));
@@ -155,9 +155,9 @@ export function Avatar({ ...props }) {
     }
   }
 
-  useMoveListener(e => onPlayerMove(e));
-  useDanceListener(e => onPlayerDance(e));
-  useChatListener(e => onPlayerChatMessage(e));
+  useMoveListener((e) => onPlayerMove(e));
+  useDanceListener((e) => onPlayerDance(e));
+  useChatListener((e) => onPlayerChatMessage(e));
 
   useFrame((state, delta) => {
     const hips = avatar.current.getObjectByName('Hips');
@@ -206,10 +206,10 @@ export function Avatar({ ...props }) {
   useEffect(() => {
     console.log(animations);
     subscribeKeys(
-      state => state.dance,
-      value => {
+      (state) => state.dance,
+      (value) => {
         if (value) setIsDancing(true);
-      }
+      },
     );
   }, []);
 
@@ -220,12 +220,12 @@ export function Avatar({ ...props }) {
       {...props}
       dispose={null}
       ref={group}
-      theatreKey='Avatar'
-    >
+      theatreKey='Avatar'>
       {/* <Cameras /> */}
       <pointLight
-        position={[0, 3, 1]}
+        position={[0, 1, 5]}
         intensity={50}
+        color={'red'}
         castShadow
       />
       <primitive

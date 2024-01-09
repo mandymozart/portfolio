@@ -11,9 +11,13 @@ import {
   useCurrentSheet,
 } from '@theatre/r3f';
 
+import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
+
 import { useFrame } from '@react-three/fiber';
+import { val } from '@theatre/core';
 import { useControls } from 'leva';
 import { useRef, useState } from 'react';
+import { Vector3 } from 'three';
 import { Avatar } from '../Avatar';
 import { FireFlies } from '../Models/Home/FireFlies';
 import { Island } from '../Models/Home/Island';
@@ -29,7 +33,9 @@ export const Scene = () => {
   const scroll = useScroll();
   const cameraRef = useRef();
   const cameraTargetRef = useRef();
-  const focusTargetRef = useRef();
+  const focusTargetRef = useRef(new Vector3(0, 0, 0));
+  const focusTargetVisualizerRef = useRef();
+  const fogRef = useRef();
 
   const planeMaterial = useRef();
 
@@ -39,20 +45,20 @@ export const Scene = () => {
   const envControls = useControls('ENVIRONMENT', {
     foreground: {
       value: colors.foreground,
-      onChange: color => {
+      onChange: (color) => {
         // planeMaterial.current.color = color;
         setColors({ ...colors, foreground: color });
       },
     },
     background: {
       value: colors.background,
-      onChange: color => {
+      onChange: (color) => {
         setColors({ ...colors, background: color });
       },
     },
   });
 
-  const onPlaneClicked = e => {
+  const onPlaneClicked = (e) => {
     // console.log(e);
     // emitMove({
     //   path: [[e.point?.x, 1.15, e.point?.z]],
@@ -60,13 +66,17 @@ export const Scene = () => {
     // });
   };
 
-  // our callback will run on every animation frame
   useFrame(() => {
-    // the length of our sequence
-    // const sequenceLength = val(sheet.sequence.pointer.length);
-    // // update the "position" of the playhead in the sequence, as a fraction of its whole length
-    // sheet.sequence.position = scroll.offset * sequenceLength;
+    const sequenceLength = val(sheet.sequence.pointer.length);
+    sheet.sequence.position = scroll.offset * sequenceLength;
   });
+
+  // useFrame(() => {
+  //   if (focusTargetVisualizerRef.current) {
+  //     console.log(focusTargetVisualizerRef.current.position);
+  //     focusTargetRef.current.copy(focusTargetVisualizerRef.current.position);
+  //   }
+  // });
 
   return (
     <>
@@ -77,44 +87,39 @@ export const Scene = () => {
           { name: 'leftward', keys: ['ArrowLeft', 'KeyA'] },
           { name: 'rightward', keys: ['ArrowRight', 'KeyD'] },
           { name: 'dance', keys: ['Space'] },
-        ]}
-      >
+        ]}>
         <PerspectiveCamera
           makeDefault
           ref={cameraRef}
           theatreKey='Camera'
-          fov={42}
-          near={0.1}
-          far={200}
+          fov={50}
           position={[20, 25.35, 18]}
           lookAt={cameraTargetRef}
         />
         <e.mesh
           theatreKey='Camera Target'
           visible='editor'
-          ref={cameraTargetRef}
-        >
+          ref={cameraTargetRef}>
           <sphereGeometry args={[0.1, 0]} />
           <meshPhongMaterial color='yellow' />
         </e.mesh>
         <PointLight />
         {/* <MovingSpot theatreKey='MovingSpot' /> */}
-        <FireFlies theatreKey='FireFlies' />
+        <FireFlies />
         <mesh
           position={[0, 1.15, 0]}
           rotation-x={-Math.PI / 2}
           receiveShadow
           onDoubleClick={onPlaneClicked}
           onPointerEnter={() => setOnFloor(true)}
-          onPointerLeave={() => setOnFloor(false)}
-        >
+          onPointerLeave={() => setOnFloor(false)}>
           <planeGeometry args={[1000, 1000]} />
           <MeshReflectorMaterial
             ref={planeMaterial}
             color={colors.foreground}
             resolution={1024}
             mixStrength={10}
-            roughness={0.5}
+            roughness={0.9}
           />
         </mesh>
         <MountainAndRiver />
@@ -122,14 +127,44 @@ export const Scene = () => {
         <MovingClouds />
         <Island position={[0, 0, 0]} />
 
-        <fog
+        <e.fog
           attach='fog'
-          args={[colors.background, 1, 20]}
+          ref={fogRef}
+          theatreKey='Fog'
+          args={[colors.foreground, 1, 400]}
         />
         <color
+          theatreKey='Background'
           attach='background'
           args={[colors.background]}
         />
+        <e.mesh
+          theatreKey='FocusTarget'
+          ref={focusTargetVisualizerRef}
+          visible='editor'>
+          <sphereGeometry args={[0.2, 1]} />
+          <meshBasicMaterial color='blue' />
+        </e.mesh>
+        <EffectComposer>
+          {/* <Autofocus
+            target={focusTargetRef.current}
+            smoothTime={0.1}
+            debug={isProd ? undefined : 0.02}
+            focusRange={0.01}
+            bokehScale={8}
+          /> */}
+          {/* <Bloom
+            luminanceThreshold={0}
+            luminanceSmoothing={0.9}
+            height={100}
+          /> */}
+          <Noise opacity={0.01} />
+          <Vignette
+            eskil={false}
+            offset={0.1}
+            darkness={0.5}
+          />
+        </EffectComposer>
       </KeyboardControls>
     </>
   );

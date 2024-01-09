@@ -10,33 +10,29 @@ Title: Mountain And River Scroll
 */
 
 import { useGLTF } from '@react-three/drei';
-import { useControls } from 'leva';
 // extend({ LineMaterial });
 
 export function MountainAndRiver({ ...props }) {
   const { nodes, materials } = useGLTF('/models/mountain_and_river_scroll.glb');
   const { colors } = useMenuStore();
-  const materialControls = useControls('MOUNTAINS', {
+  const materialControls = {
     color: colors.foreground,
-    roughness: { value: 0.4, min: 0, max: 1, step: 0.01 },
-    metalness: { value: 0.1, min: 0, max: 1, step: 0.01 },
-    transmission: { value: 0.9, min: 0, max: 1, step: 0.01 },
-  });
+    roughness: 0.4,
+    metalness: 0.6,
+    transmission: 0.2,
+  };
   return (
     <group
       {...props}
-      dispose={null}
-    >
+      dispose={null}>
       <group scale={0.01}>
         <group
           rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        >
+          scale={100}>
           <mesh
             // castShadow
             // receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -45,8 +41,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_1.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_1.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -55,8 +50,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_2.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_2.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -65,8 +59,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_3.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_3.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -75,8 +68,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_4.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_4.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -85,8 +77,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_5.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_5.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -95,8 +86,7 @@ export function MountainAndRiver({ ...props }) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Accesories_VertexCollor_0_6.geometry}
-          >
+            geometry={nodes.Accesories_VertexCollor_0_6.geometry}>
             <meshPhysicalMaterial
               side={2}
               {...materialControls}
@@ -105,8 +95,7 @@ export function MountainAndRiver({ ...props }) {
         </group>
         <group
           rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        >
+          scale={100}>
           <mesh geometry={nodes.Outline_VertexCollorBackFace_0.geometry}>
             <meshPhysicalMaterial
               side={2}

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
+import VideoPop from 'react-video-pop';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
 
@@ -69,8 +70,7 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
           className='info'
           initial='offscreen'
           whileInView='onscreen'
-          viewport={{ once: true, amount: 0.8 }}
-        >
+          viewport={{ once: true, amount: 0.8 }}>
           <FeatureProjectHeader project={project} />
           <div className='presentation'>
             <motion.div
@@ -78,8 +78,7 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
               initial='offscreen'
               whileInView='onscreen'
               custom={0}
-              variants={staggerVariants}
-            >
+              variants={staggerVariants}>
               <img
                 src={'/images/resradio-2-feature-1.png'}
                 alt={'ResRadio'}
@@ -90,8 +89,7 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
                 custom={1}
                 initial='offscreen'
                 whileInView='onscreen'
-                variants={staggerVariants}
-              >
+                variants={staggerVariants}>
                 A contemporary webradio website and back-office in React on top
                 of Mixlr, Sanity, Prismic, Ably, Github and Netlify.
               </motion.p>
@@ -99,10 +97,17 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
                 custom={2}
                 initial='offscreen'
                 whileInView='onscreen'
-                variants={staggerVariants}
-              >
+                variants={staggerVariants}>
                 Brutalist design meets scaleability.
               </motion.p>
+              <motion.button
+                custom={3}
+                variants={staggerVariants}
+                initial='offscreen'
+                whileInView='onscreen'>
+                Play reaction
+                <VideoPop />
+              </motion.button>
             </div>
           </div>
         </motion.div>

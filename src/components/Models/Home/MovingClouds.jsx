@@ -4,7 +4,7 @@ import { useControls } from 'leva';
 export function MovingClouds({ ...props }) {
   const controls = useControls('CLOUDS', {
     speed: {
-      value: 0.3,
+      value: 0.8,
       min: 0,
       max: 1,
       step: 0.01,
@@ -15,13 +15,13 @@ export function MovingClouds({ ...props }) {
     },
     position: [0, 20, 0],
     growth: {
-      value: 9,
+      value: 10,
       min: 0,
       max: 50,
       step: 1,
     },
     segments: {
-      value: 150,
+      value: 200,
       min: 0,
       max: 200,
       step: 1,
@@ -30,14 +30,14 @@ export function MovingClouds({ ...props }) {
       value: 1,
       min: 0,
       max: 1,
-      step: 0.3,
+      step: 0.8,
     },
     color: {
       value: '#ffffff',
     },
     bounds: [50, 2, 50],
     volume: {
-      value: 1,
+      value: 20,
       min: 0,
       max: 100,
       step: 1,
