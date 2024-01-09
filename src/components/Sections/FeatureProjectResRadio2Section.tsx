@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
-import VideoPop from 'react-video-pop';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
 
@@ -106,7 +105,6 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
                 initial='offscreen'
                 whileInView='onscreen'>
                 Play reaction
-                <VideoPop />
               </motion.button>
             </div>
           </div>
