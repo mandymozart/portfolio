@@ -1,0 +1,174 @@
+/* TODO: PATH HAS TO BE RELATIVE TO THE ROOT OF THE PROJECT 
+  remember when deploying to github
+*/
+@font-face {
+  font-family: Till-Normal;
+  src: url(/fonts/Till-Normal.woff);
+  src:
+    url(/fonts/Till-Normal.woff2) format('woff2'),
+    url(/fonts/Till-Normal.woff) format('woff');
+}
+
+:root {
+  --primary: rgb(30, 30, 30); /*  400 */
+  --primary-200: rgb(65, 65, 65);
+  --primary-400: var(--primary); /*  alias */
+  --secondary: rgb(255, 0, 0);
+  --secondary-400: var(--secondary); /*  alias */
+  --secondary-600: rgb(207, 24, 0);
+  --accent: rgb(255, 217, 0);
+  --accent-600: #c67700;
+  --color-captions: rgb(255, 217, 0); /* deprecated */
+  --background: rgb(253, 253, 253);
+  --background-600: rgb(212, 212, 212);
+  --background-accent-gradient: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-600) 100%
+  );
+  --grid-padding: 2rem;
+  --header-height: 4rem;
+  --content-margin-left: 0;
+  --content-width: 1728px;
+
+  --grid-color: rgba(0, 0, 0, 1);
+  --font-mono: 'Till-Normal', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-sans-serif: system-ui, sans-serif;
+  --font-serif: 'Till-Normal', serif;
+
+  overflow-y: scroll;
+}
+
+@media (max-width: 1350px) {
+  :root {
+    --grid-padding: 2rem;
+    --content-margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  :root {
+    --grid-padding: 1rem;
+    --content-margin-left: 0;
+  }
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.125;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+strong {
+  font-weight: 400;
+}
+
+img {
+  display: block;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  font: 1rem var(--font-serif);
+}
+a {
+  color: var(--main);
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+p {
+  font: 1rem var(--font-serif);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media only screen and (min-width: 1351px) {
+  .hidden--desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 851px) and (max-width: 1350px) {
+  .hidden--tablet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .hidden--mobile {
+    display: none;
+  }
+}
+
+.scrollable {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Scrollbar styles for WebKit browsers */
+.scrollable::-webkit-scrollbar {
+  border-radius: 0.25rem;
+  width: 0;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--accent-600);
+  border-radius: 0.25rem;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+.scrollable::-webkit-scrollbar-track {
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+.scrollable--hint::-webkit-scrollbar-track {
+  background-color: hsl(250 15% 90%);
+}
+
+.scrollable--hint::-webkit-scrollbar-thumb {
+  background-color: hsl(250 15% 85%);
+}
+
+.scrollable--hint:hover::-webkit-scrollbar-track {
+  background-color: hsl(250 15% 85%);
+}
+
+.scrollable--hint:hover::-webkit-scrollbar-thumb {
+  background-color: hsl(250 15% 70%);
+}
