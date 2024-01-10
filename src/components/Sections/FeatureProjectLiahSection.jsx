@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { revealVariants } from './../../animations/site';
+import { staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
   font-family: var(--font-mono);
-
+  height: 200vh;
   max-width: var(--content-width);
   margin: 0 auto;
   @media (max-width: 850px) {
@@ -71,27 +71,52 @@ const FeatureProjectLiahSection = ({ children, ...props }) => {
           className='info'
           initial='offscreen'
           whileInView='onscreen'
-          viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          viewport={{ once: true, amount: 0.8 }}>
           <FeatureProjectHeader project={project} />
           <div className='presentation'>
             <div className='lead'>
-              <p>Transnational furniture shop and configurator.</p>
-              <p>Quality made in Switzerland.</p>
+              <motion.p
+                custom={0}
+                initial='offscreen'
+                whileInView='onscreen'
+                variants={staggerVariants}>
+                Transnational furniture shop and configurator.
+              </motion.p>
+              <motion.p
+                custom={1}
+                initial='offscreen'
+                whileInView='onscreen'
+                variants={staggerVariants}>
+                Quality made in Switzerland.
+              </motion.p>
             </div>
-            <div className='image image--1'>
+            <div></div>
+            <div></div>
+          </div>
+          <div className='presentation'>
+            <div></div>
+            <motion.div
+              className='image image--1'
+              initial='offscreen'
+              whileInView='onscreen'
+              custom={0}
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-liah-1.png'}
                 alt={'LiAH - Browser view'}
               />
-            </div>
-            <div className='image image--2'>
+            </motion.div>
+            <motion.div
+              className='image image--2'
+              initial='offscreen'
+              whileInView='onscreen'
+              custom={0}
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-liah-2.png'}
                 alt={'LiAH - Mobile view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

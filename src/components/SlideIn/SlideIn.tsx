@@ -3,16 +3,13 @@ import clsx from 'clsx';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import {
   RouteChangeEvent,
-  RouteLoadedEvent,
   useRouteChangeListener,
-  useRouteLoadedListener,
 } from './../../events/routerEvents';
 import {
   SlideInRoute,
   SlideInRouteType,
   SlideInRouteVariant,
 } from './../../slideInRoutes';
-import useMenuStore from './../../stores/MenuStore';
 
 const Container = styled.div`
   position: absolute;
@@ -107,14 +104,8 @@ const variant = {
 };
 
 const SlideIn = ({ children, route, ...props }: Props) => {
-  const { preloadedKeys } = useMenuStore();
   const y = useMotionValue('100vh');
   const sY = useSpring(y);
-
-  useRouteLoadedListener((event: RouteLoadedEvent) => {
-    if (event.to.key !== route.key) return;
-    sY.set(variant.visible.y);
-  });
 
   useRouteChangeListener((event: RouteChangeEvent) => {
     if (event.to.key !== route.key) {
@@ -124,8 +115,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
     if (event.to.key === route.key) {
       if (
         route.type === SlideInRouteType.STATIC ||
-        route.type === SlideInRouteType.ROOT ||
-        preloadedKeys.indexOf(route.key) > -1
+        route.type === SlideInRouteType.ROOT
       ) {
         sY.set(variant.visible.y);
         return;

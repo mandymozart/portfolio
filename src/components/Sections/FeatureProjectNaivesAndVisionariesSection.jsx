@@ -8,6 +8,7 @@ const Container = styled.section`
   font-family: var(--font-mono);
 
   max-width: var(--content-width);
+  height: 200vh;
   margin: 0 auto;
   @media (max-width: 850px) {
   }
@@ -72,16 +73,18 @@ const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='presentation'>
             <div className='lead'>
               <p>
                 Stefan Sargemeister desciple Manuel Bürger & artist Sebastian
-                Haslauer entrusted me in bringing to live their vision of an
-                Emirates inspired WooCommerce shop for their publishing house—in
-                the process breaking more than one “good idea” of web design.
+                Haslauer entrusted me in bringing their vision of an Emirates
+                inspired WooCommerce shop for their publishing house to life.{' '}
+              </p>
+              <p>
+                In the process ended up breaking more than one “good idea” of
+                web design.
               </p>
             </div>
             <div className='image image--1'>
