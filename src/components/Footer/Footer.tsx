@@ -1,10 +1,10 @@
 'use client';
 import styled from '@emotion/styled';
 import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl';
+import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
 import ButtonLink from '../FormElements/ButtonLink';
 import { emitRouteChange } from './../../events/routerEvents';
-import useMonoSynth from './../../hooks/useMonoSynth';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -35,10 +35,8 @@ const Container = styled.div`
 `;
 
 const Footer = () => {
-  const activeMenuItem = useMenuStore(store => store.activeMenuItem);
-  const setActiveMenuItem = useMenuStore(store => store.setActiveMenuItem);
-
-  const { playToneAtRoute } = useMonoSynth();
+  const activeMenuItem = useMenuStore((store) => store.activeMenuItem);
+  const setActiveMenuItem = useMenuStore((store) => store.setActiveMenuItem);
 
   const navigateTo = (to: SlideInRoute) => {
     console.log('navigateTo', activeMenuItem.key, to.key);
@@ -57,14 +55,12 @@ const Footer = () => {
         <nav className='social'>
           <a
             href='https://github.com/mandymozart'
-            target='_blank'
-          >
+            target='_blank'>
             <SlSocialGithub />
           </a>
           <a
             href='https://linkedin.com/mandymozartdhsdjfghsdfhg'
-            target='_blank'
-          >
+            target='_blank'>
             <SlSocialLinkedin />
           </a>
         </nav>
@@ -78,8 +74,7 @@ const Footer = () => {
             <li>
               <ButtonLink
                 link
-                onClick={() => navigateTo(routes.PRIVACY)}
-              >
+                onClick={() => navigateTo(routes.PRIVACY)}>
                 Privacy Policy
               </ButtonLink>
             </li>
@@ -90,8 +85,7 @@ const Footer = () => {
             <li>
               <ButtonLink
                 href='https://paulinelepape.com/'
-                target='_blank'
-              >
+                target='_blank'>
                 Font Till by Pauline Le Pape
               </ButtonLink>
             </li>

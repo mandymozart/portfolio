@@ -25,15 +25,15 @@ const Container = styled.div`
 
 const LoadingScreen = ({ onLoaderFinished }) => {
   const { progress } = useProgress();
+  const [hidden, setHidden] = useState(false);
 
   const handleFinished = () => {
     setHidden(true);
     if (onLoaderFinished) onLoaderFinished();
   };
 
-  const [hidden, setHidden] = useState(false);
   return (
-    <Container className={clsx({ hidden: hidden })}>
+    <Container className={clsx({ active: !hidden, hidden: hidden })}>
       <div className={'loading-screen__container'}>
         <h1>WAWA Sensei Course R3F</h1>
         <p>Loading ... {parseInt(progress)}%</p>

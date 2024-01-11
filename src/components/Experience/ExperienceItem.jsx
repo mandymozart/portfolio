@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import useMenuStore from '../../stores/MenuStore';
+import { playToneAtRoute } from './../../audio';
 import { emitRouteChange } from './../../events/routerEvents';
-import useMonoSynth from './../../hooks/useMonoSynth';
 import { routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -44,13 +44,12 @@ const Container = styled.div`
 `;
 
 const ExperienceItem = ({ experience, projects }) => {
-  const { playToneAtRoute } = useMonoSynth();
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
+  const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
   if (!experience) return <></>;
   if (!projects) return <></>;
-  const getProject = uid => {
+  const getProject = (uid) => {
     if (projects) {
-      let pro = projects.find(p => {
+      let pro = projects.find((p) => {
         if (p.uid === uid) {
           return p;
         } else {
@@ -63,7 +62,7 @@ const ExperienceItem = ({ experience, projects }) => {
     }
   };
 
-  const navigateTo = uid => () => {
+  const navigateTo = (uid) => () => {
     playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
     emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
@@ -94,8 +93,7 @@ const ExperienceItem = ({ experience, projects }) => {
               <div key={index}>
                 <a
                   href={`#${node.project.uid}`}
-                  onClick={navigateTo(node.project.uid)}
-                >
+                  onClick={navigateTo(node.project.uid)}>
                   {getProject(node.project.uid)?.data.name}
                 </a>
               </div>

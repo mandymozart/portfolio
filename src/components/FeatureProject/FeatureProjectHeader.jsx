@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { playToneAtRoute } from '../../audio';
 import Arrow from '../Icons/Arrow';
 import { staggerVariants } from './../../animations/site';
 import { emitRouteChange } from './../../events/routerEvents';
-import useMonoSynth from './../../hooks/useMonoSynth';
 import { routes } from './../../slideInRoutes';
 import useMenuStore from './../../stores/MenuStore';
 
@@ -40,9 +40,9 @@ const Container = styled.header`
 `;
 
 export const FeatureProjectHeader = ({ project }) => {
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-  const { playToneAtRoute } = useMonoSynth();
-  const navigateTo = uid => () => {
+  const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
+
+  const navigateTo = (uid) => () => {
     playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
     emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
@@ -54,31 +54,26 @@ export const FeatureProjectHeader = ({ project }) => {
         initial='offscreen'
         whileInView='onscreen'
         viewport={{ once: true, amount: 0.8 }}
-        variants={staggerVariants}
-      >
+        variants={staggerVariants}>
         <motion.h3
           className='title'
-          custom={0}
-        >
+          custom={0}>
           {project.name} <Arrow />
         </motion.h3>
         <div className='subheader'>
           <motion.span
             className='subtitle'
-            custom={1}
-          >
+            custom={1}>
             Roles → {project?.roles}
           </motion.span>
           <motion.span
             className='industry'
-            custom={2}
-          >
+            custom={2}>
             {project?.industry}
           </motion.span>
           <motion.span
             className='type'
-            custom={3}
-          >
+            custom={3}>
             {project?.type}
           </motion.span>
         </div>

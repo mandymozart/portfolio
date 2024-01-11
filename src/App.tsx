@@ -7,6 +7,7 @@ import NavMenu from './components/NavMenu/NavMenu';
 import './index.css';
 import HomePage from './slides/HomePage';
 import Slides from './slides/Slides';
+
 function App() {
   const handleLoaderFinished = () => {
     console.log('handleLoaderFinished');

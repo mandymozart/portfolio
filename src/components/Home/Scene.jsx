@@ -28,7 +28,7 @@ import { TrashBag } from '../Models/TrashBag';
 import useMenuStore from './../../stores/MenuStore';
 
 export const Scene = () => {
-  const { colors, setColors } = useMenuStore();
+  const { colors, setColors, setScrollYProgress } = useMenuStore();
 
   const sheet = useCurrentSheet();
   const scroll = useScroll();
@@ -70,6 +70,7 @@ export const Scene = () => {
   useFrame(() => {
     const sequenceLength = val(sheet.sequence.pointer.length);
     sheet.sequence.position = scroll.offset * sequenceLength;
+    setScrollYProgress(scroll.offset);
   });
 
   // useFrame(() => {

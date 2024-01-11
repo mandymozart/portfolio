@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import useMenuStore from '../../stores/MenuStore';
 import Loader from '../Loader/Loader';
 import { emitRouteChange } from './../../events/routerEvents';
-import useMonoSynth from './../../hooks/useMonoSynth';
+
+import { playToneAtRoute } from '../../audio';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -90,10 +91,7 @@ const Container = styled.div`
 const navItems = [routes.PROJECTS, routes.EXPERIENCES, routes.RESUME];
 
 const NavMenu = () => {
-  const activeMenuItem = useMenuStore(store => store.activeMenuItem);
-  const setActiveMenuItem = useMenuStore(store => store.setActiveMenuItem);
-
-  const { playToneAtRoute } = useMonoSynth();
+  const { activeMenuItem, setActiveMenuItem } = useMenuStore();
 
   const navigateTo = (to: SlideInRoute) => {
     if (activeMenuItem.key === to.key) {
@@ -112,18 +110,16 @@ const NavMenu = () => {
           onClick={() => navigateTo(routes.HOME)}
           className={`item item--home ${
             activeMenuItem.key === routes.HOME.key ? 'active' : ''
-          }`}
-        >
+          }`}>
           <Loader />
         </button>
-        {navItems.map(route => (
+        {navItems.map((route) => (
           <button
             onClick={() => navigateTo(route)}
             key={route.key}
             className={`item ${
               activeMenuItem.key === route.key ? 'active' : ''
-            }`}
-          >
+            }`}>
             <span>{route.label}</span>
           </button>
         ))}

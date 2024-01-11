@@ -19,6 +19,8 @@ const useMenuStore = create(
     activeMenuItem: routes.HOME,
     setActiveMenuItem: (menuItem) =>
       set({ activeMenuItem: menuItem }),
+    scrollYProgress: 0,
+    setScrollYProgress: (scrollYProgress) => set({scrollYProgress}),
     colors: {foreground: '#fdfdfd', background: '#fdfdfd'},
     setColors: (colors)=> set({colors})
   })

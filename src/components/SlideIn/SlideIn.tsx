@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import {
   RouteChangeEvent,
   useRouteChangeListener,
@@ -95,21 +96,65 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
 const variant = {
   hidden: {
     y: '100vh',
-    scaleX: 0.5,
   },
   visible: {
     y: '0vh',
-    scaleX: 1,
   },
 };
+const innerVariants = {
+  hidden: {
+    y: '5vh',
+    scale: 1,
+    opacity: 0,
+    filter: 'blur(20px)',
+  },
+  visible: {
+    y: '0vh',
+    scale: 1,
+    opacity: 1,
+    filter: 'blur(0px)',
+  },
+};
+
+export function useMenuAnimation(isActive: boolean) {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    // animate('.arrow', { rotate: isActive ? 180 : 0 }, { duration: 0.2 });
+
+    // animate(
+    //   '.list',
+    //   {
+    //     clipPath: isActive
+    //       ? 'inset(0% 0% 0% 0% round 10px)'
+    //       : 'inset(10% 50% 90% 50% round 10px)',
+    //   },
+    //   {
+    //     type: 'spring',
+    //     bounce: 0,
+    //     duration: 0.5,
+    //   },
+    // );
+
+    animate('.inner', isActive ? innerVariants.visible : innerVariants.hidden, {
+      duration: 0.5,
+      delay: isActive ? 0.5 : 0,
+    });
+  }, [isActive]);
+
+  return scope;
+}
 
 const SlideIn = ({ children, route, ...props }: Props) => {
   const y = useMotionValue('100vh');
   const sY = useSpring(y);
+  const [isActive, setIsActive] = useState(false);
+  const scope = useMenuAnimation(isActive);
 
   useRouteChangeListener((event: RouteChangeEvent) => {
     if (event.to.key !== route.key) {
       sY.set(variant.hidden.y);
+      setIsActive(false);
       return;
     }
     if (event.to.key === route.key) {
@@ -118,10 +163,12 @@ const SlideIn = ({ children, route, ...props }: Props) => {
         route.type === SlideInRouteType.ROOT
       ) {
         sY.set(variant.visible.y);
+        setIsActive(true);
         return;
       }
     }
   });
+  console.log('SlideIn Initialized');
 
   if (!route) return <></>;
   return (
@@ -129,9 +176,20 @@ const SlideIn = ({ children, route, ...props }: Props) => {
       <Container
         className={clsx({
           isFooter: route.variant === SlideInRouteVariant.FOOTER,
+          isActive: isActive,
         })}
+        ref={scope}
         {...props}>
-        <div className='inner scrollable scrollable-hint'>{children}</div>
+        <div className='inner scrollable scrollable-hint'>
+          {/* <div className='arrow'>➡️</div>
+          <div className='list'>
+            <div className='listitem'>{'item 1'}</div>
+            <div className='listitem'>{'item 2'}</div>
+            <div className='listitem'>{'item 3'}</div>
+            <div className='listitem'>{'item 4'}</div>
+          </div> */}
+          {children}
+        </div>
         {/* <div className='shadow-overlay shadow-overlay--top'></div> */}
         <div className='shadow-overlay shadow-overlay--bottom'></div>
       </Container>

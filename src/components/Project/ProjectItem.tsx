@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
 import { emitRouteChange } from './../../events/routerEvents';
-import useMonoSynth from './../../hooks/useMonoSynth';
 import { routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -37,9 +37,7 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
 }
 
 const ProjectItem = ({ project, ...props }: Props) => {
-  const setActiveMenuItem = useMenuStore(state => state.setActiveMenuItem);
-
-  const { playToneAtRoute } = useMonoSynth();
+  const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
 
   const navigateTo = (uid: string) => () => {
     playToneAtRoute(routes.PROJECT.key);
@@ -50,8 +48,7 @@ const ProjectItem = ({ project, ...props }: Props) => {
   return (
     <Container
       onClick={navigateTo(project.uid)}
-      {...props}
-    >
+      {...props}>
       {project.data.name}
       <span>&mdash;</span>
     </Container>
