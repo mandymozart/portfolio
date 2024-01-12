@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { skills } from './../../mockData/data.json';
+import { skills } from './../../data/index.json';
 import SkillItem from './SkillItem';
 
 const Container = styled.div`

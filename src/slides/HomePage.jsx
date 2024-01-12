@@ -18,7 +18,7 @@ if (!isProd) {
 }
 
 function HomePage() {
-  const PAGES = 16; // count of slices
+  const PAGES = 20; // count of slices
   const mainSheet = getProject('Tour', {
     state: projectState,
   }).sheet('Scene');

@@ -2,7 +2,7 @@
 import styled from '@emotion/styled';
 import ExperienceItem from './ExperienceItem';
 
-import { experiences, projects } from './../../mockData/data.json';
+import { experiences, projects } from './../../data/index.json';
 
 const Container = styled.div`
   position: relative;

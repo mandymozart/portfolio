@@ -27,7 +27,6 @@ function ProjectRouterBridge() {
 
   // TODO loses closure
   const routeChangeHandler = (routeChange) => {
-    console.log('requested ...', routeChange);
     if (routeChange.to.key !== 'project') return;
     navigate({
       pathname: routeChange.params.uid,

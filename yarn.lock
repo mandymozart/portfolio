@@ -2873,6 +2873,11 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
+smpte-timecode@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/smpte-timecode/-/smpte-timecode-1.3.5.tgz#8c38b5debedfae331138963288f63427b0e08448"
+  integrity sha512-mlweKNscWsM0/ufGBKUeiROBtIX02dJO5J+PHvqWCa3C8DwoV557lHf3gCaDuvVcWkUdSWQk93SFG2NxGjII2g==
+
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"

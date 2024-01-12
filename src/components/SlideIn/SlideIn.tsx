@@ -168,7 +168,6 @@ const SlideIn = ({ children, route, ...props }: Props) => {
       }
     }
   });
-  console.log('SlideIn Initialized');
 
   if (!route) return <></>;
   return (

@@ -1,0 +1,2652 @@
+{
+  "skills": [
+    {
+      "uid": "sass",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-28T00:38:29+0000",
+      "last_publication_date": "2023-11-28T00:38:29+0000",
+      "data": {
+        "name": "SASS",
+        "years": 10,
+        "logo": {
+          "dimensions": { "width": 2500, "height": 1875 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65653670531ac2845a256540_sass-1.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "sap-hybris",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-12-02T21:50:55+0000",
+      "last_publication_date": "2023-12-02T21:50:55+0000",
+      "data": {
+        "name": "SAP Hybris",
+        "years": 5,
+        "logo": {
+          "dimensions": { "width": 300, "height": 65 },
+          "alt": "Co developed APIs and Emails",
+          "url": "https://images.prismic.io/mandymozart-dev/656ba69c531ac2845a25a1bb_sap-hybris-logo-300x65.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "prismic",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-12-02T21:51:45+0000",
+      "last_publication_date": "2023-12-02T21:51:45+0000",
+      "data": {
+        "name": "Prismic",
+        "years": 5,
+        "logo": {
+          "dimensions": { "width": 256, "height": 256 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656ba6e6531ac2845a25a1bc_prismic-seeklogo.com.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "jisti",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-28T00:40:45+0000",
+      "last_publication_date": "2023-11-28T00:40:45+0000",
+      "data": {
+        "name": "Jisti",
+        "years": 3,
+        "logo": {
+          "dimensions": { "width": 744, "height": 1052 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65653708531ac2845a256542_Logo_Jitsi.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "bloomreach-experience",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-12-02T21:49:45+0000",
+      "last_publication_date": "2023-12-02T21:49:45+0000",
+      "data": {
+        "name": "Bloomreach Experience",
+        "years": 5,
+        "logo": {
+          "dimensions": { "width": 652, "height": 652 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656ba667531ac2845a25a1ba_bloomreach-gmbh-logo-vector.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "shopify",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-28T00:37:13+0000",
+      "last_publication_date": "2023-11-28T00:37:13+0000",
+      "data": {
+        "name": "Shopify",
+        "years": 3,
+        "logo": {
+          "dimensions": { "width": 2192, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6565362d531ac2845a25653f_shopify-1-.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "unrealengine",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-27T00:44:31+0000",
+      "last_publication_date": "2023-11-27T00:44:31+0000",
+      "data": {
+        "name": "Unreal Engine",
+        "years": 4,
+        "logo": {
+          "dimensions": { "width": 559, "height": 794 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563e664531ac2845a255f12_unreal-engine-1.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "java",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:17:01+0000",
+      "last_publication_date": "2023-11-26T23:17:01+0000",
+      "data": {
+        "name": "Java",
+        "years": 5,
+        "logo": {
+          "dimensions": { "width": 1344, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d1d7531ac2845a255eeb_java-4.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "laravel",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:16:12+0000",
+      "last_publication_date": "2023-11-26T23:16:12+0000",
+      "data": {
+        "name": "Laravel",
+        "years": 2,
+        "logo": {
+          "dimensions": { "width": 2418, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d1ab531ac2845a255ee9_laravel-2.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "unity",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-27T00:45:35+0000",
+      "last_publication_date": "2023-11-27T00:45:35+0000",
+      "data": {
+        "name": "Unity",
+        "years": 4,
+        "logo": {
+          "dimensions": { "width": 2433, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563e684531ac2845a255f13_unity-69.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "dart",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T22:49:58+0000",
+      "last_publication_date": "2023-11-26T22:50:09+0000",
+      "data": {
+        "name": "Dart",
+        "years": 9,
+        "logo": {
+          "dimensions": { "width": 1024, "height": 1024 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/6563cb8f531ac2845a255ed8_dart.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "gitlab",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:09:38+0000",
+      "last_publication_date": "2023-11-26T23:09:38+0000",
+      "data": {
+        "name": "Gitlab",
+        "years": 5,
+        "logo": {
+          "dimensions": { "width": 100, "height": 92 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d028531ac2845a255edf_gitlab-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "spring",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:15:40+0000",
+      "last_publication_date": "2023-11-26T23:15:40+0000",
+      "data": {
+        "name": "Spring",
+        "years": 7,
+        "logo": {
+          "dimensions": { "width": 2499, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d184531ac2845a255ee8_spring-3.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "typescript",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T22:51:45+0000",
+      "last_publication_date": "2023-11-26T22:51:45+0000",
+      "data": {
+        "name": "TypeScript",
+        "years": 6,
+        "logo": {
+          "dimensions": { "width": 512, "height": 512 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563cbf2531ac2845a255ed9_Typescript_logo_2020.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "netlify",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:10:14+0000",
+      "last_publication_date": "2023-11-26T23:10:14+0000",
+      "data": {
+        "name": "Netlify",
+        "years": 4,
+        "logo": {
+          "dimensions": { "width": 652, "height": 652 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d040531ac2845a255ee0_netlify-logo-vector-2023.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "svelte",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T22:53:31+0000",
+      "last_publication_date": "2023-11-26T22:53:31+0000",
+      "data": {
+        "name": "Svelte",
+        "years": 3,
+        "logo": {
+          "dimensions": { "width": 98, "height": 118 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563cc65531ac2845a255eda_Svelte_Logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "wordpress",
+      "url": null,
+      "type": "skill",
+      "first_publication_date": "2023-11-26T23:12:36+0000",
+      "last_publication_date": "2023-11-26T23:12:36+0000",
+      "data": {
+        "name": "Wordpress",
+        "years": 15,
+        "logo": {
+          "dimensions": { "width": 2500, "height": 2490 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6563d0ab531ac2845a255ee3_wordpress-icon.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    }
+  ],
+  "collaborators": [
+    {
+      "uid": "foryouandyourcustomers",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-03T02:53:26+0000",
+      "last_publication_date": "2023-12-03T02:53:26+0000",
+      "data": {
+        "name": "foryouandyourcustomers",
+        "employees": 200,
+        "logo": {
+          "dimensions": { "width": 1200, "height": 600 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/655f368e531ac2845a25559d_fyayc.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "description": "Foryouandyourcustomers is a business consulting agency for digital change.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://foryouandyourcustomers.com/",
+          "target": "_blank"
+        },
+        "location": "Vienna, Zürich, Amsterdam, Munich, Sofia"
+      }
+    },
+    {
+      "uid": "lukas-rehm",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-04T17:31:06+0000",
+      "last_publication_date": "2023-12-04T17:31:06+0000",
+      "data": {
+        "name": "Lukas Rehm",
+        "employees": 1,
+        "logo": {},
+        "description": null,
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lukasrehm.net",
+          "target": "_blank"
+        },
+        "location": "Amsterdam"
+      }
+    },
+    {
+      "uid": "rudy-guedj",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-04T17:32:28+0000",
+      "last_publication_date": "2023-12-04T17:32:28+0000",
+      "data": {
+        "name": "Rudy Guedj",
+        "employees": 1,
+        "logo": {},
+        "description": "Designer & Publisher",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.buildingfictions.com",
+          "target": ""
+        },
+        "location": "Amsterdam"
+      }
+    },
+    {
+      "uid": "vj-fader",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-04T17:49:28+0000",
+      "last_publication_date": "2023-12-04T17:49:28+0000",
+      "data": {
+        "name": "VJ Fader",
+        "employees": 1,
+        "logo": {},
+        "description": "Visual artist specialized in real-time graphics",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.vjfader.com",
+          "target": "_blank"
+        },
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "negativelabs",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-11-28T00:49:05+0000",
+      "last_publication_date": "2023-11-28T00:49:05+0000",
+      "data": {
+        "name": "Negative Labs",
+        "employees": 2,
+        "logo": {
+          "dimensions": { "width": 120, "height": 120 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65653848531ac2845a256543_negativelabs.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "description": "Negative Lab is a creative studio that designs brands, digital products and websites operated by Leo and Jörg Merz.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.negativelabs.com",
+          "target": ""
+        },
+        "location": "Stuttgart, Germany"
+      }
+    },
+    {
+      "uid": "thomaskoenig",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-02T21:43:59+0000",
+      "last_publication_date": "2023-12-02T21:43:59+0000",
+      "data": {
+        "name": "Thomas Koenig",
+        "employees": 1,
+        "logo": {},
+        "description": "Global Nomad Frontend Developer",
+        "link": {
+          "link_type": "Web",
+          "url": "https://thok.at/",
+          "target": "_blank"
+        },
+        "location": "Globally"
+      }
+    },
+    {
+      "uid": "lena-thomaka",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-11-28T00:50:30+0000",
+      "last_publication_date": "2023-11-28T00:50:30+0000",
+      "data": {
+        "name": "Lena Thomaka",
+        "employees": 1,
+        "logo": {},
+        "description": "Design & Art Direction",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lenathomaka.com",
+          "target": ""
+        },
+        "location": "Zurich, Switzerland"
+      }
+    },
+    {
+      "uid": "julia-schabasser",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-02T21:46:29+0000",
+      "last_publication_date": "2023-12-02T21:46:29+0000",
+      "data": {
+        "name": "Julia Schabasser",
+        "employees": null,
+        "logo": {},
+        "description": null,
+        "link": {
+          "link_type": "Web",
+          "url": "https://websiteriesen.at/",
+          "target": "_blank"
+        },
+        "location": null
+      }
+    },
+    {
+      "uid": "christopher-sax",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-12-02T21:45:37+0000",
+      "last_publication_date": "2023-12-02T21:45:37+0000",
+      "data": {
+        "name": "Christoper Sax",
+        "employees": 1,
+        "logo": {},
+        "description": null,
+        "link": {
+          "link_type": "Web",
+          "url": "https://websiteriesen.at/",
+          "target": "_blank"
+        },
+        "location": null
+      }
+    },
+    {
+      "uid": "tatjana-sturmer",
+      "url": null,
+      "type": "collaborator",
+      "first_publication_date": "2023-11-28T00:55:03+0000",
+      "last_publication_date": "2023-11-28T00:55:03+0000",
+      "data": {
+        "name": "Tatjana Stürmer",
+        "employees": 1,
+        "logo": {},
+        "description": "Tatjana Stürmer (*1993) is an artist and (graphic) designer based in Frankfurt, DE, and Amsterdam, NL. In her work she moves between design practice and multimedia installations. They often revolve around the performativity of (visual) language and investigate how it shapes our social and political experiences. She is currently lecturer and associated researcher at the University of Arts and Design Offenbach (HfG) in the Department of Arts – Graphics  Illustration.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://tatjanastuermer.de/",
+          "target": ""
+        },
+        "location": "Amsterdam, Neatherlands / Frankfurt, Germany"
+      }
+    }
+  ],
+  "clients": [
+    {
+      "uid": "resradio",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-12-16T16:18:58+0000",
+      "last_publication_date": "2023-12-16T16:18:58+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 179, "height": 56 },
+          "alt": "res radio",
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/657dcdc7531ac2845a2699ca_resradio-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "RES Radio",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.res.radio",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "roche",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-12-07T08:36:26+0000",
+      "last_publication_date": "2023-12-07T08:36:26+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 744, "height": 403 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/657183e8531ac2845a25c550_Roche_Logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "Roche",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.roche.ch/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "viennacontemporary",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-12-07T08:45:55+0000",
+      "last_publication_date": "2023-12-07T08:45:55+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 1788, "height": 1788 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/65718634531ac2845a25c55e_viennacontemporary21_logo_and_monogram-2.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "viennacontemporary",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.viennacontemporary.at/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "svs-recrods",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-12-04T17:45:50+0000",
+      "last_publication_date": "2023-12-04T17:45:50+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 91, "height": 49 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656e1041531ac2845a25a97c_SVS-records-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "SVS Recrods",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.svs-records.com",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "jan-van-eyck-academy",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-12-04T17:28:11+0000",
+      "last_publication_date": "2023-12-04T17:28:11+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 190, "height": 180 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656e0c18531ac2845a25a942_jve.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "Jan Van Eyck Academy",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.janvaneyck.nl/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "swma",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:26:38+0000",
+      "last_publication_date": "2023-11-28T03:16:39+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 105, "height": 48 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608864531ac2845a25594d_swma.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": "SWMA",
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "cirque-du-soleil",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:21:46+0000",
+      "last_publication_date": "2023-11-24T11:21:46+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 652, "height": 652 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608730531ac2845a255947_cirque-du-soleil-logo-vector-2022.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "pommery",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:18:44+0000",
+      "last_publication_date": "2023-11-24T11:18:44+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 222, "height": 133 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/655f6e47531ac2845a2556bc_logo-white2.6013fb44.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "volvo",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:17:49+0000",
+      "last_publication_date": "2023-11-24T11:17:49+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 250, "height": 250 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608658531ac2845a255944_Volvo-Iron-Mark-Black.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "liah",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:27:43+0000",
+      "last_publication_date": "2023-11-24T11:27:43+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 528, "height": 157 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/6560889b531ac2845a25594f_liah-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "tama",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:31:16+0000",
+      "last_publication_date": "2023-11-24T11:31:16+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 2500, "height": 2500 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608975531ac2845a255951_tama-logo-svg-vector.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "ubs",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:19:42+0000",
+      "last_publication_date": "2023-11-24T11:19:42+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 127, "height": 46 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656086bb531ac2845a255945_UBS_Logo_SVG.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "baselworld",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:30:46+0000",
+      "last_publication_date": "2023-11-24T11:30:46+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 89, "height": 89 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608929531ac2845a255950_baselworld-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "lingoda",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:23:48+0000",
+      "last_publication_date": "2023-11-24T11:23:48+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 2145, "height": 1791 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/655f6c33531ac2845a2556b3_lingoda-logo.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    },
+    {
+      "uid": "rwa",
+      "url": null,
+      "type": "client",
+      "first_publication_date": "2023-11-24T11:36:46+0000",
+      "last_publication_date": "2023-11-24T11:36:46+0000",
+      "data": {
+        "logo": {
+          "dimensions": { "width": 397, "height": 174 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/65608ac2531ac2845a255954_rwa.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "name": null,
+        "link": { "link_type": "Any" }
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "uid": "streaming-and-media-production-company",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-12-03T02:59:24+0000",
+      "last_publication_date": "2023-12-05T11:17:46+0000",
+      "data": {
+        "company": "Vienna Struggle Media GmbH",
+        "name": null,
+        "type": "CTO",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Streaming and media production company.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "Set up due to the high demand for streaming during covid we set up this media production company with core members of the Vienna Struggle Association.",
+        "logo": {
+          "dimensions": { "width": 700, "height": 90 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656beed1531ac2845a25a21b_logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "Founder",
+        "location": "Vienna",
+        "startdate": "2019-05-01",
+        "enddate": "2021-03-01",
+        "projects": [{ "type": "project", "uid": "business-riot-conference" }]
+      }
+    },
+    {
+      "uid": "messerli",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-11-23T15:25:04+0000",
+      "last_publication_date": "2023-12-05T11:06:19+0000",
+      "data": {
+        "company": "Messerli",
+        "name": "Contractor",
+        "type": "Project Manager",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Working with architects, designers and engineers I help craft visualisations and interactive concepts for a leading Swiss trade show design agency. My work included render farm optimisation, creative direction and project management.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "Visualisations, construction planing and design of trade show stands.",
+        "logo": {
+          "dimensions": { "width": 199, "height": 52 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/655f6ecb531ac2845a2556c0_messerli-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "Freelance",
+        "location": "Zurich",
+        "startdate": "2012-01-01",
+        "enddate": "2014-01-01",
+        "projects": []
+      }
+    },
+    {
+      "uid": "self-employed",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-12-03T03:04:11+0000",
+      "last_publication_date": "2023-12-05T10:48:48+0000",
+      "data": {
+        "company": "Self-Employed",
+        "name": null,
+        "type": "Founder",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "I do contract work as a creative, digital consultant, producer and developer. I implemented agile workflows and design thinking in interdisciplinary teams and help shape early ideas for many years. \n\nMy role is usually the one that you are currently missing.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "I do contract work as a creative, digital consultant, producer and developer.",
+        "logo": {},
+        "contract": "Freelance",
+        "location": "Global",
+        "startdate": "2014-02-01",
+        "enddate": "2023-12-31",
+        "projects": [
+          { "type": "project", "uid": "edmt" },
+          { "type": "project", "uid": "muriquee" },
+          { "type": "project", "uid": "liah" },
+          { "type": "project", "uid": "dogheartcity" },
+          { "type": "project", "uid": "naivesandvisionaries" },
+          { "type": "project", "uid": "collisions-munich" },
+          { "type": "project", "uid": "collisions-canfranc" }
+        ]
+      }
+    },
+    {
+      "uid": "vienna-struggle---association-for-artistic-hybrid-endevours",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-12-03T03:02:02+0000",
+      "last_publication_date": "2023-12-05T10:42:36+0000",
+      "data": {
+        "company": "Vienna Struggle - Association for artistic hybrid endevours",
+        "name": null,
+        "type": "Board member",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "We founded Vienna Struggle to support hybrid creative work and explore new ways of collaboration in the arts, music and virtual production. We apply design thinking, collectivism and mutual respect to elevate one another and overcome the struggle of creative production together.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "We founded Vienna Struggle to support hybrid creative work and explore new ways of collaboration in the arts, music and virtual production.",
+        "logo": {
+          "dimensions": { "width": 700, "height": 90 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/656beed1531ac2845a25a21b_logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "Founder",
+        "location": "Vienna",
+        "startdate": "2021-08-01",
+        "enddate": "2023-01-01",
+        "projects": [
+          { "type": "project", "uid": "resradio-1" },
+          { "type": "project", "uid": "dynamic-projection" },
+          { "type": "project", "uid": "fourth-garden" },
+          { "type": "project", "uid": "dynamic-projection" }
+        ]
+      }
+    },
+    {
+      "uid": "lingoda",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-11-23T15:15:23+0000",
+      "last_publication_date": "2023-11-27T22:06:22+0000",
+      "data": {
+        "company": "Lingoda GmbH",
+        "name": null,
+        "type": "web developer",
+        "description": [],
+        "shortdescription": "Developing interactive language learning class rooms and learning materials.",
+        "logo": {
+          "dimensions": { "width": 2145, "height": 1791 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/655f6c33531ac2845a2556b3_lingoda-logo.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "FullTime",
+        "location": "Berlin",
+        "startdate": "2012-12-01",
+        "enddate": "2013-06-01",
+        "projects": []
+      }
+    },
+    {
+      "uid": "wearepictures",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-11-23T15:17:17+0000",
+      "last_publication_date": "2023-11-27T22:08:11+0000",
+      "data": {
+        "company": "WEAREPICTURES uG",
+        "name": "CTO",
+        "type": "Founder",
+        "description": [],
+        "shortdescription": "Digital design studio for trade show and interaction design",
+        "logo": {
+          "dimensions": { "width": 38, "height": 28 },
+          "alt": null,
+          "url": "https://mandymozart-dev.cdn.prismic.io/mandymozart-dev/655f6cdf531ac2845a2556b6_wearepictures-logo.svg?auto=compress,format",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "Founder",
+        "location": "Berlin",
+        "startdate": "2013-03-01",
+        "enddate": "2017-02-01",
+        "projects": [
+          { "type": "project", "uid": "muriquee" },
+          { "type": "project", "uid": "naivesandvisionaries" }
+        ]
+      }
+    },
+    {
+      "uid": "foryouandyourcustomers",
+      "url": null,
+      "type": "experience",
+      "first_publication_date": "2023-11-23T11:26:00+0000",
+      "last_publication_date": "2023-11-23T15:10:34+0000",
+      "data": {
+        "company": "foryouandyourcustomers Vienna GmbH",
+        "name": "UI/UX architect",
+        "type": "senior frontend developer",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Tilman worked as a frontend developer and UI/UX architect and consultant for major Austrian and international clients. They developed state of the art interfaces for internal operations optimising workflows and accessibility across millions of products, supply chains. As a UI/UX consultant they helped find surprisingly easy solutions across departments and applications developing design systems, frameworks and architectures.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Frontend developer",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "API design. Developing prototypes, design systems and integrations of third party applications.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "UI/UX architect",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "guide and direct tech stack, setup CI/CD, data modelling, quality control, guidance and on-boarding across large scale legacy projects as well as rebuilds and micro services.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Consultant",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "help clients find smart and easy solutions to their complex problems. estimate large scale project budgets and apply STIs for performance and measurement",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Requirements engineering",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "breaking down milestones and defining atomar tasks in an agile team to accelerate  integration of business logic and assure product quality and team health.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          { "type": "paragraph", "text": "", "spans": [], "direction": "ltr" }
+        ],
+        "shortdescription": "Tilman worked as a frontend developer and UI/UX architect and consultant for major Austrian and international clients.",
+        "logo": {
+          "dimensions": { "width": 1200, "height": 600 },
+          "alt": null,
+          "url": "https://images.prismic.io/mandymozart-dev/655f368e531ac2845a25559d_fyayc.png?auto=format,compress",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        },
+        "contract": "FullTime",
+        "location": "Vienna",
+        "startdate": "2017-03-01",
+        "enddate": "2023-03-01",
+        "projects": [
+          { "type": "project", "uid": "rwa-emails" },
+          { "type": "project", "uid": "rwa-shop" },
+          { "type": "project", "uid": "lagerhaus" }
+        ]
+      }
+    }
+  ],
+  "methods": [
+    {
+      "uid": "agile",
+      "url": null,
+      "type": "method",
+      "first_publication_date": "2023-12-16T18:20:29+0000",
+      "last_publication_date": "2023-12-16T18:20:29+0000",
+      "data": { "name": "Agile", "years": 9, "logo": {} }
+    },
+    {
+      "uid": "design-thinking",
+      "url": null,
+      "type": "method",
+      "first_publication_date": "2023-12-16T18:21:11+0000",
+      "last_publication_date": "2023-12-16T18:21:11+0000",
+      "data": { "name": "Design Thinking", "years": 5, "logo": {} }
+    },
+    {
+      "uid": "agile-scrum",
+      "url": null,
+      "type": "method",
+      "first_publication_date": "2023-12-04T13:51:39+0000",
+      "last_publication_date": "2023-12-05T10:49:35+0000",
+      "data": { "name": "Agile/Scrum", "years": 7, "logo": {} }
+    },
+    {
+      "uid": "requirements-engineering",
+      "url": null,
+      "type": "method",
+      "first_publication_date": "2023-12-04T13:50:36+0000",
+      "last_publication_date": "2023-12-05T10:50:06+0000",
+      "data": { "name": "Requirements Engineering", "years": 7, "logo": {} }
+    },
+    {
+      "uid": "project-management",
+      "url": null,
+      "type": "method",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Project Management", "years": 10, "logo": {} }
+    }
+  ],
+  "projects": [
+    {
+      "uid": "collisions-munich",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T14:53:39+0000",
+      "last_publication_date": "2023-12-21T14:08:12+0000",
+      "data": {
+        "name": "Collisions Munich",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Animated avant-garde festival website about arts & dark matter research in Munich (Germany) and Canfranc (Spain).\n\nWe build a figma playground for the experimental graphics to fuse seemlessly with the simplistic structure and animated particles effects in THREE.js",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Culture",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.collisions.cc",
+          "target": ""
+        },
+        "fromDate": "2022-06-01",
+        "toDate": "2022-06-30",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e5a531ac2845a2539e8_screely-1700147295980.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e29531ac2845a2539e7_screely-1700147312326.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e1d531ac2845a2539e5_screely-1700147381301.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e14531ac2845a2539e3_screely-1700147408584.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e21531ac2845a2539e6_screely-1700147367091.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563ec3531ac2845a2539e9_screely-1700150970769.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65563e1b531ac2845a2539e4_screely-1700147395294.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "project-management" },
+          { "type": "skill", "uid": "react" },
+          { "type": "skill", "uid": "pixijs" },
+          { "type": "skill", "uid": "typescript" },
+          { "type": "skill", "uid": "sass" }
+        ],
+        "partners": [
+          { "type": "collaborator", "uid": "tatjana-sturmer" },
+          { "type": "collaborator", "uid": "lena-thomaka" },
+          { "type": "client", "uid": "svs-recrods" }
+        ],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "resradio-2",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T15:34:32+0000",
+      "last_publication_date": "2023-12-16T17:12:07+0000",
+      "data": {
+        "name": "RES Radio 2.0",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "A community webradio website packed with key features such as 24/7 stream, heavy rotation player, live chat & unique explore algorithm to discover new shows.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Arts & Culture",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.res.radio",
+          "target": ""
+        },
+        "fromDate": "2023-01-01",
+        "toDate": "2023-01-06",
+        "video_id": "project-resradio2",
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8bda531ac2845a25a191_screely-1701546961455.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8be5531ac2845a25a192_resradio20-mobile-0.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4256, "height": 2439 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8aa1531ac2845a25a190_screely-1701546620989.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1170, "height": 2532 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b921c531ac2845a25a198_res.radio_-iPhone12Pro-.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b933a531ac2845a25a19a_screely-1701548843492.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b9380531ac2845a25a19c_resradio20-mobile-3.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b93f7531ac2845a25a19f_screely-1701548619264.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b9402531ac2845a25a1a1_resradio20-mobile-2.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "netlify" },
+          { "type": "skill", "uid": "react" },
+          { "type": "skill", "uid": "github" },
+          { "type": "skill", "uid": "typescript" },
+          { "type": "skill", "uid": "sanity" },
+          { "type": "skill", "uid": "project-management" }
+        ],
+        "partners": [
+          { "type": "collaborator", "uid": "lena-thomaka" },
+          { "type": "client", "uid": "resradio" }
+        ],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "edmt",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-21T21:41:37+0000",
+      "last_publication_date": "2023-12-04T17:50:43+0000",
+      "data": {
+        "name": "EDMT App",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "EDMT is a truly unique visual music App! Designed by media artist Fader, it allows you to ‘play’ with your phone or tablet to generate mind expanding graphics and EDM inspired sounds. He is combining years of his experience as a visual and software designer into one amazing experience.\n\nhttps://youtu.be/3SKECihPefU ",
+            "spans": [
+              {
+                "start": 66,
+                "end": 71,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "http://www.vjfader.com/",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Music",
+        "type": "App",
+        "link": {
+          "link_type": "Web",
+          "url": "http://www.edmt.tv",
+          "target": ""
+        },
+        "fromDate": "2014-02-01",
+        "toDate": "2016-02-08",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 800, "height": 800 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 600, "height": 358 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 600, "height": 358 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 600, "height": 358 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 600, "height": 358 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1800, "height": 1182 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d23f6531ac2845a254ced_franzie-A1.jpeg?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2405531ac2845a254cee_still5.jpeg?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "requirements-engineering" },
+          { "type": "skill", "uid": "java" }
+        ],
+        "partners": [{ "type": "collaborator", "uid": "vj-fader" }],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "lagerhaus",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:27:11+0000",
+      "last_publication_date": "2023-12-03T02:54:01+0000",
+      "data": {
+        "name": "Lagerhaus",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Webshop for large cooperative Austrian DIY market. My work included frontend architecture, UX  consulting, and frontend lead.\nClient: foryouandyourcustomers GmbH",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Retail",
+        "type": "eCommerce",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lagerhaus.at",
+          "target": ""
+        },
+        "fromDate": "2017-06-01",
+        "toDate": "2022-02-28",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 4642, "height": 2366 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba199531ac2845a25a1ad_screely-1701552403056.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba3af531ac2845a25a1b2_lagerhaus-0.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4642, "height": 2366 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba1b5531ac2845a25a1af_screely-1701552433821.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba24e531ac2845a25a1b0_lagerhaus-2.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1352, "height": 902 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba3c8531ac2845a25a1b3_screely-1701553017954.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656ba3d4531ac2845a25a1b4_lagerhaus-3.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/d0590301-beba-4b24-b419-7de131901028_Slide+16_9+-+37.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/2b0c5198-e8e3-4a13-81a1-12ea282b7a20_Slide+16_9+-+17.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "sass" },
+          { "type": "skill", "uid": "spring" },
+          { "type": "skill", "uid": "java" },
+          { "type": "skill", "uid": "nodejs" },
+          { "type": "skill", "uid": "docker" },
+          { "type": "skill", "uid": "typescript" },
+          { "type": "skill", "uid": "react" }
+        ],
+        "partners": [
+          { "type": "collaborator", "uid": "foryouandyourcustomers" }
+        ],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "fourth-garden",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:01:57+0000",
+      "last_publication_date": "2023-12-04T17:33:09+0000",
+      "data": {
+        "name": "Fourth Garden - Jan Van Eyck Academy",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Gamified video chat rooms and virtual exhibition space for Jan Van Eyck Academy Maastricht.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Academia",
+        "type": "MetaVerse",
+        "link": { "link_type": "Any" },
+        "fromDate": "2021-06-06",
+        "toDate": "2021-08-30",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 3840, "height": 2160 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656e02cf531ac2845a25a8cd_fourthgarden-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656e02b8531ac2845a25a8cb_fourthgarden-mobile-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "jisti" },
+          { "type": "skill", "uid": "react" },
+          { "type": "skill", "uid": "netlify" },
+          { "type": "skill", "uid": "typescript" }
+        ],
+        "partners": [
+          { "type": "client", "uid": "jan-van-eyck-academy" },
+          { "type": "collaborator", "uid": "rudy-guedj" },
+          { "type": "collaborator", "uid": "lukas-rehm" }
+        ],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "liah",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-15T12:12:39+0000",
+      "last_publication_date": "2023-12-04T13:54:01+0000",
+      "data": {
+        "name": "LiAH",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Complex customizer, marketing page and beautique WooCommerce shop for Zürich based furniture business.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Design",
+        "type": "eCommerce",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.liah.design",
+          "target": ""
+        },
+        "fromDate": "2020-02-01",
+        "toDate": "2020-07-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 4896, "height": 2254 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dcf74531ac2845a25a6fe_screely-1701695317371.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd337531ac2845a25a715_liah-mobile-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd825531ac2845a25a72c_liah-2.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd87c531ac2845a25a731_liah-mobile-2.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd89b531ac2845a25a733_liah-3.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd89b531ac2845a25a734_liah-mobile-3.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd89d531ac2845a25a736_liah-4.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656dd89c531ac2845a25a735_liah-mobile-4.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {}
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "woocommerce" },
+          { "type": "skill", "uid": "php" },
+          { "type": "skill", "uid": "wordpress" }
+        ],
+        "partners": [
+          { "type": "collaborator", "uid": "thomaskoenig" },
+          { "type": "collaborator", "uid": "christopher-sax" },
+          { "type": "collaborator", "uid": "julia-schabasser" },
+          { "type": "collaborator", "uid": "negativelabs" },
+          { "type": "client", "uid": "liah" }
+        ],
+        "methods": [{ "type": "method", "uid": "agile-scrum" }],
+        "roles": [
+          { "type": "role", "uid": "requirements-engineering" },
+          { "type": "role", "uid": "product-owner" }
+        ]
+      }
+    },
+    {
+      "uid": "swma",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-15T12:08:31+0000",
+      "last_publication_date": "2023-12-02T19:37:19+0000",
+      "data": {
+        "name": "Siegelwerk Manufaktur",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Beautique shopify webshop for Stuttgart based product design company.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Retail",
+        "type": "eCommerce",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.swma.design",
+          "target": ""
+        },
+        "fromDate": "2018-01-01",
+        "toDate": "2018-03-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b84d6531ac2845a25a182_screely-1701545039731.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8686531ac2845a25a184_liah-mobile-6.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 2120, "height": 1145 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b7e27531ac2845a25a178_screely-1701543448786.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 2120, "height": 1145 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b7f34531ac2845a25a17c_screely-1701543720950.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8706531ac2845a25a187_liah-mobile-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 2120, "height": 1145 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b7f34531ac2845a25a17c_screely-1701543720950.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8722531ac2845a25a188_screely-1701545072046.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b8738531ac2845a25a18a_liah-mobile-3.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b7f73531ac2845a25a17d_screely-1701543784271.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b874c531ac2845a25a18c_screely-1701544939929.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b875b531ac2845a25a18d_liah-mobile-5.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 1568, "height": 1037 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/656b849c531ac2845a25a180_screely-1701544939929.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [
+          { "type": "skill", "uid": "shopify" },
+          { "type": "skill", "uid": "sass" }
+        ],
+        "partners": [
+          { "type": "client", "uid": "swma" },
+          { "type": "collaborator", "uid": "negativelabs" }
+        ],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "rwa-emails",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:17:03+0000",
+      "last_publication_date": "2023-12-03T02:08:30+0000",
+      "data": {
+        "name": "RWA Email Templates",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Mailchimp style tool for designers and developers to optimize workflow for SAP Hyrbis and Bloomreach Experience emails templates. Mantain versioning across solutions between designers in figma, frontend developers and backend engineers.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Marketing",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://rwa-emails.netlify.app/",
+          "target": ""
+        },
+        "fromDate": "2021-12-01",
+        "toDate": "2021-02-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/65564922531ac2845a253a4f_screely-1700151625697.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "naivesandvisionaries",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-21T22:06:24+0000",
+      "last_publication_date": "2023-11-27T23:04:11+0000",
+      "data": {
+        "name": "Naives & Visionaries",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Drafted by the Sagemeister decibel Manuel Bürger we realized a super minimalistic catalog for our favourite art book publishing house operated by what was formerly known as ShakeYourTree, Florian Bayer, Sebastian Haslauer and Manuel Bürger himself. We combined 90s web aesthetics and modern technologies to create a Emirate Airlines like shopping experience. Learn to fly.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Culture",
+        "type": "eCommerce",
+        "link": { "link_type": "Any" },
+        "fromDate": "2014-01-01",
+        "toDate": "2014-04-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d29be531ac2845a254d17_nv-portfolio-front.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/655d29be531ac2845a254d17_nv-portfolio-front.png?auto=format%2Ccompress&rect=438%2C0%2C1125%2C2000&w=1080&h=1920",
+                "edit": {
+                  "x": 438,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/655d29bf531ac2845a254d19_nv-portfolio-right.png?auto=format%2Ccompress&rect=0%2C438%2C2000%2C1125&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 438,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2960531ac2845a254d11_nv-portfolio-cart-left.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/655d2960531ac2845a254d11_nv-portfolio-cart-left.png?auto=format%2Ccompress&rect=438%2C0%2C1125%2C2000&w=1080&h=1920",
+                "edit": {
+                  "x": 438,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/655d2960531ac2845a254d11_nv-portfolio-cart-left.png?auto=format%2Ccompress&rect=0%2C438%2C2000%2C1125&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 438,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": [{ "type": "method", "uid": "agile-scrum" }],
+        "roles": [{ "type": "role", "uid": "engineer" }]
+      }
+    },
+    {
+      "uid": "rwa-shop",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:23:59+0000",
+      "last_publication_date": "2023-11-27T23:01:55+0000",
+      "data": {
+        "name": "RWA Shop",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "B2B shop for largest Austrian farmers cooperative RWA. \nMy role involved planning of the shop and portal, requirements engineering, consulting on UIUX and frontend architecture.\nClient: foryouandyourcustomers Wien GmbH",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "B2B",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://shop.rwa.at",
+          "target": ""
+        },
+        "fromDate": null,
+        "toDate": null,
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/2e9819ed-e860-413d-a9c1-65b26fb6a01a_Slide+16_9+-+15.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/2e9819ed-e860-413d-a9c1-65b26fb6a01a_Slide+16_9+-+15.png?auto=format%2Ccompress&rect=656%2C0%2C608%2C1080&w=1080&h=1920",
+                "edit": {
+                  "x": 656,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/2e9819ed-e860-413d-a9c1-65b26fb6a01a_Slide+16_9+-+15.png?auto=format%2Ccompress&rect=0%2C0%2C1920%2C1080&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/a26d3fd0-5eef-4b79-9efb-cbc030fab91d_Slide+16_9+-+16.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/77cc8197-cf2c-4bf9-b3fa-02a8381bda2e_Slide+16_9+-+23.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/1ded2eb9-d5a3-4fcc-b85a-42096a96496f_Slide+16_9+-+18.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": [],
+        "roles": []
+      }
+    },
+    {
+      "uid": "dogheartcity",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-26T22:20:35+0000",
+      "last_publication_date": "2023-12-02T19:44:03+0000",
+      "data": {
+        "name": "Dog Heart City",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Promotional browser game about the heartship of living in London in a post colonial reality.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Entertainment",
+        "type": "Game",
+        "link": {
+          "link_type": "Web",
+          "url": "https://dogheartcitygame.netlify.app/",
+          "target": ""
+        },
+        "fromDate": "2018-02-11",
+        "toDate": "2018-11-11",
+        "video_id": "intro",
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 1242, "height": 758 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563c9bb531ac2845a255ecf_smartmockups_lpg2elbu.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {
+              "dimensions": { "width": 1080, "height": 1920 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563c9bb531ac2845a255ed0_dogheartcity-mobile-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "image": {
+              "dimensions": { "width": 1242, "height": 758 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563c9bb531ac2845a255ecf_smartmockups_lpg2elbu.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563c9bb531ac2845a255ed0_dogheartcity-mobile-1.png?auto=format%2Ccompress&rect=0%2C0%2C1080%2C1920&w=1080&h=1920",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563c9bb531ac2845a255ecf_smartmockups_lpg2elbu.png?auto=format%2Ccompress&rect=0%2C0%2C1242%2C699&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 1062, "height": 1066 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            },
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1062, "height": 1066 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format%2Ccompress&rect=231%2C0%2C600%2C1066&w=1080&h=1920",
+                "edit": {
+                  "x": 231,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format%2Ccompress&rect=0%2C234%2C1062%2C597&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 234,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "muriquee",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-21T22:32:14+0000",
+      "last_publication_date": "2023-12-03T02:07:55+0000",
+      "data": {
+        "name": "Muriquee",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Muriquee was a community prototype for moving creatives and musicians to book and arrange events world wide organized by legendary Berlin based club loophole. A unique geolocation based google maps overlay made it possible for digital nomads to find promoters, bookers or artists along their tours on specific dates.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Mobility",
+        "type": "WebApp",
+        "link": { "link_type": "Any" },
+        "fromDate": "2015-04-01",
+        "toDate": "2015-06-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2fb3531ac2845a254d49_Screen-Shot-2015-09-09-at-09-front.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2b45531ac2845a254d24_Screen-Shot-2015-09-09-at-copy-front.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2f1c531ac2845a254d48_Screen-Shot-2015-09-09-at-09-left.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 2000, "height": 2000 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d2fc5531ac2845a254d4c_Screen-Shot-2015-09-09-at-09-right.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "shalomsalon",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-21T22:35:52+0000",
+      "last_publication_date": "2023-11-27T21:43:10+0000",
+      "data": {
+        "name": "Shalom Salon",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Collection of individually designed micro pages to share on social networks with a strong focus on external embedding and eye catching typography.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Culture",
+        "type": "Microsites",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.shalomsalon.de/censorgermany/",
+          "target": ""
+        },
+        "fromDate": "2010-01-01",
+        "toDate": "2016-01-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4158, "height": 1862 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d30aa531ac2845a254d58_screely-1700605484809.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4156, "height": 1860 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d30a8531ac2845a254d57_screely-1700605503480.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 4148, "height": 1850 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d30a7531ac2845a254d56_screely-1700605522913.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1550, "height": 934 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655d30a5531ac2845a254d55_screely-1700605538089.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "business-riot-conference",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:44:21+0000",
+      "last_publication_date": "2023-11-27T21:41:55+0000",
+      "data": {
+        "name": "Business Riot Conference",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Online platform for Austrian feminist business leader platform. I was instructed to setup up custom video chat rooms, lobby and apply their corporate identity to everything. On this project I collaborated with American service provider daily.co.\n\nClient: \nbusiness riot GmbH, Vienna",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Lobbying",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.riotfestival.at/",
+          "target": ""
+        },
+        "fromDate": null,
+        "toDate": null,
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 6500, "height": 4500 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655646c1531ac2845a253a49_riot-1.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 6500, "height": 4500 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/655646d3531ac2845a253a4b_riot-2.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "dynamic-projection",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T16:05:27+0000",
+      "last_publication_date": "2023-11-27T21:44:29+0000",
+      "data": {
+        "name": "Dynamic Projection Institute - Mirror Head",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "IoT device web interface for mirror head projector.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Entertainment",
+        "type": "IoT",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.dynamicprojection.com/mirror-head-en/",
+          "target": ""
+        },
+        "fromDate": "2021-01-01",
+        "toDate": "2021-02-01",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/81569d31-5f13-4291-92a7-ccf5325dca45_Slide+16_9+-+26.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/40eeae43-38e5-4d26-abae-9538b7f0c589_Slide+16_9+-+27.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/db07faaf-c2b6-4d88-8e2a-01195bc4b34a_Slide+16_9+-+28.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "collisions-canfranc",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T14:42:30+0000",
+      "last_publication_date": "2023-11-27T21:38:19+0000",
+      "data": {
+        "name": "Collisions Canfranc",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Animated avant-garde arts festival & residency about dark matter research laboratorium Canfranc (Spain).",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Culture",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.collisions.cc",
+          "target": ""
+        },
+        "fromDate": "2021-07-01",
+        "toDate": "2021-07-30",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563d827531ac2845a255f05_Slide16_9-19.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/700977c3-e296-469c-b5f0-3300f0881567_Slide+16_9+-+21.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/f8117e35-75a8-452c-ae5a-c8d9bc65f003_Slide+16_9+-+20.png?auto=format,compress",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": []
+      }
+    },
+    {
+      "uid": "resradio-1",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T15:21:15+0000",
+      "last_publication_date": "2023-11-26T20:20:04+0000",
+      "data": {
+        "name": "RES Radio 1.0",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Complete radio station WebApp for Vienna based community radio.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Entertainment",
+        "type": "Web Radio",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.res.radio",
+          "target": ""
+        },
+        "fromDate": "2022-03-01",
+        "toDate": "2022-04-30",
+        "video_id": null,
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563a840531ac2845a255e81_resradio1-image-1.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563a63c531ac2845a255e7d_resradio1-mobile-1.png?auto=format%2Ccompress&rect=0%2C0%2C1080%2C1920&w=1080&h=1920",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563a840531ac2845a255e81_resradio1-image-1.png?auto=format%2Ccompress&rect=0%2C0%2C1920%2C1080&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          },
+          {
+            "desktop": {},
+            "mobile": {},
+            "image": {
+              "dimensions": { "width": 1920, "height": 1080 },
+              "alt": null,
+              "url": "https://images.prismic.io/mandymozart-dev/6563a813531ac2845a255e80_resradio1-image-2.png?auto=format,compress",
+              "edit": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1,
+                "background": "transparent"
+              },
+              "mobile": {
+                "dimensions": { "width": 1080, "height": 1920 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563a7e4531ac2845a255e7f_resradio1-mobile-2.png?auto=format%2Ccompress&rect=0%2C0%2C1080%2C1920&w=1080&h=1920",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "thumbnail": {
+                "dimensions": { "width": 960, "height": 540 },
+                "alt": null,
+                "url": "https://images.prismic.io/mandymozart-dev/6563a813531ac2845a255e80_resradio1-image-2.png?auto=format%2Ccompress&rect=0%2C0%2C1920%2C1080&w=960&h=540",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          }
+        ],
+        "skills": [],
+        "partners": [],
+        "methods": [],
+        "roles": []
+      }
+    }
+  ],
+  "roles": [
+    {
+      "uid": "engineer",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Engineer" }
+    },
+    {
+      "uid": "product-owner",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Product Owner" }
+    },
+    {
+      "uid": "requirements-engineering",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Requirements Engineering" }
+    }
+  ]
+}

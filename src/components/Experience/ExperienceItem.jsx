@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import useMenuStore from '../../stores/MenuStore';
 import { playToneAtRoute } from './../../audio';
+import { projects } from './../../data/index.json';
 import { emitRouteChange } from './../../events/routerEvents';
 import { routes } from './../../slideInRoutes';
 
@@ -43,10 +44,9 @@ const Container = styled.div`
   }
 `;
 
-const ExperienceItem = ({ experience, projects }) => {
+const ExperienceItem = ({ experience }) => {
   const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
   if (!experience) return <></>;
-  if (!projects) return <></>;
   const getProject = (uid) => {
     if (projects) {
       let pro = projects.find((p) => {
@@ -88,13 +88,13 @@ const ExperienceItem = ({ experience, projects }) => {
       </div>
       <div className='related'>
         {experience.data.projects.map((node, index) => {
-          if (getProject(node.project.uid)) {
+          if (getProject(node.uid)) {
             return (
               <div key={index}>
                 <a
-                  href={`#${node.project.uid}`}
-                  onClick={navigateTo(node.project.uid)}>
-                  {getProject(node.project.uid)?.data.name}
+                  href={`#${node.uid}`}
+                  onClick={navigateTo(node.uid)}>
+                  {getProject(node.uid)?.data.name}
                 </a>
               </div>
             );

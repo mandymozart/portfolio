@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
+import { clients } from '../../data/index.json';
 import { isNotEmptyLinkField } from '../../typeguards';
-import { clients } from './../../mockData/data.json';
 
 const Container = styled.div`
   display: flex;

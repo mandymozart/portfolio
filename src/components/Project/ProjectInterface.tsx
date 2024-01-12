@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
 import { PrismicRichText } from '@prismicio/react';
 import { useLocation } from 'react-router-dom';
+import { projects } from '../../data/index.json';
+import { ProjectDocument } from '../../data/types';
 import PartnerItem from '../Partners/PartnerItem';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
-import { projects } from './../../mockData/data.json';
-import SkillItemAsync from './../Skills/SkillItemAsync';
+import SkillItemAsync from '../Skills/SkillItemAsync';
+import MethodItem from './MethodItem';
+import RoleItem from './RoleItem';
 
 const Container = styled.div`
   padding-top: var(--header-height);
@@ -86,36 +89,8 @@ export const ProjectInterface = () => {
 
   const data = projects.find(
     (project) => project.uid === location.pathname.replace('/', ''),
-  );
+  ) as ProjectDocument;
 
-  // const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState<any>(null);
-  // const [data, setData] = useState<any>(null);
-
-  // const getData = async (uid: string) => {
-  //   setLoading(true);
-  //   const event: RouteLoadedEvent = {
-  //     to: routes.PROJECT,
-  //     params: { uid: uid },
-  //   };
-  //   setError(null);
-  //   try {
-  //     const response = await client.getByUID('project', uid);
-  //     setData(response.data);
-  //   } catch (err: any) {
-  //     setError(err);
-  //   } finally {
-  //     emitRouteLoaded(event);
-  //     setLoading(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getData(location.pathname.replace('/', ''));
-  // }, [location]); // dependencies
-
-  // if (loading) return 'Loading...';
-  // if (error) return `Error: ${error?.message}`;
   const project = data?.data;
   if (!project) return <>No data</>;
 
@@ -135,20 +110,21 @@ export const ProjectInterface = () => {
           <div className='partners'>
             <h3>Partners</h3>
             <div className='partners-list'>
-              {project?.partners?.map((edges, index) => (
-                <div key={index}>
-                  <PartnerItem partnerLink={edges.partner} />
-                </div>
+              {project?.partners?.map((node, index) => (
+                <PartnerItem
+                  key={index}
+                  link={node}
+                />
               ))}
             </div>
           </div>
           <div className='tech-stack'>
             <h3>Tech Stack</h3>
             <div className='tech-stack-list'>
-              {project?.skills?.map((edges, index) => (
+              {project.skills.map((node, index) => (
                 <SkillItemAsync
                   key={index}
-                  uid={edges.skill.uid}
+                  link={node}
                 />
               ))}
             </div>
@@ -156,11 +132,29 @@ export const ProjectInterface = () => {
           <div className='participation'>
             <div className='roles'>
               <h3>Roles</h3>
-              <div>{project?.roles}</div>
+              <ul>
+                {project?.roles.map((node, index) => {
+                  return (
+                    <RoleItem
+                      key={index}
+                      link={node}
+                    />
+                  );
+                })}
+              </ul>
             </div>
             <div className='methods'>
               <h3>Methods</h3>
-              {/* <div>{data?.methods}</div> */}
+              <ul>
+                {project?.methods.map((node, index) => {
+                  return (
+                    <MethodItem
+                      key={index}
+                      link={node}
+                    />
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

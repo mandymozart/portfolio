@@ -1,6 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
-import { projects } from './../../mockData/data.json';
+import { projects } from './../../data/index.json';
 import ProjectItem from './ProjectItem';
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const ProjectList = () => {
-  const handleMouseOver = uid => {
+  const handleMouseOver = (uid) => {
     // console.log(uid);
   };
   if (!projects) return <>...</>;
