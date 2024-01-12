@@ -133,7 +133,7 @@ export const ProjectInterface = () => {
             <div className='roles'>
               <h3>Roles</h3>
               <ul>
-                {project?.roles.map((node, index) => {
+                {project?.roles?.map((node, index) => {
                   return (
                     <RoleItem
                       key={index}
@@ -146,7 +146,7 @@ export const ProjectInterface = () => {
             <div className='methods'>
               <h3>Methods</h3>
               <ul>
-                {project?.methods.map((node, index) => {
+                {project?.methods?.map((node, index) => {
                   return (
                     <MethodItem
                       key={index}
