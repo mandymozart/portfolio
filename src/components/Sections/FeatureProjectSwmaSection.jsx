@@ -2,11 +2,12 @@ import styled from '@emotion/styled';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 import { motion } from 'framer-motion';
-import { revealVariants } from './../../animations/site';
+import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
+  height: 200vh;
 
   max-width: var(--content-width);
   margin: 0 auto;
@@ -23,7 +24,9 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
+        align-items: center;
         grid-template-columns: 3fr 3fr;
+        height: calc(100vh - var(--feature-project-header-height));
         p {
           font-size: 3rem;
           line-height: 4rem;
@@ -34,6 +37,7 @@ const Container = styled.section`
         }
       }
       .presentation {
+        height: 100vh;
         margin-top: 3rem;
         display: grid;
         height: 100%;
@@ -74,52 +78,85 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='lead'>
-            <p>
-              Design centric portfolio, magazine and online Shopify shop for
-              Stuttgart based brand.
-            </p>
+            <motion.p
+              custom={0}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
+              Design centric <i>portfolio, magazine and shop</i> for Stuttgart
+              based brand.
+            </motion.p>
           </div>
           <div className='presentation'>
-            <div className='image image--1'>
+            <motion.div
+              custom={1}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--1'>
               <img
                 src={'/images/feature-swma-1.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
-            <div className='image image--2'>
+            </motion.div>
+            <motion.div
+              custom={2}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--2'>
               <img
                 src={'/images/feature-swma-2.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
-            <div className='image image--3'>
+            </motion.div>
+            <motion.div
+              custom={3}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--3'>
               <img
                 src={'/images/feature-swma-3.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
-            <div className='image image--4'>
+            </motion.div>
+            <motion.div
+              custom={4}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--4'>
               <img
                 src={'/images/feature-swma-4.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
-            <div className='image image--5'>
+            </motion.div>
+            <motion.div
+              custom={5}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--5'>
               <img
                 src={'/images/feature-swma-5.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
-            <div className='image image--6'>
+            </motion.div>
+            <motion.div
+              custom={6}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--6'>
               <img
                 src={'/images/feature-swma-6.png'}
                 alt={'SWAM - Mobile view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

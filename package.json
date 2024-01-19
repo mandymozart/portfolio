@@ -18,6 +18,7 @@
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
     "@react-three/postprocessing": "^2.15.11",
+    "@stdlib/math-base-special-fibonacci": "^0.1.0",
     "@theatre/core": "^0.7.0",
     "@theatre/r3f": "^0.7.0",
     "@theatre/studio": "^0.7.0",

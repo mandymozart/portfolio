@@ -6,7 +6,7 @@ import { staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
 
   max-width: var(--content-width);
   margin: 0 auto;
@@ -22,8 +22,11 @@ const Container = styled.section`
       .presentation {
         margin-top: 3rem;
         display: grid;
-        height: 100%;
+        height: 100vh;
         grid-template-columns: 4fr 2fr;
+        &--first {
+          height: calc(100vh - var(--feature-project-header-height));
+        }
         @media (max-width: 850px) {
           grid-template-columns: 1fr;
         }
@@ -71,7 +74,27 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
           whileInView='onscreen'
           viewport={{ once: true, amount: 0.8 }}>
           <FeatureProjectHeader project={project} />
-          <div className='presentation'>
+          <div className='presentation presentation--first'>
+            <div></div>
+            <div className='lead'>
+              <motion.p
+                custom={2}
+                initial='offscreen'
+                whileInView='onscreen'
+                variants={staggerVariants}>
+                Brutalist design meets scaleability.
+              </motion.p>
+
+              <motion.button
+                custom={3}
+                variants={staggerVariants}
+                initial='offscreen'
+                whileInView='onscreen'>
+                Play reaction
+              </motion.button>
+            </div>
+          </div>
+          <div className='presentation '>
             <motion.div
               className='image'
               initial='offscreen'
@@ -89,23 +112,9 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
                 initial='offscreen'
                 whileInView='onscreen'
                 variants={staggerVariants}>
-                A contemporary webradio website and back-office in React on top
-                of Mixlr, Sanity, Prismic, Ably, Github and Netlify.
+                <i>Let's go JamStack!</i> &mdash; <b>real contemporary</b>{' '}
+                webradio website and back-office in the cloud.
               </motion.p>
-              <motion.p
-                custom={2}
-                initial='offscreen'
-                whileInView='onscreen'
-                variants={staggerVariants}>
-                Brutalist design meets scaleability.
-              </motion.p>
-              <motion.button
-                custom={3}
-                variants={staggerVariants}
-                initial='offscreen'
-                whileInView='onscreen'>
-                Play reaction
-              </motion.button>
             </div>
           </div>
         </motion.div>

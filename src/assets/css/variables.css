@@ -1,0 +1,57 @@
+:root {
+  --primary: rgb(30, 30, 30); /*  400 */
+  --primary-200: rgb(65, 65, 65);
+  --primary-400: var(--primary); /*  alias */
+  --secondary: rgb(255, 0, 0);
+  --secondary-400: var(--secondary); /*  alias */
+  --secondary-600: rgb(207, 24, 0);
+  --accent: rgb(255, 217, 0);
+  --accent-600: #c67700;
+  --color-captions: rgb(255, 217, 0); /* deprecated */
+  --background: rgb(253, 253, 253);
+  --background-600: rgb(212, 212, 212);
+  --background-accent-gradient: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-600) 100%
+  );
+  --grid-padding: 2rem;
+  --header-height: 4rem;
+  --content-margin-left: 0;
+  --content-width: 1728px;
+  --feature-project-header-height: 9.5rem;
+
+  --aero-blue: #aaffe0;
+  --pantone-blue-0821-c: #aaffe0;
+
+  --anakiwa: #8ce0ff;
+  --pantone-blue-0821-c: #8ce0ff;
+
+  --perfume: #bfb4f7;
+  --pantone-2717-c: #bfb4f7;
+
+  --tidal: #f3ffaf;
+  --pantone-2001-c: #f3ffaf;
+
+  --mauvelous: #f4899b;
+  --pantone-708-c: #f4899b;
+
+  --font: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  overflow-y: scroll;
+}
+
+@media (max-width: 1350px) {
+  :root {
+    --grid-padding: 2rem;
+    --content-margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  :root {
+    --grid-padding: 1rem;
+    --content-margin-left: 0;
+  }
+}

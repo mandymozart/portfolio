@@ -10,18 +10,28 @@ import FeatureProjectNaivesAndVisionariesSection from '../Sections/FeatureProjec
 import FeatureProjectResRadio2Section from '../Sections/FeatureProjectResRadio2Section';
 import FeatureProjectSwmaSection from '../Sections/FeatureProjectSwmaSection';
 import HeroSection from '../Sections/HeroSection';
+import IntroSection from '../Sections/IntroSection';
 import ProcessSection from '../Sections/ProcessSection';
 import ServicesSection from '../Sections/ServicesSection';
 import SubSection from '../Sections/SubSection';
+import { getSectionPageCount } from './sections.ts';
 
 const Container = styled.section`
   width: 100vw;
-  height: 15280px;
+  height: calc(${getSectionPageCount()} * 100vh);
 `;
 
 export const Interface = () => {
+  console.log('Section Page Count', getSectionPageCount());
+  // One page is 5 sec + 1 sec spacer in between
+  console.log(
+    'Required Sequence Length',
+    getSectionPageCount() * 6,
+    (getSectionPageCount() * 6) / 60,
+  );
   return (
     <Container>
+      <IntroSection />
       <HeroSection />
       <ProcessSection />
       <SubSection title={'Selected Projects'}></SubSection>
@@ -30,9 +40,8 @@ export const Interface = () => {
       <FeatureProjectSwmaSection />
       <FeatureProjectLagerhausSection />
       <SubSection title={'Arts & Culture'}>
-        Collaborating with experimental design influencers allows me to craft
-        unique experiences, expand my abilities and to push the limits of web
-        technology. Creating better frontends in any future project.
+        Collaborating with experimental design influencers pushes my creativity
+        and often the limits of technology.
       </SubSection>
       <FeatureProjectCollisionsSection />
       <FeatureProjectFourthGardenSection />

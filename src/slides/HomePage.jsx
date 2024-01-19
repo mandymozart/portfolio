@@ -10,6 +10,7 @@ import { Suspense } from 'react';
 import projectState from '../assets/Tour.theatre-project-state.json';
 import { Interface } from '../components/Home/Interface';
 import { Scene } from '../components/Home/Scene';
+import { getSectionPageCount } from '../components/Home/sections';
 export const isProd = import.meta.env.MODE === 'production';
 
 if (!isProd) {
@@ -18,7 +19,7 @@ if (!isProd) {
 }
 
 function HomePage() {
-  const PAGES = 20; // count of slices
+  const PAGES = getSectionPageCount(); // count of slices
   const mainSheet = getProject('Tour', {
     state: projectState,
   }).sheet('Scene');

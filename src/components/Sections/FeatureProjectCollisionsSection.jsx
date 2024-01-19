@@ -1,17 +1,30 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { revealVariants } from './../../animations/site';
+import { revealVariants, staggerVariants } from './../../animations/site';
+
+import { getSectionByKey } from './../Home/sections';
+
+const project = {
+  uid: 'collisions-munich',
+  name: 'Collisions Munich',
+  roles: 'Consultant, VFX, Frontend Developer',
+  industry: 'Arts & Culture',
+  type: 'WebApp',
+};
+const params = getSectionByKey('collisions-munich');
 
 const Container = styled.section`
+  background-color: ${params.backgroundColor};
+  color: ${params.color};
   position: relative;
-  min-height: 100vh;
-
+  font-family: var(--font);
+  height: 200vh;
   .backdrop {
     width: 100%;
     object-fit: cover;
+    height: 200vh;
     object-position: center;
-
     z-index: -1;
   }
 
@@ -19,16 +32,21 @@ const Container = styled.section`
     width: 100%;
     z-index: 2;
     position: absolute;
+    max-width: var(--content-width);
+    margin: 0 auto;
     top: 0;
     left: 0;
     .info {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      color: var(--background);
 
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
+        height: calc(100vh - var(--feature-project-header-height));
+        align-items: center;
         grid-template-columns: 4fr 2fr;
         p {
           font-size: 3rem;
@@ -41,7 +59,7 @@ const Container = styled.section`
       .presentation {
         display: grid;
         color: var(--background);
-        height: 100%;
+        height: 100vh;
         align-items: center;
         grid-template-columns: 1fr 1fr 3fr 1fr;
         @media (max-width: 850px) {
@@ -72,18 +90,14 @@ const Container = styled.section`
   }
 `;
 
-const project = {
-  uid: 'collisions-munich',
-  name: 'Collisions Munich',
-  roles: 'Consultant, VFX, Frontend Developer',
-  industry: 'Arts & Culture',
-  type: 'WebApp',
-};
-
-const FeatureProjectCollisionsSection = ({ children, ...props }) => {
+const FeatureProjectCollisionsSection = () => {
   return (
-    <Container {...props}>
-      <img
+    <Container>
+      <motion.img
+        custom={2}
+        initial='offscreen'
+        whileInView='onscreen'
+        variants={staggerVariants}
         className='backdrop'
         src='/images/feature-collisions-background-placeholder.jpg'
         alt='Video Placeholder'
@@ -94,32 +108,44 @@ const FeatureProjectCollisionsSection = ({ children, ...props }) => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='lead'>
-            <p>
+            <motion.p
+              custom={0}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               By visualizing dark matter research with web based particle
               effects, this web app became a participating artist itself.
-            </p>
+            </motion.p>
           </div>
           <div className='presentation'>
-            <div className='image image--1'>
+            <motion.div
+              className='image image--1'
+              custom={1}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-collisions-2.png'}
                 alt={'Collisions - Mobile view'}
               />
-            </div>
-            <div className='image image--2'>
+            </motion.div>
+            <motion.div
+              className='image image--2'
+              custom={2}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-collisions-1.png'}
                 alt={'Collisions - Desktop view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
-      {children}
     </Container>
   );
 };

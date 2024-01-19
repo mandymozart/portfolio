@@ -57,23 +57,35 @@ export const FeatureProjectHeader = ({ project }) => {
         variants={staggerVariants}>
         <motion.h3
           className='title'
-          custom={0}>
+          custom={0}
+          initial='offscreen'
+          whileInView='onscreen'
+          variants={staggerVariants}>
           {project.name} <Arrow />
         </motion.h3>
         <div className='subheader'>
           <motion.span
             className='subtitle'
-            custom={1}>
+            custom={1}
+            initial='offscreen'
+            whileInView='onscreen'
+            variants={staggerVariants}>
             Roles → {project?.roles}
           </motion.span>
           <motion.span
             className='industry'
-            custom={2}>
+            custom={2}
+            initial='offscreen'
+            whileInView='onscreen'
+            variants={staggerVariants}>
             {project?.industry}
           </motion.span>
           <motion.span
             className='type'
-            custom={3}>
+            custom={3}
+            initial='offscreen'
+            whileInView='onscreen'
+            variants={staggerVariants}>
             {project?.type}
           </motion.span>
         </div>

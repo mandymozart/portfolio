@@ -18,7 +18,7 @@ const Container = styled.div`
   grid-template-columns: 4fr 1fr 1fr;
   text-decoration: none;
   font-size: 3rem;
-  font-family: var(--font-mono);
+  font-family: var(--font);
   position: relative;
   transition: all 0.2s ease-in;
   &:hover {

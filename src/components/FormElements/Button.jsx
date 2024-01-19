@@ -4,7 +4,7 @@ const Container = styled.button`
   text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
-  font-family: var(--font-serif);
+  font-family: var(--font);
   background: none;
   border: 0;
   color: inherit;
@@ -20,7 +20,7 @@ const Container = styled.button`
     justify-content: center;
     padding: 0 2rem;
     border-radius: 2rem;
-    background: ${props =>
+    background: ${(props) =>
       props.ghost ? 'rgba(255, 255, 255, 0.0001)' : 'transparent'};
     backdrop-filter: blur(10px);
     height: 2rem;
@@ -29,7 +29,7 @@ const Container = styled.button`
   &:hover {
     color: var(--secondary);
     span {
-      background: ${props =>
+      background: ${(props) =>
         props.ghost ? 'rgba(255, 255, 255, 0.0001)' : 'transparent'};
       backdrop-filter: blur(10px);
     }
@@ -41,8 +41,7 @@ const Button = ({ ghost, children, ...props }) => {
   return (
     <Container
       ghost
-      {...props}
-    >
+      {...props}>
       <span>{children}</span>
     </Container>
   );

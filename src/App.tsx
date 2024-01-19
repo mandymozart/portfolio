@@ -1,10 +1,8 @@
 'use client';
 
 import { HashRouter } from 'react-router-dom';
-import Footer from './components/Footer/Footer';
 import LoadingScreenSimple from './components/LoadingScreen/LoadingScreenSimple';
 import NavMenu from './components/NavMenu/NavMenu';
-import './index.css';
 import HomePage from './slides/HomePage';
 import Slides from './slides/Slides';
 
@@ -19,7 +17,6 @@ function App() {
         <LoadingScreenSimple onLoaderFinished={handleLoaderFinished} />
         <HomePage />
         <Slides />
-        <Footer />
       </HashRouter>
     </>
   );

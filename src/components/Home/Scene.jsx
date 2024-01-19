@@ -1,9 +1,4 @@
-import {
-  KeyboardControls,
-  MeshReflectorMaterial,
-  useCursor,
-  useScroll,
-} from '@react-three/drei';
+import { KeyboardControls, useCursor, useScroll } from '@react-three/drei';
 
 import {
   PerspectiveCamera,
@@ -11,9 +6,8 @@ import {
   useCurrentSheet,
 } from '@theatre/r3f';
 
-import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
-
 import { useFrame } from '@react-three/fiber';
+import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
 import { val } from '@theatre/core';
 import { useControls } from 'leva';
 import { useRef, useState } from 'react';
@@ -116,13 +110,20 @@ export const Scene = () => {
           onPointerEnter={() => setOnFloor(true)}
           onPointerLeave={() => setOnFloor(false)}>
           <planeGeometry args={[1000, 1000]} />
+          <meshBasicMaterial color={colors.foreground} />
+          {/* 
+          This texture crashes the context
           <MeshReflectorMaterial
             ref={planeMaterial}
             color={colors.foreground}
             resolution={1024}
             mixStrength={10}
-            roughness={0.9}
-          />
+            roughness={1}
+            mixBlur={0}
+            blur={10}
+            mirror={1}
+            mixContrast={0.5}
+          /> */}
         </mesh>
         <MountainAndRiver />
         <Avatar />
@@ -148,19 +149,7 @@ export const Scene = () => {
           <meshBasicMaterial color='blue' />
         </e.mesh>
         <EffectComposer>
-          {/* <Autofocus
-            target={focusTargetRef.current}
-            smoothTime={0.1}
-            debug={isProd ? undefined : 0.02}
-            focusRange={0.01}
-            bokehScale={8}
-          /> */}
-          {/* <Bloom
-            luminanceThreshold={0}
-            luminanceSmoothing={0.9}
-            height={100}
-          /> */}
-          <Noise opacity={0.01} />
+          <Noise opacity={0.07} />
           <Vignette
             eskil={false}
             offset={0.1}

@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 
 import styled from '@emotion/styled';
-import { useProgress } from '@react-three/drei';
-import clsx from 'clsx';
+import { useMotionValue } from 'framer-motion';
 import useMenuStore from '../../stores/MenuStore';
-import Spiral from '../Icons/Spiral';
 
 const Container = styled.div`
   transition: opacity 0.3s linear;
@@ -16,57 +14,42 @@ const Container = styled.div`
   z-index: 100001;
   display: flex;
   align-self: center;
-  svg {
-    width: 2rem;
-    animation: rotate 1.5s linear infinite;
+
+  circle {
+    stroke-dashoffset: 0;
+    stroke-width: 0.25rem;
+    fill: none;
   }
 
-  &.paused svg {
-    animation-play-state: paused;
-  }
-
-  &.active svg {
-    transform: scale(1.2);
-  }
-
-  @keyframes rotate {
-    0% {
-      -webkit-transform: rotate3d(0, 0, 1, 0deg);
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-    25% {
-      -webkit-transform: rotate3d(0, 0, 1, 90deg);
-      transform: rotate3d(0, 0, 1, 90deg);
-    }
-    50% {
-      -webkit-transform: rotate3d(0, 0, 1, 180deg);
-      transform: rotate3d(0, 0, 1, 180deg);
-    }
-    75% {
-      -webkit-transform: rotate3d(0, 0, 1, 270deg);
-      transform: rotate3d(0, 0, 1, 270deg);
-    }
-    100% {
-      -webkit-transform: rotate3d(0, 0, 1, 360deg);
-      transform: rotate3d(0, 0, 1, 360deg);
-    }
+  #progress .indicator {
+    stroke: var(--primary);
   }
 `;
 
 const Loader = () => {
-  const { active, progress, loaded } = useProgress();
-
   const { scrollYProgress } = useMenuStore();
   useEffect(() => {
-    console.log('progress', progress, scrollYProgress);
+    console.log('progress', scrollYProgress);
   }, [scrollYProgress]);
-
+  const y = useMotionValue(scrollYProgress);
   return (
     <Container
-      className={clsx({ active: active, paused: !active })}
-      style={{ transform: `rotate(${scrollYProgress * 5 * 360}deg)` }}>
-      <Spiral />
-      {!loaded && <span>{parseInt(progress)}%</span>}
+    // style={{ transform: `rotate(${scrollYProgress * 5 * 360}deg)` }}
+    >
+      <svg
+        id='progress'
+        width='32'
+        height='32'
+        viewBox='0 0 32 32'>
+        <circle
+          cx='16'
+          cy='16'
+          r='8'
+          pathLength='1'
+          className='indicator'
+          strokeDasharray={`${scrollYProgress}px 1px`}
+        />
+      </svg>
     </Container>
   );
 };

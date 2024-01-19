@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { revealVariants } from './../../animations/site';
+import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
+  height: 200vh;
 
   max-width: var(--content-width);
   margin: 0 auto;
@@ -36,9 +37,10 @@ const Container = styled.section`
       }
       .presentation {
         display: grid;
-        height: 100%;
+        height: 100vh;
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
+        min-height: calc(100vh - var(--feature-project-header-height));
         @media (max-width: 850px) {
           grid-template-columns: 1fr 1fr 1fr;
         }
@@ -84,35 +86,53 @@ const FeatureProjectFourthGardenSection = ({ children, ...props }) => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='lead'>
-            <p>
+            <motion.p
+              custom={0}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               Using AI and artistic reinterpretations of the campus of Dutch Jan
               Van Eyck Academy for one week, the browser turned into a vivid
               meta garden. Built with Jitsi and Chatmosphere.
-            </p>
+            </motion.p>
           </div>
           <div className='presentation'>
-            <div className='plants plants--1'>
+            <motion.div
+              custom={1}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='plants plants--1'>
               <img
                 src={'/images/feature-jve-plants-1.png'}
                 alt={'Plants'}
               />
-            </div>
-            <div className='plants plants--2'>
+            </motion.div>
+            <motion.div
+              custom={3}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='plants plants--2'>
               <img
                 src={'/images/feature-jve-plants-2.png'}
                 alt={'Plants'}
               />
-            </div>
-            <div className='image image--1'>
+            </motion.div>
+            <motion.div
+              custom={2}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}
+              className='image image--1'>
               <img
                 src={'/images/feature-jve-1.png'}
                 alt={'JVE - Desktop view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

@@ -83,14 +83,14 @@ export const routes: SlideInRoutesMap = {
   },
   PROJECTS: {
     key: SlideInRouteName.PROJECTS,
-    label: 'Projects',
+    label: 'Work',
     type: SlideInRouteType.STATIC,
     tone: { note: 'F4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,
   },
   EXPERIENCES: {
     key: SlideInRouteName.EXPERIENCES,
-    label: 'Experiences',
+    label: 'About',
     type: SlideInRouteType.STATIC,
     tone: { note: 'G#4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,

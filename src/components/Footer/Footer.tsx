@@ -8,8 +8,6 @@ import { emitRouteChange } from './../../events/routerEvents';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
 const Container = styled.div`
-  position: fixed;
-  z-index: 1000;
   bottom: 0;
   left: 0;
   right: 0;
@@ -82,13 +80,6 @@ const Footer = () => {
         </nav>
         <nav className='attribution'>
           <ul>
-            <li>
-              <ButtonLink
-                href='https://paulinelepape.com/'
-                target='_blank'>
-                Font Till by Pauline Le Pape
-              </ButtonLink>
-            </li>
             <li>
               <ButtonLink onClick={() => navigateTo(routes.ATTRIBUTIONS)}>
                 Attributions

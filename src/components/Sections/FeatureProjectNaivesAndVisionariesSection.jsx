@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { revealVariants } from './../../animations/site';
+import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
 
   max-width: var(--content-width);
   height: 200vh;
@@ -21,10 +21,24 @@ const Container = styled.section`
       flex-direction: column;
       justify-content: center;
 
-      .presentation {
-        margin-top: 3rem;
+      .lead {
+        padding: 0 var(--grid-padding);
         display: grid;
-        height: 100%;
+        height: calc(100vh - var(--feature-project-header-height));
+        align-items: center;
+        grid-template-columns: 3fr 3fr;
+        p {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+        @media (max-width: 850px) {
+          padding: 0 var(--grid-padding) 1rem var(--grid-padding);
+        }
+      }
+      .presentation {
+        display: grid;
+        color: var(--background);
+        height: 100vh;
         align-items: center;
         grid-template-columns: 3fr 3fr;
         @media (max-width: 850px) {
@@ -32,22 +46,24 @@ const Container = styled.section`
         }
         .image {
           padding: 0 var(--grid-padding);
+          &--1 {
+            grid-column: 2;
+            @media (max-width: 850px) {
+              display: none;
+            }
+          }
+          &--2 {
+            @media (max-width: 850px) {
+            }
+          }
           img {
             width: 100%;
             border-radius: 2rem;
           }
         }
-        .lead {
-          padding: 0 var(--grid-padding);
-          p {
-            font-size: 3rem;
-            line-height: 4rem;
-            margin-bottom: 4rem;
-          }
-          @media (max-width: 850px) {
-            padding: 0 var(--grid-padding) 1rem var(--grid-padding);
-          }
-        }
+      }
+      .red {
+        color: var(--secondary);
       }
     }
     @media (max-width: 850px) {
@@ -75,24 +91,39 @@ const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
           viewport={{ once: true }}
           variants={revealVariants}>
           <FeatureProjectHeader project={project} />
-          <div className='presentation'>
-            <div className='lead'>
-              <p>
+          <div className='lead'>
+            <div>
+              <motion.p
+                custom={0}
+                initial='offscreen'
+                whileInView='onscreen'
+                variants={staggerVariants}>
+                [1]<span className='red'>*</span> <i>bad design</i> = good
+                design
+              </motion.p>
+              <motion.p
+                custom={1}
+                initial='offscreen'
+                whileInView='onscreen'
+                variants={staggerVariants}>
                 Stefan Sargemeister desciple Manuel Bürger & artist Sebastian
                 Haslauer entrusted me in bringing their vision of an Emirates
                 inspired WooCommerce shop for their publishing house to life.{' '}
-              </p>
-              <p>
-                In the process ended up breaking more than one “good idea” of
-                web design.
-              </p>
+              </motion.p>
             </div>
-            <div className='image image--1'>
+          </div>
+          <div className='presentation'>
+            <motion.div
+              className='image image--1'
+              custom={2}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-naivesandvisionaries-1.png'}
                 alt={'Naives & Visionaries - Browser view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

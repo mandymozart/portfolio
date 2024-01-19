@@ -5,7 +5,12 @@ import { revealVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
+  height: 200vh;
+  position: relative;
+  font-family: var(--font);
 
+  max-width: var(--content-width);
+  margin: 0 auto;
   .backdrop {
     width: 100%;
 
@@ -15,6 +20,7 @@ const Container = styled.section`
     top: 0;
     left: 0;
     z-index: -1;
+    border-radius: 2rem;
   }
 
   .overlay {
@@ -24,10 +30,13 @@ const Container = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      color: var(--background);
 
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
+        height: calc(100vh - var(--feature-project-header-height));
+        align-items: center;
         grid-template-columns: 4fr 2fr;
         p {
           font-size: 3rem;
@@ -39,7 +48,7 @@ const Container = styled.section`
       }
       .presentation {
         display: grid;
-        height: 100%;
+        height: 100vh;
         align-items: center;
         grid-template-columns: 1fr 3fr 1fr 1fr;
         @media (max-width: 850px) {
@@ -92,13 +101,12 @@ const FeatureProjectDogHeartCitySection = ({ children, ...props }) => {
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='lead'>
             <p>
-              Help Roger Robinson to fend of the evil suit people in this dub
-              game.
+              Help poet Roger Robinson to fend of the evil suit people in this
+              London-themed dub game.
             </p>
           </div>
           <div className='presentation'>

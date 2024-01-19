@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
 import { useIsMounted } from 'usehooks-ts';
-import { BASE } from '../../../config';
+import { BASE_PATH } from '../../../config';
 import { AvatarChatMessageType, emitChat } from '../../events/avatarEvents';
 
 const Container = styled.div`
@@ -41,7 +41,7 @@ const Container = styled.div`
       max-height: 100%;
     }
     &.playing {
-      opacity: 1;
+      opacity: 0;
       filter: blur(0px);
       transform: translateY(0) scale(1);
     }
@@ -49,10 +49,14 @@ const Container = styled.div`
   .caption {
     opacity: 0;
     position: absolute;
-    bottom: 2rem;
-    left: 6rem;
-    right: 2rem;
-    font-family: var(--font-mono);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
     text-align: center;
     color: var(--color-captions);
     font-size: 3rem;
@@ -105,7 +109,7 @@ export const IntroVideo = ({ playing, setPlaying }) => {
 
   const [visible, setVisible] = useState(false);
 
-  const removeHtml = fragment => {
+  const removeHtml = (fragment) => {
     const regex = /<b[^>]*>(.*?)<\/b>/g;
 
     // Initialize an array to store matched content
@@ -120,7 +124,7 @@ export const IntroVideo = ({ playing, setPlaying }) => {
     setCaption(matches[0]);
   };
 
-  const cueEnter = e => {
+  const cueEnter = (e) => {
     removeHtml(e.target.text);
     emitChat({
       message: removeHtml(e.target.text),
@@ -128,7 +132,7 @@ export const IntroVideo = ({ playing, setPlaying }) => {
     });
     setVisible(true);
   };
-  const cueExit = e => {
+  const cueExit = (e) => {
     emitChat({
       message: removeHtml(e.target.text),
       type: AvatarChatMessageType.EXIT,
@@ -146,21 +150,20 @@ export const IntroVideo = ({ playing, setPlaying }) => {
         onCanPlay={initCaptions}
         id='video'
         playsInline
-        className={clsx({ playing: playing })}
-      >
+        className={clsx({ playing: playing })}>
         <source
-          src={`${BASE}/videos/intro.webm`}
+          src={`${BASE_PATH}/videos/intro.webm`}
           type='video/webm'
         />
         <source
-          src={`${BASE}/videos/intro.mov`}
+          src={`${BASE_PATH}/videos/intro.mov`}
           type={'video/mp4; codecs="hvc1"'}
         />
         <track
           default
           kind='captions'
           srcLang='en'
-          src={`${BASE}/videos/intro.vtt`}
+          src={`${BASE_PATH}/videos/intro.vtt`}
         />
       </video>
       <div className={clsx('caption', { visible: visible })}>{caption}</div>

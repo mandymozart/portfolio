@@ -11,23 +11,20 @@ import { routes } from './../slideInRoutes';
 //   setActiveMenuItem: (menuItem: SlideInRoute) => void;
 // }
 
-const useMenuStore = create(
-  (set) => ({
-    preloadedKeys: [],
-    addPreloadedKey: (key) =>
-      set(state => ({ preloadedKeys: [...state.preloadedKeys, key] })),
-    activeMenuItem: routes.HOME,
-    setActiveMenuItem: (menuItem) =>
-      set({ activeMenuItem: menuItem }),
-    scrollYProgress: 0,
-    setScrollYProgress: (scrollYProgress) => set({scrollYProgress}),
-    colors: {foreground: '#fdfdfd', background: '#fdfdfd'},
-    setColors: (colors)=> set({colors})
-  })
-);
+const useMenuStore = create((set) => ({
+  preloadedKeys: [],
+  addPreloadedKey: (key) =>
+    set((state) => ({ preloadedKeys: [...state.preloadedKeys, key] })),
+  activeMenuItem: routes.HOME,
+  setActiveMenuItem: (menuItem) => set({ activeMenuItem: menuItem }),
+  scrollYProgress: 0,
+  setScrollYProgress: (scrollYProgress) => set({ scrollYProgress }),
+  colors: { foreground: '#fdfdfd', background: '#fdfdfd' },
+  setColors: (colors) => set({ colors }),
+}));
 
 export default useMenuStore;
 
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.DEV) {
   mountStoreDevtool('MenuStore', useMenuStore);
 }

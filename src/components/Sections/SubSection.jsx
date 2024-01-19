@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 import React from 'react';
+import { staggerVariants } from '../../animations/site';
 
 const Container = styled.div`
   height: 100vh;
@@ -31,8 +33,20 @@ const SubSection = ({ title, children }) => {
     <Container>
       <div></div>
       <div className='body'>
-        <h2>{title}</h2>
-        <p>{children}</p>
+        <motion.h2
+          custom={0}
+          initial='offscreen'
+          whileInView='onscreen'
+          variants={staggerVariants}>
+          {title}
+        </motion.h2>
+        <motion.p
+          custom={0}
+          initial='offscreen'
+          whileInView='onscreen'
+          variants={staggerVariants}>
+          {children}
+        </motion.p>
       </div>
       <div></div>
     </Container>

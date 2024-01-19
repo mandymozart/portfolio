@@ -5,7 +5,7 @@ import { staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
   height: 200vh;
   max-width: var(--content-width);
   margin: 0 auto;
@@ -20,31 +20,44 @@ const Container = styled.section`
       flex-direction: column;
       justify-content: center;
 
-      .presentation {
-        margin-top: 3rem;
+      .lead {
+        padding: 0 var(--grid-padding);
         display: grid;
-        height: 100%;
+        height: calc(100vh - var(--feature-project-header-height));
         align-items: center;
-        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-columns: 2fr 4fr;
+        p {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+        @media (max-width: 850px) {
+          padding: 0 var(--grid-padding) 1rem var(--grid-padding);
+        }
+      }
+      .presentation {
+        display: grid;
+        color: var(--background);
+        height: 100vh;
+        align-items: center;
+        grid-template-columns: 1fr 3fr 1fr 1fr;
         @media (max-width: 850px) {
           grid-template-columns: 1fr;
         }
         .image {
           padding: 0 var(--grid-padding);
+          &--1 {
+            grid-column: 2;
+            @media (max-width: 850px) {
+              display: none;
+            }
+          }
+          &--2 {
+            @media (max-width: 850px) {
+            }
+          }
           img {
             width: 100%;
             border-radius: 2rem;
-          }
-        }
-        .lead {
-          padding: 0 var(--grid-padding);
-          p {
-            font-size: 3rem;
-            line-height: 4rem;
-            margin-bottom: 4rem;
-          }
-          @media (max-width: 850px) {
-            padding: 0 var(--grid-padding) 1rem var(--grid-padding);
           }
         }
       }
@@ -63,9 +76,9 @@ const project = {
   type: 'eCommerce',
 };
 
-const FeatureProjectLiahSection = ({ children, ...props }) => {
+const FeatureProjectLiahSection = () => {
   return (
-    <Container {...props}>
+    <Container>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -73,8 +86,8 @@ const FeatureProjectLiahSection = ({ children, ...props }) => {
           whileInView='onscreen'
           viewport={{ once: true, amount: 0.8 }}>
           <FeatureProjectHeader project={project} />
-          <div className='presentation'>
-            <div className='lead'>
+          <div className='lead'>
+            <div>
               <motion.p
                 custom={0}
                 initial='offscreen'
@@ -90,16 +103,15 @@ const FeatureProjectLiahSection = ({ children, ...props }) => {
                 Quality made in Switzerland.
               </motion.p>
             </div>
-            <div></div>
-            <div></div>
           </div>
+
           <div className='presentation'>
             <div></div>
             <motion.div
               className='image image--1'
               initial='offscreen'
               whileInView='onscreen'
-              custom={0}
+              custom={2}
               variants={staggerVariants}>
               <img
                 src={'/images/feature-liah-1.png'}
@@ -110,7 +122,7 @@ const FeatureProjectLiahSection = ({ children, ...props }) => {
               className='image image--2'
               initial='offscreen'
               whileInView='onscreen'
-              custom={0}
+              custom={3}
               variants={staggerVariants}>
               <img
                 src={'/images/feature-liah-2.png'}
@@ -120,7 +132,6 @@ const FeatureProjectLiahSection = ({ children, ...props }) => {
           </div>
         </motion.div>
       </div>
-      {children}
     </Container>
   );
 };

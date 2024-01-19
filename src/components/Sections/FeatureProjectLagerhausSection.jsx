@@ -1,16 +1,15 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { revealVariants } from './../../animations/site';
+import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font-mono);
+  font-family: var(--font);
+  height: 200vh;
 
   max-width: var(--content-width);
   margin: 0 auto;
-  @media (max-width: 850px) {
-  }
   .overlay {
     width: 100%;
 
@@ -22,6 +21,8 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
+        height: calc(100vh - var(--feature-project-header-height));
+        align-items: center;
         grid-template-columns: repeat(6, 1fr);
         p {
           font-size: 3rem;
@@ -37,7 +38,7 @@ const Container = styled.section`
       .presentation {
         margin-top: 3rem;
         display: grid;
-        height: 100%;
+        height: 100vh;
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
         @media (max-width: 850px) {
@@ -67,35 +68,42 @@ const project = {
   type: 'eCommerce',
 };
 
-const FeatureProjectLagerhausSection = ({ children, ...props }) => {
+const FeatureProjectLagerhausSection = () => {
   return (
-    <Container {...props}>
+    <Container>
       <div className='overlay'>
         <motion.div
           className='info'
           initial='offscreen'
           whileInView='onscreen'
           viewport={{ once: true }}
-          variants={revealVariants}
-        >
+          variants={revealVariants}>
           <FeatureProjectHeader project={project} />
           <div className='lead'>
-            <p>
+            <motion.p
+              custom={0}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               Cooperative B2C shop and content platform built on Bloomreach
               Experience and SAP Hybris.
-            </p>
+            </motion.p>
           </div>
           <div className='presentation'>
-            <div className='image image--1'>
+            <motion.div
+              className='image image--1'
+              custom={1}
+              initial='offscreen'
+              whileInView='onscreen'
+              variants={staggerVariants}>
               <img
                 src={'/images/feature-lagerhaus-1.png'}
                 alt={'Lagerhaus - Mobile view'}
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
-      {children}
     </Container>
   );
 };

@@ -34,7 +34,7 @@ const Container = styled.div`
     text-decoration: none;
     font-weight: 400;
     font-size: 1rem;
-    font-family: var(--font-serif);
+    font-family: var(--font);
     background: none;
     border: 0;
     color: inherit;

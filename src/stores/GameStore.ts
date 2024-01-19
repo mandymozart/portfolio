@@ -19,7 +19,7 @@ export type GameStore = {
   setEditor: (editor: boolean) => void;
 };
 
-const useGameStore = create<GameStore>(set => ({
+const useGameStore = create<GameStore>((set) => ({
   camera: 'DEFAULT',
   setCamera: (camera: Camera) => set({ camera }),
   editor: false,
@@ -28,6 +28,6 @@ const useGameStore = create<GameStore>(set => ({
 
 export default useGameStore;
 
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.DEV) {
   mountStoreDevtool('GameStore', useGameStore);
 }
