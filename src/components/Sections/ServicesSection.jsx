@@ -5,8 +5,10 @@ import { getSectionByKey } from './../Home/sections';
 const params = getSectionByKey('services');
 const Container = styled.div`
   background-color: ${params.backgroundColor};
+  --accordion-color: ${params.color};
   color: ${params.color};
   height: 100vh;
+  border-radius: 4rem;
   > header {
     max-width: var(--content-width);
     margin: 0 auto;
@@ -130,12 +132,6 @@ const ServicesSection = () => {
         </div>
         <div className='services-list'>
           <Accordion items={services} />
-          {/* {services.map((service) => (
-            <div className='services' key={service.key}>
-              <h3>{service.title}</h3>
-              <p>{service.content}</p>
-            </div>
-          ))} */}
         </div>
         <div className='right'></div>
       </div>

@@ -6,14 +6,30 @@ Files: ../../../public/models/trashbag.glb [132.43KB] > /home/mandymozart/portfo
 
 import { useGLTF } from '@react-three/drei';
 import React from 'react';
+import useMenuStore from '../../stores/MenuStore';
 
 export function TrashBag(props) {
+  const { ready } = useMenuStore();
   const { nodes, materials } = useGLTF('/models/trashbag.glb');
   return (
     <group
       {...props}
       dispose={null}>
+      {ready && (
+        <PositionalAudio
+          url='/audio/wind-howl-interior.mp3'
+          distance={1}
+          loop
+        />
+      )}
+      <pointLight
+        intensity={1000}
+        color={0xff00ff}
+        position={[0, 0, 0]}
+      />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Icosphere.geometry}
         material={materials.Black}
         position={[0.037, 0.663, -0.016]}

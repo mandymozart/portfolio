@@ -228,6 +228,7 @@ export function Avatar({ ...props }) {
         color={'red'}
         castShadow
       />
+
       <primitive
         ref={avatar}
         object={clone}

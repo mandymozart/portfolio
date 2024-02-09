@@ -20,22 +20,24 @@ const Container = styled.section`
   position: relative;
   font-family: var(--font);
   height: 200vh;
+  border-radius: 4rem;
+  overflow: hidden;
+  z-index: -2;
   .backdrop {
     width: 100%;
-    object-fit: cover;
     height: 200vh;
+    object-fit: cover;
     object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
   }
 
   .overlay {
-    width: 100%;
     z-index: 2;
-    position: absolute;
     max-width: var(--content-width);
     margin: 0 auto;
-    top: 0;
-    left: 0;
     .info {
       display: flex;
       flex-direction: column;
@@ -93,7 +95,7 @@ const Container = styled.section`
 const FeatureProjectCollisionsSection = () => {
   return (
     <Container>
-      <motion.img
+      {/* <motion.img
         custom={2}
         initial='offscreen'
         whileInView='onscreen'
@@ -101,7 +103,17 @@ const FeatureProjectCollisionsSection = () => {
         className='backdrop'
         src='/images/feature-collisions-background-placeholder.jpg'
         alt='Video Placeholder'
-      />
+      /> */}
+      <motion.video
+        custom={2}
+        initial='offscreen'
+        whileInView='onscreen'
+        variants={staggerVariants}
+        autoPlay
+        loop
+        className='backdrop'>
+        <source src='/videos/feature-collisions-background.mp4' />
+      </motion.video>
       <div className='overlay'>
         <motion.div
           className='info'

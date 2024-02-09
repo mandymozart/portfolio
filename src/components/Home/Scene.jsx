@@ -129,7 +129,7 @@ export const Scene = () => {
         <Avatar />
         <MovingClouds />
         <Island position={[0, 0, 0]} />
-        <TrashBag position={[0, 1.15, 0]} />
+        <TrashBag position={[5, 1.15, 14]} />
         <e.fog
           attach='fog'
           ref={fogRef}

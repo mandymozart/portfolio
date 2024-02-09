@@ -19,8 +19,7 @@ export function Heaven({ ...props }) {
     <>
       <group
         {...props}
-        position={[position.x, position.y, position.z]}
-      >
+        position={[position.x, position.y, position.z]}>
         <group>
           <Cloud
             position={[-20, 0, 0]}

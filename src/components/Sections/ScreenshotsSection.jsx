@@ -7,7 +7,7 @@ const Container = styled.div`
     margin: 0 var(--content-margin-left);
     max-width: var(--content-width);
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     img {
       max-width: 100%;
       max-height: 100%;

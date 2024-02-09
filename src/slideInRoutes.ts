@@ -19,6 +19,8 @@ export enum SlideInRouteName {
   PRIVACY = 'privacy',
   IMPRINT = 'imprint',
   RESUME = 'resume',
+  SERVICES = 'services',
+  PROCESS = 'process',
   PROJECTS = 'projects',
   ATTRIBUTIONS = 'attributions',
   EXPERIENCES = 'experiences',

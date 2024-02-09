@@ -18,7 +18,7 @@ if (!isProd) {
   studio.extend(extension);
 }
 
-function HomePage() {
+function HomePage({ ready }) {
   const PAGES = getSectionPageCount(); // count of slices
   const mainSheet = getProject('Tour', {
     state: projectState,

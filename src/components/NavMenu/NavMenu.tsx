@@ -113,6 +113,7 @@ const NavMenu = () => {
           }`}>
           <Loader />
         </button>
+
         {navItems.map((route) => (
           <button
             onClick={() => navigateTo(route)}

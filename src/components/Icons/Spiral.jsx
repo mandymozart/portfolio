@@ -5,7 +5,6 @@ const Spiral = () => {
     <img
       src='/textures/cloud10.png'
       alt='cloud'
-      height={32}
     />
     // <svg
     //   xmlns='http://www.w3.org/2000/svg'

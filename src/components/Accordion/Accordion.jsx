@@ -1,9 +1,18 @@
 import styled from '@emotion/styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { staggerVariants } from '../../animations/site';
 
 const Container = styled.div`
-  border-bottom: 1px solid var(--primary);
+  :root {
+    @property --accordion-color {
+      syntax: '<color>';
+      inherits: false;
+      initial-value: var(--primary);
+    }
+  }
+  border-bottom: 1px solid var(--accordion-color);
+  width: 100%;
   header {
     cursor: pointer;
     height: 4rem;
@@ -81,19 +90,29 @@ const AccordionItem = ({ item, expanded, setExpanded }) => {
     </Container>
   );
 };
-
-export const Accordion = ({ items }) => {
+const AccordionContainer = styled.div``;
+export const Accordion = ({ items, ...props }) => {
   // This approach is if you only want max one section open at a time. If you want multiple
   // sections to potentially be open simultaneously, they can all be given their own `useState`.
   const [expanded, setExpanded] = useState();
 
-  return items.map((item) => (
-    <AccordionItem
-      item={item}
-      expanded={expanded}
-      setExpanded={setExpanded}
-    />
-  ));
+  return (
+    <AccordionContainer {...props}>
+      {items.map((item, index) => (
+        <motion.div
+          initial='offscreen'
+          whileInView='onscreen'
+          custom={index}
+          variants={staggerVariants}>
+          <AccordionItem
+            item={item}
+            expanded={expanded}
+            setExpanded={setExpanded}
+          />
+        </motion.div>
+      ))}
+    </AccordionContainer>
+  );
 };
 
 export const Example = () => <Accordion items={items} />;

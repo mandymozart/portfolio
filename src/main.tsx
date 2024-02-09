@@ -4,8 +4,7 @@ import App from './App.tsx';
 import './assets/css/fonts.css';
 import './assets/css/index.css';
 import './assets/css/variables.css';
-import { mutate } from './data/mutations.js';
-console.log(JSON.stringify(mutate()));
+// console.log(JSON.stringify(mutate()));
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />

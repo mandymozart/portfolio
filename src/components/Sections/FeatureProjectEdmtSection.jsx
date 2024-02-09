@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import YouTube from 'react-youtube';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
@@ -83,6 +84,17 @@ const project = {
 };
 
 const FeatureProjectEdmtSection = ({ children, ...props }) => {
+  const opts = {
+    height: '440',
+    width: '770',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      loop: true,
+      controls: 0,
+      showinfo: 0,
+    },
+  };
   return (
     <Container {...props}>
       <div className='overlay'>
@@ -154,6 +166,10 @@ const FeatureProjectEdmtSection = ({ children, ...props }) => {
               <img
                 src={'/images/feature-edmt-2.png'}
                 alt={'EDMT - Desktop view'}
+              />
+              <YouTube
+                videoId='3SKECihPefU'
+                opts={opts}
               />
             </motion.div>
           </div>

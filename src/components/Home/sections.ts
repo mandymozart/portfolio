@@ -105,7 +105,7 @@ export const sections: Section[] = [
     key: 'services',
     type: SectionType.DEFAULT,
     pages: 1,
-    backgroundColor: 'var(--aero-blue)',
+    backgroundColor: 'var(--perfume)',
     color: 'var(--background)',
   },
   {

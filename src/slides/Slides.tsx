@@ -43,6 +43,9 @@ const Slides: FC = () => {
       <SlideIn route={routes.PRIVACY}>
         <PrivacyPolicyPage />
       </SlideIn>
+      <SlideIn route={routes.PRIVACY}>
+        <PrivacyPolicyPage />
+      </SlideIn>
     </Container>
   );
 };

@@ -21,6 +21,8 @@ const useMenuStore = create((set) => ({
   setScrollYProgress: (scrollYProgress) => set({ scrollYProgress }),
   colors: { foreground: '#fdfdfd', background: '#fdfdfd' },
   setColors: (colors) => set({ colors }),
+  ready: false,
+  setReady: (ready) => set({ ready }),
 }));
 
 export default useMenuStore;

@@ -13,7 +13,6 @@ const Container = styled.section`
   margin: 0 auto;
   .backdrop {
     width: 100%;
-
     object-fit: cover;
     object-position: center;
     position: absolute;
