@@ -1,6 +1,7 @@
 'use client';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { ProjectInterface } from '../components/Project/ProjectInterface';
+import { SlideInRouteName } from '../slideInRoutes';
 import { useRouteChangeListener } from './../events/routerEvents';
 
 function ProjectDetailPage() {
@@ -22,12 +23,31 @@ function ProjectDetailPage() {
 }
 
 export default ProjectDetailPage;
+
 function ProjectRouterBridge() {
   const navigate = useNavigate();
 
-  // TODO loses closure
+  // useEffect(() => {
+  //   window.addEventListener('popstate', (event) => {
+  //     if (event) {
+  //       const uid = event.target.location.hash.replace('#/', '');
+  //       if (uid)
+  //         routeChangeHandler({
+  //           to: {
+  //             key: 'project',
+  //             params: { uid: event.target.location.hash.replace('#/', '') },
+  //           },
+  //         });
+  //       else
+  //         navigate({
+  //           pathname: '/',
+  //         });
+  //     }
+  //   });
+  // });
+
   const routeChangeHandler = (routeChange) => {
-    if (routeChange.to.key !== 'project') return;
+    if (routeChange.to.key !== SlideInRouteName.PROJECT) return;
     navigate({
       pathname: routeChange.params.uid,
     });

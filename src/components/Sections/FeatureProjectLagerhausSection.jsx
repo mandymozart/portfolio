@@ -97,7 +97,7 @@ const FeatureProjectLagerhausSection = () => {
               whileInView='onscreen'
               variants={staggerVariants}>
               <img
-                src={'/images/feature-lagerhaus-1.png'}
+                src={'/images/feature-lagerhaus-1.avif'}
                 alt={'Lagerhaus - Mobile view'}
               />
             </motion.div>

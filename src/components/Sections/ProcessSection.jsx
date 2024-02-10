@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { Accordion } from '../Accordion/Accordion';
+import { Accordion } from '../Common/Accordion/Accordion';
 import { getSectionByKey } from './../Home/sections';
 const params = getSectionByKey('process');
 

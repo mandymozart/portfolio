@@ -18,6 +18,8 @@ import { Island } from '../Models/Home/Island';
 import { MountainAndRiver } from '../Models/Home/MountainAndRiver';
 import { MovingClouds } from '../Models/Home/MovingClouds';
 import { PointLight } from '../Models/Lights/PointLight';
+import { RadioTower } from '../Models/RadioTower';
+import { Slide } from '../Models/Slide';
 import { TrashBag } from '../Models/TrashBag';
 import useMenuStore from './../../stores/MenuStore';
 
@@ -126,10 +128,29 @@ export const Scene = () => {
           /> */}
         </mesh>
         <MountainAndRiver />
+        <RadioTower />
+        <Slide />
         <Avatar />
         <MovingClouds />
         <Island position={[0, 0, 0]} />
-        <TrashBag position={[5, 1.15, 14]} />
+        <TrashBag
+          position={[5, 1.15, 14]}
+          scale={0.3}
+        />
+        <TrashBag
+          position={[5, 1.15, 13]}
+          scale={0.3}
+          rotation={[0, 0.5, 0]}
+        />
+        <TrashBag
+          position={[6, 1.15, 12]}
+          scale={0.3}
+          rotation={[0, 1, 0]}
+        />
+        <TrashBag
+          position={[5, 1.15, 14]}
+          scale={0.3}
+        />
         <e.fog
           attach='fog'
           ref={fogRef}

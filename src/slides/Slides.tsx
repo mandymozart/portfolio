@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { FC } from 'react';
-import SlideIn from './../components/SlideIn/SlideIn';
+import SlideIn from './../components/Common/SlideIn/SlideIn';
 import { routes } from './../slideInRoutes';
 import AttributionsPage from './../slides/AttributionsPage';
 import ExperiencePage from './../slides/ExperiencePage';

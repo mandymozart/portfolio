@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { playToneAtRoute } from '../../audio';
-import Arrow from '../Icons/Arrow';
+import Arrow from '../Common/Icons/Arrow';
 import { staggerVariants } from './../../animations/site';
 import { emitRouteChange } from './../../events/routerEvents';
 import { routes } from './../../slideInRoutes';

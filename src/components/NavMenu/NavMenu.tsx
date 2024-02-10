@@ -1,7 +1,7 @@
 'use client';
 import styled from '@emotion/styled';
 import useMenuStore from '../../stores/MenuStore';
-import Loader from '../Loader/Loader';
+import Loader from '../Common/Loader/Loader';
 import { emitRouteChange } from './../../events/routerEvents';
 
 import { playToneAtRoute } from '../../audio';

@@ -5,6 +5,7 @@ import { CustomTypeLink, MethodDocument } from '../../data/types';
 const Container = styled.li`
   padding: 0;
   margin: 0;
+  list-style-type: none;
 `;
 
 interface Props extends React.ComponentPropsWithoutRef<'li'> {

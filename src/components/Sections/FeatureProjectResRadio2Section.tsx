@@ -84,14 +84,6 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
                 variants={staggerVariants}>
                 Brutalist design meets scaleability.
               </motion.p>
-
-              <motion.button
-                custom={3}
-                variants={staggerVariants}
-                initial='offscreen'
-                whileInView='onscreen'>
-                Play reaction
-              </motion.button>
             </div>
           </div>
           <div className='presentation '>
@@ -102,7 +94,7 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
               custom={0}
               variants={staggerVariants}>
               <img
-                src={'/images/resradio-2-feature-1.png'}
+                src={'/images/resradio-2-feature-1.avif'}
                 alt={'ResRadio'}
               />
             </motion.div>

@@ -109,7 +109,7 @@ export function Avatar({ ...props }) {
   const [path, setPath] = useState();
 
   const position = useMemo(() => [20, 21.15, 5], []);
-  const scale = useMemo(() => 1, []);
+  const scale = useMemo(() => 0.3, []);
   const [animation, setAnimation] = useState('Idle');
   const [isDancing, setIsDancing] = useState(false);
   const [showChatBubble, setShowChatBubble] = useState(false);

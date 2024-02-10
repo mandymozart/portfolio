@@ -114,7 +114,7 @@ const FeatureProjectLiahSection = () => {
               custom={2}
               variants={staggerVariants}>
               <img
-                src={'/images/feature-liah-1.png'}
+                src={'/images/feature-liah-1.avif'}
                 alt={'LiAH - Browser view'}
               />
             </motion.div>
@@ -125,7 +125,7 @@ const FeatureProjectLiahSection = () => {
               custom={3}
               variants={staggerVariants}>
               <img
-                src={'/images/feature-liah-2.png'}
+                src={'/images/feature-liah-2.avif'}
                 alt={'LiAH - Mobile view'}
               />
             </motion.div>

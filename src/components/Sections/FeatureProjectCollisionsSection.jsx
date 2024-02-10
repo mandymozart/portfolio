@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
+import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { getSectionByKey } from './../Home/sections';
 
 const project = {
@@ -95,15 +96,6 @@ const Container = styled.section`
 const FeatureProjectCollisionsSection = () => {
   return (
     <Container>
-      {/* <motion.img
-        custom={2}
-        initial='offscreen'
-        whileInView='onscreen'
-        variants={staggerVariants}
-        className='backdrop'
-        src='/images/feature-collisions-background-placeholder.jpg'
-        alt='Video Placeholder'
-      /> */}
       <motion.video
         custom={2}
         initial='offscreen'
@@ -140,7 +132,7 @@ const FeatureProjectCollisionsSection = () => {
               whileInView='onscreen'
               variants={staggerVariants}>
               <img
-                src={'/images/feature-collisions-2.png'}
+                src={'/images/feature-collisions-2.avif'}
                 alt={'Collisions - Mobile view'}
               />
             </motion.div>
@@ -150,10 +142,16 @@ const FeatureProjectCollisionsSection = () => {
               initial='offscreen'
               whileInView='onscreen'
               variants={staggerVariants}>
-              <img
-                src={'/images/feature-collisions-1.png'}
+              {/* <img
+                src={'/images/feature-collisions-1.avif'}
                 alt={'Collisions - Desktop view'}
-              />
+              /> */}
+              <VideoPlayer poster='/images/feature-collisions-1.avif'>
+                <source
+                  src='collisions-munich.mp4'
+                  type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+                />
+              </VideoPlayer>
             </motion.div>
           </div>
         </motion.div>

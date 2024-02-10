@@ -107,7 +107,7 @@ const FeatureProjectFourthGardenSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='plants plants--1'>
               <img
-                src={'/images/feature-jve-plants-1.png'}
+                src={'/images/feature-jve-plants-1.avif'}
                 alt={'Plants'}
               />
             </motion.div>
@@ -118,7 +118,7 @@ const FeatureProjectFourthGardenSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='plants plants--2'>
               <img
-                src={'/images/feature-jve-plants-2.png'}
+                src={'/images/feature-jve-plants-2.avif'}
                 alt={'Plants'}
               />
             </motion.div>
@@ -129,7 +129,7 @@ const FeatureProjectFourthGardenSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--1'>
               <img
-                src={'/images/feature-jve-1.png'}
+                src={'/images/feature-jve-1.avif'}
                 alt={'JVE - Desktop view'}
               />
             </motion.div>

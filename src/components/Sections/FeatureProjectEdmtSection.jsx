@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import YouTube from 'react-youtube';
+import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
+  position: relative;
   .overlay {
     position: relative;
     max-width: var(--content-width);
@@ -58,13 +59,60 @@ const Container = styled.section`
               display: none;
             }
           }
-          &--2 {
-            @media (max-width: 850px) {
-            }
-          }
           img {
             width: 100%;
             border-radius: 2rem;
+          }
+        }
+        .video {
+          padding: 0 var(--grid-padding);
+          @media (max-width: 850px) {
+          }
+          &-player {
+            position: relative;
+            img,
+            video {
+              width: 100%;
+              height: 100%;
+              border-radius: 2rem;
+              overflow: hidden;
+            }
+            .video-placeholder {
+              border-radius: 2rem;
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              display: flex;
+              justify-content: center;
+              transition: opacity 0.3s ease;
+              &-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                .play-button {
+                }
+              }
+            }
+            &--playing {
+              .video-placeholder {
+                opacity: 0;
+                pointer-events: none;
+              }
+            }
+            &--hovered {
+              .video-placeholder {
+                opacity: 1;
+                pointer-events: all;
+              }
+            }
           }
         }
       }
@@ -84,17 +132,6 @@ const project = {
 };
 
 const FeatureProjectEdmtSection = ({ children, ...props }) => {
-  const opts = {
-    height: '440',
-    width: '770',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      loop: true,
-      controls: 0,
-      showinfo: 0,
-    },
-  };
   return (
     <Container {...props}>
       <div className='overlay'>
@@ -132,11 +169,11 @@ const FeatureProjectEdmtSection = ({ children, ...props }) => {
                 initial='offscreen'
                 whileInView='onscreen'
                 variants={staggerVariants}
-                src='/images/feature-edmt-icon-app-art-award.png'
+                src='/images/feature-edmt-icon-app-art-award.avif'
                 alt='App Art Award'
               />
               <motion.img
-                custom={0}
+                custom={1}
                 initial='offscreen'
                 whileInView='onscreen'
                 variants={staggerVariants}
@@ -148,29 +185,34 @@ const FeatureProjectEdmtSection = ({ children, ...props }) => {
           <div className='presentation'>
             <motion.div
               className='image image--1'
-              custom={1}
+              custom={2}
               initial='offscreen'
               whileInView='onscreen'
               variants={staggerVariants}>
               <img
-                src={'/images/feature-edmt-1.png'}
+                src={'/images/feature-edmt-1.avif'}
                 alt={'EDMT - Mobile view'}
               />
             </motion.div>
             <motion.div
-              className='image image--2'
-              custom={1}
+              className='video video--1'
+              custom={3}
               initial='offscreen'
               whileInView='onscreen'
               variants={staggerVariants}>
-              <img
-                src={'/images/feature-edmt-2.png'}
-                alt={'EDMT - Desktop view'}
-              />
-              <YouTube
-                videoId='3SKECihPefU'
-                opts={opts}
-              />
+              {/* <YouTube
+                   videoId='3SKECihPefU'
+                   opts={opts}/> */}
+              <VideoPlayer poster='/images/feature-edmt-2.avif'>
+                <source
+                  src='/videos/edmt-1080p.mp4'
+                  type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+                />
+                <source
+                  src='/videos/edmt-720p.mp4'
+                  type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+                />
+              </VideoPlayer>
             </motion.div>
           </div>
         </motion.div>

@@ -98,7 +98,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--1'>
               <img
-                src={'/images/feature-swma-1.png'}
+                src={'/images/feature-swma-1.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>
@@ -109,7 +109,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--2'>
               <img
-                src={'/images/feature-swma-2.png'}
+                src={'/images/feature-swma-2.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>
@@ -120,7 +120,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--3'>
               <img
-                src={'/images/feature-swma-3.png'}
+                src={'/images/feature-swma-3.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>
@@ -131,7 +131,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--4'>
               <img
-                src={'/images/feature-swma-4.png'}
+                src={'/images/feature-swma-4.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>
@@ -142,7 +142,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--5'>
               <img
-                src={'/images/feature-swma-5.png'}
+                src={'/images/feature-swma-5.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>
@@ -153,7 +153,7 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
               variants={staggerVariants}
               className='image image--6'>
               <img
-                src={'/images/feature-swma-6.png'}
+                src={'/images/feature-swma-6.avif'}
                 alt={'SWAM - Mobile view'}
               />
             </motion.div>

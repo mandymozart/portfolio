@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants } from './../../animations/site';
 
@@ -110,14 +111,13 @@ const FeatureProjectDogHeartCitySection = ({ children, ...props }) => {
           </div>
           <div className='presentation'>
             <div className='image image--1'>
-              <img
-                src={'/images/feature-dogheartcity-1.png'}
-                alt={'Dog Heart City - Desktop view // Video Placeholder'}
-              />
+              <VideoPlayer poster='/images/feature-dogheartcity-1.avif'>
+                <source src='http://mandymozart.com/dev.mandymozart.com/cdn/dogheartcity.mov' />
+              </VideoPlayer>
             </div>
             <div className='image image--2'>
               <img
-                src={'/images/feature-dogheartcity-2.png'}
+                src={'/images/feature-dogheartcity-2.avif'}
                 alt={'Dog Heart City - Mobile view'}
               />
             </div>

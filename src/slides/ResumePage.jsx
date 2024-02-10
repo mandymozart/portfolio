@@ -81,7 +81,7 @@ function ResumePage() {
       <div className='left'>
         <div className='avatar'>
           <img
-            src={'/images/avatar-portrait-placeholder.png'}
+            src={'/images/portrait.avif'}
             alt='avatar'
           />
         </div>
@@ -96,8 +96,7 @@ function ResumePage() {
             <br />
             <a
               href='https://www.mandymozart.com'
-              target='_blank'
-            >
+              target='_blank'>
               Mandy Mozart
             </a>
           </p>
@@ -113,8 +112,7 @@ function ResumePage() {
         </div>
         <a
           className='download-link'
-          href='/resume.pdf'
-        >
+          href='/resume.pdf'>
           Download PDF
         </a>
       </div>

@@ -4,8 +4,8 @@ import { useRef } from 'react';
 export const PointLight = ({ ...props }) => {
   const controls = {
     position: [9, 3, 12],
-    intensity: 35,
-    color: '#7a6fbe',
+    intensity: 8.8,
+    color: '#2b4159',
     distance: 10000,
     decay: 1,
   };

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { Accordion } from '../Accordion/Accordion';
+import { Accordion } from '../Common/Accordion/Accordion';
 import { getSectionByKey } from './../Home/sections';
 const params = getSectionByKey('services');
 const Container = styled.div`

@@ -1,6 +1,6 @@
 :root {
   --primary: rgb(30, 30, 30); /*  400 */
-  --primary-200: rgb(65, 65, 65);
+  --primary-200: rgb(34, 34, 34);
   --primary-400: var(--primary); /*  alias */
   --secondary: rgb(255, 0, 0);
   --secondary-400: var(--secondary); /*  alias */

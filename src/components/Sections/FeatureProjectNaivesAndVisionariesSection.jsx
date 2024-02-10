@@ -120,7 +120,7 @@ const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
               whileInView='onscreen'
               variants={staggerVariants}>
               <img
-                src={'/images/feature-naivesandvisionaries-1.png'}
+                src={'/images/feature-naivesandvisionaries-1.avif'}
                 alt={'Naives & Visionaries - Browser view'}
               />
             </motion.div>

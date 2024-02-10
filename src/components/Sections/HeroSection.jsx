@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styled from '@emotion/styled';
 import clsx from 'clsx';
+import PlayButton from '../Common/FormElements/PlayButton';
 import { IntroVideo } from '../Videos/IntroVideo';
 
 const Container = styled.section`
@@ -64,19 +65,17 @@ const HeroSection = ({ ...props }) => {
       />
       <div
         id='overlay'
-        className={clsx({ playing: playing })}
-      >
+        className={clsx({ playing: playing })}>
         <h1 className='title'>
           I am Tilman Porschütz, a Vienna based creative developer crafting
           boutique experiences, websites and apps.
         </h1>
         <div className='message'></div>
-        <button
+        <PlayButton
           id='startButton'
-          onClick={togglePlay}
-        >
-          {playing ? 'Pause' : 'Play'}
-        </button>
+          onClick={togglePlay}>
+          {playing ? 'Pause' : 'Play Intro'}
+        </PlayButton>
       </div>
     </Container>
   );

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl';
 import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
-import ButtonLink from '../FormElements/ButtonLink';
+import ButtonLink from '../Common/FormElements/ButtonLink';
 import { emitRouteChange } from './../../events/routerEvents';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 

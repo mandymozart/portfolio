@@ -42,7 +42,7 @@ const Container = styled.div`
   }
   &.loaded {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.0001);
+    background: rgba(255, 255, 255, 1);
     svg {
       animation-play-state: paused;
       scale: 1;

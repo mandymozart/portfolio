@@ -23,8 +23,8 @@ export function TrashBag(props) {
         />
       )}
       <pointLight
-        intensity={1000}
-        color={0xff00ff}
+        intensity={20}
+        color={0xffff00}
         position={[0, 0, 0]}
       />
       <mesh

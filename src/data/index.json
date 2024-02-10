@@ -1113,7 +1113,7 @@
         },
         "fromDate": "2022-06-01",
         "toDate": "2022-06-30",
-        "video_id": null,
+        "video_id": "project-collisions-munich",
         "transcript": [],
         "images": [
           {
@@ -1122,7 +1122,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e5a531ac2845a2539e8_screely-1700147295980.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e5a531ac2845a2539e8_screely-1700147295980.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1132,7 +1132,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e29531ac2845a2539e7_screely-1700147312326.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e29531ac2845a2539e7_screely-1700147312326.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1142,7 +1142,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e1d531ac2845a2539e5_screely-1700147381301.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e1d531ac2845a2539e5_screely-1700147381301.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1152,7 +1152,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e14531ac2845a2539e3_screely-1700147408584.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e14531ac2845a2539e3_screely-1700147408584.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1162,7 +1162,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e21531ac2845a2539e6_screely-1700147367091.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e21531ac2845a2539e6_screely-1700147367091.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1172,7 +1172,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563ec3531ac2845a2539e9_screely-1700150970769.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563ec3531ac2845a2539e9_screely-1700150970769.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1182,7 +1182,7 @@
             "image": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/65563e1b531ac2845a2539e4_screely-1700147395294.png?auto=format,compress",
+              "url": "http://localhost:5173/images/65563e1b531ac2845a2539e4_screely-1700147395294.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           }
@@ -1235,13 +1235,13 @@
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b8bda531ac2845a25a191_screely-1701546961455.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b8bda531ac2845a25a191_screely-1701546961455.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b8be5531ac2845a25a192_resradio20-mobile-0.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b8be5531ac2845a25a192_resradio20-mobile-0.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "image": {}
@@ -1250,13 +1250,13 @@
             "desktop": {
               "dimensions": { "width": 4256, "height": 2439 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b8aa1531ac2845a25a190_screely-1701546620989.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b8aa1531ac2845a25a190_screely-1701546620989.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "mobile": {
               "dimensions": { "width": 1170, "height": 2532 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b921c531ac2845a25a198_res.radio_-iPhone12Pro-.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b921c531ac2845a25a198_res.radio_-iPhone12Pro-.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "image": {}
@@ -1265,13 +1265,13 @@
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b933a531ac2845a25a19a_screely-1701548843492.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b933a531ac2845a25a19a_screely-1701548843492.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b9380531ac2845a25a19c_resradio20-mobile-3.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b9380531ac2845a25a19c_resradio20-mobile-3.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "image": {}
@@ -1280,13 +1280,13 @@
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b93f7531ac2845a25a19f_screely-1701548619264.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b93f7531ac2845a25a19f_screely-1701548619264.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/656b9402531ac2845a25a1a1_resradio20-mobile-2.png?auto=format,compress",
+              "url": "http://localhost:5173/images/656b9402531ac2845a25a1a1_resradio20-mobile-2.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
             "image": {}
@@ -1342,9 +1342,17 @@
           "url": "http://www.edmt.tv",
           "target": ""
         },
+        "additionalLinks": [
+          {
+            "link_type": "Web",
+            "title": "Blog: What we learned from kickstarting an audio-visual instrument",
+            "url": "https://medium.com/design-in-code/edmt-app-what-we-learned-from-kickstarting-an-audio-visual-instrument-a14e628169be",
+            "target": "_blank"
+          }
+        ],
         "fromDate": "2014-02-01",
         "toDate": "2016-02-08",
-        "video_id": null,
+        "video_id": "project-edmt",
         "transcript": [],
         "images": [
           {
@@ -1353,7 +1361,7 @@
             "image": {
               "dimensions": { "width": 800, "height": 800 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.png?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1363,7 +1371,7 @@
             "image": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.png?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1373,7 +1381,7 @@
             "image": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.png?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1383,7 +1391,7 @@
             "image": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.png?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1393,7 +1401,7 @@
             "image": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.png?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1403,7 +1411,7 @@
             "image": {
               "dimensions": { "width": 1800, "height": 1182 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d23f6531ac2845a254ced_franzie-A1.jpeg?auto=format,compress",
+              "url": "http://localhost:5173/images/655d23f6531ac2845a254ced_franzie-A1.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -1413,7 +1421,7 @@
             "image": {
               "dimensions": { "width": 1920, "height": 1080 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/655d2405531ac2845a254cee_still5.jpeg?auto=format,compress",
+              "url": "http://localhost:5173/images/655d2405531ac2845a254cee_still5.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           }
@@ -2150,40 +2158,7 @@
               "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format,compress",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             },
-            "mobile": {},
-            "image": {
-              "dimensions": { "width": 1062, "height": 1066 },
-              "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format,compress",
-              "edit": {
-                "x": 0,
-                "y": 0,
-                "zoom": 1,
-                "background": "transparent"
-              },
-              "mobile": {
-                "dimensions": { "width": 1080, "height": 1920 },
-                "alt": null,
-                "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format%2Ccompress&rect=231%2C0%2C600%2C1066&w=1080&h=1920",
-                "edit": {
-                  "x": 231,
-                  "y": 0,
-                  "zoom": 1,
-                  "background": "transparent"
-                }
-              },
-              "thumbnail": {
-                "dimensions": { "width": 960, "height": 540 },
-                "alt": null,
-                "url": "https://images.prismic.io/mandymozart-dev/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.png?auto=format%2Ccompress&rect=0%2C234%2C1062%2C597&w=960&h=540",
-                "edit": {
-                  "x": 0,
-                  "y": 234,
-                  "zoom": 1,
-                  "background": "transparent"
-                }
-              }
-            }
+            "mobile": {}
           }
         ],
         "skills": [],
@@ -2421,9 +2396,9 @@
             "desktop": {},
             "mobile": {},
             "image": {
-              "dimensions": { "width": 1920, "height": 1080 },
+              "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/81569d31-5f13-4291-92a7-ccf5325dca45_Slide+16_9+-+26.png?auto=format,compress",
+              "url": "http://localhost:5173/images/dynamic-projection-1.svg",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -2431,9 +2406,9 @@
             "desktop": {},
             "mobile": {},
             "image": {
-              "dimensions": { "width": 1920, "height": 1080 },
+              "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/40eeae43-38e5-4d26-abae-9538b7f0c589_Slide+16_9+-+27.png?auto=format,compress",
+              "url": "http://localhost:5173/images/dynamic-projection-3.svg",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -2441,9 +2416,9 @@
             "desktop": {},
             "mobile": {},
             "image": {
-              "dimensions": { "width": 1920, "height": 1080 },
+              "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "https://images.prismic.io/mandymozart-dev/db07faaf-c2b6-4d88-8e2a-01195bc4b34a_Slide+16_9+-+28.png?auto=format,compress",
+              "url": "http://localhost:5173/images/dynamic-projection-5.svg",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           }
