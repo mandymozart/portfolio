@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import ExperienceList from '../components/Common/Experience/ExperienceList';
+import PrimaryButtonLink from '../components/Common/FormElements/PrimaryButtonLink';
 import ListHeader from '../components/Common/ListHeader/ListHeader';
 import SkillsList from '../components/Common/Skills/SkillsList';
-import PrimaryButton from './../components/Common/FormElements/PrimaryButton';
 
 const Container = styled.div`
   width: var(--content-width);
@@ -114,9 +114,11 @@ function AboutPage() {
               </p>
             </div>
 
-            <PrimaryButton onClick={() => download()}>
+            <PrimaryButtonLink
+              href='/docs/tilman-porschuetz-resume.pdf'
+              download>
               Download PDF
-            </PrimaryButton>
+            </PrimaryButtonLink>
           </div>
         </div>
         <div></div>
@@ -218,8 +220,7 @@ function AboutPage() {
         <p>
           If possible I am trying to use <b>They/Them</b> pronouns. I do this
           out of solidarity for those fighting for gender inclusive language in
-          arts, culture, research and tech. But you can choose which ones to
-          use.
+          arts, culture, research and tech.
         </p>
       </div>
     </Container>

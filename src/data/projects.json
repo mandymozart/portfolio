@@ -32,21 +32,21 @@
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e5a531ac2845a2539e8_screely-1700147295980.avif"
+              "url": "/images/65563e5a531ac2845a2539e8_screely-1700147295980.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e29531ac2845a2539e7_screely-1700147312326.avif"
+              "url": "/images/65563e29531ac2845a2539e7_screely-1700147312326.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e1d531ac2845a2539e5_screely-1700147381301.avif",
+              "url": "/images/65563e1d531ac2845a2539e5_screely-1700147381301.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -54,28 +54,28 @@
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e14531ac2845a2539e3_screely-1700147408584.avif"
+              "url": "/images/65563e14531ac2845a2539e3_screely-1700147408584.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e21531ac2845a2539e6_screely-1700147367091.avif"
+              "url": "/images/65563e21531ac2845a2539e6_screely-1700147367091.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563ec3531ac2845a2539e9_screely-1700150970769.avif"
+              "url": "/images/65563ec3531ac2845a2539e9_screely-1700150970769.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
-              "url": "http://localhost:5173/images/65563e1b531ac2845a2539e4_screely-1700147395294.avif"
+              "url": "/images/65563e1b531ac2845a2539e4_screely-1700147395294.avif"
             }
           }
         ],
@@ -121,48 +121,48 @@
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b8bda531ac2845a25a191_screely-1701546961455.avif"
+              "url": "/images/656b8bda531ac2845a25a191_screely-1701546961455.avif"
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b8be5531ac2845a25a192_resradio20-mobile-0.avif"
+              "url": "/images/656b8be5531ac2845a25a192_resradio20-mobile-0.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 4256, "height": 2439 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b8aa1531ac2845a25a190_screely-1701546620989.avif"
+              "url": "/images/656b8aa1531ac2845a25a190_screely-1701546620989.avif"
             },
             "mobile": {
               "dimensions": { "width": 1170, "height": 2532 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b921c531ac2845a25a198_res.radio_-iPhone12Pro-.avif"
+              "url": "/images/656b921c531ac2845a25a198_res.radio_-iPhone12Pro-.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b933a531ac2845a25a19a_screely-1701548843492.avif"
+              "url": "/images/656b933a531ac2845a25a19a_screely-1701548843492.avif"
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b9380531ac2845a25a19c_resradio20-mobile-3.avif"
+              "url": "/images/656b9380531ac2845a25a19c_resradio20-mobile-3.avif"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 1568, "height": 1037 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b93f7531ac2845a25a19f_screely-1701548619264.avif"
+              "url": "/images/656b93f7531ac2845a25a19f_screely-1701548619264.avif"
             },
             "mobile": {
               "dimensions": { "width": 1080, "height": 1920 },
               "alt": null,
-              "url": "http://localhost:5173/images/656b9402531ac2845a25a1a1_resradio20-mobile-2.avif"
+              "url": "/images/656b9402531ac2845a25a1a1_resradio20-mobile-2.avif"
             }
           }
         ],
@@ -238,7 +238,7 @@
             "desktop": {
               "dimensions": { "width": 800, "height": 800 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.avif",
+              "url": "/images/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -246,7 +246,7 @@
             "desktop": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.avif",
+              "url": "/images/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -254,7 +254,7 @@
             "desktop": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.avif",
+              "url": "/images/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -262,7 +262,7 @@
             "desktop": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.avif",
+              "url": "/images/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -270,7 +270,7 @@
             "desktop": {
               "dimensions": { "width": 600, "height": 358 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.avif",
+              "url": "/images/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -278,7 +278,7 @@
             "desktop": {
               "dimensions": { "width": 1800, "height": 1182 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d23f6531ac2845a254ced_franzie-A1.avif",
+              "url": "/images/655d23f6531ac2845a254ced_franzie-A1.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           },
@@ -286,7 +286,7 @@
             "desktop": {
               "dimensions": { "width": 1920, "height": 1080 },
               "alt": null,
-              "url": "http://localhost:5173/images/655d2405531ac2845a254cee_still5.avif",
+              "url": "/images/655d2405531ac2845a254cee_still5.avif",
               "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
             }
           }
@@ -1093,21 +1093,21 @@
             "desktop": {
               "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "http://localhost:5173/images/dynamic-projection-1.svg"
+              "url": "/images/dynamic-projection-1.svg"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "http://localhost:5173/images/dynamic-projection-3.svg"
+              "url": "/images/dynamic-projection-3.svg"
             }
           },
           {
             "desktop": {
               "dimensions": { "width": 1440, "height": 900 },
               "alt": null,
-              "url": "http://localhost:5173/images/dynamic-projection-5.svg"
+              "url": "/images/dynamic-projection-5.svg"
             }
           }
         ],
