@@ -1,28 +1,14 @@
-import styled from '@emotion/styled';
-import { skills } from '../../../data/index.json';
-import { CustomTypeLink, SkillData } from '../../../data/types';
+import doc from '../../../data/skills.json';
+import { SkillData } from '../../../data/types';
 import SkillItem from './SkillItem';
 
-const Container = styled.div`
-  display: flex;
-  padding: 0 var(--grid-padding);
-  flex-direction: column;
-  &.textOnly {
-    display: inline;
-  }
-  img {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-`;
-
 interface Props extends React.ComponentPropsWithoutRef<'div'> {
-  link: CustomTypeLink;
+  uid: string;
   textOnly?: boolean;
 }
 
-const SkillItemAsync = ({ link, textOnly }: Props) => {
-  const data = skills.find((skill) => skill.uid === link.uid)
+const SkillItemAsync = ({ uid, textOnly }: Props) => {
+  const data = doc.results.find((skill) => skill.uid === uid)
     ?.data as SkillData;
   if (!data) return <></>;
   return (

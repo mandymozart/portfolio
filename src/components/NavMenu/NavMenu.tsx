@@ -17,7 +17,7 @@ const Container = styled.div`
   nav {
     height: 4rem;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 4fr 1fr 1fr;
     width: var(--content-width);
     margin: 0 auto;
     &:hover {
@@ -88,7 +88,7 @@ const Container = styled.div`
   }
 `;
 
-const navItems = [routes.PROJECTS, routes.EXPERIENCES, routes.RESUME];
+const navItems = [routes.PROJECTS, routes.ABOUT];
 
 const NavMenu = () => {
   const { activeMenuItem, setActiveMenuItem } = useMenuStore();

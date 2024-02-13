@@ -1,0 +1,547 @@
+{
+  "results": [
+    {
+      "uid": "sass",
+      "data": {
+        "name": "SASS",
+        "years": 10,
+        "category": "language",
+        "logo": {
+          "url": "/images/sass-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "css",
+      "data": {
+        "name": "CSS",
+        "years": 20,
+        "category": "language",
+        "logo": {
+          "url": "/images/css-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "html",
+      "data": {
+        "name": "HTML",
+        "years": 20,
+        "category": "language",
+        "logo": {
+          "url": "/images/html-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "webrtc",
+      "data": {
+        "name": "WebRTC",
+        "years": 5,
+        "category": "protocol",
+        "logo": {
+          "url": "/images/webrtc-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "sap-hybris",
+      "data": {
+        "name": "SAP Hybris",
+        "years": 5,
+        "category": "framework",
+        "logo": {
+          "url": "/images/sap-hybris-logo.png"
+        }
+      }
+    },
+    {
+      "uid": "prismic",
+      "data": {
+        "name": "Prismic",
+        "years": 5,
+        "category": "cms",
+        "logo": {
+          "url": "/images/prismic-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "jisti",
+      "data": {
+        "name": "Jisti",
+        "years": 3,
+        "category": "framework",
+        "logo": {
+          "url": "/images/jitsi-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "bloomreach-experience",
+      "data": {
+        "name": "Bloomreach Experience",
+        "years": 5,
+        "category": "cms",
+        "logo": {
+          "url": "/images/bloomreach-experience-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "shopify",
+      "data": {
+        "name": "Shopify",
+        "years": 3,
+        "category": "cms",
+        "logo": {
+          "url": "/images/shopify-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "unrealengine",
+      "data": {
+        "name": "Unreal Engine",
+        "years": 4,
+        "category": "framework",
+        "logo": {
+          "url": "/images/unreal-engine-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "java",
+
+      "data": {
+        "name": "Java",
+        "years": 5,
+        "category": "language",
+        "logo": {
+          "url": "/images/java-logo.svg",
+          "id": "ZWPR11MawoRaJV7r",
+          "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+        }
+      }
+    },
+    {
+      "uid": "laravel",
+      "data": {
+        "name": "Laravel",
+        "years": 2,
+        "category": "framework",
+        "logo": {
+          "url": "/images/laravel-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "unity",
+      "data": {
+        "name": "Unity",
+        "years": 4,
+        "category": "framework",
+        "logo": {
+          "url": "/images/unity-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "dart",
+      "data": {
+        "name": "Dart",
+        "years": 9,
+        "category": "language",
+        "logo": {
+          "url": "/images/dart-logo.png"
+        }
+      }
+    },
+    {
+      "uid": "gitlab",
+      "data": {
+        "name": "Gitlab",
+        "years": 5,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/gitlab-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "spring",
+      "data": {
+        "name": "Spring",
+        "years": 7,
+        "category": "framework",
+        "logo": {
+          "url": "/images/spring-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "vercel",
+      "data": {
+        "name": "Vercel",
+        "years": 7,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/vercel-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "aws",
+      "data": {
+        "name": "AWS",
+        "years": 7,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/aws-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "typescript",
+      "data": {
+        "name": "TypeScript",
+        "years": 6,
+        "category": "language",
+        "logo": {
+          "url": "/images/typescript-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "javascript",
+      "data": {
+        "name": "JavaScript",
+        "years": 20,
+        "category": "language",
+        "logo": {
+          "url": "/images/javascript-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "netlify",
+      "data": {
+        "name": "Netlify",
+        "years": 4,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/netlify-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "chatmosphere",
+      "data": {
+        "name": "Chatmosphere",
+        "years": 2,
+        "category": "framework",
+        "logo": {
+          "url": "/images/chatmosphere-logo.svg"
+        }
+      }
+    },
+
+    {
+      "uid": "svelte",
+      "data": {
+        "name": "Svelte",
+        "years": 3,
+        "category": "framework",
+        "logo": {
+          "url": "/images/svelte-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "wordpress",
+      "data": {
+        "name": "Wordpress",
+        "years": 15,
+        "category": "cms",
+        "logo": {
+          "url": "/images/wordpress-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "woocommerce",
+      "data": {
+        "name": "Woocommerce",
+        "years": 10,
+        "category": "cms",
+        "logo": {
+          "url": "/images/woocommerce-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "sanity",
+      "data": {
+        "name": "Sanity",
+        "years": 2,
+        "category": "cms",
+        "logo": {
+          "url": "/images/sanity-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "github",
+      "data": {
+        "name": "Github",
+        "years": 10,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/github-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "bitbucket",
+      "data": {
+        "name": "BitBucket",
+        "years": 7,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/bitbucket-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "threejs",
+      "data": {
+        "name": "ThreeJS",
+        "years": 9,
+        "category": "framework",
+        "logo": {
+          "url": "/images/threejs-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "php",
+      "data": {
+        "name": "PHP",
+        "years": 20,
+        "category": "language",
+        "logo": {
+          "url": "/images/php-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "pixijs",
+      "data": {
+        "name": "PixiJS",
+        "years": 7,
+        "category": "framework",
+        "logo": {
+          "url": "/images/pixijs-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "angular",
+      "data": {
+        "name": "Angular",
+        "years": 8,
+        "category": "framework",
+        "logo": {
+          "url": "/images/angular-logo.avif"
+        }
+      }
+    },
+    {
+      "uid": "mongodb",
+      "data": {
+        "name": "MongoDB",
+        "years": 10,
+        "category": "database",
+        "logo": {
+          "url": "/images/mongodb-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "mysql",
+      "data": {
+        "name": "MySQL",
+        "years": 10,
+        "category": "database",
+        "logo": {
+          "url": "/images/mysql-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "websocket",
+      "data": {
+        "name": "Websocket",
+        "years": 10,
+        "category": "protocol",
+        "logo": {
+          "url": "/images/websocket-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "postgresql",
+      "data": {
+        "name": "PostGreSQL",
+        "years": 10,
+        "category": "database",
+        "logo": {
+          "url": "/images/postgresql-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "graphql",
+      "data": {
+        "name": "GraphQL",
+        "years": 10,
+        "category": "language",
+        "logo": {
+          "url": "/images/graphql-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "python",
+      "data": {
+        "name": "Python",
+        "years": 10,
+        "category": "language",
+        "logo": {
+          "url": "/images/python-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "csharp",
+      "data": {
+        "name": "CSharp",
+        "years": 10,
+        "category": "language",
+        "logo": {
+          "url": "/images/csharp-logo.png"
+        }
+      }
+    },
+    {
+      "uid": "nextjs",
+      "data": {
+        "name": "NextJS",
+        "category": "framework",
+        "years": 10,
+        "logo": {
+          "url": "/images/nextjs-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "blender",
+      "data": {
+        "name": "Blender",
+        "category": "utility",
+        "years": 6,
+        "logo": {
+          "url": "/images/blender-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "figma",
+      "data": {
+        "name": "Figma",
+        "category": "utility",
+        "years": 6,
+        "logo": {
+          "url": "/images/figma-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "cinema4d",
+      "data": {
+        "name": "Cinema4D",
+        "category": "utility",
+        "years": 10,
+        "logo": {
+          "url": "/images/cinema4d-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "autocad",
+      "data": {
+        "name": "autocad",
+        "category": "utility",
+        "years": 3,
+        "logo": {
+          "url": "/images/autocad-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "flutter",
+      "data": {
+        "name": "flutter",
+        "category": "framework",
+        "years": 2,
+        "logo": {
+          "url": "/images/flutter-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "webcomponents",
+      "data": {
+        "name": "webcomponents",
+        "category": "framework",
+        "years": 5,
+        "logo": {
+          "url": "/images/webcomponents-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "nodejs",
+      "data": {
+        "name": "NodeJS",
+        "years": 9,
+        "category": "framework",
+        "logo": {
+          "url": "/images/nodejs-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "react",
+      "data": {
+        "name": "React",
+        "years": 7,
+        "category": "framework",
+        "logo": {
+          "url": "/images/react-logo.svg"
+        }
+      }
+    },
+    {
+      "uid": "docker",
+      "data": {
+        "name": "Docker",
+        "years": 9,
+        "category": "cicd",
+        "logo": {
+          "url": "/images/docker-logo.svg"
+        }
+      }
+    }
+  ]
+}

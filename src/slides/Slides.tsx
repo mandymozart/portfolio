@@ -2,13 +2,12 @@ import styled from '@emotion/styled';
 import { FC } from 'react';
 import SlideIn from './../components/Common/SlideIn/SlideIn';
 import { routes } from './../slideInRoutes';
-import AttributionsPage from './../slides/AttributionsPage';
-import ExperiencePage from './../slides/ExperiencePage';
-import ImprintPage from './../slides/ImprintPage';
-import PrivacyPolicyPage from './../slides/PrivacyPolicyPage';
-import ProjectDetailPage from './../slides/ProjectDetailPage';
-import ProjectsPage from './../slides/ProjectsPage';
-import ResumePage from './../slides/ResumePage';
+import AboutPage from './/AboutPage';
+import AttributionsPage from './AttributionsPage';
+import ImprintPage from './ImprintPage';
+import PrivacyPolicyPage from './PrivacyPolicyPage';
+import ProjectDetailPage from './ProjectDetailPage';
+import ProjectsPage from './ProjectsPage';
 
 const Container = styled.div`
   position: fixed;
@@ -28,11 +27,8 @@ const Slides: FC = () => {
       <SlideIn route={routes.PROJECTS}>
         <ProjectsPage />
       </SlideIn>
-      <SlideIn route={routes.EXPERIENCES}>
-        <ExperiencePage />
-      </SlideIn>
-      <SlideIn route={routes.RESUME}>
-        <ResumePage />
+      <SlideIn route={routes.ABOUT}>
+        <AboutPage />
       </SlideIn>
       <SlideIn route={routes.IMPRINT}>
         <ImprintPage />

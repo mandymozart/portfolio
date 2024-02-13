@@ -1,0 +1,279 @@
+{
+  "results": [
+    {
+      "uid": "foryouandyourcustomers",
+      "data": {
+        "name": "foryouandyourcustomers",
+        "employees": 200,
+        "logo": {
+          "url": "/images/fyayc-logo.avif"
+        },
+        "description": "Foryouandyourcustomers is a business consulting agency for digital change.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://foryouandyourcustomers.com/",
+          "target": "_blank"
+        },
+        "location": "Vienna, Zürich, Amsterdam, Munich, Sofia"
+      }
+    },
+    {
+      "uid": "lukas-rehm",
+      "data": {
+        "name": "Lukas Rehm",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lukasrehm.net",
+          "target": "_blank"
+        },
+        "location": "Amsterdam"
+      }
+    },
+    {
+      "uid": "roger-robinson",
+
+      "data": {
+        "name": "Roger Robinson",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": {
+          "link_type": "Web",
+          "url": "https://rogerrobinsononline.com/",
+          "target": "_blank"
+        },
+        "location": "London"
+      }
+    },
+    {
+      "uid": "rudy-guedj",
+      "data": {
+        "name": "Rudy Guedj",
+        "employees": 1,
+        "logo": null,
+        "description": "Designer & Publisher",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.buildingfictions.com",
+          "target": ""
+        },
+        "location": "Amsterdam"
+      }
+    },
+    {
+      "uid": "ben-wael",
+      "data": {
+        "name": "Ben Wael",
+        "employees": 1,
+        "logo": null,
+        "description": "Developer",
+        "link": null,
+        "location": "Vienna"
+      }
+    },
+    {
+      "uid": "daniel-domberger",
+      "data": {
+        "name": "Daniel Domberger",
+        "employees": 1,
+        "logo": null,
+        "description": "Developer",
+        "link": null,
+        "location": "Vienna"
+      }
+    },
+    {
+      "uid": "vj-fader",
+
+      "data": {
+        "name": "VJ Fader",
+        "employees": 1,
+        "logo": null,
+        "description": "Visual artist specialized in real-time graphics",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.vjfader.com",
+          "target": "_blank"
+        },
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "negativelabs",
+
+      "data": {
+        "name": "Negative Labs",
+        "employees": 2,
+        "logo": {
+          "url": "/images/negativelabs-logo.svg"
+        },
+        "description": "Negative Lab is a creative studio that designs brands, digital products and websites operated by Leo and Jörg Merz.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.negativelabs.com",
+          "target": "_blank"
+        },
+        "location": "Stuttgart, Germany"
+      }
+    },
+    {
+      "uid": "thomaskoenig",
+      "data": {
+        "name": "Thomas Koenig",
+        "employees": 1,
+        "logo": null,
+        "description": "Global Nomad Frontend Developer",
+        "link": {
+          "link_type": "Web",
+          "url": "https://thok.at/",
+          "target": "_blank"
+        },
+        "location": "Globally"
+      }
+    },
+    {
+      "uid": "manuel-buerger",
+      "data": {
+        "name": "Manuel Buerger",
+        "employees": 1,
+        "logo": null,
+        "description": "Designer & Publisher",
+        "link": {
+          "link_type": "Web",
+          "url": "https://manuelbuerger.com",
+          "target": "_blank"
+        },
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "lena-thomaka",
+      "data": {
+        "name": "Lena Thomaka",
+        "employees": 1,
+        "logo": null,
+        "description": "Design & Art Direction",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lenathomaka.com",
+          "target": ""
+        },
+        "location": "Zurich, Switzerland"
+      }
+    },
+    {
+      "uid": "julia-schabasser",
+      "data": {
+        "name": "Julia Schabasser",
+        "employees": 1,
+        "logo": null,
+        "description": "Webdesign",
+        "link": {
+          "link_type": "Web",
+          "url": "https://websiteriesen.at/",
+          "target": "_blank"
+        },
+        "location": "Vienna"
+      }
+    },
+    {
+      "uid": "christopher-sax",
+      "data": {
+        "name": "Christoper Sax",
+        "employees": 1,
+        "logo": null,
+        "description": "Webdesign",
+        "link": {
+          "link_type": "Web",
+          "url": "https://websiteriesen.at/",
+          "target": "_blank"
+        },
+        "location": "Vienna"
+      }
+    },
+    {
+      "uid": "gianluca-baccanico",
+      "data": {
+        "name": "Gianluca Baccanico",
+        "employees": 1,
+        "logo": null,
+        "description": "Philosopher, Entrepreneur",
+        "link": null,
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "janik-hotz",
+      "data": {
+        "name": "Janik Hotz",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": null,
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "ali-chibli",
+      "data": {
+        "name": "Ali Chibli",
+        "employees": 1,
+        "logo": null,
+        "description": "Marketing",
+        "link": null,
+        "location": "Berlin"
+      }
+    },
+    {
+      "uid": "jakob-hoff",
+      "data": {
+        "name": "Jakob Hoff",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": null,
+        "location": "Amsterdam, Berlin"
+      }
+    },
+    {
+      "uid": "eva-perner",
+      "data": {
+        "name": "Eva Perner",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": null,
+        "location": null
+      }
+    },
+    {
+      "uid": "franziska-seiffner",
+      "data": {
+        "name": "Franziska Seiffner",
+        "employees": 1,
+        "logo": null,
+        "description": null,
+        "link": null,
+        "location": null
+      }
+    },
+    {
+      "uid": "tatjana-sturmer",
+      "data": {
+        "name": "Tatjana Stürmer",
+        "employees": 1,
+        "logo": null,
+        "description": "Tatjana Stürmer (*1993) is an artist and (graphic) designer based in Frankfurt, DE, and Amsterdam, NL. In her work she moves between design practice and multimedia installations. They often revolve around the performativity of (visual) language and investigate how it shapes our social and political experiences. She is currently lecturer and associated researcher at the University of Arts and Design Offenbach (HfG) in the Department of Arts – Graphics  Illustration.",
+        "link": {
+          "link_type": "Web",
+          "url": "https://tatjanastuermer.de/",
+          "target": ""
+        },
+        "location": "Amsterdam, Neatherlands / Frankfurt, Germany"
+      }
+    }
+  ]
+}

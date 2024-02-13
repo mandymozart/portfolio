@@ -2,19 +2,16 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 const Container = styled.div`
-  padding: 0 var(--grid-padding);
   h3 {
-    position: relative;
-    width: var(--content-width);
-    margin: 0;
-    margin-left: var(--content-margin-left);
+    position: sticky;
+    top: 0;
     > div {
       display: flex;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 6rem;
+      font-weight: 400;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem var(--grid-padding) 1rem var(--grid-padding);
+      padding: 6rem 0 3rem 0;
     }
     span {
       font-size: 1rem;

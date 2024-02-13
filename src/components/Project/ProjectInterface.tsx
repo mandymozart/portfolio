@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
 import { PrismicRichText } from '@prismicio/react';
 import { useLocation } from 'react-router-dom';
-import { projects } from '../../data/index.json';
+import docs from '../../data/index.js';
 import { ProjectDocument } from '../../data/types';
 import PrimaryButton from '../Common/FormElements/PrimaryButton';
 import SecondaryButton from '../Common/FormElements/SecondaryButton';
 import PartnerItem from '../Common/Partners/PartnerItem';
 import SkillItemAsync from '../Common/Skills/SkillItemAsync';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
+import { BASE_PATH } from './../../../config';
 import MethodItem from './MethodItem';
 
 import { Accordion } from '../Common/Accordion/Accordion';
@@ -55,6 +56,10 @@ const Container = styled.div`
           font-size: 3rem;
           line-height: 4rem;
         }
+        img {
+          padding: 16rem 0 16rem 0;
+          max-width: 100%;
+        }
       }
       .details {
         .accordion {
@@ -64,8 +69,8 @@ const Container = styled.div`
           .partners-list {
             align-items: center;
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
             @media (max-width: 850px) {
               grid-template-columns: repeat(3, 1fr);
             }
@@ -95,11 +100,17 @@ const Container = styled.div`
     left: 4rem;
     z-index: 10000;
   }
+  .navigation {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const MetaContainer = styled.div`
   padding: 2rem 0;
   font-size: 2rem;
+  gap: 4rem;
   ul {
     padding: 0;
     margin: 0;
@@ -108,15 +119,35 @@ const MetaContainer = styled.div`
 
 const getDetails = (project: any) => {
   let details = [];
-  if (project.skills.length > 0) {
+  if (project.roles?.length > 0) {
     details.push({
-      key: 'tech-stack',
-      title: 'Tech Stack',
+      key: 'roles',
+      title: 'Roles',
       content: (
         <MetaContainer>
-          <div className='tech-stack-list'>
-            {project.skills.map((node, index) => (
-              <SkillItemAsync
+          <ul>
+            {project?.roles?.map((node, index) => {
+              return (
+                <RoleItem
+                  key={index}
+                  uid={node}
+                />
+              );
+            })}
+          </ul>
+        </MetaContainer>
+      ),
+    });
+  }
+  if (project.partners?.length > 0) {
+    details.push({
+      key: 'partners',
+      title: 'Partners',
+      content: (
+        <MetaContainer>
+          <div className='partners-list'>
+            {project?.partners?.map((node, index) => (
+              <PartnerItem
                 key={index}
                 link={node}
               />
@@ -125,45 +156,26 @@ const getDetails = (project: any) => {
         </MetaContainer>
       ),
     });
-    if (project.partners.length > 0) {
-      details.push({
-        key: 'partners',
-        title: 'Partners',
-        content: (
-          <MetaContainer>
-            <div className='partners-list'>
-              {project?.partners?.map((node, index) => (
-                <PartnerItem
-                  key={index}
-                  link={node}
-                />
-              ))}
-            </div>
-          </MetaContainer>
-        ),
-      });
-    }
-    if (project.roles.length > 0) {
-      details.push({
-        key: 'roles',
-        title: 'Roles',
-        content: (
-          <MetaContainer>
-            <ul>
-              {project?.roles?.map((node, index) => {
-                return (
-                  <RoleItem
-                    key={index}
-                    link={node}
-                  />
-                );
-              })}
-            </ul>
-          </MetaContainer>
-        ),
-      });
-    }
-    if (project.methods.length > 0) {
+  }
+
+  if (project.skills.length > 0) {
+    details.push({
+      key: 'tech-stack',
+      title: 'Tech Stack',
+      content: (
+        <MetaContainer>
+          <div className='tech-stack-list'>
+            {project.skills?.map((node, index) => (
+              <SkillItemAsync
+                key={index}
+                uid={node}
+              />
+            ))}
+          </div>
+        </MetaContainer>
+      ),
+    });
+    if (project.methods?.length > 0) {
       details.push({
         key: 'methods',
         title: 'Methods',
@@ -174,7 +186,7 @@ const getDetails = (project: any) => {
                 return (
                   <MethodItem
                     key={index}
-                    link={node}
+                    uid={node}
                   />
                 );
               })}
@@ -190,7 +202,7 @@ const getDetails = (project: any) => {
 export const ProjectInterface = () => {
   let location = useLocation();
 
-  const data = projects.find(
+  const data = docs.projects.find(
     (project) => project.uid === location.pathname.replace('/', ''),
   ) as ProjectDocument;
 
@@ -217,6 +229,18 @@ export const ProjectInterface = () => {
         <div className='meta'>
           <div className='description'>
             <PrismicRichText field={project?.description} />
+            {project.images[0].desktop && (
+              <img
+                className='screenshot hidden--mobile'
+                src={BASE_PATH + project.images[0].desktop.url}
+              />
+            )}
+            {project.images[0].mobile && (
+              <img
+                className='screenshot hidden--desktop hidden--tablet'
+                src={BASE_PATH + project.images[0].mobile.url}
+              />
+            )}
           </div>
           <div className='details'>
             {getDetails(project).length > 0 && (
@@ -250,6 +274,18 @@ export const ProjectInterface = () => {
           {/* <VideoReaction videoid={data?.video_id.toString()} /> */}
         </div>
       )}
+      <div className='navigation'>
+        <PrimaryButton onClick={() => goToWebsite(project?.link.url)}>
+          Return To Projects
+        </PrimaryButton>
+        {project?.link?.url && (
+          <div className='link-item'>
+            <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>
+              Visit Project
+            </SecondaryButton>
+          </div>
+        )}
+      </div>
     </Container>
   );
 };

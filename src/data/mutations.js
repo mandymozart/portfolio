@@ -23,7 +23,7 @@ function removeProperties(obj) {
   return obj;
 }
 
-function extractImageUrls(data) {
+export function extractImageUrls(data) {
   for (let key in data) {
     if (typeof data[key] === 'object' && data[key] !== null) {
       urls = urls.concat(extractImageUrls(data[key]));
@@ -35,13 +35,14 @@ function extractImageUrls(data) {
       urls.push(data[key]);
     }
   }
+  return urls;
 }
 
-function extractImageUrls2(data) {
+export function extractImageUrls2(data) {
   let urls = [];
   for (let key in data) {
     if (typeof data[key] === 'object' && data[key] !== null) {
-      urls = urls.concat(extractImageUrls(data[key]));
+      urls = urls.concat(extractImageUrls2(data[key]));
     } else if (
       key === 'url' &&
       typeof data[key] === 'string' &&

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import ClientList from '../Common/Partners/ClientList.jsx';
 import ContactSection from '../Sections/ContactSection';
 import FeatureProjectCollisionsSection from '../Sections/FeatureProjectCollisionsSection';
 import FeatureProjectDogHeartCitySection from '../Sections/FeatureProjectDogHeartCitySection';
@@ -34,6 +35,7 @@ export const Interface = () => {
       <IntroSection />
       <HeroSection />
       <ProcessSection />
+      <ClientList />
       <SubSection title={'Selected Projects'}></SubSection>
       <FeatureProjectResRadio2Section />
       <FeatureProjectLiahSection />

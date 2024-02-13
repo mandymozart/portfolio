@@ -18,12 +18,10 @@ export enum SlideInRouteName {
   HOME = 'home',
   PRIVACY = 'privacy',
   IMPRINT = 'imprint',
-  RESUME = 'resume',
-  SERVICES = 'services',
   PROCESS = 'process',
   PROJECTS = 'projects',
   ATTRIBUTIONS = 'attributions',
-  EXPERIENCES = 'experiences',
+  ABOUT = 'about',
   PROJECT = 'project',
 }
 
@@ -59,8 +57,6 @@ export const routes: SlideInRoutesMap = {
       note: 'B#2',
       duration: 0.3,
     },
-    backgroundColor: '',
-    color: '',
   },
   IMPRINT: {
     key: SlideInRouteName.IMPRINT,
@@ -90,18 +86,11 @@ export const routes: SlideInRoutesMap = {
     tone: { note: 'F4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,
   },
-  EXPERIENCES: {
-    key: SlideInRouteName.EXPERIENCES,
+  ABOUT: {
+    key: SlideInRouteName.ABOUT,
     label: 'About',
     type: SlideInRouteType.STATIC,
     tone: { note: 'G#4', duration: 0.05 },
-    variant: SlideInRouteVariant.DEFAULT,
-  },
-  RESUME: {
-    key: SlideInRouteName.RESUME,
-    label: 'Resume',
-    type: SlideInRouteType.STATIC,
-    tone: { note: 'B4', duration: 0.05 },
     variant: SlideInRouteVariant.DEFAULT,
   },
   PROJECT: {

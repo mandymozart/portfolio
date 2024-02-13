@@ -1,17 +1,18 @@
 import styled from '@emotion/styled';
-import { PrismicImage } from '@prismicio/react';
-
+import { BASE_PATH } from '../../../config';
 const Container = styled.div`
   /* Add your styles here */
   section {
     margin: 0 var(--content-margin-left);
     max-width: var(--content-width);
     position: relative;
+    text-align: center;
     min-height: 100vh;
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: fill;
+      border-radius: 2rem;
     }
   }
 `;
@@ -22,24 +23,18 @@ const ScreenshotsSection = ({ screenshots }) => {
     <Container>
       {screenshots &&
         screenshots.length > 0 &&
-        screenshots.map((item, index) => (
+        screenshots.slice(1).map((item, index) => (
           <section key={index}>
             {item.desktop && (
-              <PrismicImage
+              <img
                 className='screenshot hidden--mobile'
-                field={item.desktop}
+                src={BASE_PATH + item.desktop.url}
               />
             )}
             {item.mobile && (
-              <PrismicImage
+              <img
                 className='screenshot hidden--desktop hidden--tablet'
-                field={item.mobile}
-              />
-            )}
-            {item.image && (
-              <PrismicImage
-                className='screenshot'
-                field={item.image}
+                src={BASE_PATH + item.mobile.url}
               />
             )}
           </section>

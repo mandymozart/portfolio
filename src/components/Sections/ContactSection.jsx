@@ -3,7 +3,7 @@ import Footer from './../../components/Footer/Footer';
 
 const Container = styled.div`
   height: 100vh;
-  background: var(--primary);
+  background: var(--mauvelous);
   color: var(--background);
   border-radius: 4rem 4rem 0 0;
   .body {

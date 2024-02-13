@@ -36,8 +36,8 @@ const Container = styled.div`
     /* transform: translateY(0); */
   }
   &.isFooter {
-    background-color: var(--primary);
-    color: var(--background);
+    background-color: var(--tidal);
+    color: var(--primary);
     /* background: #0f0c29; /* fallback for old browsers */
     /* background: -webkit-linear-gradient(
       to right,
@@ -53,11 +53,7 @@ const Container = styled.div`
     );  */
 
     .shadow-overlay--bottom {
-      background: linear-gradient(
-        to top,
-        rgb(30, 30, 30) 50%,
-        rgba(30, 30, 30, 0)
-      );
+      background: linear-gradient(to top, #f3ffaf 50%, rgba(30, 30, 30, 0));
     }
   }
   .shadow-overlay {
@@ -179,17 +175,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
         })}
         ref={scope}
         {...props}>
-        <div className='inner scrollable scrollable-hint'>
-          {/* <div className='arrow'>➡️</div>
-          <div className='list'>
-            <div className='listitem'>{'item 1'}</div>
-            <div className='listitem'>{'item 2'}</div>
-            <div className='listitem'>{'item 3'}</div>
-            <div className='listitem'>{'item 4'}</div>
-          </div> */}
-          {children}
-        </div>
-        {/* <div className='shadow-overlay shadow-overlay--top'></div> */}
+        <div className='inner scrollable scrollable-hint'>{children}</div>
         <div className='shadow-overlay shadow-overlay--bottom'></div>
       </Container>
     </motion.div>

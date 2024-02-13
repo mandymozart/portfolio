@@ -1,36 +1,18 @@
 import styled from '@emotion/styled';
 import Marquee from 'react-fast-marquee';
-import { clients } from './../../../data/index.json';
+import docs from './../../../data/index.js';
 import ClientItem from './ClientItem';
 
 const Container = styled.div`
-  .list {
-    position: relative;
-    margin-left: var(--content-margin-left);
-    /* width: var(--content-width); */
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    @media (max-width: 1350px) {
-      grid-template-columns: repeat(8, 1fr);
-    }
-
-    @media (max-width: 850px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    button {
-      position: absolute;
-      right: 0;
-    }
-  }
+  height: 100vh;
 `;
 
 const ClientList = () => {
-  if (!clients) return <></>;
+  if (!docs.clients) return <></>;
   return (
     <Container>
       <Marquee speed={100}>
-        {clients.slice(0, 5).map((node, index) => (
+        {docs.clients.slice(0, 8).map((node, index) => (
           <ClientItem
             key={index}
             client={node.data}
@@ -38,7 +20,7 @@ const ClientList = () => {
         ))}
       </Marquee>
       <Marquee speed={80}>
-        {clients.slice(6, 16).map((node, index) => (
+        {docs.clients.slice(9, 16).map((node, index) => (
           <ClientItem
             key={index}
             client={node.data}

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { collaborators } from '../../../data/index.json';
+import docs from '../../../data/index.js';
 import { isNotEmptyLinkField } from '../../../typeguards';
 
 const Container = styled.div`
@@ -7,11 +7,12 @@ const Container = styled.div`
   flex-direction: column;
   img {
     margin-bottom: 1rem;
+    max-width: 100%;
   }
 `;
 
 const CollaboratorItem = ({ uid }) => {
-  const collaborator = collaborators.find(
+  const collaborator = docs.collaborators.find(
     (collaborator) => collaborator.uid === uid,
   )?.data;
   console.log(collaborator);

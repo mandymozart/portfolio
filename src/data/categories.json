@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "uid": "framework",
+      "singular": "Framework",
+      "plural": "Frameworks"
+    },
+    {
+      "uid": "cicd",
+      "singular": "CI/CD",
+      "plural": "CI/CD"
+    },
+    {
+      "uid": "protocol",
+      "singular": "Protocol",
+      "plural": "Protocol"
+    },
+    {
+      "uid": "cms",
+      "singular": "CMS",
+      "plural": "CMS"
+    },
+    {
+      "uid": "database",
+      "singular": "Database",
+      "plural": "Databases"
+    },
+    {
+      "uid": "utility",
+      "singular": "Utility",
+      "plural": "Utilities"
+    },
+    {
+      "uid": "language",
+      "singular": "Language",
+      "plural": "Languages"
+    }
+  ]
+}

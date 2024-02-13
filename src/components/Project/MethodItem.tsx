@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { methods } from '../../data/index.json';
-import { CustomTypeLink, MethodDocument } from '../../data/types';
+import docs from '../../data/index.js';
+import { MethodDocument } from '../../data/types';
 
 const Container = styled.li`
   padding: 0;
@@ -9,15 +9,15 @@ const Container = styled.li`
 `;
 
 interface Props extends React.ComponentPropsWithoutRef<'li'> {
-  link: CustomTypeLink;
+  uid: string;
 }
 
-const MethodItem = ({ link }: Props) => {
-  const doc = methods.find(
-    (method) => method.uid === link.uid,
+const MethodItem = ({ uid }: Props) => {
+  const doc = docs.methods.find(
+    (method) => method.uid === uid,
   ) as MethodDocument;
   if (!doc) {
-    console.warn(`Method ${link.uid} not found`);
+    console.warn(`Method ${uid} not found`, docs.methods);
     return <></>;
   }
   const data = doc.data;

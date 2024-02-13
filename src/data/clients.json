@@ -1,0 +1,229 @@
+{
+  "results": [
+    {
+      "uid": "resradio",
+      "data": {
+        "logo": {
+          "url": "/images/resradio-logo.svg"
+        },
+        "name": "RES Radio",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.res.radio",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "roche",
+      "data": {
+        "logo": {
+          "url": "/images/roche-logo.svg"
+        },
+        "name": "Roche",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.roche.ch/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "viennacontemporary",
+      "data": {
+        "logo": {
+          "url": "/images/viennacontemporary-logo.avif"
+        },
+        "name": "viennacontemporary",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.viennacontemporary.at/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "svs-recrods",
+      "data": {
+        "logo": {
+          "url": "/images/svs-records-logo.svg"
+        },
+        "name": "SVS Recrods",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.svs-records.com",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "jahtari",
+      "data": {
+        "logo": {
+          "url": "/images/jahtari-logo.svg"
+        },
+        "name": "Jahtari Records",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.jahtari.com",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "jan-van-eyck-academy",
+      "data": {
+        "logo": {
+          "url": "/images/jve-logo.svg"
+        },
+        "name": "Jan Van Eyck Academy",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.janvaneyck.nl/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "swma",
+      "data": {
+        "logo": {
+          "url": "/images/swma-logo.svg"
+        },
+        "name": "SWMA",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.swma.design/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "cirque-du-soleil",
+      "data": {
+        "logo": {
+          "url": "/images/cirque-du-soleil-logo.svg"
+        },
+        "name": "Cirque du Soleil",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.cirquedusoleil.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "pommery",
+      "data": {
+        "logo": {
+          "url": "/images/pommery-logo.svg"
+        },
+        "name": "Champagne Pommery",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.champagnepommery.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "volvo",
+      "data": {
+        "logo": {
+          "url": "/images/volvo-logo.svg"
+        },
+        "name": "Volvo",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.volvo.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "liah",
+      "data": {
+        "logo": {
+          "url": "/images/liah-logo.svg"
+        },
+        "name": "LiAH",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.liah.design/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "tama",
+      "data": {
+        "logo": {
+          "url": "/images/tama-logo.svg"
+        },
+        "name": "TAMA Automobiles",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.tama.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "ubs",
+
+      "data": {
+        "logo": {
+          "url": "/images/ubs-logo.svg"
+        },
+        "name": "UBS",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.ubs.ch/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "baselworld",
+      "data": {
+        "logo": {
+          "url": "/images/baselworld-logo.svg"
+        },
+        "name": "Baselworld",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.baselworld.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "lingoda",
+      "data": {
+        "logo": {
+          "url": "/images/lingoda-logo.avif"
+        },
+        "name": "Lingoda",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lingoda.com/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "rwa",
+      "data": {
+        "logo": {
+          "url": "/images/rwa-logo.svg"
+        },
+        "name": "RWA",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.rwa.at/",
+          "target": "_blank"
+        }
+      }
+    }
+  ]
+}

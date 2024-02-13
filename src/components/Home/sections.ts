@@ -39,6 +39,11 @@ export const sections: Section[] = [
     pages: 1,
   },
   {
+    key: 'clients',
+    type: SectionType.DEFAULT,
+    pages: 1,
+  },
+  {
     key: 'selected-projects',
     type: SectionType.DEFAULT,
     pages: 1,

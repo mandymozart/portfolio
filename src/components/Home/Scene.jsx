@@ -23,6 +23,8 @@ import { Slide } from '../Models/Slide';
 import { TrashBag } from '../Models/TrashBag';
 import useMenuStore from './../../stores/MenuStore';
 
+export const GROUND = 1.15;
+
 export const Scene = () => {
   const { colors, setColors, setScrollYProgress } = useMenuStore();
 
@@ -58,7 +60,7 @@ export const Scene = () => {
   const onPlaneClicked = (e) => {
     // console.log(e);
     // emitMove({
-    //   path: [[e.point?.x, 1.15, e.point?.z]],
+    //   path: [[e.point?.x, GROUND, e.point?.z]],
     //   action: AvatarActions.SWIM,
     // });
   };
@@ -105,7 +107,7 @@ export const Scene = () => {
         {/* <MovingSpot theatreKey='MovingSpot' /> */}
         <FireFlies />
         <mesh
-          position={[0, 1.15, 0]}
+          position={[0, GROUND, 0]}
           rotation-x={-Math.PI / 2}
           receiveShadow
           onDoubleClick={onPlaneClicked}
@@ -134,22 +136,22 @@ export const Scene = () => {
         <MovingClouds />
         <Island position={[0, 0, 0]} />
         <TrashBag
-          position={[5, 1.15, 14]}
-          scale={0.3}
+          position={[5, GROUND, 14]}
+          scale={0.1}
         />
         <TrashBag
-          position={[5, 1.15, 13]}
-          scale={0.3}
+          position={[5, GROUND, 13]}
+          scale={0.1}
           rotation={[0, 0.5, 0]}
         />
         <TrashBag
-          position={[6, 1.15, 12]}
-          scale={0.3}
+          position={[6, GROUND, 12]}
+          scale={0.1}
           rotation={[0, 1, 0]}
         />
         <TrashBag
-          position={[5, 1.15, 14]}
-          scale={0.3}
+          position={[7, GROUND, 14]}
+          scale={0.1}
         />
         <e.fog
           attach='fog'

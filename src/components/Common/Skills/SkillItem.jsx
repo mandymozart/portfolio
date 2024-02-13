@@ -3,7 +3,6 @@ import clsx from 'clsx';
 
 const Container = styled.div`
   display: flex;
-  padding: 0 var(--grid-padding);
   flex-direction: column;
   &.textOnly {
     display: inline;

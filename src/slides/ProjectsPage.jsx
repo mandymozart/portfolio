@@ -1,6 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
-import ProjectList from '../components/Project/ProjectList';
+import ProjectThumbnailList from '../components/Project/ProjectThumbnailList';
 
 const Container = styled.div`
   /* Add your styles here */
@@ -10,7 +10,7 @@ const Container = styled.div`
 function ProjectsPage() {
   return (
     <Container>
-      <ProjectList />
+      <ProjectThumbnailList />
     </Container>
   );
 }

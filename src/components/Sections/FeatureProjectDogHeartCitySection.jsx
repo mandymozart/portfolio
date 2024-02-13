@@ -92,7 +92,7 @@ const FeatureProjectDogHeartCitySection = ({ children, ...props }) => {
     <Container {...props}>
       <img
         className='backdrop'
-        src='/images/feature-dogheartcity-background.jpg'
+        src='/images/feature-dogheartcity-background.avif'
         alt='Video Placeholder'
       />
       <div className='overlay'>

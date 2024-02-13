@@ -42,8 +42,9 @@ const processes = [
     title: 'Proof the concept',
     content: (
       <ProcessContainer>
-        I will always research and built a rapid prototype to proof your idea is
-        possible. Some ideas are just a few years too ahead of their time.
+        I will always research and built a <b>rapid prototype</b> first to proof
+        your idea's feasebility. Just to make sure your ideas are not to ahead
+        of their time.
       </ProcessContainer>
     ),
   },
@@ -52,8 +53,8 @@ const processes = [
     title: 'Trust the team',
     content: (
       <ProcessContainer>
-        My job is to spot the talent needed to build diverse perspectives and
-        facilitate smart decision making.
+        My job is to spot the <b>talent</b> required to build{' '}
+        <i>diverse perspectives</i> and facilitate <i>smart decision</i> making.
       </ProcessContainer>
     ),
   },
@@ -63,7 +64,7 @@ const processes = [
     content: (
       <ProcessContainer>
         Business logic and frameworks are dictating designers today. Together we
-        are moulding UX like clay in an iterative process.
+        are <b>moulding UX like clay</b> through an <i>iterative process.</i>
       </ProcessContainer>
     ),
   },
@@ -72,9 +73,9 @@ const processes = [
     title: 'Optimize workflows',
     content: (
       <ProcessContainer>
-        Continuous integration, design tools and utilities will not only
-        optimize your supply chain but save you time to fully focus on your
-        enterprise!
+        Continuous integration, design tools and utilities will not only{' '}
+        <b>optimize your supply chain</b> but save you time to fully focus on
+        your enterprise!
       </ProcessContainer>
     ),
   },
@@ -83,8 +84,8 @@ const processes = [
     title: 'Tell a beautiful story',
     content: (
       <ProcessContainer>
-        I built vibes and narratives. My craft is to write poetry guiding users
-        through your world.
+        I built <i>vibes</i> and <i>narratives</i>. My craft is to write poetry
+        guiding users through your world.
       </ProcessContainer>
     ),
   },

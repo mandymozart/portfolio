@@ -1,6 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
-import { projects } from './../../data/index.json';
+import docs from './../../data/index.js';
 import ProjectItem from './ProjectItem';
 
 const Container = styled.div`
@@ -15,12 +15,13 @@ const ProjectList = () => {
   const handleMouseOver = (uid) => {
     // console.log(uid);
   };
-  if (!projects) return <>...</>;
+  console.log(docs);
+  if (!docs.projects) return <>...</>;
 
   return (
     <Container>
       <div className='list'>
-        {projects.map((project, index) => (
+        {docs.projects.map((project, index) => (
           <ProjectItem
             onMouseOver={() => handleMouseOver(project.uid)}
             onFocus={() => handleMouseOver(project.uid)}

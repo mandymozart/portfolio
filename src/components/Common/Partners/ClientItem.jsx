@@ -5,10 +5,14 @@ import { isNotEmptyLinkField } from '../../../typeguards';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 var(--grid-padding);
+  padding: 4rem 4rem;
   img {
     margin-bottom: 1rem;
-    width: 20vw;
+    width: 10vw;
+    transition: transform 0.3s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

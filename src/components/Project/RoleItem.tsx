@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { roles } from '../../data/index.json';
-import { CustomTypeLink, RoleDocument } from '../../data/types';
+import docs from '../../data/index.js';
+import { RoleDocument } from '../../data/types';
 
 const Container = styled.li`
   padding: 0;
@@ -8,13 +8,13 @@ const Container = styled.li`
 `;
 
 interface Props extends React.ComponentPropsWithoutRef<'li'> {
-  link: CustomTypeLink;
+  uid: string;
 }
 
-const RoleItem = ({ link }: Props) => {
-  const doc = roles.find((role) => role.uid === link.uid) as RoleDocument;
+const RoleItem = ({ uid }: Props) => {
+  const doc = docs.roles.find((role) => role.uid === uid) as RoleDocument;
   if (!doc) {
-    console.warn(`Role ${link.uid} not found`);
+    console.warn(`Role ${uid} not found`);
     return <></>;
   }
   const data = doc.data;

@@ -86,7 +86,6 @@ export interface Image {
 export interface ResponsiveImage {
   desktop: Record<string, unknown>;
   mobile: Record<string, unknown>;
-  image: Image;
 }
 
 export interface RichTextBlock {

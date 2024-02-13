@@ -1,0 +1,226 @@
+{
+  "results": [
+    {
+      "uid": "self-employed",
+      "data": {
+        "company": "Self-Employed",
+        "name": null,
+        "type": "Founder",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "I do contract work as a creative, digital consultant, producer and developer. I implemented agile workflows and design thinking in interdisciplinary teams and help shape early ideas for many years. \n\nMy role is usually the one that you are currently missing.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "I do contract work as a creative, digital consultant, producer and developer.",
+        "logo": {},
+        "contract": "Freelance",
+        "location": "Global",
+        "startdate": "2014-02-01",
+        "enddate": "2023-12-31",
+        "projects": [
+          "edmt",
+          "muriquee",
+          "liah",
+          "dogheartcity",
+          "naivesandvisionaries",
+          "collisions-munich",
+          "collisions-canfranc"
+        ]
+      }
+    },
+    {
+      "uid": "foryouandyourcustomers",
+      "data": {
+        "company": "foryouandyourcustomers Vienna GmbH",
+        "name": "UI/UX architect",
+        "type": "senior frontend developer",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Tilman worked as a frontend developer and UI/UX architect and consultant for major Austrian and international clients. They developed state of the art interfaces for internal operations optimising workflows and accessibility across millions of products, supply chains. As a UI/UX consultant they helped find surprisingly easy solutions across departments and applications developing design systems, frameworks and architectures.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Frontend developer",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "API design. Developing prototypes, design systems and integrations of third party applications.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "UI/UX architect",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "guide and direct tech stack, setup CI/CD, data modelling, quality control, guidance and on-boarding across large scale legacy projects as well as rebuilds and micro services.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Consultant",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "help clients find smart and easy solutions to their complex problems. estimate large scale project budgets and apply STIs for performance and measurement",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "text": "Requirements engineering",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "breaking down milestones and defining atomar tasks in an agile team to accelerate  integration of business logic and assure product quality and team health.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          { "type": "paragraph", "text": "", "spans": [], "direction": "ltr" }
+        ],
+        "shortdescription": "Tilman worked as a frontend developer and UI/UX architect and consultant for major Austrian and international clients.",
+        "logo": {
+          "url": "/images/fyayc-logo.avif"
+        },
+        "contract": "FullTime",
+        "location": "Vienna",
+        "startdate": "2017-03-01",
+        "enddate": "2023-03-01",
+        "projects": ["rwa-emails", "rwa-shop", "lagerhaus"]
+      }
+    },
+    {
+      "uid": "viennastruggle",
+      "data": {
+        "company": "Vienna Struggle - Association for Hybrid Endevours in Art",
+        "name": null,
+        "type": "Board member",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "We founded Vienna Struggle to support hybrid creative work and explore new ways of collaboration in the arts, music and virtual production. We apply design thinking, collectivism and mutual respect to elevate one another and overcome the struggle of creative production together.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "We founded Vienna Struggle to support hybrid creative work and explore new ways of collaboration in the arts, music and virtual production.",
+        "logo": {
+          "url": "/images/viennastruggle_logo.svg"
+        },
+        "contract": "Co-Founder",
+        "location": "Vienna",
+        "startdate": "2021-08-01",
+        "enddate": "2023-01-01",
+        "projects": [
+          "resradio-1",
+          "dynamic-projection",
+          "fourth-garden",
+          "dynamic-projection"
+        ]
+      }
+    },
+    {
+      "uid": "streaming-and-media-production-company",
+      "data": {
+        "company": "Vienna Struggle Media GmbH",
+        "name": null,
+        "type": "CTO",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Streaming and media production company.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "Set up due to the high demand for streaming during covid we set up this media production company with core members of the Vienna Struggle Association.",
+        "logo": {
+          "url": "/images/viennastruggle_logo.svg"
+        },
+        "contract": "Co-Founder",
+        "location": "Vienna",
+        "startdate": "2019-05-01",
+        "enddate": "2021-03-01",
+        "projects": ["business-riot-conference"]
+      }
+    },
+    {
+      "uid": "messerli",
+      "data": {
+        "company": "Messerli",
+        "name": "Contractor",
+        "type": "Project Manager",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Working with architects, designers and engineers I help craft visualisations and interactive concepts for a leading Swiss trade show design agency. My work included render farm optimisation, creative direction and project management.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "Visualisations, construction planing and design of trade show stands.",
+        "logo": {
+          "url": "/images/messerli-logo.svg"
+        },
+        "contract": "Freelance",
+        "location": "Zurich",
+        "startdate": "2013-03-01",
+        "enddate": "2014-01-01",
+        "projects": ["baselworld", "ubs", "volvo"]
+      }
+    },
+    {
+      "uid": "wearepictures",
+
+      "data": {
+        "company": "WEAREPICTURES uG",
+        "name": "CTO",
+        "type": "Co-Founder",
+        "description": [],
+        "shortdescription": "Digital design studio for trade show and interaction design",
+        "logo": {
+          "url": "/images/wearepictures-logo.svg"
+        },
+        "contract": "Co-Founder",
+        "location": "Berlin",
+        "startdate": "2013-03-01",
+        "enddate": "2017-02-01",
+        "projects": ["muriquee", "naivesandvisionaries"]
+      }
+    },
+    {
+      "uid": "lingoda",
+      "data": {
+        "company": "Lingoda GmbH",
+        "name": null,
+        "type": "web developer",
+        "description": [],
+        "shortdescription": "Developing interactive language learning class rooms and learning materials.",
+        "logo": {
+          "url": "/images/lingoda-logo.avif"
+        },
+        "contract": "FullTime",
+        "location": "Berlin",
+        "startdate": "2012-12-01",
+        "enddate": "2013-06-01",
+        "projects": []
+      }
+    }
+  ]
+}

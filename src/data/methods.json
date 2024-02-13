@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "uid": "agile-scrum",
+      "url": null,
+      "type": "method",
+      "tags": ["Method"],
+      "first_publication_date": "2023-12-04T13:51:39+0000",
+      "last_publication_date": "2023-12-05T10:49:35+0000",
+      "slugs": [],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": { "name": "Agile/Scrum", "years": 7, "logo": {} }
+    },
+    {
+      "uid": "extreme-go-horse",
+      "url": null,
+      "type": "method",
+      "href": "https://gist.github.com/banaslee/4147370",
+      "tags": ["Method"],
+      "first_publication_date": "2023-12-04T13:51:39+0000",
+      "last_publication_date": "2023-12-05T10:49:35+0000",
+      "slugs": [],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": { "name": "XGo Horse", "years": 5, "logo": {} }
+    },
+    {
+      "uid": "agile",
+      "url": null,
+      "type": "method",
+      "tags": [],
+      "first_publication_date": "2023-12-16T18:20:29+0000",
+      "last_publication_date": "2023-12-16T18:20:29+0000",
+      "slugs": [],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": { "name": "Agile" }
+    },
+    {
+      "uid": "design-thinking",
+      "url": null,
+      "type": "method",
+      "tags": [],
+      "first_publication_date": "2023-12-16T18:21:11+0000",
+      "last_publication_date": "2023-12-16T18:21:11+0000",
+      "slugs": [],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": { "name": "Design Thinking" }
+    },
+    {
+      "uid": "ux-design",
+      "url": null,
+      "type": "method",
+      "tags": [],
+      "first_publication_date": "2023-12-16T18:21:11+0000",
+      "last_publication_date": "2023-12-16T18:21:11+0000",
+      "slugs": [],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": { "name": "UX Design" }
+    }
+  ],
+  "version": "679c7f6",
+  "license": "All Rights Reserved"
+}

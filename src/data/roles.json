@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "uid": "engineer",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Engineer" }
+    },
+    {
+      "uid": "designer",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Designer" }
+    },
+    {
+      "uid": "sound-designer",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Sound Designer" }
+    },
+    {
+      "uid": "software-architect",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Software Architect" }
+    },
+    {
+      "uid": "product-owner",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Product Owner" }
+    },
+    {
+      "uid": "product-owner",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Product Owner" }
+    },
+    {
+      "uid": "requirements-engineering",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Requirements Engineering" }
+    },
+    {
+      "uid": "scrum-master",
+      "url": null,
+      "type": "role",
+      "data": { "name": "Scrum Master" }
+    },
+    {
+      "uid": "project-management",
+      "url": null,
+      "type": "role",
+      "first_publication_date": "2023-12-04T13:51:02+0000",
+      "last_publication_date": "2023-12-05T10:49:49+0000",
+      "data": { "name": "Project Management" }
+    }
+  ]
+}
