@@ -75,12 +75,7 @@ export interface ImageDimensions {
 }
 
 export interface Image {
-  dimensions: ImageDimensions;
-  alt: string | null;
-  copyright: string | null;
   url: string;
-  id: string;
-  edit: ImageEdit;
 }
 
 export interface ResponsiveImage {
