@@ -198,6 +198,20 @@
       }
     },
     {
+      "uid": "rrriot",
+      "data": {
+        "logo": {
+          "url": "/images/rrriot-logo.svg"
+        },
+        "name": "RRRiot",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.riotfestival.at/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
       "uid": "lingoda",
       "data": {
         "logo": {

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { clients } from '../../../data/index.json';
+import docs from '../../../data/index';
 import { isNotEmptyLinkField } from '../../../typeguards';
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const ClientItemAsync = ({ uid }) => {
-  const client = clients.find((client) => client.uid === uid)?.data;
+  const client = docs.clients.find((client) => client.uid === uid)?.data;
   console.log(client);
   if (!client) return <>Not found</>;
   return (

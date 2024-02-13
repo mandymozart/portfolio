@@ -23,6 +23,7 @@ const Container = styled.div`
   position: relative;
   border-radius: 4rem;
   transition: all 0.2s ease-in;
+  /* mix-blend-mode: darken; */
   img {
     width: 100%;
   }

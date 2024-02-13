@@ -24,7 +24,8 @@ const Container = styled.button`
     padding: 0 2rem;
     border-radius: 2rem;
     border: 1px solid var(--primary);
-    background: transparent;
+    background: rgba(255, 255, 255, 0.0001);
+    backdrop-filter: blur(10px);
     height: 4rem;
     transition: all 0.2s ease-in;
   }

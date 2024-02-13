@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import ExperienceList from '../components/Common/Experience/ExperienceList';
 import PrimaryButtonLink from '../components/Common/FormElements/PrimaryButtonLink';
+import SecondaryButtonLink from '../components/Common/FormElements/SecondaryButtonLink';
 import ListHeader from '../components/Common/ListHeader/ListHeader';
 import SkillsList from '../components/Common/Skills/SkillsList';
 
@@ -39,7 +40,7 @@ const Container = styled.div`
         .meta {
           margin-top: 2rem;
           margin-bottom: 3rem;
-          padding: 1rem;
+          padding: 0rem;
         }
         button {
         }
@@ -98,11 +99,7 @@ function AboutPage() {
               />
             </div>
             <div className='meta'>
-              <p>
-                Born in 1984 in Zwickau, Germany
-                <br />
-                Currently living and working in Vienna, Austria
-              </p>
+              <p>Living in Vienna, Austria</p>
               <p>
                 also known as:
                 <br />
@@ -114,10 +111,14 @@ function AboutPage() {
               </p>
             </div>
 
-            <PrimaryButtonLink
+            <SecondaryButtonLink
               href='/docs/tilman-porschuetz-resume.pdf'
               download>
-              Download PDF
+              Download Résumé
+            </SecondaryButtonLink>
+            <br />
+            <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>
+              Contact me
             </PrimaryButtonLink>
           </div>
         </div>

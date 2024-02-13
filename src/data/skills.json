@@ -162,7 +162,7 @@
       "data": {
         "name": "Gitlab",
         "years": 5,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/gitlab-logo.svg"
         }
@@ -184,7 +184,7 @@
       "data": {
         "name": "Vercel",
         "years": 7,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/vercel-logo.svg"
         }
@@ -195,7 +195,7 @@
       "data": {
         "name": "AWS",
         "years": 7,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/aws-logo.svg"
         }
@@ -228,7 +228,7 @@
       "data": {
         "name": "Netlify",
         "years": 4,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/netlify-logo.svg"
         }
@@ -295,7 +295,7 @@
       "data": {
         "name": "Github",
         "years": 10,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/github-logo.svg"
         }
@@ -306,7 +306,7 @@
       "data": {
         "name": "BitBucket",
         "years": 7,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/bitbucket-logo.svg"
         }
@@ -537,7 +537,7 @@
       "data": {
         "name": "Docker",
         "years": 9,
-        "category": "cicd",
+        "category": "infrastructure",
         "logo": {
           "url": "/images/docker-logo.svg"
         }

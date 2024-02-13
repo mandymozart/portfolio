@@ -1,95 +1,6 @@
 {
   "results": [
     {
-      "uid": "collisions-munich",
-      "url": null,
-      "type": "project",
-      "first_publication_date": "2023-11-16T14:53:39+0000",
-      "last_publication_date": "2023-12-21T14:08:12+0000",
-      "data": {
-        "name": "Collisions Munich",
-        "description": [
-          {
-            "type": "paragraph",
-            "text": "Animated avant-garde festival website about arts & dark matter research in Munich (Germany) and Canfranc (Spain).\n\nWe build a figma playground for the experimental graphics to fuse seemlessly with the simplistic structure and animated particles effects in THREE.js",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ],
-        "industry": "Culture",
-        "type": "WebApp",
-        "link": {
-          "link_type": "Web",
-          "url": "https://www.collisions.cc",
-          "target": ""
-        },
-        "fromDate": "2022-06-01",
-        "toDate": "2022-06-30",
-        "video_id": "project-collisions-munich",
-        "transcript": [],
-        "images": [
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e5a531ac2845a2539e8_screely-1700147295980.avif"
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e29531ac2845a2539e7_screely-1700147312326.avif"
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e1d531ac2845a2539e5_screely-1700147381301.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e14531ac2845a2539e3_screely-1700147408584.avif"
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e21531ac2845a2539e6_screely-1700147367091.avif"
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563ec3531ac2845a2539e9_screely-1700150970769.avif"
-            }
-          },
-          {
-            "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65563e1b531ac2845a2539e4_screely-1700147395294.avif"
-            }
-          }
-        ],
-        "skills": ["react", "pixijs", "typescript", "sass"],
-        "partners": [
-          { "type": "collaborator", "uid": "tatjana-sturmer" },
-          { "type": "collaborator", "uid": "lena-thomaka" },
-          { "type": "client", "uid": "svs-recrods" }
-        ],
-        "methods": [],
-        "roles": ["project-management", "engineer"]
-      }
-    },
-    {
       "uid": "resradio-2",
       "url": null,
       "type": "project",
@@ -185,6 +96,95 @@
           "project-management",
           "designer"
         ]
+      }
+    },
+    {
+      "uid": "collisions-munich",
+      "url": null,
+      "type": "project",
+      "first_publication_date": "2023-11-16T14:53:39+0000",
+      "last_publication_date": "2023-12-21T14:08:12+0000",
+      "data": {
+        "name": "Collisions Munich",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Animated avant-garde festival website about arts & dark matter research in Munich (Germany) and Canfranc (Spain).\n\nWe build a figma playground for the experimental graphics to fuse seemlessly with the simplistic structure and animated particles effects in THREE.js",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "industry": "Culture",
+        "type": "WebApp",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.collisions.cc",
+          "target": ""
+        },
+        "fromDate": "2022-06-01",
+        "toDate": "2022-06-30",
+        "video_id": "project-collisions-munich",
+        "transcript": [],
+        "images": [
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e5a531ac2845a2539e8_screely-1700147295980.avif"
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e29531ac2845a2539e7_screely-1700147312326.avif"
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e1d531ac2845a2539e5_screely-1700147381301.avif",
+              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e14531ac2845a2539e3_screely-1700147408584.avif"
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e21531ac2845a2539e6_screely-1700147367091.avif"
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563ec3531ac2845a2539e9_screely-1700150970769.avif"
+            }
+          },
+          {
+            "desktop": {
+              "dimensions": { "width": 4640, "height": 2365 },
+              "alt": null,
+              "url": "/images/65563e1b531ac2845a2539e4_screely-1700147395294.avif"
+            }
+          }
+        ],
+        "skills": ["react", "pixijs", "typescript", "sass"],
+        "partners": [
+          { "type": "collaborator", "uid": "tatjana-sturmer" },
+          { "type": "collaborator", "uid": "lena-thomaka" },
+          { "type": "client", "uid": "svs-recrods" }
+        ],
+        "methods": [],
+        "roles": ["project-management", "engineer"]
       }
     },
     {
@@ -402,7 +402,7 @@
       "first_publication_date": "2023-11-16T16:01:57+0000",
       "last_publication_date": "2023-12-04T17:33:09+0000",
       "data": {
-        "name": "Fourth Garden - Jan Van Eyck Academy",
+        "name": "Fourth Garden - JVE",
         "description": [
           {
             "type": "paragraph",
@@ -647,7 +647,7 @@
       "first_publication_date": "2023-11-16T16:17:03+0000",
       "last_publication_date": "2023-12-03T02:08:30+0000",
       "data": {
-        "name": "RWA Email Templates",
+        "name": "RWA Emails",
         "description": [
           {
             "type": "paragraph",
@@ -669,9 +669,7 @@
         "transcript": [],
         "images": [
           {
-            "desktop": {},
-            "mobile": {},
-            "image": {
+            "desktop": {
               "dimensions": { "width": 4640, "height": 2365 },
               "alt": null,
               "url": "/images/65564922531ac2845a253a4f_screely-1700151625697.avif",
@@ -1019,7 +1017,7 @@
         "description": [
           {
             "type": "paragraph",
-            "text": "Online platform for Austrian feminist business leader platform. I was instructed to setup up custom video chat rooms, lobby and apply their corporate identity to everything. On this project I collaborated with American service provider daily.co.\n\nClient: \nbusiness riot GmbH, Vienna",
+            "text": "Online platform for Austrian feminist business leader platform. I was instructed to setup up custom video chat rooms, lobby and apply their corporate identity to everything. On this project I collaborated with American service provider daily.co.",
             "spans": [],
             "direction": "ltr"
           }
@@ -1053,9 +1051,9 @@
         ],
         "skills": ["webrtc", "javascript", "css"],
         "partners": [
-          { "type": "client", "uid": "rrrriot" },
+          { "type": "client", "uid": "rrriot" },
           { "type": "collaborator", "uid": "franziska-seiffner" },
-          { "type": "collaborator", "uid": "franziska-seiffner" }
+          { "type": "collaborator", "uid": "eva-perner" }
         ],
         "methods": ["agile"],
         "roles": ["engineer", "designer"]
@@ -1068,7 +1066,7 @@
       "first_publication_date": "2023-11-16T16:05:27+0000",
       "last_publication_date": "2023-11-27T21:44:29+0000",
       "data": {
-        "name": "Dynamic Projection Institute - Mirror Head",
+        "name": "Mirror Head - DPI",
         "description": [
           {
             "type": "paragraph",

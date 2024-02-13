@@ -21,31 +21,24 @@ const CategoryContainer = styled.div`
   }
 `;
 
-const getCategories = () => {
-  const cats = [];
-  docs.skills.forEach((s) => {
-    if (s.data.category === 'database') {
-      console.log('db', s.data);
-    }
-    if (cats.some((c) => c.uid === s.data.category)) {
-      cats.find((cat) => cat.uid === s.data.category).items.push(s);
-    } else {
-      cats.push({ uid: s.data.category, items: [] });
-    }
-  });
-  console.log(cats);
-  return cats;
-};
+const categoryKeys = [
+  'language',
+  'framework',
+  'cms',
+  'infrastructure',
+  'database',
+  'utility',
+  'protocol',
+];
 
-const items = getCategories().map((c) => {
-  console.log(c.uid);
+const items = categoryKeys.map((key) => {
   return {
-    key: c.uid,
-    title: docs.categories.find((cat) => cat.uid === c.uid).plural,
+    key: key,
+    title: docs.categories.find((cat) => cat.uid === key).plural,
     content: (
       <CategoryContainer>
         {docs.skills
-          .filter((s) => s.data.category === c.uid)
+          .filter((s) => s.data.category === key)
           .map((node, index) => (
             <SkillItem
               key={index}
