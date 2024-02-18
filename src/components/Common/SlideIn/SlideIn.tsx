@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import clsx from 'clsx';
 import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import useProjectsStore from '../../../stores/ProjectsStore';
 import {
   RouteChangeEvent,
   useRouteChangeListener,
@@ -116,22 +117,6 @@ export function useMenuAnimation(isActive: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    // animate('.arrow', { rotate: isActive ? 180 : 0 }, { duration: 0.2 });
-
-    // animate(
-    //   '.list',
-    //   {
-    //     clipPath: isActive
-    //       ? 'inset(0% 0% 0% 0% round 10px)'
-    //       : 'inset(10% 50% 90% 50% round 10px)',
-    //   },
-    //   {
-    //     type: 'spring',
-    //     bounce: 0,
-    //     duration: 0.5,
-    //   },
-    // );
-
     animate('.inner', isActive ? innerVariants.visible : innerVariants.hidden, {
       duration: 0.5,
       delay: isActive ? 0.5 : 0,
@@ -146,6 +131,19 @@ const SlideIn = ({ children, route, ...props }: Props) => {
   const sY = useSpring(y);
   const [isActive, setIsActive] = useState(false);
   const scope = useMenuAnimation(isActive);
+  const { projects } = useProjectsStore();
+
+  const innerRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (innerRef.current) {
+      innerRef.current.scrollTo({ top: '10rem', behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [projects, scope]);
 
   useRouteChangeListener((event: RouteChangeEvent) => {
     if (event.to.key !== route.key) {
@@ -160,6 +158,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
       ) {
         sY.set(variant.visible.y);
         setIsActive(true);
+        scrollToTop();
         return;
       }
     }
@@ -175,7 +174,11 @@ const SlideIn = ({ children, route, ...props }: Props) => {
         })}
         ref={scope}
         {...props}>
-        <div className='inner scrollable scrollable-hint'>{children}</div>
+        <div
+          className='inner scrollable scrollable-hint'
+          ref={innerRef}>
+          {children}
+        </div>
         <div className='shadow-overlay shadow-overlay--bottom'></div>
       </Container>
     </motion.div>

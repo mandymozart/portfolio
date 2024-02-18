@@ -16,8 +16,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Arts & Culture",
-        "type": "WebApp",
+        "industries": ["arts"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://www.res.radio",
@@ -27,6 +27,7 @@
         "toDate": "2023-01-06",
         "video_id": "project-resradio2",
         "transcript": [],
+        "preview": "/images/preview-resradio20.avif",
         "images": [
           {
             "desktop": {
@@ -105,7 +106,7 @@
       "first_publication_date": "2023-11-16T14:53:39+0000",
       "last_publication_date": "2023-12-21T14:08:12+0000",
       "data": {
-        "name": "Collisions Munich",
+        "name": "Collisions 2.0",
         "description": [
           {
             "type": "paragraph",
@@ -114,8 +115,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Culture",
-        "type": "WebApp",
+        "industries": ["arts"],
+        "types": ["website"],
         "link": {
           "link_type": "Web",
           "url": "https://www.collisions.cc",
@@ -125,6 +126,7 @@
         "toDate": "2022-06-30",
         "video_id": "project-collisions-munich",
         "transcript": [],
+        "preview": "/images/preview-collisions-munich.avif",
         "images": [
           {
             "desktop": {
@@ -214,8 +216,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Music",
-        "type": "App",
+        "industries": ["arts"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "http://www.edmt.tv",
@@ -233,61 +235,41 @@
         "toDate": "2016-02-08",
         "video_id": "project-edmt",
         "transcript": [],
+        "preview": "/images/preview-edmt.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 800, "height": 800 },
-              "alt": null,
-              "url": "/images/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23b8531ac2845a254ce8_EDMT-Nexus_5-mockups-combined.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 600, "height": 358 },
-              "alt": null,
-              "url": "/images/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23c1531ac2845a254cea_EDMT-Nexus_7-mockup-13.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 600, "height": 358 },
-              "alt": null,
-              "url": "/images/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23c2531ac2845a254ceb_EDMT-Nexus_7-mockup-4.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 600, "height": 358 },
-              "alt": null,
-              "url": "/images/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23c0531ac2845a254ce9_EDMT-Nexus_7-mockup-5.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 600, "height": 358 },
-              "alt": null,
-              "url": "/images/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23c3531ac2845a254cec_EDMT-Nexus_7-mockup-15.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1800, "height": 1182 },
-              "alt": null,
-              "url": "/images/655d23f6531ac2845a254ced_franzie-A1.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d23f6531ac2845a254ced_franzie-A1.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/655d2405531ac2845a254cee_still5.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/655d2405531ac2845a254cee_still5.avif"
             }
           }
         ],
@@ -308,13 +290,19 @@
         "description": [
           {
             "type": "paragraph",
-            "text": "Webshop for large cooperative Austrian DIY market. My work included frontend architecture, UX  consulting, and frontend lead.\nClient: foryouandyourcustomers GmbH",
+            "text": "Webshop for large cooperative Austrian DIY market. My work included frontend architecture, UX  consulting, and frontend lead.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "I accompanied the project for almost 5 years in which I helped develop and built custom frameworks as well implementing third party tools into the shop. The shop went through two redesign phases and is home to more than 1 million products.",
             "spans": [],
             "direction": "ltr"
           }
         ],
-        "industry": "Retail",
-        "type": "eCommerce",
+        "industries": ["agriculture"],
+        "types": ["shop"],
         "link": {
           "link_type": "Web",
           "url": "https://www.lagerhaus.at",
@@ -324,55 +312,35 @@
         "toDate": "2022-02-28",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-lagerhaus.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 4642, "height": 2366 },
-              "alt": null,
-              "url": "/images/656ba199531ac2845a25a1ad_screely-1701552403056.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba199531ac2845a25a1ad_screely-1701552403056.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656ba3af531ac2845a25a1b2_lagerhaus-0.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba3af531ac2845a25a1b2_lagerhaus-0.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 4642, "height": 2366 },
-              "alt": null,
-              "url": "/images/656ba1b5531ac2845a25a1af_screely-1701552433821.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba1b5531ac2845a25a1af_screely-1701552433821.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656ba24e531ac2845a25a1b0_lagerhaus-2.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba24e531ac2845a25a1b0_lagerhaus-2.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1352, "height": 902 },
-              "alt": null,
-              "url": "/images/656ba3c8531ac2845a25a1b3_screely-1701553017954.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba3c8531ac2845a25a1b3_screely-1701553017954.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656ba3d4531ac2845a25a1b4_lagerhaus-3.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656ba3d4531ac2845a25a1b4_lagerhaus-3.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/2b0c5198-e8e3-4a13-81a1-12ea282b7a20_Slide+16_9+-+17.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/2b0c5198-e8e3-4a13-81a1-12ea282b7a20_Slide+16_9+-+17.avif"
             }
           }
         ],
@@ -402,37 +370,52 @@
       "first_publication_date": "2023-11-16T16:01:57+0000",
       "last_publication_date": "2023-12-04T17:33:09+0000",
       "data": {
-        "name": "Fourth Garden - JVE",
+        "name": "Fourth Garden",
         "description": [
           {
             "type": "paragraph",
-            "text": "Gamified video chat rooms and virtual exhibition space for Jan Van Eyck Academy Maastricht.",
+            "text": "Gamified video chat rooms and virtual exhibition space.",
             "spans": [],
             "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In collaboration with the 2021 roaster of artists I was commisioned to develop a truely inhabitable metaverse for the anual open studios at Jan Van Eyck Academy Maastricht. In addition to a Jitsi mod built upon a mod of Chatmosphere I added scheduled guided tours and virtual exhibition spaces on the map.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In a mini game visitors were encouraged to chase after two ducks that were modelled after the real life ducks on campus, but turned into a sysiphos task on screen. They were never caught.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "image",
+            "url": "/images/fourth-garden-ducks.svg"
           }
         ],
-        "industry": "Academia",
-        "type": "MetaVerse",
+        "industries": ["network"],
+        "types": ["app"],
         "link": { "link_type": "Any" },
         "fromDate": "2021-06-06",
         "toDate": "2021-08-30",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-jve.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 3840, "height": 2160 },
-              "alt": null,
-              "url": "/images/656e02cf531ac2845a25a8cd_fourthgarden-1.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656e02cf531ac2845a25a8cd_fourthgarden-1.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656e02b8531ac2845a25a8cb_fourthgarden-mobile-1.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            },
-            "image": {}
+              "url": "/images/656e02b8531ac2845a25a8cb_fourthgarden-mobile-1.avif"
+            }
+          },
+          {
+            "desktop": {
+              "url": "/images/fourth-garden-bg.jpg"
+            }
           }
         ],
         "skills": ["jisti", "react", "netlify", "typescript"],
@@ -461,8 +444,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Design",
-        "type": "eCommerce",
+        "industries": ["design"],
+        "types": ["shop"],
         "link": {
           "link_type": "Web",
           "url": "https://www.liah.design",
@@ -472,66 +455,39 @@
         "toDate": "2020-07-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-liah.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 4896, "height": 2254 },
-              "alt": null,
-              "url": "/images/656dcf74531ac2845a25a6fe_screely-1701695317371.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656dcf74531ac2845a25a6fe_screely-1701695317371.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656dd337531ac2845a25a715_liah-mobile-1.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            },
-            "image": {}
+              "url": "/images/656dd337531ac2845a25a715_liah-mobile-1.avif"
+            }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/656dd825531ac2845a25a72c_liah-2.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656dd825531ac2845a25a72c_liah-2.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656dd87c531ac2845a25a731_liah-mobile-2.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            },
-            "image": {}
+              "url": "/images/656dd87c531ac2845a25a731_liah-mobile-2.avif"
+            }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/656dd89b531ac2845a25a733_liah-3.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656dd89b531ac2845a25a733_liah-3.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656dd89b531ac2845a25a734_liah-mobile-3.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            },
-            "image": {}
+              "url": "/images/656dd89b531ac2845a25a734_liah-mobile-3.avif"
+            }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/656dd89d531ac2845a25a736_liah-4.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656dd89d531ac2845a25a736_liah-4.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656dd89c531ac2845a25a735_liah-mobile-4.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
-            },
-            "image": {}
+              "url": "/images/656dd89c531ac2845a25a735_liah-mobile-4.avif"
+            }
           }
         ],
         "skills": ["woocommerce", "php", "wordpress", "docker"],
@@ -562,8 +518,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Retail",
-        "type": "eCommerce",
+        "industries": ["design"],
+        "types": ["shop"],
         "link": {
           "link_type": "Web",
           "url": "https://www.swma.design",
@@ -573,61 +529,38 @@
         "toDate": "2018-03-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-swma.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1568, "height": 1037 },
-              "alt": null,
-              "url": "/images/656b84d6531ac2845a25a182_screely-1701545039731.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b84d6531ac2845a25a182_screely-1701545039731.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656b8686531ac2845a25a184_liah-mobile-6.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b8686531ac2845a25a184_liah-mobile-6.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 2120, "height": 1145 },
-              "alt": null,
-              "url": "/images/656b7f34531ac2845a25a17c_screely-1701543720950.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b7f34531ac2845a25a17c_screely-1701543720950.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656b8706531ac2845a25a187_liah-mobile-1.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b8706531ac2845a25a187_liah-mobile-1.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1568, "height": 1037 },
-              "alt": null,
-              "url": "/images/656b8722531ac2845a25a188_screely-1701545072046.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b8722531ac2845a25a188_screely-1701545072046.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656b8738531ac2845a25a18a_liah-mobile-3.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b8738531ac2845a25a18a_liah-mobile-3.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1568, "height": 1037 },
-              "alt": null,
-              "url": "/images/656b874c531ac2845a25a18c_screely-1701544939929.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b874c531ac2845a25a18c_screely-1701544939929.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
-              "url": "/images/656b875b531ac2845a25a18d_liah-mobile-5.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/656b875b531ac2845a25a18d_liah-mobile-5.avif"
             }
           }
         ],
@@ -656,8 +589,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Marketing",
-        "type": "WebApp",
+        "industries": ["marketing"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://rwa-emails.netlify.app/",
@@ -667,13 +600,11 @@
         "toDate": "2021-02-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-rwa-emails.png",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 4640, "height": 2365 },
-              "alt": null,
-              "url": "/images/65564922531ac2845a253a4f_screely-1700151625697.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/65564922531ac2845a253a4f_screely-1700151625697.avif"
             }
           }
         ],
@@ -702,38 +633,23 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Culture",
-        "type": "eCommerce",
+        "industries": ["arts"],
+        "types": ["shop"],
         "link": { "link_type": "Any" },
         "fromDate": "2014-01-01",
         "toDate": "2014-04-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-naivesandvisionaries.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
-              "url": "/images/655d29be531ac2845a254d17_nv-portfolio-front.avif",
-              "edit": {
-                "x": 0,
-                "y": 0,
-                "zoom": 1,
-                "background": "transparent"
-              }
+              "url": "/images/655d29be531ac2845a254d17_nv-portfolio-front.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
-              "url": "/images/655d2960531ac2845a254d11_nv-portfolio-cart-left.avif",
-              "edit": {
-                "x": 0,
-                "y": 0,
-                "zoom": 1,
-                "background": "transparent"
-              }
+              "url": "/images/655d2960531ac2845a254d11_nv-portfolio-cart-left.avif"
             }
           }
         ],
@@ -759,53 +675,37 @@
             "direction": "ltr"
           }
         ],
-        "industry": "B2B",
-        "type": "WebApp",
+        "industries": ["agriculture"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://shop.rwa.at",
           "target": ""
         },
-        "fromDate": null,
-        "toDate": null,
+        "fromDate": "2019-03-01",
+        "toDate": "2021-03-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-rwa-shop.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/2e9819ed-e860-413d-a9c1-65b26fb6a01a_Slide+16_9+-+15.avif",
-              "edit": {
-                "x": 0,
-                "y": 0,
-                "zoom": 1,
-                "background": "transparent"
-              }
+              "url": "/images/2e9819ed-e860-413d-a9c1-65b26fb6a01a_Slide+16_9+-+15.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/a26d3fd0-5eef-4b79-9efb-cbc030fab91d_Slide+16_9+-+16.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/a26d3fd0-5eef-4b79-9efb-cbc030fab91d_Slide+16_9+-+16.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/77cc8197-cf2c-4bf9-b3fa-02a8381bda2e_Slide+16_9+-+23.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/77cc8197-cf2c-4bf9-b3fa-02a8381bda2e_Slide+16_9+-+23.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
-              "url": "/images/1ded2eb9-d5a3-4fcc-b85a-42096a96496f_Slide+16_9+-+18.avif",
-              "edit": { "x": 0, "y": 0, "zoom": 1, "background": "transparent" }
+              "url": "/images/1ded2eb9-d5a3-4fcc-b85a-42096a96496f_Slide+16_9+-+18.avif"
             }
           }
         ],
@@ -814,10 +714,11 @@
           { "type": "collaborator", "uid": "thomaskoenig" },
           { "type": "collaborator", "uid": "ben-wael" },
           { "type": "collaborator", "uid": "daniel-domberger" },
-          { "type": "client", "uid": "foryouandyourcustomers" }
+          { "type": "client", "uid": "foryouandyourcustomers" },
+          { "type": "client", "uid": "rwa" }
         ],
         "methods": ["agile-scrum"],
-        "roles": ["developer", "designer", "software-architect"]
+        "roles": ["engineer", "designer", "software-architect"]
       }
     },
     {
@@ -836,8 +737,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Entertainment",
-        "type": "Game",
+        "industries": ["arts"],
+        "types": ["game"],
         "link": {
           "link_type": "Web",
           "url": "https://dogheartcitygame.netlify.app/",
@@ -847,26 +748,20 @@
         "toDate": "2018-11-11",
         "video_id": "intro",
         "transcript": [],
+        "preview": "/images/preview-dogheart-city.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1242, "height": 758 },
-              "alt": null,
               "url": "/images/6563c9bb531ac2845a255ecf_smartmockups_lpg2elbu.avif"
             },
             "mobile": {
-              "dimensions": { "width": 1080, "height": 1920 },
-              "alt": null,
               "url": "/images/6563c9bb531ac2845a255ed0_dogheartcity-mobile-1.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1062, "height": 1066 },
-              "alt": null,
               "url": "/images/6563c9bc531ac2845a255ed1_smartmockups_lpg29g6a.avif"
-            },
-            "mobile": {}
+            }
           }
         ],
         "skills": ["pixijs", "sass"],
@@ -894,39 +789,32 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Mobility",
-        "type": "WebApp",
+        "industries": ["network"],
+        "types": ["app"],
         "link": { "link_type": "Any" },
         "fromDate": "2015-04-01",
         "toDate": "2015-06-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-muriquee.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
               "url": "/images/655d2fb3531ac2845a254d49_Screen-Shot-2015-09-09-at-09-front.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
               "url": "/images/655d2b45531ac2845a254d24_Screen-Shot-2015-09-09-at-copy-front.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
               "url": "/images/655d2f1c531ac2845a254d48_Screen-Shot-2015-09-09-at-09-left.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 2000, "height": 2000 },
-              "alt": null,
               "url": "/images/655d2fc5531ac2845a254d4c_Screen-Shot-2015-09-09-at-09-right.avif"
             }
           }
@@ -956,8 +844,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Culture",
-        "type": "Microsites",
+        "industries": ["arts"],
+        "types": ["website"],
         "link": {
           "link_type": "Web",
           "url": "https://www.shalomsalon.de/censorgermany/",
@@ -967,32 +855,25 @@
         "toDate": "2016-01-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-shalomsalon.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 4158, "height": 1862 },
-              "alt": null,
               "url": "/images/655d30aa531ac2845a254d58_screely-1700605484809.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 4156, "height": 1860 },
-              "alt": null,
               "url": "/images/655d30a8531ac2845a254d57_screely-1700605503480.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 4148, "height": 1850 },
-              "alt": null,
               "url": "/images/655d30a7531ac2845a254d56_screely-1700605522913.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1550, "height": 934 },
-              "alt": null,
               "url": "/images/655d30a5531ac2845a254d55_screely-1700605538089.avif"
             }
           }
@@ -1013,38 +894,35 @@
       "first_publication_date": "2023-11-16T16:44:21+0000",
       "last_publication_date": "2023-11-27T21:41:55+0000",
       "data": {
-        "name": "Business Riot Conference",
+        "name": "RRRiot",
         "description": [
           {
             "type": "paragraph",
-            "text": "Online platform for Austrian feminist business leader platform. I was instructed to setup up custom video chat rooms, lobby and apply their corporate identity to everything. On this project I collaborated with American service provider daily.co.",
+            "text": "Online platform for seminars and panel discussions of Austrian feminist business leader platform. I was instructed to setup up custom video chat rooms, lobby and apply their corporate identity to everything. On this project I collaborated with American service provider daily.co.",
             "spans": [],
             "direction": "ltr"
           }
         ],
-        "industry": "Lobbying",
-        "type": "WebApp",
+        "industries": ["network"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://www.riotfestival.at/",
           "target": ""
         },
-        "fromDate": null,
-        "toDate": null,
+        "fromDate": "2020-05-01",
+        "toDate": "2020-06-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-rrriot.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 6500, "height": 4500 },
-              "alt": null,
               "url": "/images/655646c1531ac2845a253a49_riot-1.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 6500, "height": 4500 },
-              "alt": null,
               "url": "/images/655646d3531ac2845a253a4b_riot-2.avif"
             }
           }
@@ -1060,23 +938,35 @@
       }
     },
     {
-      "uid": "dynamic-projection",
+      "uid": "mirror-head",
       "url": null,
       "type": "project",
       "first_publication_date": "2023-11-16T16:05:27+0000",
       "last_publication_date": "2023-11-27T21:44:29+0000",
       "data": {
-        "name": "Mirror Head - DPI",
+        "name": "Mirror Head",
         "description": [
           {
             "type": "paragraph",
-            "text": "IoT device web interface for mirror head projector.",
+            "text": "IoT device web interface for mirror head add-on combining the power of moving heads with projectors.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "A tiny vanilla javascript and html interface is hosted on the device. It enables the user to remotely load videos, control and automate the mirror head with DMX signals.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "My job was to design a UX concept and built a UI system.",
             "spans": [],
             "direction": "ltr"
           }
         ],
-        "industry": "Entertainment",
-        "type": "IoT",
+        "industries": ["arts"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://www.dynamicprojection.com/mirror-head-en/",
@@ -1086,35 +976,28 @@
         "toDate": "2021-02-01",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-mirror-head.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1440, "height": 900 },
-              "alt": null,
               "url": "/images/dynamic-projection-1.svg"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1440, "height": 900 },
-              "alt": null,
               "url": "/images/dynamic-projection-3.svg"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1440, "height": 900 },
-              "alt": null,
               "url": "/images/dynamic-projection-5.svg"
             }
           }
         ],
         "skills": ["figma", "javascript", "css"],
-        "partners": [
-          { "type": "client", "uid": "dynamic-projections-institute" }
-        ],
+        "partners": [{ "type": "client", "uid": "dpi" }],
         "methods": ["ux-design"],
-        "roles": ["engineer", "project-management", "designer"]
+        "roles": ["engineer", "designer"]
       }
     },
     {
@@ -1124,7 +1007,7 @@
       "first_publication_date": "2023-11-16T14:42:30+0000",
       "last_publication_date": "2023-11-27T21:38:19+0000",
       "data": {
-        "name": "Collisions Canfranc",
+        "name": "Collisions 1.0",
         "description": [
           {
             "type": "paragraph",
@@ -1133,8 +1016,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Culture",
-        "type": "WebApp",
+        "industries": ["arts"],
+        "types": ["website"],
         "link": {
           "link_type": "Web",
           "url": "https://www.collisions.cc",
@@ -1144,25 +1027,20 @@
         "toDate": "2021-07-30",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-collisions-canfranc.avif",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
               "url": "/images/6563d827531ac2845a255f05_Slide16_9-19.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
               "url": "/images/700977c3-e296-469c-b5f0-3300f0881567_Slide+16_9+-+21.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
               "url": "/images/f8117e35-75a8-452c-ae5a-c8d9bc65f003_Slide+16_9+-+20.avif"
             }
           }
@@ -1193,8 +1071,8 @@
             "direction": "ltr"
           }
         ],
-        "industry": "Entertainment",
-        "type": "Web Radio",
+        "industries": ["arts"],
+        "types": ["app"],
         "link": {
           "link_type": "Web",
           "url": "https://www.res.radio",
@@ -1204,18 +1082,15 @@
         "toDate": "2022-04-30",
         "video_id": null,
         "transcript": [],
+        "preview": "/images/preview-resradio1.png",
         "images": [
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
               "url": "/images/6563a840531ac2845a255e81_resradio1-image-1.avif"
             }
           },
           {
             "desktop": {
-              "dimensions": { "width": 1920, "height": 1080 },
-              "alt": null,
               "url": "/images/6563a813531ac2845a255e80_resradio1-image-2.avif"
             }
           }

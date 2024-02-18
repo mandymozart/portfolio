@@ -12,6 +12,8 @@ interface Props extends React.ComponentPropsWithoutRef<'li'> {
   uid: string;
 }
 
+import { getCharsFast } from './../Project/RoleItem.js';
+
 const MethodItem = ({ uid }: Props) => {
   const doc = docs.methods.find(
     (method) => method.uid === uid,
@@ -22,7 +24,7 @@ const MethodItem = ({ uid }: Props) => {
   }
   const data = doc.data;
   if (!data) return <></>;
-  return <Container>{data.name}</Container>;
+  return <Container>{getCharsFast(data.name)}</Container>;
 };
 
 export default MethodItem;

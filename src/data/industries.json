@@ -1,0 +1,9 @@
+{
+  "results": [
+    { "uid": "arts", "data": { "name": "Arts & Culture" } },
+    { "uid": "network", "data": { "name": "Network" } },
+    { "uid": "agriculture", "data": { "name": "Agriculture" } },
+    { "uid": "marketing", "data": { "name": "Marketing" } },
+    { "uid": "design", "data": { "name": "Design" } }
+  ]
+}

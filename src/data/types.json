@@ -1,0 +1,11 @@
+{
+  "results": [
+    { "uid": "shop", "data": { "name": "Shop" } },
+    { "uid": "game", "data": { "name": "Game" } },
+    { "uid": "experience", "data": { "name": "Experience" } },
+    { "uid": "installation", "data": { "name": "Installation" } },
+    { "uid": "app", "data": { "name": "App" } },
+    { "uid": "website", "data": { "name": "Website" } },
+    { "uid": "device", "data": { "name": "Device" } }
+  ]
+}

@@ -8,10 +8,6 @@ const Container = styled.div`
   transition: opacity 0.3s linear;
   opacity: 1;
   pointer-events: none;
-  position: fixed;
-  top: 1rem;
-  left: 2rem;
-  z-index: 100001;
   display: flex;
   align-self: center;
 
@@ -44,7 +40,7 @@ const Loader = () => {
         <circle
           cx='16'
           cy='16'
-          r='8'
+          r='13'
           pathLength='1'
           className='indicator'
           strokeDasharray={`${scrollYProgress}px 1px`}

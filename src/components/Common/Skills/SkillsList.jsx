@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+import { fastTranslateVariants } from '../../../animations/site';
 import { Accordion } from '../Accordion/Accordion.jsx';
 import docs from './../../../data/index.js';
 import SkillItem from './SkillItem';
@@ -40,10 +42,18 @@ const items = categoryKeys.map((key) => {
         {docs.skills
           .filter((s) => s.data.category === key)
           .map((node, index) => (
-            <SkillItem
+            <motion.div
               key={index}
-              skill={node.data}
-            />
+              custom={[index * 0.1, index * 0.01]}
+              variants={fastTranslateVariants}
+              initial='initial'
+              animate='enter'
+              exit='exit'>
+              <SkillItem
+                key={index}
+                skill={node.data}
+              />
+            </motion.div>
           ))}
       </CategoryContainer>
     ),

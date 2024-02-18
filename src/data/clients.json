@@ -57,6 +57,20 @@
       }
     },
     {
+      "uid": "foryouandyourcustomers",
+      "data": {
+        "logo": {
+          "url": "/images/fyayc-logo.avif"
+        },
+        "name": "foryouandyourcustomers",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.foryouandyourcustomers.com",
+          "target": "_blank"
+        }
+      }
+    },
+    {
       "uid": "jahtari",
       "data": {
         "logo": {
@@ -207,6 +221,20 @@
         "link": {
           "link_type": "Web",
           "url": "https://www.riotfestival.at/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
+      "uid": "dpi",
+      "data": {
+        "logo": {
+          "url": "/images/dpi-logo.svg"
+        },
+        "name": "Dynamic Projection Institute",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.dynamicprojection.com/",
           "target": "_blank"
         }
       }

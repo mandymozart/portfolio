@@ -1,18 +1,27 @@
 import styled from '@emotion/styled';
-import { PrismicRichText } from '@prismicio/react';
+import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import docs from '../../data/index.js';
 import { ProjectDocument } from '../../data/types';
+import useMenuStore from '../../stores/MenuStore';
+import { Accordion } from '../Common/Accordion/Accordion';
 import PrimaryButton from '../Common/FormElements/PrimaryButton';
 import SecondaryButton from '../Common/FormElements/SecondaryButton';
 import PartnerItem from '../Common/Partners/PartnerItem';
+import Richtext from '../Common/Richtext/Richtext';
 import SkillItemAsync from '../Common/Skills/SkillItemAsync';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
 import { BASE_PATH } from './../../../config';
 import MethodItem from './MethodItem';
 
-import { Accordion } from '../Common/Accordion/Accordion';
-
+import {
+  fastTranslateVariants,
+  translateVariants,
+} from '../../animations/site.js';
+import { playToneAtRoute } from '../../audio.js';
+import { emitRouteChange } from '../../events/routerEvents';
+import { routes } from '../../slideInRoutes';
+import ProjectTags from './ProjectTags';
 import RoleItem from './RoleItem';
 
 const Container = styled.div`
@@ -30,10 +39,9 @@ const Container = styled.div`
       padding: 0 var(--grid-padding);
       h2 {
         font-size: 6rem;
-        span {
-          font-size: 1rem;
-          font-weight: 400;
-        }
+      }
+      .tags button {
+        margin-left: 1rem;
       }
     }
     .meta {
@@ -147,10 +155,18 @@ const getDetails = (project: any) => {
         <MetaContainer>
           <div className='partners-list'>
             {project?.partners?.map((node, index) => (
-              <PartnerItem
+              <motion.div
                 key={index}
-                link={node}
-              />
+                custom={[index * 0.1, index * 0.01]}
+                variants={fastTranslateVariants}
+                initial='initial'
+                animate='enter'
+                exit='exit'>
+                <PartnerItem
+                  key={index}
+                  link={node}
+                />
+              </motion.div>
             ))}
           </div>
         </MetaContainer>
@@ -166,10 +182,15 @@ const getDetails = (project: any) => {
         <MetaContainer>
           <div className='tech-stack-list'>
             {project.skills?.map((node, index) => (
-              <SkillItemAsync
+              <motion.div
                 key={index}
-                uid={node}
-              />
+                custom={[index * 0.1, index * 0.01]}
+                variants={fastTranslateVariants}
+                initial='initial'
+                animate='enter'
+                exit='exit'>
+                <SkillItemAsync uid={node} />
+              </motion.div>
             ))}
           </div>
         </MetaContainer>
@@ -199,8 +220,27 @@ const getDetails = (project: any) => {
   return details;
 };
 
+export const getChars = (word) => {
+  let chars = [];
+  word.split('').forEach((char, i) => {
+    chars.push(
+      <motion.span
+        custom={[i * 0.02, (word.length - i) * 0.01]}
+        variants={translateVariants}
+        initial='initial'
+        animate='enter'
+        exit='exit'
+        key={char + i}>
+        {char}
+      </motion.span>,
+    );
+  });
+  return chars;
+};
+
 export const ProjectInterface = () => {
   let location = useLocation();
+  const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
 
   const data = docs.projects.find(
     (project) => project.uid === location.pathname.replace('/', ''),
@@ -213,22 +253,35 @@ export const ProjectInterface = () => {
     alert('Playing reaction');
   };
 
+  const back = () => () => {
+    playToneAtRoute(routes.PROJECTS.key);
+    setActiveMenuItem(routes.PROJECTS);
+    emitRouteChange({ to: routes.PROJECTS });
+  };
+
   const goToWebsite = (url: string) => {
     window.open(url, '_blank').focus();
   };
-
+  console.log(project);
   return (
     <Container>
       <section className='page page-hero'>
         <header>
-          <h2>{project?.name}</h2>
-          <div>
-            {project?.industry}/{project?.type}
+          <h2>{getChars(project?.name)}</h2>
+          <div className='tags'>
+            <ProjectTags
+              tags={project.industries}
+              category={'industries'}
+            />
+            <ProjectTags
+              tags={project.types}
+              category={'types'}
+            />
           </div>
         </header>
         <div className='meta'>
           <div className='description'>
-            <PrismicRichText field={project?.description} />
+            <Richtext richtext={project?.description} />
             {project.images[0].desktop && (
               <img
                 className='screenshot hidden--mobile'
@@ -275,9 +328,7 @@ export const ProjectInterface = () => {
         </div>
       )}
       <div className='navigation'>
-        <PrimaryButton onClick={() => goToWebsite(project?.link.url)}>
-          Return To Projects
-        </PrimaryButton>
+        <PrimaryButton onClick={back()}>Return To Projects</PrimaryButton>
         {project?.link?.url && (
           <div className='link-item'>
             <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>

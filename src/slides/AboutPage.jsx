@@ -4,23 +4,39 @@ import PrimaryButtonLink from '../components/Common/FormElements/PrimaryButtonLi
 import SecondaryButtonLink from '../components/Common/FormElements/SecondaryButtonLink';
 import ListHeader from '../components/Common/ListHeader/ListHeader';
 import SkillsList from '../components/Common/Skills/SkillsList';
+import {
+  BREAKPOINT_L,
+  BREAKPOINT_MD,
+  BREAKPOINT_SM,
+  BREAKPOINT_XS,
+} from './../../config';
 
 const Container = styled.div`
   width: var(--content-width);
   margin: 0 auto;
+  @media (max-width: ${BREAKPOINT_L}) {
+    width: auto;
+  }
+  @media (max-width: ${BREAKPOINT_MD}) {
+  }
+  @media (max-width: ${BREAKPOINT_SM}) {
+  }
+  @media (max-width: ${BREAKPOINT_XS}) {
+  }
   h2 {
     padding: 8rem var(--grid-padding) 16rem var(--grid-padding);
     font-size: 8rem;
+    color: var(--perfume);
+    @media (max-width: ${BREAKPOINT_SM}) {
+      font-size: 4rem;
+      padding: 2rem var(--grid-padding) 2rem var(--grid-padding);
+    }
   }
   .body {
     display: grid;
     grid-template-columns: 1fr 1fr 4fr;
-    @media (max-width: 1350px) {
-      grid-template-columns: 2fr 2fr;
-    }
-
-    @media (max-width: 850px) {
-      grid-template-columns: 1fr;
+    @media (max-width: ${BREAKPOINT_SM}) {
+      display: block;
     }
     .left {
       padding: 0 var(--grid-padding);
@@ -83,9 +99,6 @@ const Container = styled.div`
 `;
 
 function AboutPage() {
-  const download = () => {
-    alert('PDF missing');
-  };
   return (
     <Container>
       <h2>Résumé</h2>
@@ -130,8 +143,8 @@ function AboutPage() {
                 I am a versatile frontend developer and visual communicator with
                 more than 15+ years experience in the field of visualization,
                 interaction design, user interfaces, and immersive experiences.
-                Tilman has worked as a consultant, developer, digital designer,
-                and artist.
+                I worked as a consultant, developer, digital designer, and
+                artist.
               </p>
               <p>
                 My focus lies in bridging human needs and digital realities
@@ -142,10 +155,11 @@ function AboutPage() {
                 startups, and corporations.
               </p>
               <p>
-                By attending conferences and through my independent research
-                practise as an artist, musician, and enthusiast media scientist.
-                This universal approach allows me to maintain a nuanced
-                perspective on a market and world in constant flux.
+                By regularily attending conferences and through my independent
+                research practise as an artist, musician, and enthusiast media
+                scientist I challange my perspectives constn. This universal
+                approach allows me to maintain a nuanced perspective on a market
+                and world in constant flux.
               </p>
             </div>
           </section>

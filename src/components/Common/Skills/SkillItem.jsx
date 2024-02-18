@@ -8,8 +8,10 @@ const Container = styled.div`
     display: inline;
   }
   img {
-    margin-bottom: 1rem;
     max-width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
 `;
 

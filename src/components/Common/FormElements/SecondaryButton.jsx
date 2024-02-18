@@ -14,7 +14,7 @@ const Container = styled.button`
   cursor: pointer;
   align-items: center;
   transition: all 0.1s ease-in;
-  span {
+  span.inner {
     margin-left: 0;
     padding: 0.5rem 2rem;
     width: 100%;
@@ -28,6 +28,10 @@ const Container = styled.button`
     backdrop-filter: blur(10px);
     height: 4rem;
     transition: all 0.2s ease-in;
+    span {
+      font-size: 1.5em;
+      padding-left: 1rem;
+    }
   }
   &.active,
   &:hover {
@@ -40,7 +44,7 @@ const Container = styled.button`
 const SecondaryButton = ({ children, ...props }) => {
   return (
     <Container {...props}>
-      <span>{children}</span>
+      <span className='inner'>{children}</span>
     </Container>
   );
 };

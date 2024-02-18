@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { staggerVariants } from '../../../animations/site';
+import { staggerVariants, translateVariants } from '../../../animations/site';
 
 const Container = styled.div`
   :root {
@@ -35,6 +35,24 @@ const Container = styled.div`
 //     contentNode: React.ReactNode;
 // }
 
+export const getChars = (word) => {
+  let chars = [];
+  word.split('').forEach((char, i) => {
+    chars.push(
+      <motion.span
+        custom={[i * 0.02, (word.length - i) * 0.01]}
+        variants={translateVariants}
+        initial='initial'
+        animate='enter'
+        exit='exit'
+        key={char + i}>
+        {char}
+      </motion.span>,
+    );
+  });
+  return chars;
+};
+
 const AccordionItem = ({ item, expanded, setExpanded }) => {
   const isOpen = item.key === expanded;
   return (
@@ -43,7 +61,7 @@ const AccordionItem = ({ item, expanded, setExpanded }) => {
         initial={false}
         // animate={{ backgroundColor: isOpen ? '#FF0088' : '#0055FF' }}
         onClick={() => setExpanded(isOpen ? false : item.key)}>
-        <div>{item.title}</div>
+        <div>{getChars(item.title)}</div>
         <div>
           <motion.svg
             width='32'

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import Magnetic from '../../../animations/Magnetic';
 import { isNotEmptyLinkField } from '../../../typeguards';
 
 const Container = styled.div`
@@ -24,10 +25,12 @@ const ClientItem = ({ client }) => {
         href={isNotEmptyLinkField(client.link) ? client.link.url : '#'}
         target='_blank'>
         {client.logo.url ? (
-          <img
-            src={client.logo.url}
-            alt={client.logo.alt}
-          />
+          <Magnetic>
+            <img
+              src={client.logo.url}
+              alt={client.logo.alt}
+            />
+          </Magnetic>
         ) : (
           <>{client.name}</>
         )}

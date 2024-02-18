@@ -38,8 +38,6 @@ export interface SlideInRoute {
   type: SlideInRouteType;
   variant?: SlideInRouteVariant;
   tone: SynthTone;
-  backgroundColor?: string;
-  color?: string;
   path?: string; // this is used to relink to the next page router if required
   params?: SlideInRouteParams;
   requiredParams?: string[];

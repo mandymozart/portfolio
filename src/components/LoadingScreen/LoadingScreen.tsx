@@ -3,8 +3,11 @@ import { useProgress } from '@react-three/drei';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
+import Magnetic from '../../animations/Magnetic';
 import { initAudio } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
+import { getChars } from '../Project/ProjectInterface';
+import { getCharsFast } from '../Project/RoleItem';
 
 const Container = styled.div`
   position: fixed;
@@ -117,13 +120,15 @@ const LoadingScreen = ({ onLoaderFinished }: Props) => {
     <Container className={clsx({ hidden: hidden, loaded: loaded === total })}>
       <div className={'loading-screen__container'}>
         {loaded === total ? (
-          <button
-            className='ready'
-            onClick={enter}>
-            Enter
-          </button>
+          <Magnetic>
+            <button
+              className='ready'
+              onClick={enter}>
+              {getChars('Enter')}
+            </button>
+          </Magnetic>
         ) : (
-          <>{item}</>
+          <>{getCharsFast(item)}</>
         )}
         <div className='numerical'>{parseInt(progress.toString())}%</div>
         <LoadingBar

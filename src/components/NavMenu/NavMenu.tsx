@@ -2,6 +2,12 @@
 import styled from '@emotion/styled';
 import useMenuStore from '../../stores/MenuStore';
 import Loader from '../Common/Loader/Loader';
+import {
+  BREAKPOINT_L,
+  BREAKPOINT_MD,
+  BREAKPOINT_SM,
+  BREAKPOINT_XS,
+} from './../../../config';
 import { emitRouteChange } from './../../events/routerEvents';
 
 import { playToneAtRoute } from '../../audio';
@@ -23,10 +29,17 @@ const Container = styled.div`
     &:hover {
       cursor: pointer;
     }
-    @media (max-width: 1350px) {
+    @media (max-width: ${BREAKPOINT_L}) {
+      width: auto;
     }
-    @media (max-width: 850px) {
-      grid-template-columns: 1fr 1fr;
+    @media (max-width: ${BREAKPOINT_MD}) {
+    }
+    @media (max-width: ${BREAKPOINT_SM}) {
+    }
+    @media (max-width: ${BREAKPOINT_XS}) {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 var(--grid-padding);
+      gap: var(--grid-padding);
     }
   }
 
@@ -37,41 +50,69 @@ const Container = styled.div`
     font-family: var(--font);
     background: none;
     border: 0;
+    margin: 0 var(--grid-padding);
+    @media (max-width: ${BREAKPOINT_XS}) {
+      margin: 0;
+    }
+    padding: 0;
     color: inherit;
     display: flex;
     cursor: pointer;
     align-items: center;
     transition: all 0.2s ease-in;
+    position: relative;
     span {
       margin-left: 0;
       padding: 0.5rem 2rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0 2rem;
+      padding: 0 var(--grid-padding);
       border-radius: 2rem;
       background: rgba(255, 255, 255, 0.0001);
       backdrop-filter: blur(10px);
       height: 2rem;
+      transition: all 0.2s ease-in-out;
     }
-    &--home {
-      padding: 0 2rem;
+    &.item--projects {
+      &.active,
+      &:hover {
+        span {
+          background: var(--aero-blue);
+          color: var(--primary);
+        }
+      }
+    }
+    &.item--about {
+      &.active,
+      &:hover {
+        span {
+          background: var(--perfume);
+          color: var(--primary);
+        }
+      }
+    }
+    &.item--home {
+      /* padding: 0 2rem; */
       span {
         display: block;
-        width: 2rem;
         height: 2rem;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
+        padding: 0 var(--grid-padding);
         border-radius: 2rem;
+        margin-right: 1rem;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          margin: 0;
+        }
         background: rgba(255, 255, 255, 0.0001);
         backdrop-filter: blur(10px);
       }
       &.active span,
       &:hover span {
         background: var(--primary);
-
+        color: var(--background);
         letter-spacing: normal;
       }
     }
@@ -82,6 +123,12 @@ const Container = styled.div`
       span {
         background: rgba(255, 255, 255, 0.11);
         backdrop-filter: blur(10px);
+      }
+      &.active span {
+        padding-right: 8rem;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          padding-right: var(--grid-padding);
+        }
       }
       /* letter-spacing: 0.2rem; */
     }
@@ -111,6 +158,7 @@ const NavMenu = () => {
           className={`item item--home ${
             activeMenuItem.key === routes.HOME.key ? 'active' : ''
           }`}>
+          <span>Home</span>
           <Loader />
         </button>
 
@@ -118,10 +166,10 @@ const NavMenu = () => {
           <button
             onClick={() => navigateTo(route)}
             key={route.key}
-            className={`item ${
+            className={`item item--${route.key} ${
               activeMenuItem.key === route.key ? 'active' : ''
             }`}>
-            <span>{route.label}</span>
+            <span> {route.label}</span>
           </button>
         ))}
       </nav>

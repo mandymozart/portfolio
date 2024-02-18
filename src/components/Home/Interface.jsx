@@ -19,7 +19,7 @@ import { getSectionPageCount } from './sections.ts';
 
 const Container = styled.section`
   width: 100vw;
-  height: calc(${getSectionPageCount()} * 100vh);
+  height: calc(${getSectionPageCount()} * 100dvh);
 `;
 
 export const Interface = () => {

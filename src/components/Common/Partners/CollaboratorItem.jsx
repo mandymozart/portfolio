@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import docs from '../../../data/index.js';
 import { isNotEmptyLinkField } from '../../../typeguards';
+import { getCharsFast } from '../../Project/RoleItem';
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,6 @@ const CollaboratorItem = ({ uid }) => {
   const collaborator = docs.collaborators.find(
     (collaborator) => collaborator.uid === uid,
   )?.data;
-  console.log(collaborator);
   if (!collaborator) return <>Not found</>;
   return (
     <Container>
@@ -30,7 +30,7 @@ const CollaboratorItem = ({ uid }) => {
             alt={collaborator.logo.alt}
           />
         ) : (
-          collaborator.name
+          getCharsFast(collaborator.name)
         )}
       </a>
     </Container>

@@ -120,18 +120,19 @@ export interface ClientData {
 export interface ProjectData {
   name: string;
   description: Array<RichTextBlock>;
-  industry: string;
-  type: string;
+  industries: Array<string>;
+  types: Array<string>;
   link: WebLink | null;
+  preview: string;
   fromDate: string;
   toDate: string;
   video_id: string | null;
   transcript: Array<TranscriptCue>;
   images: Array<ResponsiveImage>;
-  skills: Array<CustomTypeLink>;
+  skills: Array<string>;
   partners: Array<CustomTypeLink>;
-  methods: Array<CustomTypeLink>;
-  roles: Array<CustomTypeLink>;
+  methods: Array<string>;
+  roles: Array<string>;
 }
 
 interface CustomDocument {

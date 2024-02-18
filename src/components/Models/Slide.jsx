@@ -20,7 +20,7 @@ export function Slide(props) {
   return (
     <group
       {...props}
-      position={[0, 0, 0]}
+      position={[40, 0, 40]}
       scale={[0.5, 0.5, 0.5]}
       theatreKey='Slide'
       dispose={null}>

@@ -13,7 +13,6 @@ const Container = styled.div`
 
 const ClientItemAsync = ({ uid }) => {
   const client = docs.clients.find((client) => client.uid === uid)?.data;
-  console.log(client);
   if (!client) return <>Not found</>;
   return (
     <Container>

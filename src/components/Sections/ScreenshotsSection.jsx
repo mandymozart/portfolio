@@ -2,12 +2,14 @@ import styled from '@emotion/styled';
 import { BASE_PATH } from '../../../config';
 const Container = styled.div`
   /* Add your styles here */
+  position: relative;
   section {
     margin: 0 var(--content-margin-left);
     max-width: var(--content-width);
-    position: relative;
     text-align: center;
     min-height: 100vh;
+    position: sticky;
+    top: 0;
     img {
       max-width: 100%;
       max-height: 100%;

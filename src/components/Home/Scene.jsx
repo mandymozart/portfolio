@@ -6,11 +6,12 @@ import {
   useCurrentSheet,
 } from '@theatre/r3f';
 
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
 import { val } from '@theatre/core';
 import { useControls } from 'leva';
 import { useRef, useState } from 'react';
+import * as THREE from 'three';
 import { Vector3 } from 'three';
 import { Avatar } from '../Avatar';
 import { FireFlies } from '../Models/Home/FireFlies';
@@ -96,6 +97,7 @@ export const Scene = () => {
           position={[20, 25.35, 18]}
           lookAt={cameraTargetRef}
         />
+        {/* <CameraRig ref={focusTargetVisualizerRef} /> */}
         <e.mesh
           theatreKey='Camera Target'
           visible='editor'
@@ -182,4 +184,15 @@ export const Scene = () => {
       </KeyboardControls>
     </>
   );
+};
+
+const CameraRig = () => {
+  const { camera, mouse } = useThree();
+  const vec = new THREE.Vector3();
+  return useFrame(() => {
+    camera.position.lerp(
+      vec.set(mouse.x * 2, mouse.y * 1, camera.position.z),
+      0.5,
+    );
+  });
 };
