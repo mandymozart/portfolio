@@ -8,7 +8,6 @@ import {
 
 import { useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
-import { val } from '@theatre/core';
 import { useControls } from 'leva';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
@@ -67,8 +66,8 @@ export const Scene = () => {
   };
 
   useFrame(() => {
-    const sequenceLength = val(sheet.sequence.pointer.length);
-    sheet.sequence.position = scroll.offset * sequenceLength;
+    // const sequenceLength = val(sheet.sequence.pointer.length);
+    // sheet.sequence.position = scroll.offset * sequenceLength;
     setScrollYProgress(scroll.offset);
   });
 
