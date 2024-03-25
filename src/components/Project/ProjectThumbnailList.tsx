@@ -14,6 +14,7 @@ import {
   BREAKPOINT_MD,
   BREAKPOINT_SM,
   BREAKPOINT_XS,
+  BREAKPOINT_XXS,
 } from './../../../config';
 import ProjectListFilters from './ProjectListFilters.js';
 import ProjectThumbnailItem from './ProjectThumbnailItem';
@@ -34,6 +35,8 @@ const Container = styled.div`
   @media (max-width: ${BREAKPOINT_SM}) {
   }
   @media (max-width: ${BREAKPOINT_XS}) {
+  }
+  @media (max-width: ${BREAKPOINT_XXS}) {
   }
 
   .controls {

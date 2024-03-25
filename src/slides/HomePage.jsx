@@ -44,8 +44,8 @@ function HomePage({ ready }) {
           </Suspense>
         </ScrollControls>
         {/* <Stats /> */}
-        <Leva hidden />
       </Canvas>
+      <Leva hidden />
     </>
   );
 }

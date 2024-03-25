@@ -245,7 +245,17 @@
         }
       }
     },
-
+    {
+      "uid": "django",
+      "data": {
+        "name": "Django",
+        "years": 2,
+        "category": "framework",
+        "logo": {
+          "url": "/images/django-logo.svg"
+        }
+      }
+    },
     {
       "uid": "svelte",
       "data": {

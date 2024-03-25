@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 import styled from '@emotion/styled';
 import clsx from 'clsx';
+import { AvatarEvents, emitMove } from '../../events/avatarEvents';
 import PlayButton from '../Common/FormElements/PlayButton';
+import SecondaryButton from '../Common/FormElements/SecondaryButton';
 import { IntroVideo } from '../Videos/IntroVideo';
 
 const Container = styled.section`
@@ -76,6 +78,9 @@ const HeroSection = ({ ...props }) => {
           onClick={togglePlay}>
           {playing ? 'Pause' : 'Play Intro'}
         </PlayButton>
+        <SecondaryButton onClick={emitMove(AvatarEvents.MOVE)}>
+          Move
+        </SecondaryButton>
       </div>
     </Container>
   );

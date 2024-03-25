@@ -13,15 +13,12 @@ import { useControls } from 'leva';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 import { Vector3 } from 'three';
-import { Avatar } from '../Avatar';
 import { FireFlies } from '../Models/Home/FireFlies';
-import { Island } from '../Models/Home/Island';
 import { MountainAndRiver } from '../Models/Home/MountainAndRiver';
 import { MovingClouds } from '../Models/Home/MovingClouds';
 import { PointLight } from '../Models/Lights/PointLight';
 import { RadioTower } from '../Models/RadioTower';
 import { Slide } from '../Models/Slide';
-import { TrashBag } from '../Models/TrashBag';
 import useMenuStore from './../../stores/MenuStore';
 
 export const GROUND = 1.15;
@@ -69,6 +66,7 @@ export const Scene = () => {
   useFrame(() => {
     const sequenceLength = val(sheet.sequence.pointer.length);
     sheet.sequence.position = scroll.offset * sequenceLength;
+    // GOTO WAY POINT
     setScrollYProgress(scroll.offset);
   });
 
@@ -134,27 +132,7 @@ export const Scene = () => {
         <MountainAndRiver />
         <RadioTower />
         <Slide />
-        <Avatar />
-        <MovingClouds />
-        <Island position={[0, 0, 0]} />
-        <TrashBag
-          position={[5, GROUND, 14]}
-          scale={0.1}
-        />
-        <TrashBag
-          position={[5, GROUND, 13]}
-          scale={0.1}
-          rotation={[0, 0.5, 0]}
-        />
-        <TrashBag
-          position={[6, GROUND, 12]}
-          scale={0.1}
-          rotation={[0, 1, 0]}
-        />
-        <TrashBag
-          position={[7, GROUND, 14]}
-          scale={0.1}
-        />
+        <MovingClouds />/
         <e.fog
           attach='fog'
           ref={fogRef}

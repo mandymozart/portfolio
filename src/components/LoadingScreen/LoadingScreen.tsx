@@ -9,6 +9,30 @@ import useMenuStore from '../../stores/MenuStore';
 import { getChars } from '../Project/ProjectInterface';
 import { getCharsFast } from '../Project/RoleItem';
 
+function getLastSegment(uri) {
+  // Split the URI by '/'
+  var segments = uri.split('/');
+
+  // Return the last element of the array
+  return segments[segments.length - 1];
+}
+
+function getFileType(filename) {
+  // Split the filename by '.' to get the file extension
+  var parts = filename.split('.');
+  var extension = parts[parts.length - 1].toLowerCase(); // Convert to lowercase for case-insensitivity
+
+  // Check the file extension and return the corresponding string
+  if (extension === 'fbx') {
+    return 'Animation';
+  } else if (extension === 'glb' || extension === 'gltf') {
+    return 'Model';
+  } else {
+    // If the extension doesn't match any of the specified ones, return null or handle it as needed
+    return null;
+  }
+}
+
 const Container = styled.div`
   position: fixed;
   top: 0;
@@ -128,7 +152,10 @@ const LoadingScreen = ({ onLoaderFinished }: Props) => {
             </button>
           </Magnetic>
         ) : (
-          <>{getCharsFast(item)}</>
+          <>
+            Loading {getFileType(getLastSegment(item))}:<br />
+            {getCharsFast(getLastSegment(item))}
+          </>
         )}
         <div className='numerical'>{parseInt(progress.toString())}%</div>
         <LoadingBar
