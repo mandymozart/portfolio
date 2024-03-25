@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import { AvatarEvents, emitMove } from '../../events/avatarEvents';
-import PlayButton from '../Common/FormElements/PlayButton';
-import SecondaryButton from '../Common/FormElements/SecondaryButton';
-import { IntroVideo } from '../Videos/IntroVideo';
 
 const Container = styled.section`
   position: relative;
@@ -61,10 +57,10 @@ const HeroSection = ({ ...props }) => {
   };
   return (
     <Container {...props}>
-      <IntroVideo
+      {/* <IntroVideo
         playing={playing}
         setPlaying={setPlaying}
-      />
+      /> */}
       <div
         id='overlay'
         className={clsx({ playing: playing })}>
@@ -73,14 +69,14 @@ const HeroSection = ({ ...props }) => {
           boutique experiences, websites and apps.
         </h1>
         <div className='message'></div>
-        <PlayButton
+        {/* <PlayButton
           id='startButton'
           onClick={togglePlay}>
           {playing ? 'Pause' : 'Play Intro'}
-        </PlayButton>
-        <SecondaryButton onClick={emitMove(AvatarEvents.MOVE)}>
+        </PlayButton> */}
+        {/* <SecondaryButton onClick={emitMove(AvatarEvents.MOVE)}>
           Move
-        </SecondaryButton>
+        </SecondaryButton> */}
       </div>
     </Container>
   );
