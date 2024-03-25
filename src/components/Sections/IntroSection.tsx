@@ -27,21 +27,49 @@ const IntroSection = ({ ...props }) => {
           whileInView='onscreen'
           custom={0}
           variants={staggerVariants}>
-          just{' '}
+          Down{' '}
         </motion.span>
         <motion.span
           initial='offscreen'
           whileInView='onscreen'
           custom={1}
           variants={staggerVariants}>
-          keep{' '}
+          below{' '}
         </motion.span>
         <motion.span
           initial='offscreen'
           whileInView='onscreen'
           custom={2}
           variants={staggerVariants}>
-          scrolling
+          the
+        </motion.span>
+        <motion.span
+          initial='offscreen'
+          whileInView='onscreen'
+          custom={2}
+          variants={staggerVariants}>
+          sky
+        </motion.span>
+        <motion.span
+          initial='offscreen'
+          whileInView='onscreen'
+          custom={2}
+          variants={staggerVariants}>
+          is
+        </motion.span>
+        <motion.span
+          initial='offscreen'
+          whileInView='onscreen'
+          custom={2}
+          variants={staggerVariants}>
+          the
+        </motion.span>
+        <motion.span
+          initial='offscreen'
+          whileInView='onscreen'
+          custom={2}
+          variants={staggerVariants}>
+          limit!
         </motion.span>
       </motion.div>
     </Container>
