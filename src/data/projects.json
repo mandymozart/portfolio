@@ -800,26 +800,33 @@
         "images": [
           {
             "desktop": {
-              "url": "/images/655d2fb3531ac2845a254d49_Screen-Shot-2015-09-09-at-09-front.avif"
+              "url": "/images/muriquee-02.avif"
             }
           },
           {
             "desktop": {
-              "url": "/images/655d2b45531ac2845a254d24_Screen-Shot-2015-09-09-at-copy-front.avif"
+              "url": "/images/muriquee-03.avif"
             }
           },
           {
             "desktop": {
-              "url": "/images/655d2f1c531ac2845a254d48_Screen-Shot-2015-09-09-at-09-left.avif"
+              "url": "/images/muriquee-02.avif"
             }
           },
           {
             "desktop": {
-              "url": "/images/655d2fc5531ac2845a254d4c_Screen-Shot-2015-09-09-at-09-right.avif"
+              "url": "/images/muriquee-04.avif"
             }
           }
         ],
-        "skills": ["angular", "sass", "github", "google-maps", "postgres"],
+        "skills": [
+          "angular",
+          "sass",
+          "github",
+          "google-maps",
+          "postgresql",
+          "nodejs"
+        ],
         "partners": [
           { "type": "collaborator", "uid": "gianluca-baccanico" },
           { "type": "collaborator", "uid": "janik-hotz" }

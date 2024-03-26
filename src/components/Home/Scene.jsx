@@ -104,7 +104,6 @@ export const Scene = () => {
           <meshPhongMaterial color='yellow' />
         </e.mesh>
         <PointLight />
-        {/* <MovingSpot theatreKey='MovingSpot' /> */}
         <FireFlies />
         <mesh
           position={[0, GROUND, 0]}
@@ -115,19 +114,6 @@ export const Scene = () => {
           onPointerLeave={() => setOnFloor(false)}>
           <planeGeometry args={[1000, 1000]} />
           <meshBasicMaterial color={colors.foreground} />
-          {/* 
-          This texture crashes the context
-          <MeshReflectorMaterial
-            ref={planeMaterial}
-            color={colors.foreground}
-            resolution={1024}
-            mixStrength={10}
-            roughness={1}
-            mixBlur={0}
-            blur={10}
-            mirror={1}
-            mixContrast={0.5}
-          /> */}
         </mesh>
         <MountainAndRiver />
         <RadioTower />

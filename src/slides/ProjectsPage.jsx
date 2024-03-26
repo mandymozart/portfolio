@@ -6,7 +6,6 @@ import useProjectsStore from '../stores/ProjectsStore';
 
 const Container = styled.div`
   /* Add your styles here */
-  margin-top: var(--header-height);
   .experiments {
     border-radius: 4rem;
 

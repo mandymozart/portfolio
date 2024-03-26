@@ -25,7 +25,7 @@ const Container = styled.div`
   }
   h2 {
     padding: 8rem var(--grid-padding) 16rem var(--grid-padding);
-    font-size: 8rem;
+    font-size: 12rem;
     color: var(--perfume);
     @media (max-width: ${BREAKPOINT_SM}) {
       font-size: 4rem;

@@ -11,11 +11,19 @@ import PartnerItem from '../Common/Partners/PartnerItem';
 import Richtext from '../Common/Richtext/Richtext';
 import SkillItemAsync from '../Common/Skills/SkillItemAsync';
 import ScreenshotsSection from '../Sections/ScreenshotsSection';
-import { BASE_PATH } from './../../../config';
+import {
+  BASE_PATH,
+  BREAKPOINT_L,
+  BREAKPOINT_MD,
+  BREAKPOINT_SM,
+  BREAKPOINT_XS,
+  BREAKPOINT_XXS,
+} from './../../../config';
 import MethodItem from './MethodItem';
 
 import {
   fastTranslateVariants,
+  staggerVariants,
   translateVariants,
 } from '../../animations/site.js';
 import { playToneAtRoute } from '../../audio.js';
@@ -35,21 +43,41 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: ${BREAKPOINT_MD}) {
+        display: block;
+      }
       height: 18rem;
       padding: 0 var(--grid-padding);
+      position: sticky;
+      top: 0;
+      color: var(--aero-blue);
       h2 {
         font-size: 6rem;
       }
       .tags button {
         margin-left: 1rem;
+        @media (max-width: ${BREAKPOINT_MD}) {
+          margin-left: 0;
+          margin-right: 1rem;
+        }
       }
     }
     .meta {
       display: grid;
       position: relative;
-      width: var(--content-width);
-      margin-left: var(--content-margin-left);
       grid-template-columns: 3fr 3fr;
+
+      @media (max-width: ${BREAKPOINT_L}) {
+      }
+      @media (max-width: ${BREAKPOINT_MD}) {
+      }
+      @media (max-width: ${BREAKPOINT_SM}) {
+        display: block;
+      }
+      @media (max-width: ${BREAKPOINT_XS}) {
+      }
+      @media (max-width: ${BREAKPOINT_XXS}) {
+      }
 
       @media (max-width: 1350px) {
         grid-template-columns: 2fr 2fr;
@@ -58,11 +86,15 @@ const Container = styled.div`
         grid-template-columns: 1fr;
       }
       .description {
-        padding: var(--grid-padding);
+        padding: 0 var(--grid-padding);
         p {
           margin: 0 0 4rem 0;
           font-size: 3rem;
           line-height: 4rem;
+          @media (max-width: ${BREAKPOINT_MD}) {
+            font-size: 2rem;
+            line-height: 3rem;
+          }
         }
         img {
           padding: 16rem 0 16rem 0;
@@ -79,15 +111,21 @@ const Container = styled.div`
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 4rem;
-            @media (max-width: 850px) {
-              grid-template-columns: repeat(3, 1fr);
+            @media (max-width: ${BREAKPOINT_SM}) {
+              grid-template-columns: repeat(6, 1fr);
             }
+          }
+          .partners-list {
+            display: block;
           }
         }
         .links {
           display: grid;
           margin-top: 2rem;
           grid-template-columns: repeat(3, 1fr);
+          @media (max-width: ${BREAKPOINT_MD}) {
+            grid-template-columns: repeat(2, 1fr);
+          }
           position: sticky;
           top: 0;
           .link-item {
@@ -110,8 +148,11 @@ const Container = styled.div`
   }
   .navigation {
     display: grid;
-    gap: 4rem;
     grid-template-columns: 1fr 1fr;
+    padding-top: var(--grid-padding);
+    .link-item {
+      padding: 0 var(--grid-padding);
+    }
   }
 `;
 
@@ -304,17 +345,29 @@ export const ProjectInterface = () => {
             <div className='links'>
               {project?.video_id && (
                 <div className='link-item'>
-                  <PrimaryButton onClick={() => playReaction()}>
-                    Play Reaction
-                  </PrimaryButton>
+                  <motion.div
+                    initial='offscreen'
+                    whileInView='onscreen'
+                    custom={0}
+                    variants={staggerVariants}>
+                    <PrimaryButton onClick={() => playReaction()}>
+                      Play Reaction
+                    </PrimaryButton>
+                  </motion.div>
                 </div>
               )}
               {project?.link?.url && (
                 <div className='link-item'>
-                  <SecondaryButton
-                    onClick={() => goToWebsite(project?.link.url)}>
-                    Visit Project
-                  </SecondaryButton>
+                  <motion.div
+                    initial='offscreen'
+                    whileInView='onscreen'
+                    custom={3}
+                    variants={staggerVariants}>
+                    <SecondaryButton
+                      onClick={() => goToWebsite(project?.link.url)}>
+                      Visit Project
+                    </SecondaryButton>
+                  </motion.div>
                 </div>
               )}
             </div>
@@ -328,12 +381,26 @@ export const ProjectInterface = () => {
         </div>
       )}
       <div className='navigation'>
-        <PrimaryButton onClick={back()}>Return To Projects</PrimaryButton>
+        <div className='link-item'>
+          <motion.div
+            initial='offscreen'
+            whileInView='onscreen'
+            custom={0}
+            variants={staggerVariants}>
+            <PrimaryButton onClick={back()}>Return To Projects</PrimaryButton>
+          </motion.div>
+        </div>
         {project?.link?.url && (
           <div className='link-item'>
-            <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>
-              Visit Project
-            </SecondaryButton>
+            <motion.div
+              initial='offscreen'
+              whileInView='onscreen'
+              custom={3}
+              variants={staggerVariants}>
+              <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>
+                Visit Project
+              </SecondaryButton>
+            </motion.div>
           </div>
         )}
       </div>

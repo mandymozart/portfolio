@@ -113,7 +113,7 @@ const Container = styled.div`
           font-size: 8rem;
         }
         @media (max-width: ${BREAKPOINT_XS}) {
-          font-size: 6rem;
+          font-size: 4rem;
         }
       }
     }

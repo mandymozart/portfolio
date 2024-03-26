@@ -28,11 +28,8 @@ function HomePage({ ready }) {
     <>
       <Canvas
         shadows
-        gl={{ preserveDrawingBuffer: true }}
-        // raycaster={{ params: { Line: { threshold: 0.15 } } }} // important for click events
-      >
+        gl={{ preserveDrawingBuffer: true }}>
         <SoftShadows />
-        {/* <OrbitControls makeDefault /> */}
         <ScrollControls pages={PAGES}>
           <Suspense>
             <SheetProvider sheet={mainSheet}>
@@ -43,7 +40,6 @@ function HomePage({ ready }) {
             </Scroll>
           </Suspense>
         </ScrollControls>
-        {/* <Stats /> */}
       </Canvas>
       <Leva hidden />
     </>
