@@ -106,9 +106,9 @@ const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
                 initial='offscreen'
                 whileInView='onscreen'
                 variants={staggerVariants}>
-                Stefan Sargemeister desciple Manuel Bürger & artist Sebastian
-                Haslauer entrusted me in bringing their vision of an Emirates
-                inspired WooCommerce shop for their publishing house to life.{' '}
+                Stefan Sargemeister desciple Manuel Bürger entrusted me in
+                bringing their vision of an Emirates inspired WooCommerce shop
+                to life.{' '}
               </motion.p>
             </div>
           </div>

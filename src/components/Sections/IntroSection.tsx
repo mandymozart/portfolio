@@ -41,28 +41,28 @@ const IntroSection = ({ ...props }) => {
           whileInView='onscreen'
           custom={2}
           variants={staggerVariants}>
-          the
+          the{' '}
         </motion.span>
         <motion.span
           initial='offscreen'
           whileInView='onscreen'
           custom={2}
           variants={staggerVariants}>
-          sky
+          sky{' '}
         </motion.span>
         <motion.span
           initial='offscreen'
           whileInView='onscreen'
           custom={2}
           variants={staggerVariants}>
-          is
+          is{' '}
         </motion.span>
         <motion.span
           initial='offscreen'
           whileInView='onscreen'
           custom={2}
           variants={staggerVariants}>
-          the
+          the{' '}
         </motion.span>
         <motion.span
           initial='offscreen'

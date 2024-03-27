@@ -20,7 +20,6 @@ const Container = styled.section`
       justify-content: center;
 
       .presentation {
-        margin-top: 3rem;
         display: grid;
         height: 100vh;
         grid-template-columns: 4fr 2fr;

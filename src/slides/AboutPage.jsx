@@ -9,6 +9,7 @@ import {
   BREAKPOINT_MD,
   BREAKPOINT_SM,
   BREAKPOINT_XS,
+  BREAKPOINT_XXS,
 } from './../../config';
 
 const Container = styled.div`
@@ -31,11 +32,30 @@ const Container = styled.div`
       font-size: 4rem;
       padding: 2rem var(--grid-padding) 2rem var(--grid-padding);
     }
+    position: sticky;
+    top: 0;
+    z-index: -1;
+  }
+  h3 {
+    @media (max-width: ${BREAKPOINT_XXS}) {
+      > div {
+        font-size: 3rem;
+      }
+    }
   }
   .body {
     display: grid;
     grid-template-columns: 1fr 1fr 4fr;
+    @media (max-width: ${BREAKPOINT_MD}) {
+      grid-template-columns: 2fr 7fr;
+      .gap {
+        display: none;
+      }
+    }
     @media (max-width: ${BREAKPOINT_SM}) {
+      grid-template-columns: 3fr 6fr; // bug
+    }
+    @media (max-width: ${BREAKPOINT_XS}) {
       display: block;
     }
     .left {
@@ -43,6 +63,15 @@ const Container = styled.div`
       .stick {
         position: sticky;
         top: 0;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          display: grid;
+          grid-template-columns: 2fr 4fr;
+          gap: var(--grid-padding);
+          margin-bottom: 4rem;
+        }
+        @media (max-width: ${BREAKPOINT_XXS}) {
+          display: block;
+        }
         .avatar {
           border: 1px solid var(--primary);
           border-radius: 2rem;
@@ -63,6 +92,7 @@ const Container = styled.div`
       }
     }
     .right {
+      padding: 0 var(--grid-padding);
       .description {
         p {
           margin: 0 0 4rem 0;
@@ -111,31 +141,33 @@ function AboutPage() {
                 alt='avatar'
               />
             </div>
-            <div className='meta'>
-              <p>Living in Vienna, Austria</p>
-              <p>
-                also known as:
-                <br />
-                <a
-                  href='https://www.mandymozart.com'
-                  target='_blank'>
-                  Mandy Mozart
-                </a>
-              </p>
-            </div>
+            <div>
+              <div className='meta'>
+                <p>Living in Vienna, Austria</p>
+                <p>
+                  also known as:
+                  <br />
+                  <a
+                    href='https://www.mandymozart.com'
+                    target='_blank'>
+                    Mandy Mozart
+                  </a>
+                </p>
+              </div>
 
-            <SecondaryButtonLink
-              href='/docs/tilman-porschuetz-resume.pdf'
-              download>
-              Download Résumé
-            </SecondaryButtonLink>
-            <br />
-            <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>
-              Contact me
-            </PrimaryButtonLink>
+              <SecondaryButtonLink
+                href='/docs/tilman-porschuetz-resume.pdf'
+                download>
+                Download Résumé
+              </SecondaryButtonLink>
+              <br />
+              <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>
+                Contact me
+              </PrimaryButtonLink>
+            </div>
           </div>
         </div>
-        <div></div>
+        <div className='gap'></div>
         <div className='right'>
           <section>
             <div className='description'>

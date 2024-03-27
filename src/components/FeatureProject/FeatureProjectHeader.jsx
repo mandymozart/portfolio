@@ -13,6 +13,7 @@ const Container = styled.header`
     margin: 0;
     padding: 2rem var(--grid-padding);
     font-size: 2rem;
+    line-height: 2rem;
     display: flex;
     align-content: center;
     gap: 1rem;
@@ -26,6 +27,7 @@ const Container = styled.header`
   .subheader {
     display: grid;
     padding-bottom: 2rem;
+    line-height: 1.5rem;
     grid-template-columns: 4fr 1fr 1fr;
     @media (max-width: 850px) {
       grid-template-columns: 1fr;

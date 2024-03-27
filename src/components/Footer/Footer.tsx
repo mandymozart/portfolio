@@ -4,6 +4,7 @@ import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl';
 import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
 import ButtonLink from '../Common/FormElements/ButtonLink';
+import { BREAKPOINT_SM, BREAKPOINT_XS } from './../../../config';
 import { emitRouteChange } from './../../events/routerEvents';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
@@ -14,9 +15,16 @@ const Container = styled.div`
   font-size: 1rem;
   line-height: 1.5rem;
   padding: var(--grid-padding) 0;
+  flex: 100% 1 1;
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr 4fr;
+    @media (max-width: ${BREAKPOINT_SM}) {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+    @media (max-width: ${BREAKPOINT_XS}) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
     nav {
       padding: 0 var(--grid-padding);
       &.social a {

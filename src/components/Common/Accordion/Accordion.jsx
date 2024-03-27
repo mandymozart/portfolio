@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { staggerVariants, translateVariants } from '../../../animations/site';
+import { BREAKPOINT_XXS } from './../../../../config';
 
 const Container = styled.div`
   :root {
@@ -16,6 +17,9 @@ const Container = styled.div`
   header {
     cursor: pointer;
     height: 4rem;
+    @media (max-width: ${BREAKPOINT_XXS}) {
+      height: 6rem;
+    }
     font-size: 1.25rem;
     display: flex;
     align-items: center;

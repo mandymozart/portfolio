@@ -25,10 +25,9 @@ export const SortingLabels = {
 
 const Container = styled.div`
   position: relative;
-  width: var(--content-width);
+  max-width: var(--content-width);
   margin: 0 auto;
   @media (max-width: ${BREAKPOINT_L}) {
-    width: auto;
   }
   @media (max-width: ${BREAKPOINT_MD}) {
   }

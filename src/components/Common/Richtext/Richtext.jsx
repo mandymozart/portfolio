@@ -1,11 +1,9 @@
-import { getCharsFast } from '../../Project/RoleItem';
-
 const Richtext = ({ richtext }) => {
   return (
     <>
       {richtext.map((node, index) => {
         if (node.type === 'paragraph') {
-          return <p key={index}>{getCharsFast(node.text)}</p>;
+          return <p key={index}>{node.text}</p>;
         }
         if (node.type === 'image') {
           return (
