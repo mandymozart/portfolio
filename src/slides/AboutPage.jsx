@@ -156,9 +156,9 @@ function AboutPage() {
               </div>
 
               <SecondaryButtonLink
-                href='/docs/tilman-porschuetz-resume.pdf'
+                href='/docs/tilman-porschuetz-frontend-developer-resume-en.pdf'
                 download>
-                Download Résumé
+                Résumé EN
               </SecondaryButtonLink>
               <br />
               <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>
