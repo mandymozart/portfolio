@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_XS } from '../../../config';
 import { Accordion } from '../Common/Accordion/Accordion';
 import { getSectionByKey } from './../Home/sections';
 const params = getSectionByKey('process');
@@ -8,12 +9,15 @@ const Container = styled.div`
   background-color: ${params.backgroundColor};
   --accordion-color: ${params.color};
   color: ${params.color};
-  height: 100vh;
+  min-height: 100vh;
   > header {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     max-width: var(--content-width);
     margin: 0 auto;
+    @media (max-width: ${BREAKPOINT_XS}) {
+        display: block;
+      }
     > h2 {
       padding: 2rem var(--grid-padding);
       grid-column-start: 2;
@@ -25,6 +29,9 @@ const Container = styled.div`
     grid-template-columns: 1fr 4fr 1fr;
     max-width: var(--content-width);
     margin: 0 auto;
+    @media (max-width: ${BREAKPOINT_XS}) {
+        display: block;
+      }
     .process-list {
       padding: 2rem var(--grid-padding);
     }
@@ -42,9 +49,9 @@ const processes = [
     title: 'Proof the concept',
     content: (
       <ProcessContainer>
-        I will always research and built a <b>rapid prototype</b> first to proof
-        your idea's feasebility. Just to make sure your ideas are not to ahead
-        of their time.
+        I carefully research and built <b>rapid prototypes</b> first to proof
+        your idea's feasebility. Having worked in a fast paced startup world 
+        taught me how to spot pitfalls if you are ahead of your time.
       </ProcessContainer>
     ),
   },

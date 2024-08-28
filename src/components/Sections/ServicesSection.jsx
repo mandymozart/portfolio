@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { Accordion } from '../Common/Accordion/Accordion';
 import { getSectionByKey } from './../Home/sections';
 const params = getSectionByKey('services');
@@ -7,7 +8,7 @@ const Container = styled.div`
   background-color: ${params.backgroundColor};
   --accordion-color: ${params.color};
   color: ${params.color};
-  height: 100vh;
+  min-height: 100vh;
   border-radius: 4rem;
   > header {
     max-width: var(--content-width);
@@ -21,6 +22,12 @@ const Container = styled.div`
   .body {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media (max-width: ${BREAKPOINT_MD}) {
+        grid-template-columns: 2fr 2fr;
+      }
+      @media (max-width: ${BREAKPOINT_XS}) {
+        grid-template-columns: 1fr;
+      }
     max-width: var(--content-width);
     margin: 0 auto;
     > div {
@@ -29,6 +36,7 @@ const Container = styled.div`
     .left {
       font-size: 2rem;
     }
+    padding-bottom: 4rem;
   }
 `;
 
@@ -71,7 +79,7 @@ const services = [
   },
   {
     key: 4,
-    title: 'Consulting',
+    title: 'UX',
     content: (
       <ServiceContainer>
         I advise founders and established teams in Design Thinking, Agile and

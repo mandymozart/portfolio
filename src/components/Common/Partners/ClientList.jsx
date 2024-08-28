@@ -4,7 +4,6 @@ import docs from './../../../data/index.js';
 import ClientItem from './ClientItem';
 
 const Container = styled.div`
-  height: 100vh;
 `;
 
 const ClientList = () => {
@@ -27,14 +26,6 @@ const ClientList = () => {
           />
         ))}
       </Marquee>
-      {/* <Marquee speed={60}>
-        {clients.slice(12, 16).map((node, index) => (
-          <ClientItem
-            key={index}
-            client={node.data}
-          />
-        ))}
-      </Marquee> */}
     </Container>
   );
 };

@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Magnetic from '../../animations/Magnetic';
 import { translateProjectVariants } from '../../animations/site';
 import { playToneAtRoute } from '../../audio';
 import { ProjectDocument } from '../../data/types';
-import { emitRouteChange } from '../../events/routerEvents';
 import { routes } from '../../slideInRoutes';
 import useMenuStore from '../../stores/MenuStore';
 import { BREAKPOINT_XS } from './../../../config';
@@ -77,11 +77,12 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
 
 const ProjectThumbnailItem = ({ project, index, ...props }: Props) => {
   const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
+  const navigate = useNavigate()
 
   const navigateTo = (uid: string) => () => {
     playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
-    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
+    navigate(`/project/${uid}`);
   };
   if (!project) return <></>;
   return (

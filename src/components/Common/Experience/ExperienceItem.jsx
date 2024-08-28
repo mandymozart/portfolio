@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../../config.js';
 import { playToneAtRoute } from '../../../audio';
 import docs from '../../../data/index.js';
 import { emitRouteChange } from '../../../events/routerEvents';
@@ -13,10 +14,10 @@ const Container = styled.div`
   padding: var(--grid-padding) 0;
   position: relative;
   /* width: var(--content-width); */
-  @media (max-width: 1350px) {
+  @media (max-width: ${BREAKPOINT_MD}) {
     grid-template-columns: 2fr 2fr;
   }
-  @media (max-width: 850px) {
+  @media (max-width: ${BREAKPOINT_XS}) {
     grid-template-columns: 1fr;
   }
 

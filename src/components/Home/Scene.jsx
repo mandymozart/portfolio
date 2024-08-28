@@ -1,18 +1,18 @@
 import { KeyboardControls, useCursor, useScroll } from '@react-three/drei';
 
+import { useFrame, useThree } from '@react-three/fiber';
+import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
+import { val } from '@theatre/core';
 import {
   PerspectiveCamera,
   editable as e,
   useCurrentSheet,
 } from '@theatre/r3f';
-
-import { useFrame, useThree } from '@react-three/fiber';
-import { EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
-import { val } from '@theatre/core';
 import { useControls } from 'leva';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 import { Vector3 } from 'three';
+import { accumulatedWaypoints } from '../../components/Common/SlideIn/Waypoints';
 import { FireFlies } from '../Models/Home/FireFlies';
 import { MountainAndRiver } from '../Models/Home/MountainAndRiver';
 import { MovingClouds } from '../Models/Home/MovingClouds';
@@ -20,6 +20,9 @@ import { PointLight } from '../Models/Lights/PointLight';
 import { RadioTower } from '../Models/RadioTower';
 import { Slide } from '../Models/Slide';
 import useMenuStore from './../../stores/MenuStore';
+
+const waypoints = accumulatedWaypoints
+
 
 export const GROUND = 1.15;
 

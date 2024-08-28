@@ -47,6 +47,12 @@ const ScreenshotsSection = ({ screenshots }) => {
                   src={BASE_PATH + item.mobile.url}
                 />
               )}
+              {!item.mobile && item.desktop && (
+                <img
+                className='screenshot hidden--desktop hidden--tablet'
+                src={BASE_PATH + item.desktop.url}
+              />
+              )}
             </section>
           </motion.div>
         ))}

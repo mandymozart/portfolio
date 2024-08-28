@@ -79,10 +79,10 @@ const Container = styled.div`
       @media (max-width: ${BREAKPOINT_XXS}) {
       }
 
-      @media (max-width: 1350px) {
+      @media (max-width: ${BREAKPOINT_MD}) {
         grid-template-columns: 2fr 2fr;
       }
-      @media (max-width: 850px) {
+      @media (max-width: ${BREAKPOINT_MD}) {
         grid-template-columns: 1fr;
       }
       .description {

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { getSectionByKey } from './../Home/sections';
 
@@ -20,12 +21,12 @@ const Container = styled.section`
   color: ${params.color};
   position: relative;
   font-family: var(--font);
-  height: 200vh;
+  min-height: 200vh;
   border-radius: 4rem;
   overflow: hidden;
   .backdrop {
     width: 100%;
-    height: 200vh;
+    min-height: 200vh;
     object-fit: cover;
     object-position: center;
     position: absolute;
@@ -39,6 +40,9 @@ const Container = styled.section`
     width: 100%;
     .container {
       width: var(--content-width);
+      @media (max-width: ${BREAKPOINT_XS}) {
+        width: auto;
+      }
       margin: 0 auto;
       .info {
         display: flex;
@@ -50,36 +54,45 @@ const Container = styled.section`
         .lead {
           padding: 0 var(--grid-padding);
           display: grid;
-          height: calc(100vh - var(--feature-project-header-height));
+          min-height: calc(100vh - var(--feature-project-header-height));
           align-items: center;
           grid-template-columns: 4fr 2fr;
+
           p {
             font-size: 3rem;
             line-height: 4rem;
+            @media (max-width: ${BREAKPOINT_MD}) {
+              font-size: 2rem;
+              line-height: 2.5rem;
+            }
           }
-          @media (max-width: 850px) {
+          @media (max-width: ${BREAKPOINT_MD}) {
             padding: 0 var(--grid-padding) 1rem var(--grid-padding);
+          }
+          @media (max-width: ${BREAKPOINT_XS}) {
+            display: block;
           }
         }
         .presentation {
           display: grid;
           color: var(--background);
-          height: 100vh;
+          min-height: 100vh;
           align-items: center;
           grid-template-columns: 1fr 1fr 3fr 1fr;
-          @media (max-width: 850px) {
+          @media (max-width: ${BREAKPOINT_XS}) {
             grid-template-columns: 1fr;
           }
           .image {
             padding: 0 var(--grid-padding);
             &--1 {
               grid-column: 2;
-              @media (max-width: 850px) {
-                display: none;
+              @media (max-width: ${BREAKPOINT_XS}) {
+
+              display: none;
               }
             }
             &--2 {
-              @media (max-width: 850px) {
+              @media (max-width: ${BREAKPOINT_XS}) {
               }
             }
             img {
@@ -89,7 +102,7 @@ const Container = styled.section`
           }
         }
       }
-      @media (max-width: 850px) {
+      @media (max-width: ${BREAKPOINT_XS}) {
         position: relative;
       }
     }

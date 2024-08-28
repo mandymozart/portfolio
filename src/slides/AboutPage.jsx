@@ -33,7 +33,7 @@ const Container = styled.div`
       padding: 2rem var(--grid-padding) 2rem var(--grid-padding);
     }
     position: sticky;
-    top: 0;
+    top: 6rem;
     z-index: -1;
   }
   h3 {
@@ -62,7 +62,7 @@ const Container = styled.div`
       padding: 0 var(--grid-padding);
       .stick {
         position: sticky;
-        top: 0;
+        top: 6rem;
         @media (max-width: ${BREAKPOINT_XS}) {
           display: grid;
           grid-template-columns: 2fr 4fr;
@@ -156,9 +156,9 @@ function AboutPage() {
               </div>
 
               <SecondaryButtonLink
-                href='/docs/tilman-porschuetz-frontend-developer-resume-en.pdf'
+                href='/docs/tilman-porschuetz-resume.pdf'
                 download>
-                Résumé EN
+                Download Résumé
               </SecondaryButtonLink>
               <br />
               <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>

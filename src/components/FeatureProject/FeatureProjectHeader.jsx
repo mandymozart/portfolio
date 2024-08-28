@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { BREAKPOINT_MD } from '../../../config';
 import { playToneAtRoute } from '../../audio';
 import Arrow from '../Common/Icons/Arrow';
 import { staggerVariants } from './../../animations/site';
-import { emitRouteChange } from './../../events/routerEvents';
 import { routes } from './../../slideInRoutes';
 import useMenuStore from './../../stores/MenuStore';
 
@@ -17,7 +18,7 @@ const Container = styled.header`
     display: flex;
     align-content: center;
     gap: 1rem;
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_MD}) {
       padding: 2rem var(--grid-padding) 1rem var(--grid-padding);
     }
     &:hover {
@@ -29,12 +30,12 @@ const Container = styled.header`
     padding-bottom: 2rem;
     line-height: 1.5rem;
     grid-template-columns: 4fr 1fr 1fr;
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_MD}) {
       grid-template-columns: 1fr;
     }
     span {
       padding: 0 var(--grid-padding);
-      @media (max-width: 850px) {
+      @media (max-width: ${BREAKPOINT_MD}) {
         padding: 0 var(--grid-padding) 1rem var(--grid-padding);
       }
     }
@@ -43,11 +44,12 @@ const Container = styled.header`
 
 export const FeatureProjectHeader = ({ project }) => {
   const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
+  const navigate = useNavigate()
 
   const navigateTo = (uid) => () => {
     playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
-    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
+    navigate(`/project/${uid}`);
   };
   return (
     <Container onClick={navigateTo(project.uid)}>

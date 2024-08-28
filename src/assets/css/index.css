@@ -4,9 +4,7 @@ html {
 }
 
 #root {
-  width: 100dvw;
-  height: 100dvh;
-  overflow: hidden;
+  width: 100%;
 }
 h1,
 h2,
@@ -27,7 +25,6 @@ img {
 }
 
 body {
-  overflow: hidden;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: var(--background);

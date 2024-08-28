@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
   font-family: var(--font);
-  height: 200vh;
-
   max-width: var(--content-width);
   margin: 0 auto;
   .overlay {
@@ -21,7 +20,7 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
-        height: calc(100vh - var(--feature-project-header-height));
+        min-height: calc(100vh - var(--feature-project-header-height));
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
         p {
@@ -29,20 +28,26 @@ const Container = styled.section`
           line-height: 4rem;
           margin-bottom: 4rem;
           grid-column: 2 / span 4;
+          @media (max-width: ${BREAKPOINT_XS}) {
+              font-size: 2rem;
+            line-height: 2.5rem;
+            }
         }
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_XS}) {
           padding: 0 var(--grid-padding) 1rem var(--grid-padding);
           grid-column: 1 / span 6;
+          display: block;
         }
       }
       .presentation {
         margin-top: 3rem;
         display: grid;
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
-        @media (max-width: 850px) {
-          grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          display: block;
+          min-height: auto;
         }
         .image {
           grid-column: 2 / span 4;
@@ -54,7 +59,7 @@ const Container = styled.section`
         }
       }
     }
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_XS}) {
       position: relative;
     }
   }

@@ -1,11 +1,11 @@
 'use client';
 import styled from '@emotion/styled';
-import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl';
+import { SlSocialGithub } from 'react-icons/sl';
+import { useNavigate } from 'react-router-dom';
 import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
 import ButtonLink from '../Common/FormElements/ButtonLink';
 import { BREAKPOINT_SM, BREAKPOINT_XS } from './../../../config';
-import { emitRouteChange } from './../../events/routerEvents';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -23,7 +23,7 @@ const Container = styled.div`
       grid-template-columns: 1fr 1fr 2fr;
     }
     @media (max-width: ${BREAKPOINT_XS}) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     nav {
       padding: 0 var(--grid-padding);
@@ -43,6 +43,7 @@ const Container = styled.div`
 const Footer = () => {
   const activeMenuItem = useMenuStore((store) => store.activeMenuItem);
   const setActiveMenuItem = useMenuStore((store) => store.setActiveMenuItem);
+  const navigate = useNavigate()
 
   const navigateTo = (to: SlideInRoute) => {
     console.log('navigateTo', activeMenuItem.key, to.key);
@@ -50,8 +51,8 @@ const Footer = () => {
       playToneAtRoute();
     } else {
       playToneAtRoute(to.key);
-      emitRouteChange({ to });
       setActiveMenuItem(to);
+      navigate(to.key);
     }
   };
 
@@ -63,11 +64,6 @@ const Footer = () => {
             href='https://github.com/mandymozart'
             target='_blank'>
             <SlSocialGithub />
-          </a>
-          <a
-            href='https://linkedin.com/mandymozartdhsdjfghsdfhg'
-            target='_blank'>
-            <SlSocialLinkedin />
           </a>
         </nav>
         <nav className='legal'>
@@ -82,15 +78,6 @@ const Footer = () => {
                 link
                 onClick={() => navigateTo(routes.PRIVACY)}>
                 Privacy Policy
-              </ButtonLink>
-            </li>
-          </ul>
-        </nav>
-        <nav className='attribution'>
-          <ul>
-            <li>
-              <ButtonLink onClick={() => navigateTo(routes.ATTRIBUTIONS)}>
-                Attributions
               </ButtonLink>
             </li>
           </ul>

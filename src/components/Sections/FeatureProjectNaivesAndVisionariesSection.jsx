@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
@@ -10,7 +11,7 @@ const Container = styled.section`
   max-width: var(--content-width);
   height: 200vh;
   margin: 0 auto;
-  @media (max-width: 850px) {
+  @media (max-width: ${BREAKPOINT_MD}) {
   }
 
   .overlay {
@@ -24,36 +25,45 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
-        height: calc(100vh - var(--feature-project-header-height));
+        min-height: calc(100vh - var(--feature-project-header-height));
         align-items: center;
         grid-template-columns: 3fr 3fr;
         p {
           font-size: 3rem;
           line-height: 4rem;
+          @media (max-width: ${BREAKPOINT_XS}) {
+            font-size: 2rem;
+          line-height: 2.5rem;
+          }
         }
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           padding: 0 var(--grid-padding) 1rem var(--grid-padding);
+        }
+        @media (max-width: ${BREAKPOINT_XS}) {
+          display: block;
         }
       }
       .presentation {
         display: grid;
         color: var(--background);
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
         grid-template-columns: 3fr 3fr;
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           grid-template-columns: 1fr;
+        }
+        @media (max-width: ${BREAKPOINT_XS}) {
+          min-height: 50vh;
         }
         .image {
           padding: 0 var(--grid-padding);
           &--1 {
             grid-column: 2;
-            @media (max-width: 850px) {
-              display: none;
+            @media (max-width: ${BREAKPOINT_MD}) {
             }
           }
           &--2 {
-            @media (max-width: 850px) {
+            @media (max-width: ${BREAKPOINT_MD}) {
             }
           }
           img {
@@ -66,7 +76,7 @@ const Container = styled.section`
         color: var(--secondary);
       }
     }
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_XS}) {
       position: relative;
     }
   }

@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 
 import styled from '@emotion/styled';
-import { useMotionValue } from 'framer-motion';
-import useMenuStore from '../../../stores/MenuStore';
+import { useScroll, useTransform } from 'framer-motion';
 
 const Container = styled.div`
   transition: opacity 0.3s linear;
@@ -23,11 +22,13 @@ const Container = styled.div`
 `;
 
 const Loader = () => {
-  const { scrollYProgress } = useMenuStore();
-  useEffect(() => {
-    console.log('progress', scrollYProgress);
-  }, [scrollYProgress]);
-  const y = useMotionValue(scrollYProgress);
+  const { scrollYProgress } = useScroll();
+// Transform scrollYProgress to a suitable range for strokeDasharray
+const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+useEffect(() => {
+  console.log('progress', scrollYProgress.get());
+}, [scrollYProgress]);
   return (
     <Container
     // style={{ transform: `rotate(${scrollYProgress * 5 * 360}deg)` }}
@@ -43,7 +44,7 @@ const Loader = () => {
           r='13'
           pathLength='1'
           className='indicator'
-          strokeDasharray={`${scrollYProgress}px 1px`}
+          strokeDasharray={`${pathLength}px 1px`}
         />
       </svg>
     </Container>

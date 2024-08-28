@@ -1,83 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styled from '@emotion/styled';
-import clsx from 'clsx';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 
 const Container = styled.section`
   position: relative;
-  height: 100vh;
-  max-width: var(--content-width);
-  margin: 0 auto;
-  scroll-snap-align: start;
-  h1 {
+    min-height: 100vh;
+   max-width: var(--content-width);
+   margin: 0 auto;
+   scroll-snap-align: start;
+   h1 {
+    padding: 0 var(--grid-padding);
     text-align: left;
     font-weight: 400;
-    font-size: 6rem;
+    font-size: 4rem;
+    @media (max-width: ${BREAKPOINT_XS}) {
+      font-size: 2rem;
+      padding: 0;
+    }
   }
-  #overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 4rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 0.7s ease-in-out;
-    transform: translateY(0);
-    .message {
-      text-align: center;
-    }
-    &.playing {
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-    @media (max-width: 1350px) {
+
+    @media (max-width: ${BREAKPOINT_MD}) {
       margin: 6rem;
     }
-    @media (max-width: 850px) {
-      margin: 2rem;
+    @media (max-width: ${BREAKPOINT_XS}) {
+      margin: 1rem;
     }
-  }
-  button {
-    cursor: pointer;
-    border: 0;
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
-  }
 `;
 
 const HeroSection = ({ ...props }) => {
-  const [playing, setPlaying] = useState(false);
-  const togglePlay = () => {
-    setPlaying(!playing);
-  };
   return (
     <Container {...props}>
-      {/* <IntroVideo
-        playing={playing}
-        setPlaying={setPlaying}
-      /> */}
-      <div
-        id='overlay'
-        className={clsx({ playing: playing })}>
         <h1 className='title'>
-          I am Tilman Porschütz, a Vienna based creative developer crafting
-          boutique experiences, websites and apps.
+          I am Tilman Porschütz, a Vienna based developer crafting both <i>functional</i> and <i>unique</i> <b>UX/UI</b> for the web.
         </h1>
-        <div className='message'></div>
-        {/* <PlayButton
-          id='startButton'
-          onClick={togglePlay}>
-          {playing ? 'Pause' : 'Play Intro'}
-        </PlayButton> */}
-        {/* <SecondaryButton onClick={emitMove(AvatarEvents.MOVE)}>
-          Move
-        </SecondaryButton> */}
-      </div>
     </Container>
   );
 };

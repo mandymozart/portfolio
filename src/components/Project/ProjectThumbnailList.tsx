@@ -42,7 +42,7 @@ const Container = styled.div`
     position: sticky;
     align-items: center;
     margin-bottom: 4rem;
-    top: 0;
+    top: 5rem;
     z-index: 1;
 
     display: grid;
@@ -104,7 +104,7 @@ const Container = styled.div`
       @media (max-width: ${BREAKPOINT_SM}) {
         display: flex;
       }
-      top: 2rem;
+      top: 6rem;
       h2 {
         font-size: 12rem;
         color: var(--aero-blue);

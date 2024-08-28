@@ -1,17 +1,15 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
-
 const Container = styled.section`
   position: relative;
   font-family: var(--font);
 
   max-width: var(--content-width);
   margin: 0 auto;
-  @media (max-width: 850px) {
-  }
   .overlay {
     width: 100%;
     .info {
@@ -26,7 +24,7 @@ const Container = styled.section`
         &--first {
           height: calc(100vh - var(--feature-project-header-height));
         }
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           grid-template-columns: 1fr;
         }
         .image {
@@ -42,14 +40,18 @@ const Container = styled.section`
             font-size: 3rem;
             line-height: 4rem;
             margin-bottom: 4rem;
+            @media (max-width: ${BREAKPOINT_XS}) {
+              font-size: 2rem;
+            line-height: 2.5rem;
+            }
           }
-          @media (max-width: 850px) {
+          @media (max-width: ${BREAKPOINT_MD}) {
             padding: 0 var(--grid-padding) 1rem var(--grid-padding);
           }
         }
       }
     }
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_XS}) {
       position: relative;
     }
   }

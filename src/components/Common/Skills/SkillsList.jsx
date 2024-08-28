@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../../config.js';
 import { fastTranslateVariants } from '../../../animations/site';
 import { Accordion } from '../Accordion/Accordion.jsx';
 import docs from './../../../data/index.js';
@@ -14,11 +15,11 @@ const CategoryContainer = styled.div`
   align-items: center;
   padding: var(--grid-padding) 0;
   gap: 2rem;
-  @media (max-width: 1350px) {
+  @media (max-width: ${BREAKPOINT_MD}) {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: ${BREAKPOINT_XS}) {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

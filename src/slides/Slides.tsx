@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { FC } from 'react';
 import SlideIn from './../components/Common/SlideIn/SlideIn';
 import { routes } from './../slideInRoutes';
-import AboutPage from './/AboutPage';
+import AboutPage from './AboutPage';
 import AttributionsPage from './AttributionsPage';
 import ImprintPage from './ImprintPage';
 import PrivacyPolicyPage from './PrivacyPolicyPage';
-import ProjectDetailPage from './ProjectDetailPage';
+import ProjectDetailPage from './ProjectPage';
 import ProjectsPage from './ProjectsPage';
 
 const Container = styled.div`

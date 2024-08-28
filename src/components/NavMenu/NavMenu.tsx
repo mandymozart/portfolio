@@ -1,15 +1,14 @@
 'use client';
 import styled from '@emotion/styled';
 import useMenuStore from '../../stores/MenuStore';
-import Loader from '../Common/Loader/Loader';
 import {
   BREAKPOINT_L,
   BREAKPOINT_MD,
   BREAKPOINT_SM,
   BREAKPOINT_XS,
 } from './../../../config';
-import { emitRouteChange } from './../../events/routerEvents';
 
+import { useNavigate } from 'react-router-dom';
 import { playToneAtRoute } from '../../audio';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
@@ -18,7 +17,7 @@ const Container = styled.div`
   right: 0;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   margin: 0;
   nav {
     height: 4rem;
@@ -125,7 +124,7 @@ const Container = styled.div`
         backdrop-filter: blur(10px);
       }
       &.active span {
-        padding-right: 8rem;
+        /* padding-right: 8rem; */
         @media (max-width: ${BREAKPOINT_XS}) {
           padding-right: var(--grid-padding);
         }
@@ -139,13 +138,16 @@ const navItems = [routes.PROJECTS, routes.ABOUT];
 
 const NavMenu = () => {
   const { activeMenuItem, setActiveMenuItem } = useMenuStore();
+  const navigate = useNavigate()
 
   const navigateTo = (to: SlideInRoute) => {
     if (activeMenuItem.key === to.key) {
       playToneAtRoute();
     } else {
       playToneAtRoute(to.key);
-      emitRouteChange({ to });
+      console.log(to)
+      // emitRouteChange({ to });
+      navigate(to.key)
       setActiveMenuItem(to);
     }
   };
@@ -159,7 +161,6 @@ const NavMenu = () => {
             activeMenuItem.key === routes.HOME.key ? 'active' : ''
           }`}>
           <span>Home</span>
-          <Loader />
         </button>
 
         {navItems.map((route) => (

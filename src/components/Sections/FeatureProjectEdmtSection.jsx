@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
@@ -20,12 +21,19 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
-        height: calc(100vh - var(--feature-project-header-height));
+        min-height: calc(100vh - var(--feature-project-header-height));
         align-items: center;
         grid-template-columns: 4fr 1fr 1fr;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          display: block;
+        }
         p.text {
           font-size: 3rem;
           line-height: 4rem;
+          @media (max-width: ${BREAKPOINT_XS}) {
+              font-size: 2rem;
+            line-height: 2.5rem;
+            }
         }
         .awards {
           grid-column: 3 / span 1;
@@ -39,23 +47,23 @@ const Container = styled.section`
             margin-bottom: 1rem;
           }
         }
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           padding: 0 var(--grid-padding) 1rem var(--grid-padding);
         }
       }
       .presentation {
         display: grid;
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
         grid-template-columns: 1fr 1fr 3fr 1fr;
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           grid-template-columns: 1fr;
-        }
+                  }
         .image {
           padding: 0 var(--grid-padding);
           &--1 {
             grid-column: 2;
-            @media (max-width: 850px) {
+            @media (max-width: ${BREAKPOINT_MD}) {
               display: none;
             }
           }
@@ -66,8 +74,6 @@ const Container = styled.section`
         }
         .video {
           padding: 0 var(--grid-padding);
-          @media (max-width: 850px) {
-          }
           &-player {
             position: relative;
             img,
@@ -117,7 +123,7 @@ const Container = styled.section`
         }
       }
     }
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_XS}) {
       position: relative;
     }
   }

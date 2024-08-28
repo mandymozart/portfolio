@@ -15,7 +15,7 @@ export enum SlideInRouteVariant {
   FOOTER = 'footer',
 }
 export enum SlideInRouteName {
-  HOME = 'home',
+  HOME = '',
   PRIVACY = 'privacy',
   IMPRINT = 'imprint',
   PROCESS = 'process',

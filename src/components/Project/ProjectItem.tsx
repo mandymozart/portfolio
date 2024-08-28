@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 import { playToneAtRoute } from '../../audio';
 import useMenuStore from '../../stores/MenuStore';
-import { emitRouteChange } from './../../events/routerEvents';
 import { routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -38,11 +38,12 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
 
 const ProjectItem = ({ project, ...props }: Props) => {
   const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
+  const navigate = useNavigate()
 
   const navigateTo = (uid: string) => () => {
     playToneAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
-    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
+    navigate(`/project/${uid}`);
   };
   if (!project) return <></>;
   return (

@@ -56,7 +56,7 @@ const Container = styled.div`
         font-size: 2.25rem;
         line-height: 2.5rem;
         @media (max-width: ${BREAKPOINT_XS}) {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           line-height: 2rem;
           margin: 0;
         }
@@ -64,6 +64,9 @@ const Container = styled.div`
       a {
         letter-spacing: 0.5rem;
         text-decoration: none;
+        @media (max-width: ${BREAKPOINT_XS}) {
+          letter-spacing: 0;
+        }
       }
     }
   }

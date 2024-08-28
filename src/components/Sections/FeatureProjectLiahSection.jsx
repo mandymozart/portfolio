@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
   font-family: var(--font);
-  height: 200vh;
+  min-height: 200vh;
   max-width: var(--content-width);
   margin: 0 auto;
-  @media (max-width: 850px) {
+  @media (max-width: ${BREAKPOINT_MD}) {
   }
 
   .overlay {
@@ -23,14 +24,17 @@ const Container = styled.section`
       .lead {
         padding: 0 var(--grid-padding);
         display: grid;
-        height: calc(100vh - var(--feature-project-header-height));
         align-items: center;
         grid-template-columns: 2fr 4fr;
         p {
           font-size: 3rem;
           line-height: 4rem;
+          @media (max-width: ${BREAKPOINT_MD}) {
+              font-size: 2rem;
+            line-height: 2.5rem;
+            }
         }
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           padding: 0 var(--grid-padding) 1rem var(--grid-padding);
         }
       }
@@ -40,19 +44,20 @@ const Container = styled.section`
         height: 100vh;
         align-items: center;
         grid-template-columns: 1fr 3fr 1fr 1fr;
-        @media (max-width: 850px) {
+        @media (max-width: ${BREAKPOINT_MD}) {
           grid-template-columns: 1fr;
+          gap: 1rem;
         }
         .image {
           padding: 0 var(--grid-padding);
           &--1 {
             grid-column: 2;
-            @media (max-width: 850px) {
+            @media (max-width: ${BREAKPOINT_XS}) {
               display: none;
             }
           }
           &--2 {
-            @media (max-width: 850px) {
+            @media (max-width: ${BREAKPOINT_XS}) {
             }
           }
           img {
@@ -62,7 +67,7 @@ const Container = styled.section`
         }
       }
     }
-    @media (max-width: 850px) {
+    @media (max-width: ${BREAKPOINT_MD}) {
       position: relative;
     }
   }
