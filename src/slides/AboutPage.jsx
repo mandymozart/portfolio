@@ -188,9 +188,8 @@ function AboutPage() {
               </p>
               <p>
                 By regularily attending conferences and through my independent
-                research practise as an artist, musician, and enthusiast media
-                scientist I challange my perspectives constn. This universal
-                approach allows me to maintain a nuanced perspective on a market
+                research practise as an artist and musician I challange my perspectives constantly. 
+                This universal approach allows me to maintain a nuanced perspective on a market
                 and world in constant flux.
               </p>
             </div>
