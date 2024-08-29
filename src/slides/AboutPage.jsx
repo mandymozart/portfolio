@@ -73,15 +73,32 @@ const Container = styled.div`
           display: block;
         }
         .avatar {
-          border: 1px solid var(--primary);
-          border-radius: 2rem;
+          width: 100%; /* The avatar width is 100% of its parent */
+          height: auto;
           overflow: hidden;
-          img {
-            width: 100%;
-            height: auto;
-            display: block;
+          position: relative;
+          display: inline-block;
+        }
+
+        .avatar img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          clip-path: ellipse(50% 50% at 50% 50%);
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+          .avatar img {
+            clip-path: ellipse(60% 40% at 50% 50%);
           }
         }
+
+        @media (max-aspect-ratio: 4/3) {
+          .avatar img {
+            clip-path: ellipse(60% 40% at 50% 50%);
+          }
+        }
+        
         .meta {
           margin-top: 2rem;
           margin-bottom: 3rem;
@@ -188,9 +205,10 @@ function AboutPage() {
               </p>
               <p>
                 By regularily attending conferences and through my independent
-                research practise as an artist and musician I challange my perspectives constantly. 
-                This universal approach allows me to maintain a nuanced perspective on a market
-                and world in constant flux.
+                research practise as an artist and musician I challange my
+                perspectives constantly. This universal approach allows me to
+                maintain a nuanced perspective on a market and world in constant
+                flux.
               </p>
             </div>
           </section>

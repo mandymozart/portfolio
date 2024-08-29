@@ -89,8 +89,8 @@ const Container = styled.div`
         padding: 0 var(--grid-padding);
         p {
           margin: 0 0 4rem 0;
-          font-size: 3rem;
-          line-height: 4rem;
+          font-size: 2rem;
+          line-height: 3rem;
           @media (max-width: ${BREAKPOINT_MD}) {
             font-size: 2rem;
             line-height: 3rem;
