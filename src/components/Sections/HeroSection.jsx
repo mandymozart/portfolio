@@ -32,7 +32,7 @@ const HeroSection = ({ ...props }) => {
   return (
     <Container {...props}>
         <h1 className='title'>
-          I am Tilman Porschütz, a Vienna based developer crafting both <i>functional</i> and <i>unique</i> <b>UX/UI</b> for the web.
+          I am Tilman Porschütz, a Vienna based developer and designer crafting both <i>functional</i> and <i>impactful</i> <b>UX/UI</b> for the web, humanity and all beings.
         </h1>
     </Container>
   );

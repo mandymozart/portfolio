@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Accordion } from '../components/Common/Accordion/Accordion';
 import PrimaryButton from '../components/Common/FormElements/PrimaryButton';
@@ -165,7 +166,7 @@ const MetaContainer = styled.div`
   }
 `;
 
-const getDetails = (project: any) => {
+const getDetails = (project) => {
   let details = [];
   if (project.roles?.length > 0) {
     details.push({
@@ -176,10 +177,7 @@ const getDetails = (project: any) => {
           <ul>
             {project?.roles?.map((node, index) => {
               return (
-                <RoleItem
-                  key={index}
-                  uid={node}
-                />
+                <RoleItem key={index} uid={node} />
               );
             })}
           </ul>
@@ -193,19 +191,17 @@ const getDetails = (project: any) => {
       title: 'Partners',
       content: (
         <MetaContainer>
-          <div className='partners-list'>
+          <div className="partners-list">
             {project?.partners?.map((node, index) => (
               <motion.div
                 key={index}
                 custom={[index * 0.1, index * 0.01]}
                 variants={fastTranslateVariants}
-                initial='initial'
-                animate='enter'
-                exit='exit'>
-                <PartnerItem
-                  key={index}
-                  link={node}
-                />
+                initial="initial"
+                animate="enter"
+                exit="exit"
+              >
+                <PartnerItem key={index} link={node} />
               </motion.div>
             ))}
           </div>
@@ -220,15 +216,16 @@ const getDetails = (project: any) => {
       title: 'Tech Stack',
       content: (
         <MetaContainer>
-          <div className='tech-stack-list'>
+          <div className="tech-stack-list">
             {project.skills?.map((node, index) => (
               <motion.div
                 key={index}
                 custom={[index * 0.1, index * 0.01]}
                 variants={fastTranslateVariants}
-                initial='initial'
-                animate='enter'
-                exit='exit'>
+                initial="initial"
+                animate="enter"
+                exit="exit"
+              >
                 <SkillItemAsync uid={node} />
               </motion.div>
             ))}
@@ -245,10 +242,7 @@ const getDetails = (project: any) => {
             <ul>
               {project?.methods?.map((node, index) => {
                 return (
-                  <MethodItem
-                    key={index}
-                    uid={node}
-                  />
+                  <MethodItem key={index} uid={node} />
                 );
               })}
             </ul>
@@ -267,12 +261,13 @@ export const getChars = (word) => {
       <motion.span
         custom={[i * 0.02, (word.length - i) * 0.01]}
         variants={translateVariants}
-        initial='initial'
-        animate='enter'
-        exit='exit'
-        key={char + i}>
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        key={char + i}
+      >
         {char}
-      </motion.span>,
+      </motion.span>
     );
   });
   return chars;
@@ -280,8 +275,8 @@ export const getChars = (word) => {
 
 const ProjectPage = () => {
   const { uid } = useParams();
-  const navigate = useNavigate()
-  const  { setActiveMenuItem } = useMenuStore();
+  const navigate = useNavigate();
+  const { setActiveMenuItem } = useMenuStore();
 
   const data = docs.projects.find(
     (project) => project.uid === uid,
@@ -290,65 +285,95 @@ const ProjectPage = () => {
   const project = data?.data;
   if (!project) return <>No data</>;
 
+  useEffect(() => {
+    // Define your project-specific background colors here
+    const projectBackgroundColors = {
+      'resradio-2': 'var(--penugin-white)',
+      'collisions-munich': 'var(--anakiwa)',
+      'edmt': 'var(--perfume)',
+      'lagerhaus': 'var(--tidal)',
+      'fourth-garden': 'var(--penguin-white)',
+      'liah': 'var(--penguin-white)',
+      'swma': 'var(--background)',
+      'rwa-emails': 'var(--penguin-white)',
+      'naivesandvisionaries': 'var(--penguin-white)',
+      'rwa-shop': 'var(--penguin-white)',
+      'dogheartcity': 'var(--background-600)',
+      'muriquee': 'var(--penguin-white)',
+      'shalomsalon': 'var(--penguin-white)',
+      'business-riot-conference': 'var(--background-600)',
+      'mirror-head': 'var(--background)',
+      'collisions-canfranc': 'var(--background)',
+      'resradio-1': 'var(--background)',
+    };
+  
+    // Get the background color for the current project
+    const backgroundColor = projectBackgroundColors[uid] || 'var(--background)';
+  
+    // Smooth transition for background color
+    document.body.style.transition = 'background-color 6s ease';
+    document.body.style.backgroundColor = backgroundColor;
+  
+    // Cleanup function to reset background color when the component unmounts
+    return () => {
+      document.body.style.backgroundColor = 'var(--background)';
+    };
+  }, [uid]);
+  
+
   const back = () => () => {
     playToneAtRoute(routes.PROJECTS.key);
     navigate(`/${routes.PROJECTS.key}`);
-    setActiveMenuItem(routes.PROJECTS)
+    setActiveMenuItem(routes.PROJECTS);
     emitRouteChange({ to: routes.PROJECTS });
   };
 
-  const goToWebsite = (url: string) => {
+  const goToWebsite = (url) => {
     window.open(url, '_blank').focus();
   };
-  console.log(project);
+
   return (
     <Container>
-      <section className='page page-hero'>
+      <section className="page page-hero">
         <header>
           <h2>{getChars(project?.name)}</h2>
-          <div className='tags'>
-            <ProjectTags
-              tags={project.industries}
-              category={'industries'}
-            />
-            <ProjectTags
-              tags={project.types}
-              category={'types'}
-            />
+          <div className="tags">
+            <ProjectTags tags={project.industries} category={'industries'} />
+            <ProjectTags tags={project.types} category={'types'} />
           </div>
         </header>
-        <div className='meta'>
-          <div className='description'>
+        <div className="meta">
+          <div className="description">
             <Richtext richtext={project?.description} />
             {project.images[0].desktop && (
               <img
-                className='screenshot hidden--mobile'
+                className="screenshot hidden--mobile"
                 src={BASE_PATH + project.images[0].desktop.url}
               />
             )}
             {project.images[0].mobile && (
               <img
-                className='screenshot hidden--desktop hidden--tablet'
+                className="screenshot hidden--desktop hidden--tablet"
                 src={BASE_PATH + project.images[0].mobile.url}
               />
             )}
           </div>
-          <div className='details'>
+          <div className="details">
             {getDetails(project).length > 0 && (
-              <div className='accordion'>
+              <div className="accordion">
                 <Accordion items={getDetails(project)} />
               </div>
             )}
-            <div className='links'>
+            <div className="links">
               {project?.link?.url && (
-                <div className='link-item'>
+                <div className="link-item">
                   <motion.div
-                    initial='offscreen'
-                    whileInView='onscreen'
+                    initial="offscreen"
+                    whileInView="onscreen"
                     custom={3}
-                    variants={staggerVariants}>
-                    <SecondaryButton
-                      onClick={() => goToWebsite(project?.link.url)}>
+                    variants={staggerVariants}
+                  >
+                    <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>
                       Visit Project
                     </SecondaryButton>
                   </motion.div>
@@ -359,23 +384,25 @@ const ProjectPage = () => {
         </div>
       </section>
       <ScreenshotsSection screenshots={project?.images} />
-      <div className='navigation'>
-        <div className='link-item'>
+      <div className="navigation">
+        <div className="link-item">
           <motion.div
-            initial='offscreen'
-            whileInView='onscreen'
+            initial="offscreen"
+            whileInView="onscreen"
             custom={0}
-            variants={staggerVariants}>
+            variants={staggerVariants}
+          >
             <PrimaryButton onClick={back()}>Return To Projects</PrimaryButton>
           </motion.div>
         </div>
         {project?.link?.url && (
-          <div className='link-item'>
+          <div className="link-item">
             <motion.div
-              initial='offscreen'
-              whileInView='onscreen'
+              initial="offscreen"
+              whileInView="onscreen"
               custom={3}
-              variants={staggerVariants}>
+              variants={staggerVariants}
+            >
               <SecondaryButton onClick={() => goToWebsite(project?.link.url)}>
                 Visit Project
               </SecondaryButton>
@@ -387,4 +414,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage
+export default ProjectPage;

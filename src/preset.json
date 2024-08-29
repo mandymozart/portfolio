@@ -1,0 +1,12 @@
+{
+  "oscillatorType": "sawtooth",
+  "attack": 0.5,
+  "decay": 0.3,
+  "sustain": 0.82,
+  "release": 9.9,
+  "filterFrequency": 3000,
+  "filterType": "lowpass",
+  "reverbDecay": 10,
+  "delayTime": 0.17,
+  "delayFeedback": 0.61
+}

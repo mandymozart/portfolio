@@ -6,12 +6,15 @@ import './assets/css/fonts.css';
 import './assets/css/index.css';
 import './assets/css/variables.css';
 import { initAudio } from './audio.ts';
+import { AudioProvider } from './hooks/useAudio.tsx';
 initAudio()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <AudioProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </AudioProvider>
   </React.StrictMode>,
 );

@@ -9,7 +9,7 @@ import {
 } from './../../../config';
 
 import { useNavigate } from 'react-router-dom';
-import { playToneAtRoute } from '../../audio';
+import { playChordAtRoute, playToneAtRoute } from '../../audio';
 import { SlideInRoute, routes } from './../../slideInRoutes';
 
 const Container = styled.div`
@@ -144,7 +144,8 @@ const NavMenu = () => {
     if (activeMenuItem.key === to.key) {
       playToneAtRoute();
     } else {
-      playToneAtRoute(to.key);
+      playChordAtRoute(to.key)
+      // playToneAtRoute(to.key);
       console.log(to)
       // emitRouteChange({ to });
       navigate(to.key)

@@ -9,6 +9,7 @@
   --accent-600: #c67700;
   --color-captions: rgb(255, 217, 0); /* deprecated */
   --background: rgb(253, 253, 253);
+  /* --background: #ecebe4; */
   --background-600: rgb(212, 212, 212);
   --background-accent-gradient: linear-gradient(
     90deg,
@@ -36,6 +37,8 @@
 
   --mauvelous: #f4899b;
   --pantone-708-c: #f4899b;
+
+  --penguin-white: #f5f3ef;
 
   --font: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;

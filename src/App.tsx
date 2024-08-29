@@ -1,6 +1,7 @@
 'use client';
 
 import { Outlet, Route, Routes } from 'react-router-dom';
+import PageTransition from './animations/PageTransition'; // Import the PageTransition component
 import NavMenu from './components/NavMenu/NavMenu';
 import ScrollToTop from './components/ScrollToTop';
 import AboutPage from './slides/AboutPage';
@@ -33,13 +34,15 @@ function App() {
   );
 }
 
+
 function Layout() {
   return (
     <>
-    <ScrollToTop/>
+      <ScrollToTop />
       <NavMenu />
-      <div style={{paddingTop: '8rem'}}>
-        <Outlet />
+      {/* <SynthControlPanel /> */}
+      <div style={{ paddingTop: '8rem' }}>
+        <PageTransition />
       </div>
     </>
   );
