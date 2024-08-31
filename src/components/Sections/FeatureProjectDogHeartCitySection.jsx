@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
@@ -88,9 +89,9 @@ const project = {
   type: 'Marketing Game',
 };
 
-const FeatureProjectDogHeartCitySection = ({ children, ...props }) => {
+const FeatureProjectDogHeartCitySection = forwardRef(({ children, ...props },ref) => {
   return (
-    <Container {...props}>
+    <Container {...props} ref={ref}>
       <img
         className='backdrop'
         src='/images/feature-dogheartcity-background.avif'
@@ -128,6 +129,6 @@ const FeatureProjectDogHeartCitySection = ({ children, ...props }) => {
       {children}
     </Container>
   );
-};
+});
 
 export default FeatureProjectDogHeartCitySection;

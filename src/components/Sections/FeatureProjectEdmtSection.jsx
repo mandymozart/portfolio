@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
@@ -137,9 +138,9 @@ const project = {
   type: 'Mobile App',
 };
 
-const FeatureProjectEdmtSection = ({ children, ...props }) => {
+const FeatureProjectEdmtSection = forwardRef(({ children, ...props },ref) => {
   return (
-    <Container {...props}>
+    <Container {...props}  ref={ref}>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -226,6 +227,6 @@ const FeatureProjectEdmtSection = ({ children, ...props }) => {
       {children}
     </Container>
   );
-};
+});
 
 export default FeatureProjectEdmtSection;

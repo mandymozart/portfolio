@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { forwardRef } from 'react';
 import docs from '../../../data/index.js';
 
 const Container = styled.div`
@@ -18,7 +19,7 @@ div {
 
 `;
 
-const ClientListSimple = () => {
+const ClientListSimple = forwardRef(() => {
   if (!docs.clients) return <></>;
   return (
     <Container>
@@ -51,6 +52,6 @@ const ClientListSimple = () => {
       ))} */}
     </Container>
   );
-};
+});
 
 export default ClientListSimple;

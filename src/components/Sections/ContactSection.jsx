@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { forwardRef } from 'react';
 import {
   BREAKPOINT_MD,
   BREAKPOINT_SM,
@@ -69,9 +70,9 @@ const Container = styled.div`
   }
 `;
 
-const ContactSection = () => {
+const ContactSection = forwardRef((_,ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <div className='body'>
         <div className='inner'>
           <h3>Let&apos;s work together!</h3>
@@ -87,6 +88,6 @@ const ContactSection = () => {
       <Footer />
     </Container>
   );
-};
+});
 
 export default ContactSection;

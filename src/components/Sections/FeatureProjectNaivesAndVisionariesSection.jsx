@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
@@ -90,9 +91,9 @@ const project = {
   type: 'eCommerce',
 };
 
-const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
+const FeatureProjectNaivesAndVisionariesSection = forwardRef(({ children, ...props },ref) => {
   return (
-    <Container {...props}>
+    <Container {...props}  ref={ref}>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -141,6 +142,6 @@ const FeatureProjectNaivesAndVisionariesSection = ({ children, ...props }) => {
       {children}
     </Container>
   );
-};
+});
 
 export default FeatureProjectNaivesAndVisionariesSection;

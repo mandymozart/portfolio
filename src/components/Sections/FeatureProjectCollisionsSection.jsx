@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
 
@@ -107,9 +108,9 @@ const Container = styled.section`
   }
 `;
 
-const FeatureProjectCollisionsSection = () => {
+const FeatureProjectCollisionsSection = forwardRef((_,ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <img
         className='backdrop'
         src='/images/shade-shapes-2.png'
@@ -179,6 +180,6 @@ const FeatureProjectCollisionsSection = () => {
       </div>
     </Container>
   );
-};
+});
 
 export default FeatureProjectCollisionsSection;

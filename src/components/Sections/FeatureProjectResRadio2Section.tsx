@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { FC } from 'react';
+import { FC, forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
@@ -65,9 +65,9 @@ const project = {
   type: 'WebApp',
 };
 
-const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
+const FeatureProjectResRadio2Section: FC = forwardRef(({ ...props },ref) => {
   return (
-    <Container {...props}>
+    <Container {...props}  ref={ref}>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -114,6 +114,6 @@ const FeatureProjectResRadio2Section: FC = ({ ...props }) => {
       </div>
     </Container>
   );
-};
+});
 
 export default FeatureProjectResRadio2Section;

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { staggerVariants } from '../../animations/site';
 
@@ -35,9 +35,9 @@ const Container = styled.div`
   }
 `;
 
-const SubSection = ({ title, children }) => {
+const SubSection = forwardRef(({ title, children }, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <div>
         <motion.h2
           custom={0}
@@ -56,6 +56,6 @@ const SubSection = ({ title, children }) => {
       </div>
     </Container>
   );
-};
+});
 
 export default SubSection;

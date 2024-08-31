@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import styled from '@emotion/styled';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
@@ -33,9 +33,9 @@ const Container = styled.section`
       
 `;
 
-const HeroSection = ({ ...props }) => {
+const HeroSection = forwardRef(({ ...props },ref) => {
   return (
-    <Container {...props}>
+    <Container {...props}  ref={ref}>
       <div>
 
         <h1 className='title'>
@@ -44,6 +44,6 @@ const HeroSection = ({ ...props }) => {
       </div>
     </Container>
   );
-};
+});
 
 export default HeroSection;

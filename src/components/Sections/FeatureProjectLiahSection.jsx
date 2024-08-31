@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 import { staggerVariants } from './../../animations/site';
@@ -30,9 +31,9 @@ const Container = styled.section`
           font-size: 3rem;
           line-height: 4rem;
           @media (max-width: ${BREAKPOINT_MD}) {
-              font-size: 2rem;
+            font-size: 2rem;
             line-height: 2.5rem;
-            }
+          }
         }
         @media (max-width: ${BREAKPOINT_MD}) {
           padding: 0 var(--grid-padding) 1rem var(--grid-padding);
@@ -81,9 +82,9 @@ const project = {
   type: 'eCommerce',
 };
 
-const FeatureProjectLiahSection = () => {
+const FeatureProjectLiahSection = forwardRef((_, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -139,6 +140,6 @@ const FeatureProjectLiahSection = () => {
       </div>
     </Container>
   );
-};
+});
 
 export default FeatureProjectLiahSection;

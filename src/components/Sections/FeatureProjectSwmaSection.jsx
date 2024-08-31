@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
 
 import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import { BREAKPOINT_XS, BREAKPOINT_XXS } from '../../../config';
 import { revealVariants, staggerVariants } from './../../animations/site';
 
@@ -75,9 +76,11 @@ const project = {
   type: 'eCommerce',
 };
 
-const FeatureProjectSwmaSection = ({ children, ...props }) => {
+const FeatureProjectSwmaSection = forwardRef(({ children, ...props }, ref) => {
   return (
-    <Container {...props}>
+    <Container
+      {...props}
+      ref={ref}>
       <div className='overlay'>
         <motion.div
           className='info'
@@ -169,6 +172,6 @@ const FeatureProjectSwmaSection = ({ children, ...props }) => {
       {children}
     </Container>
   );
-};
+});
 
 export default FeatureProjectSwmaSection;

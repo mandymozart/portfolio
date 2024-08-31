@@ -124,6 +124,29 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
   }
 };
 
+
+let isPlaying = false;  // Flag to track if a note is currently playing
+
+export const playChord = (chord: SynthTone[]) => {
+  // Trigger the chord notes
+  if (isPlaying) return;
+  isPlaying = true;
+
+  // Calculate the duration in milliseconds
+  const durationInMs = Tone.Time(chord[0].duration).toMilliseconds();
+
+  // Trigger the new chord notes
+  synth.triggerAttackRelease(
+    chord.map(t => t.note),
+    chord[0].duration
+  );
+
+  // Reset the flag once the note(s) finish playing
+  setTimeout(() => {
+    isPlaying = false;
+  }, durationInMs);
+};
+
 export const playChordAtRoute = (key?: string) => {
   const selectedRoute = Object.values(routes).find(
     (route) => route.key === key,
