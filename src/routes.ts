@@ -25,6 +25,7 @@ export interface SynthTone {
 export enum AudioBedKey {
   ARCTIC_WIND = 'arctic-wind',
   WIND_INTERIOR_HOWL = 'wind-interior-howl',
+  OWL_HOOTS_AND_DISTANT_DOG = 'owl-hoots-and-distant-dog'
 }
 
 export interface IRoute {

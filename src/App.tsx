@@ -40,7 +40,6 @@ function Layout() {
     <>
       <ScrollToTop />
       <NavMenu />
-      {/* <SynthControlPanel /> */}
       <div style={{ paddingTop: '8rem' }}>
         <PageTransition />
       </div>

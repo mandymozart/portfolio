@@ -107,7 +107,7 @@ const HomePageNoGl = () => {
 
   return (
     <Container>
-      <HeroSection ref={(el) => (sectionsRef.current[0] = el)} />
+      <HeroSection />
       <ClientListSimple ref={(el) => (sectionsRef.current[1] = el)} />
       <SubSection title={<>Selected<br /> Projects</>} ref={(el) => (sectionsRef.current[2] = el)} />
       <FeatureProjectResRadio2Section ref={(el) => (sectionsRef.current[3] = el)} />

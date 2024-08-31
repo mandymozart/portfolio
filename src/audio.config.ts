@@ -1,46 +1,112 @@
 import { SynthTone } from './routes';
-// export const MONO_SYNTH_MENU_PRESET: MonoSynthOptions = {
-//   oscillator: {
-//     type: 'sine',
-//     phase: 2,
-//     volume: 0.3,
-//     mute: false,
-//     onstop: () => {},
-//   },
-//   volume: 0.3,
-//   envelope: {
-//     attack: 0.3,
-//     decay: 0.1,
-//     sustain: 0.4,
-//     release: 0.4,
-//     attackCurve: 'linear',
-//     releaseCurve: 'exponential',
-//     decayCurve: 'linear',
-//   },
-//   filterEnvelope: {
-//     attack: 0.001,
-//     decay: 0.2,
-//     sustain: 0.5,
-//     release: 0.3,
-//     baseFrequency: 200,
-//     octaves: 3,
-//     exponent: 2,
-//     attackCurve: 'linear',
-//     releaseCurve: 'linear',
-//     decayCurve: 'linear',
-//   },
-//   filter: {
-//     Q: 1,
-//     type: 'lowpass',
-//     rolloff: -12,
-//     frequency: 400,
-//     detune: 200,
-//     gain: 0,
-//   },
-//   detune: 0,
-//   portamento: 0.1,
-//   onsilence: () => {},
-// };
+// paramConfig.js
+export const paramConfig = {
+  synth: {
+    oscillatorType: {
+      type: 'select',
+      options: ['sine', 'triangle', 'square', 'sawtooth'],
+      label: 'Oscillator Type'
+    },
+    attack: {
+      type: 'range',
+      min: 0,
+      max: 2,
+      step: 0.01,
+      label: 'Attack'
+    },
+    decay: {
+      type: 'range',
+      min: 0,
+      max: 2,
+      step: 0.01,
+      label: 'Decay'
+    },
+    sustain: {
+      type: 'range',
+      min: 0,
+      max: 1,
+      step: 0.01,
+      label: 'Sustain'
+    },
+    release: {
+      type: 'range',
+      min: 0,
+      max: 10,
+      step: 0.01,
+      label: 'Release'
+    }
+  },
+  filter: {
+    filterFrequency: {
+      type: 'range',
+      min: 100,
+      max: 5000,
+      step: 1,
+      label: 'Filter Frequency'
+    },
+    filterType: {
+      type: 'select',
+      options: ['lowpass', 'highpass', 'bandpass', 'notch'],
+      label: 'Filter Type'
+    }
+  },
+  reverb: {
+    reverbDecay: {
+      type: 'range',
+      min: 0.1,
+      max: 10,
+      step: 0.1,
+      label: 'Reverb Decay'
+    },
+    reverbWet: {
+      type: 'range',
+      min: 0,
+      max: 1,
+      step: 0.01,
+      label: 'Reverb Wet'
+    }
+  },
+  delay: {
+    delayTime: {
+      type: 'range',
+      min: 0.01,
+      max: 1,
+      step: 0.01,
+      label: 'Delay Time'
+    },
+    delayFeedback: {
+      type: 'range',
+      min: 0,
+      max: 1,
+      step: 0.01,
+      label: 'Delay Feedback'
+    }
+  },
+  chorus: {
+    chorusFrequency: {
+      type: 'range',
+      min: 0.1,
+      max: 10,
+      step: 0.1,
+      label: 'Chorus Frequency'
+    },
+    chorusDelayTime: {
+      type: 'range',
+      min: 0,
+      max: 5,
+      step: 0.1,
+      label: 'Chorus Delay Time'
+    },
+    chorusDepth: {
+      type: 'range',
+      min: 0,
+      max: 1,
+      step: 0.01,
+      label: 'Chorus Depth'
+    }
+  }
+};
+
 
 export const sameRouteTone: SynthTone = {
   note: 'C2',

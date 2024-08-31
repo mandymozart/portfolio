@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { paramConfig } from './../audio.config';
 import { useAudio } from './../hooks/useAudio';
 
 const Container = styled.div`
@@ -20,8 +21,12 @@ const Container = styled.div`
 
   .control-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
   }
 
   label {
@@ -35,12 +40,54 @@ const Container = styled.div`
   }
 `;
 
+const ControlPanel = ({ params, onParamChange, config }) => (
+  <div className="control-grid">
+    {Object.keys(config).map((section) => (
+      <div key={section}>
+        <h3>{section.charAt(0).toUpperCase() + section.slice(1)}</h3>
+        {Object.entries(config[section]).map(([paramName, paramConfig]) => (
+          <label key={paramName}>
+            {paramConfig.label}:
+            {paramConfig.type === 'range' && (
+              <input
+                type="range"
+                name={paramName}
+                min={paramConfig.min}
+                max={paramConfig.max}
+                step={paramConfig.step}
+                value={params[paramName]}
+                onChange={(e) =>
+                  onParamChange({ [paramName]: parseFloat(e.target.value) })
+                }
+              />
+            )}
+            {paramConfig.type === 'select' && (
+              <select
+                name={paramName}
+                value={params[paramName]}
+                onChange={(e) =>
+                  onParamChange({ [paramName]: e.target.value })
+                }
+              >
+                {paramConfig.options.map((option) => (
+                  <option key={option} value={option}>
+                    {option.charAt(0).toUpperCase() + option.slice(1)}
+                  </option>
+                ))}
+              </select>
+            )}
+          </label>
+        ))}
+      </div>
+    ))}
+  </div>
+);
+
 const SynthControlPanel = () => {
   const { params, updateParams } = useAudio();
 
-  const handleParamChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    const { name, value } = e.target;
-    updateParams({ [name]: parseFloat(value) });
+  const handleParamChange = (newParams) => {
+    updateParams(newParams);
   };
 
   return (
@@ -48,145 +95,11 @@ const SynthControlPanel = () => {
       <div className='json'>
         {JSON.stringify(params)}
       </div>
-      <div className="control-grid">
-        <div>
-          <h3>Synth</h3>
-          <label>
-            Attack:
-            <input
-              type="range"
-              name="attack"
-              min="0"
-              max="2"
-              step="0.01"
-              value={params.attack}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Decay:
-            <input
-              type="range"
-              name="decay"
-              min="0"
-              max="2"
-              step="0.01"
-              value={params.decay}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Sustain:
-            <input
-              type="range"
-              name="sustain"
-              min="0"
-              max="1"
-              step="0.01"
-              value={params.sustain}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Release:
-            <input
-              type="range"
-              name="release"
-              min="0"
-              max="10"
-              step="0.01"
-              value={params.release}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Oscillator Type:
-            <select
-              name="oscillatorType"
-              value={params.oscillatorType}
-              onChange={(e) => updateParams({ oscillatorType: e.target.value })}
-            >
-              <option value="sine">Sine</option>
-              <option value="triangle">Triangle</option>
-              <option value="square">Square</option>
-              <option value="sawtooth">Sawtooth</option>
-            </select>
-          </label>
-        </div>
-
-        <div>
-          <h3>Filter</h3>
-          <label>
-            Filter Frequency:
-            <input
-              type="range"
-              name="filterFrequency"
-              min="100"
-              max="5000"
-              step="1"
-              value={params.filterFrequency}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Filter Type:
-            <select
-              name="filterType"
-              value={params.filterType}
-              onChange={(e) => updateParams({ filterType: e.target.value })}
-            >
-              <option value="lowpass">Lowpass</option>
-              <option value="highpass">Highpass</option>
-              <option value="bandpass">Bandpass</option>
-              <option value="notch">Notch</option>
-            </select>
-          </label>
-        </div>
-
-        <div>
-          <h3>Reverb</h3>
-          <label>
-            Reverb Decay:
-            <input
-              type="range"
-              name="reverbDecay"
-              min="0.1"
-              max="10"
-              step="0.1"
-              value={params.reverbDecay}
-              onChange={handleParamChange}
-            />
-          </label>
-        </div>
-
-        <div>
-          <h3>Delay</h3>
-          <label>
-            Delay Time:
-            <input
-              type="range"
-              name="delayTime"
-              min="0.01"
-              max="1"
-              step="0.01"
-              value={params.delayTime}
-              onChange={handleParamChange}
-            />
-          </label>
-          <label>
-            Delay Feedback:
-            <input
-              type="range"
-              name="delayFeedback"
-              min="0"
-              max="1"
-              step="0.01"
-              value={params.delayFeedback}
-              onChange={handleParamChange}
-            />
-          </label>
-        </div>
-      </div>
+      <ControlPanel 
+        params={params} 
+        onParamChange={handleParamChange} 
+        config={paramConfig} 
+      />
     </Container>
   );
 };

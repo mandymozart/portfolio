@@ -1,41 +1,61 @@
 import * as Tone from 'tone';
 import { sameRouteTone } from './audio.config';
 import preset from './preset.json';
-import { AudioBedKey, routes, SynthTone } from './routes';
+import presetSharp from './presetSharp.json';
+import { routes, SynthTone } from './routes';
 
 const VOLUME_BED = -36;
 const VOLUME_SYNTH = -12;
 const MAX_DETUNE = 300; // Max detune value in cents (3 semitones)
 const DETUNE_SENSITIVITY = 0.2; // Sensitivity factor for detune based on mouse speed
 
-export const synthParams: any = {
-  oscillatorType: preset.oscillatorType as any,
-  attack: preset.attack,
-  decay: preset.decay,
-  sustain: preset.sustain,
-  release: preset.release,
-  filterFrequency: preset.filterFrequency,
-  filterType: preset.filterType as any,
-  reverbDecay: preset.reverbDecay,
-  delayTime: preset.delayTime,
-  delayFeedback: preset.delayFeedback,
-};
+export let synthParams: any = preset; // Default to day mode preset
 
 let synth: Tone.PolySynth = null;
 let sequence: Tone.Sequence = null;
 let gain: Tone.Gain = null;
 let filter: Tone.Filter = null;
 let reverb: Tone.Reverb = null;
+let chorus: Tone.Chorus = null;
 let delay: Tone.FeedbackDelay = null;
 
-let arcticWind: Tone.Player = null;
-let windHowl: Tone.Player = null;
-let currentPlayingAudio: Tone.Player = null; // Track the currently playing audio
+let ambient: Tone.Player = null; // To hold either arctic wind or owl hoots
 
 let lastMouseY = 0;
 let lastMouseTime = 0;
 
-export const initAudio = async () => {
+let isMuted = false; 
+let isPlaying = false; 
+let isAudioContextStarted = false;
+
+function startAudioContextWithPromise() {
+  return new Promise((resolve) => {
+    if (!isAudioContextStarted) {
+      Tone.start().then(() => {
+        isAudioContextStarted = true;
+        console.log('Audio context started.');
+        resolve();
+      });
+    } else {
+      resolve();
+    }
+  });
+}
+
+document.addEventListener('click', startAudioContextWithPromise);
+document.addEventListener('touchstart', startAudioContextWithPromise);
+document.addEventListener('keypress', startAudioContextWithPromise);
+
+export const toggleMute = () => {
+  isMuted = !isMuted;
+};
+
+export const isAudioMuted = () => isMuted;
+
+export const initAudio = async (isNightMode: boolean) => {
+  // Choose preset based on night mode
+  synthParams = isNightMode ? presetSharp : preset;
+
   // Initialize the synth
   synth = new Tone.PolySynth(Tone.Synth, {
     oscillator: {
@@ -51,35 +71,25 @@ export const initAudio = async () => {
 
   gain = new Tone.Gain(0.1);
   filter = new Tone.Filter(synthParams.filterFrequency, synthParams.filterType);
-  reverb = new Tone.Reverb({ decay: synthParams.reverbDecay, wet: 0.7 });
   delay = new Tone.FeedbackDelay(synthParams.delayTime, synthParams.delayFeedback);
+  reverb = new Tone.Reverb({ decay: synthParams.reverbDecay, wet: synthParams.reverbWet });
+  chorus = new Tone.Chorus(synthParams.chorusFrequency, synthParams.chorusDelayTime, synthParams.chorusDepth);
 
   const vol = new Tone.Volume(VOLUME_SYNTH);
 
-  synth.chain(filter, delay, reverb, gain, vol, Tone.Destination);
+  synth.chain(filter, delay, chorus, reverb, gain, vol, Tone.Destination);
 
-  // Initialize the audio players
-  arcticWind = new Tone.Player('/audio/arctic-wind.mp3').toDestination();
-  windHowl = new Tone.Player('/audio/wind-howl-interior.mp3').toDestination();
+  if (ambient) {
+    ambient.stop();
+    ambient.dispose();  // Properly dispose of the old player to free resources
+  }
 
-  // Loop the audio files
-  arcticWind.loop = true;
-  windHowl.loop = true;
-
-  // Wait for all buffers to load
+  ambient = new Tone.Player(isNightMode ? '/audio/owl-hoots-and-distant-dog.mp3' : '/audio/wind-howl-interior.mp3').toDestination();
+  ambient.loop = true;
   await Tone.loaded();
-
-  // Set initial volumes and start the players
-  arcticWind.volume.value = VOLUME_BED; // Start audible
-  windHowl.volume.value = -Infinity; // Start silent
-
-  arcticWind.start();
-  windHowl.start();
-
-  // Set the current playing audio to arctic wind
-  currentPlayingAudio = arcticWind;
-
-  // Initialize mouse move listener for detuning
+  ambient.volume.value = isNightMode ? 0 : VOLUME_BED; // Start audible
+  ambient.start();
+  
   document.addEventListener('mousemove', handleMouseMove);
 
   console.log('Synth and audio players initialized and loaded');
@@ -112,7 +122,7 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
   if (reverb) {
     reverb.set({
       decay: synthParams.reverbDecay,
-      wet: 0.7,
+      wet: synthParams.reverbWet,  // Update reverb wet
     });
   }
 
@@ -122,32 +132,36 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
       feedback: synthParams.delayFeedback,
     });
   }
+
+  if (chorus) {
+    chorus.set({
+      frequency: synthParams.chorusFrequency,  // Update chorus parameters
+      delayTime: synthParams.chorusDelayTime,
+      depth: synthParams.chorusDepth,
+    });
+  }
 };
 
-
-let isPlaying = false;  // Flag to track if a note is currently playing
-
 export const playChord = (chord: SynthTone[]) => {
-  // Trigger the chord notes
+  if (isMuted) return;
+  console.log(isMuted)
   if (isPlaying) return;
   isPlaying = true;
 
-  // Calculate the duration in milliseconds
   const durationInMs = Tone.Time(chord[0].duration).toMilliseconds();
 
-  // Trigger the new chord notes
   synth.triggerAttackRelease(
     chord.map(t => t.note),
     chord[0].duration
   );
 
-  // Reset the flag once the note(s) finish playing
   setTimeout(() => {
     isPlaying = false;
   }, durationInMs);
 };
 
 export const playChordAtRoute = (key?: string) => {
+  if (isMuted) return;
   const selectedRoute = Object.values(routes).find(
     (route) => route.key === key,
   );
@@ -161,26 +175,7 @@ export const playChordAtRoute = (key?: string) => {
     chord = [sameRouteTone];
   }
 
-  synth.triggerAttackRelease(
-    chord.map(t => t.note),
-    chord[0].duration
-  );
-
-  // Determine the audio to play based on the audioBedKey
-  let nextAudio: Tone.Player | null = null;
-
-  if (selectedRoute?.audioBedKey === AudioBedKey.WIND_INTERIOR_HOWL) {
-    nextAudio = windHowl;
-  } else if (selectedRoute?.audioBedKey === AudioBedKey.ARCTIC_WIND) {
-    nextAudio = arcticWind;
-  }
-
-  // Fade between audio files if necessary
-  if (nextAudio && nextAudio !== currentPlayingAudio) {
-    currentPlayingAudio?.volume.rampTo(-Infinity, 2); // Fade out the current audio over 2 seconds
-    nextAudio.volume.rampTo(VOLUME_BED, 2); // Fade in the next audio over 2 seconds
-    currentPlayingAudio = nextAudio; // Update the current playing audio
-  }
+  playChord(chord)
 };
 
 export const playTheme = () => {

@@ -1,12 +1,16 @@
 {
-  "oscillatorType": "sawtooth",
+  "oscillatorType": "triangle",
   "attack": 0.5,
   "decay": 0.3,
   "sustain": 0.82,
   "release": 9.9,
-  "filterFrequency": 3000,
+  "filterFrequency": 4047,
   "filterType": "lowpass",
   "reverbDecay": 10,
+  "reverbWet": 0.7,
   "delayTime": 0.17,
-  "delayFeedback": 0.61
+  "delayFeedback": 0.61,
+  "chorusFrequency": 4,
+  "chorusDelayTime": 2.5,
+  "chorusDepth": 0.5
 }

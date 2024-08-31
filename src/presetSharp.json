@@ -1,0 +1,16 @@
+{
+  "oscillatorType": "sawtooth",
+  "attack": 0.57,
+  "decay": 0.19,
+  "sustain": 0.14,
+  "release": 7.37,
+  "filterFrequency": 3147,
+  "filterType": "lowpass",
+  "reverbDecay": 10,
+  "reverbWet": 0.22,
+  "delayTime": 0.01,
+  "delayFeedback": 0.93,
+  "chorusFrequency": 7.8,
+  "chorusDelayTime": 4,
+  "chorusDepth": 0.73
+}

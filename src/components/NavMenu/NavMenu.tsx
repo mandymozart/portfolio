@@ -1,16 +1,24 @@
 'use client';
 import styled from '@emotion/styled';
+import { IoMoonOutline, IoSunnyOutline, IoVolumeHighOutline, IoVolumeMuteOutline } from 'react-icons/io5';
 import useMenuStore from '../../stores/MenuStore';
 import {
   BREAKPOINT_L,
-  BREAKPOINT_MD,
   BREAKPOINT_SM,
-  BREAKPOINT_XS,
+  BREAKPOINT_XS
 } from './../../../config';
 
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { playChordAtRoute, playToneAtRoute } from '../../audio';
+import {
+  initAudio,
+  isAudioMuted,
+  playChordAtRoute,
+  playToneAtRoute,
+  toggleMute,
+} from '../../audio';
 import { IRoute, routes } from '../../routes';
+import SynthControlPanel from '../SynthControlPanel';
 
 const Container = styled.div`
   position: fixed;
@@ -19,28 +27,27 @@ const Container = styled.div`
   top: 0;
   z-index: 10;
   margin: 0;
-  padding-top: var(--grid-padding);
+
   nav {
     height: 4rem;
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr; // Adjusted to fit the night mode button
     width: var(--content-width);
     margin: 0 auto;
+    align-items: center;
     &:hover {
       cursor: pointer;
     }
     @media (max-width: ${BREAKPOINT_L}) {
       width: auto;
     }
-    @media (max-width: ${BREAKPOINT_MD}) {
-    }
     @media (max-width: ${BREAKPOINT_SM}) {
-            grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       padding: 0 var(--grid-padding);
       gap: var(--grid-padding);
     }
     @media (max-width: ${BREAKPOINT_XS}) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       padding: 0 var(--grid-padding);
       gap: var(--grid-padding);
     }
@@ -96,7 +103,6 @@ const Container = styled.div`
       }
     }
     &.item--home {
-      /* padding: 0 2rem; */
       span {
         display: block;
         height: 2rem;
@@ -127,15 +133,31 @@ const Container = styled.div`
         background: rgba(255, 255, 255, 0.11);
         backdrop-filter: blur(10px);
       }
-      /* &.active span {
-        /* padding-right: 8rem; */
-        /* @media (max-width: ${BREAKPOINT_XS}) {
-          padding-right: var(--grid-padding);
-        } */
-      /* }  */
-      /* letter-spacing: 0.2rem; */
     }
   }
+  .controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 var(--grid-padding);
+    .item {
+      margin: 0;
+    }
+  }
+`;
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1000;
+  background: ${(props) => (props.isNightMode ? 'white' : 'transparent')};
+  mix-blend-mode: ${(props) => (props.isNightMode ? 'difference' : 'normal')};
+  transition: all 0.3s ease-in-out;
 `;
 
 const navItems = [routes.HOME, routes.PROJECTS, routes.ABOUT];
@@ -143,6 +165,28 @@ const navItems = [routes.HOME, routes.PROJECTS, routes.ABOUT];
 const NavMenu = () => {
   const { activeMenuItem, setActiveMenuItem } = useMenuStore();
   const navigate = useNavigate();
+
+  const [isMuted, setIsMuted] = useState(isAudioMuted());
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  useEffect(() => {
+    initAudio(isNightMode);
+  }, [isNightMode]);
+
+  const [isSynthControlVisible, setIsSynthControlVisible] = useState(false);
+
+  const handleToggleSynthControl = () => {
+    setIsSynthControlVisible((prev) => !prev);
+  };
+
+  const handleToggleMute = () => {
+    toggleMute();
+    setIsMuted(isAudioMuted());
+  };
+
+  const handleToggleNightMode = () => {
+    setIsNightMode((prevMode) => !prevMode);
+  };
 
   const navigateTo = (to: IRoute) => {
     if (activeMenuItem.key === to.key) {
@@ -155,28 +199,37 @@ const NavMenu = () => {
   };
 
   return (
-    <Container>
-      <nav>
-
-
-        {navItems.map(route =>
-          <div>
-            <button
-              onClick={() => navigateTo(route)}
-              key={route.key}
-              className={`item item--${route.key} ${activeMenuItem.key ===
-              route.key
-                ? 'active'
-                : ''}`}
-            >
-              <span>
-                {' '}{route.label}
-              </span>
+    <>
+      <Overlay isNightMode={isNightMode} />
+      <Container isNightMode={isNightMode}>
+        <nav>
+          {navItems.map((route) => (
+            <div key={route.key}>
+              <button
+                onClick={() => navigateTo(route)}
+                className={`item item--${route.key} ${
+                  activeMenuItem.key === route.key ? 'active' : ''
+                }`}
+              >
+                <span>{route.label}</span>
+              </button>
+            </div>
+          ))}
+          <div className='controls'>
+          {/* <button onClick={handleToggleSynthControl} className="item item--synth-control">
+            <IoCogOutline size={20} />
+          </button> */}
+            <button onClick={handleToggleNightMode} className="item item--night-mode">
+              {isNightMode ? <IoSunnyOutline  size={20} /> : <IoMoonOutline  size={20} />}
             </button>
-          </div>,
-        )}
-      </nav>
-    </Container>
+            <button onClick={handleToggleMute} className="item item--mute">
+              {isMuted ? <IoVolumeMuteOutline size={20} /> : <IoVolumeHighOutline size={20} />}
+            </button>
+          </div>
+        </nav>
+      </Container>
+      {isSynthControlVisible && <SynthControlPanel />}
+    </>
   );
 };
 

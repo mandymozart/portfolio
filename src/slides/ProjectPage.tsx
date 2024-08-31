@@ -299,7 +299,7 @@ const ProjectPage = () => {
       'swma': 'var(--background)',
       'rwa-emails': 'var(--penguin-white)',
       'naivesandvisionaries': 'var(--penguin-white)',
-      'rwa-shop': 'var(--penguin-white)',
+      'rwa-shop': 'white',
       'dogheartcity': 'var(--background-600)',
       'muriquee': 'var(--penguin-white)',
       'shalomsalon': 'var(--penguin-white)',
