@@ -3,7 +3,6 @@ import ExperienceList from '../components/Common/Experience/ExperienceList';
 import PrimaryButtonLink from '../components/Common/FormElements/PrimaryButtonLink';
 import SecondaryButtonLink from '../components/Common/FormElements/SecondaryButtonLink';
 import ListHeader from '../components/Common/ListHeader/ListHeader';
-import SkillsList from '../components/Common/Skills/SkillsList';
 import {
   BREAKPOINT_L,
   BREAKPOINT_MD,
@@ -113,8 +112,8 @@ const Container = styled.div`
       .description {
         p {
           margin: 0 0 4rem 0;
-          font-size: 2rem;
-          line-height: 2.75rem;
+          font-size: 1rem;
+          line-height: 2rem;
           text-indent: 4rem;
           &:first-of-type {
             text-indent: 0;
@@ -199,7 +198,7 @@ function AboutPage() {
                 My focus lies in bridging human needs and digital realities
                 through responsible design, UX/UI, story telling and art. As a
                 developer I worked on single page applications, websites and
-                apps. As a CTO and project manager, I led interdisciplinary
+                apps. As a CTO and project lead, I led interdisciplinary
                 teams of up to 15 people, working with boutique agencies,
                 startups, and corporations.
               </p>
@@ -275,8 +274,8 @@ function AboutPage() {
           </section>
           <ListHeader title='Experiences' />
           <ExperienceList />
-          <ListHeader title='Skills' />
-          <SkillsList />
+          {/* <ListHeader title='Skills' />
+          <SkillsList /> */}
         </div>
       </div>
       <div className='disclaimer'>

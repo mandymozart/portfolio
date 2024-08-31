@@ -7,7 +7,7 @@ const Container = styled.div`
     top: 0;
     > div {
       display: flex;
-      font-size: 6rem;
+      font-size: 3rem;
       font-weight: 400;
       align-items: center;
       justify-content: space-between;

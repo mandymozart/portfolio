@@ -9,16 +9,16 @@ import Footer from './../../components/Footer/Footer';
 
 const Container = styled.div`
   height: 100vh;
-  background: var(--mauvelous);
+  background: var(--perfume);
   color: var(--background);
-  border-radius: 4rem 4rem 0 0;
+  /* border-radius: 4rem 4rem 0 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   .body {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 2fr 4fr;
     max-width: var(--content-width);
     margin: 0 auto;
     @media (max-width: ${BREAKPOINT_SM}) {
@@ -27,7 +27,7 @@ const Container = styled.div`
 
     .inner {
       margin-top: 6rem;
-
+      padding: 0 var(--grid-padding);
       @media (max-width: ${BREAKPOINT_SM}) {
         margin-top: 0;
         padding: 0 var(--grid-padding);
@@ -50,7 +50,6 @@ const Container = styled.div`
         @media (max-width: ${BREAKPOINT_XXS}) {
         }
       }
-      grid-column: 2 / span 1;
 
       p {
         font-size: 2.25rem;
@@ -62,10 +61,8 @@ const Container = styled.div`
         }
       }
       a {
-        letter-spacing: 0.5rem;
-        text-decoration: none;
-        @media (max-width: ${BREAKPOINT_XS}) {
-          letter-spacing: 0;
+        &:hover {
+          text-decoration: none;
         }
       }
     }
@@ -83,10 +80,7 @@ const ContactSection = () => {
             friendly and excited to hear from you.
             <br />
             <br />
-            <a href='mailto:tilman@porschuetz.de'>tilman@porschuetz.de</a>
-            <br />
-            <br />
-            <a href='phone:+436608366059'>+43 66 0836 6059</a>
+            <a href='mailto:tilman@porschuetz.de'>Contact</a>
           </p>
         </div>
       </div>

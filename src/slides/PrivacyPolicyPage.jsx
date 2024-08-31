@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   margin-top: var(--header-height);
+  margin-bottom: var(--header-height);
 
   padding: 0 var(--grid-padding);
-  font-size: 3rem;
+  font-size: 2rem;
   p {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 1.25;
   }
   ul {

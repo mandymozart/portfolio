@@ -29,6 +29,20 @@
       }
     },
     {
+      "uid": "lagerhaus",
+      "data": {
+        "logo": {
+          "url": "/images/lagerhaus-logo.svg"
+        },
+        "name": "Lagerhaus",
+        "link": {
+          "link_type": "Web",
+          "url": "https://www.lagerhaus.at/",
+          "target": "_blank"
+        }
+      }
+    },
+    {
       "uid": "viennacontemporary",
       "data": {
         "logo": {

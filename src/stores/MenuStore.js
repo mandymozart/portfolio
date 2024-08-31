@@ -2,7 +2,7 @@
 
 import { mountStoreDevtool } from 'simple-zustand-devtools';
 import create from 'zustand';
-import { routes } from './../slideInRoutes';
+import { routes } from '../routes';
 
 // interface MenuStoreState extends State {
 //   preloadedKeys: string[];

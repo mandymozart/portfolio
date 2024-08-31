@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
+import { useNavigate } from 'react-router-dom';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../../config.js';
-import { playToneAtRoute } from '../../../audio';
+import { playChordAtRoute } from '../../../audio';
 import docs from '../../../data/index.js';
-import { emitRouteChange } from '../../../events/routerEvents';
-import { routes } from '../../../slideInRoutes';
+import { routes } from '../../../routes';
 import useMenuStore from '../../../stores/MenuStore';
 import Arrow from '../Icons/Arrow.jsx';
 
@@ -62,6 +62,7 @@ const Container = styled.div`
 
 const ExperienceItem = ({ experience }) => {
   const setActiveMenuItem = useMenuStore((state) => state.setActiveMenuItem);
+  const navigate = useNavigate();
   if (!experience) return <></>;
   const getProject = (uid) => {
     if (docs.projects) {
@@ -79,9 +80,9 @@ const ExperienceItem = ({ experience }) => {
   };
 
   const navigateTo = (uid) => () => {
-    playToneAtRoute(routes.PROJECT.key);
+    playChordAtRoute(routes.PROJECT.key);
     setActiveMenuItem(routes.PROJECT);
-    emitRouteChange({ to: routes.PROJECT, params: { uid: uid } });
+    navigate(`/project/${uid}`);
   };
   return (
     <Container>

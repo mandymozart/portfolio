@@ -5,7 +5,6 @@ import { revealVariants, staggerVariants } from './../../animations/site';
 
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 import VideoPlayer from '../Common/VideoPlayer/VideoPlayer';
-import { getSectionByKey } from './../Home/sections';
 
 const project = {
   uid: 'collisions-munich',
@@ -14,15 +13,14 @@ const project = {
   industry: 'Arts & Culture',
   type: 'WebApp',
 };
-const params = getSectionByKey('collisions-munich');
 
 const Container = styled.section`
-  background-color: ${params.backgroundColor};
-  color: ${params.color};
+  background-color: #373f30;
+  color: var(--background);
   position: relative;
   font-family: var(--font);
   min-height: 200vh;
-  border-radius: 4rem;
+  /* border-radius: 4rem; */
   overflow: hidden;
   .backdrop {
     width: 100%;

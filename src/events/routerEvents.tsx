@@ -1,6 +1,6 @@
 /* Based on: https://github.com/etienne-martin/react-event-hook */
 import { createEvent } from 'react-event-hook';
-import { SlideInRoute, SlideInRouteParams } from './../slideInRoutes';
+import { IRoute, IRouteParams } from '../routes';
 
 export enum RouterEvents {
   ROUTE_CHANGE = 'routeChange',
@@ -8,12 +8,12 @@ export enum RouterEvents {
 }
 
 export interface RouteChangeEvent {
-  to: SlideInRoute;
-  params?: SlideInRouteParams;
+  to: IRoute;
+  params?: IRouteParams;
 }
 export interface RouteLoadedEvent {
-  to: SlideInRoute;
-  params?: SlideInRouteParams;
+  to: IRoute;
+  params?: IRouteParams;
 }
 
 export const { useRouteChangeListener, emitRouteChange } = createEvent(

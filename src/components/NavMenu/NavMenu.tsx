@@ -10,7 +10,7 @@ import {
 
 import { useNavigate } from 'react-router-dom';
 import { playChordAtRoute, playToneAtRoute } from '../../audio';
-import { SlideInRoute, routes } from './../../slideInRoutes';
+import { IRoute, routes } from '../../routes';
 
 const Container = styled.div`
   position: fixed;
@@ -19,6 +19,7 @@ const Container = styled.div`
   top: 0;
   z-index: 10;
   margin: 0;
+  padding-top: var(--grid-padding);
   nav {
     height: 4rem;
     display: grid;
@@ -34,6 +35,9 @@ const Container = styled.div`
     @media (max-width: ${BREAKPOINT_MD}) {
     }
     @media (max-width: ${BREAKPOINT_SM}) {
+            grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 var(--grid-padding);
+      gap: var(--grid-padding);
     }
     @media (max-width: ${BREAKPOINT_XS}) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -123,32 +127,29 @@ const Container = styled.div`
         background: rgba(255, 255, 255, 0.11);
         backdrop-filter: blur(10px);
       }
-      &.active span {
+      /* &.active span {
         /* padding-right: 8rem; */
-        @media (max-width: ${BREAKPOINT_XS}) {
+        /* @media (max-width: ${BREAKPOINT_XS}) {
           padding-right: var(--grid-padding);
-        }
-      }
+        } */
+      /* }  */
       /* letter-spacing: 0.2rem; */
     }
   }
 `;
 
-const navItems = [routes.PROJECTS, routes.ABOUT];
+const navItems = [routes.HOME, routes.PROJECTS, routes.ABOUT];
 
 const NavMenu = () => {
   const { activeMenuItem, setActiveMenuItem } = useMenuStore();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const navigateTo = (to: SlideInRoute) => {
+  const navigateTo = (to: IRoute) => {
     if (activeMenuItem.key === to.key) {
       playToneAtRoute();
     } else {
-      playChordAtRoute(to.key)
-      // playToneAtRoute(to.key);
-      console.log(to)
-      // emitRouteChange({ to });
-      navigate(to.key)
+      playChordAtRoute(to.key);
+      navigate(to.slug);
       setActiveMenuItem(to);
     }
   };
@@ -156,24 +157,24 @@ const NavMenu = () => {
   return (
     <Container>
       <nav>
-        <button
-          onClick={() => navigateTo(routes.HOME)}
-          className={`item item--home ${
-            activeMenuItem.key === routes.HOME.key ? 'active' : ''
-          }`}>
-          <span>Home</span>
-        </button>
 
-        {navItems.map((route) => (
-          <button
-            onClick={() => navigateTo(route)}
-            key={route.key}
-            className={`item item--${route.key} ${
-              activeMenuItem.key === route.key ? 'active' : ''
-            }`}>
-            <span> {route.label}</span>
-          </button>
-        ))}
+
+        {navItems.map(route =>
+          <div>
+            <button
+              onClick={() => navigateTo(route)}
+              key={route.key}
+              className={`item item--${route.key} ${activeMenuItem.key ===
+              route.key
+                ? 'active'
+                : ''}`}
+            >
+              <span>
+                {' '}{route.label}
+              </span>
+            </button>
+          </div>,
+        )}
       </nav>
     </Container>
   );

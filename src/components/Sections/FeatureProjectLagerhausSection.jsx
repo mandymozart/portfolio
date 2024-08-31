@@ -6,7 +6,6 @@ import { revealVariants, staggerVariants } from './../../animations/site';
 
 const Container = styled.section`
   position: relative;
-  font-family: var(--font);
   max-width: var(--content-width);
   margin: 0 auto;
   .overlay {

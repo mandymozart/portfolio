@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { FC } from 'react';
+import { routes } from '../routes';
 import SlideIn from './../components/Common/SlideIn/SlideIn';
-import { routes } from './../slideInRoutes';
 import AboutPage from './AboutPage';
 import AttributionsPage from './AttributionsPage';
 import ImprintPage from './ImprintPage';

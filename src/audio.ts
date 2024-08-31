@@ -1,11 +1,13 @@
 import * as Tone from 'tone';
-import cloudSequence from './assets/cloudSequence.json';
 import { sameRouteTone } from './audio.config';
 import preset from './preset.json';
-import { AudioBedKey, routes, SynthTone } from './slideInRoutes';
+import { AudioBedKey, routes, SynthTone } from './routes';
 
-const VOLUME_BED = -42;
-const VOLUME_SYNTH = -24;
+const VOLUME_BED = -36;
+const VOLUME_SYNTH = -12;
+const MAX_DETUNE = 300; // Max detune value in cents (3 semitones)
+const DETUNE_SENSITIVITY = 0.2; // Sensitivity factor for detune based on mouse speed
+
 export const synthParams: any = {
   oscillatorType: preset.oscillatorType as any,
   attack: preset.attack,
@@ -30,6 +32,9 @@ let arcticWind: Tone.Player = null;
 let windHowl: Tone.Player = null;
 let currentPlayingAudio: Tone.Player = null; // Track the currently playing audio
 
+let lastMouseY = 0;
+let lastMouseTime = 0;
+
 export const initAudio = async () => {
   // Initialize the synth
   synth = new Tone.PolySynth(Tone.Synth, {
@@ -53,10 +58,6 @@ export const initAudio = async () => {
 
   synth.chain(filter, delay, reverb, gain, vol, Tone.Destination);
 
-  sequence = new Tone.Sequence((time, note) => {
-    synth.triggerAttackRelease(note.name, note.duration, time, note.velocity);
-  }, cloudSequence.tracks[0].notes);
-
   // Initialize the audio players
   arcticWind = new Tone.Player('/audio/arctic-wind.mp3').toDestination();
   windHowl = new Tone.Player('/audio/wind-howl-interior.mp3').toDestination();
@@ -78,12 +79,15 @@ export const initAudio = async () => {
   // Set the current playing audio to arctic wind
   currentPlayingAudio = arcticWind;
 
+  // Initialize mouse move listener for detuning
+  document.addEventListener('mousemove', handleMouseMove);
+
   console.log('Synth and audio players initialized and loaded');
 };
 
 export const updateSynthParams = (newParams: Partial<typeof synthParams>): void => {
   Object.assign(synthParams, newParams);
-  
+
   if (synth) {
     synth.set({
       oscillator: {
@@ -97,21 +101,21 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
       },
     });
   }
-  
+
   if (filter) {
     filter.set({
       frequency: synthParams.filterFrequency,
       type: synthParams.filterType,
     });
   }
-  
+
   if (reverb) {
     reverb.set({
       decay: synthParams.reverbDecay,
-      wet: 0.3,
+      wet: 0.7,
     });
   }
-  
+
   if (delay) {
     delay.set({
       delayTime: synthParams.delayTime,
@@ -164,5 +168,28 @@ export const pauseTheme = () => {
   Tone.Transport.stop();
 };
 
+export const playToneAtRoute = playChordAtRoute;
 
-export const playToneAtRoute = playChordAtRoute
+function handleMouseMove(event: MouseEvent) {
+  const currentTime = performance.now();
+  const deltaY = event.clientY - lastMouseY;
+  const deltaTime = currentTime - lastMouseTime;
+
+  // Calculate speed (pixels per millisecond)
+  const speed = deltaY / deltaTime;
+
+  // Determine detune amount
+  let detuneAmount = speed * DETUNE_SENSITIVITY * MAX_DETUNE;
+
+  // Clamp detune amount within the desired range
+  detuneAmount = Math.max(-MAX_DETUNE, Math.min(MAX_DETUNE, detuneAmount));
+
+  // Apply detune to the synth
+  if (synth) {
+    synth.set({ detune: detuneAmount });
+  }
+
+  // Update last mouse position and time
+  lastMouseY = event.clientY;
+  lastMouseTime = currentTime;
+}

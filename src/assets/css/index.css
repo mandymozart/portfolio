@@ -36,8 +36,8 @@ a {
 }
 
 a:hover {
-  color: var(--secondary);
-  font-style: italic;
+  /* color: var(--secondary); */
+  /* font-style: italic; */
 }
 
 p {

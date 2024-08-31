@@ -1,6 +1,6 @@
 import docs from '../../../data/index.js';
 import { ProjectDocument } from "../../../data/types";
-import { SlideInRouteName } from "../../../slideInRoutes";
+import { IRouteKey } from "../../../routes.js";
 const projectDocs = docs.projects as ProjectDocument[];
 type IPlaybackRange = [from: number, to: number];
 
@@ -27,7 +27,7 @@ export const getDirection = (prev:Waypoint,next:Waypoint):IPlaybackDirection => 
 const accumulateWaypoints = (): Waypoint[] => {
     // Create a Set from the SlideInRouteName enum values
     const slideIns = new Set(
-        Object.values(SlideInRouteName).map((key) => ({
+        Object.values(IRouteKey).map((key) => ({
             id: key,
             type: WaypointType.SLIDE_IN,
             position: 0, // Assuming default frameNumber as 0, adjust as needed

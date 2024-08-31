@@ -1,4 +1,4 @@
-import { SynthTone } from './slideInRoutes';
+import { SynthTone } from './routes';
 // export const MONO_SYNTH_MENU_PRESET: MonoSynthOptions = {
 //   oscillator: {
 //     type: 'sine',

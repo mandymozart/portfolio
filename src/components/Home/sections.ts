@@ -1,4 +1,4 @@
-import { SynthTone } from '../../slideInRoutes';
+import { SynthTone } from '../../routes';
 
 enum SectionType {
   EMPTY = 'empty',

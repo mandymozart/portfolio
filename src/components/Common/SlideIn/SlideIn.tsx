@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 import clsx from 'clsx';
 import { motion, useAnimate, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import {
+  IRoute,
+  RouteType,
+  RouteVariant,
+} from '../../../routes';
 import useProjectsStore from '../../../stores/ProjectsStore';
 import {
   RouteChangeEvent,
   useRouteChangeListener,
 } from './../../../events/routerEvents';
-import {
-  SlideInRoute,
-  SlideInRouteType,
-  SlideInRouteVariant,
-} from './../../../slideInRoutes';
 
 const Container = styled.div`
   position: absolute;
@@ -87,7 +87,7 @@ const Container = styled.div`
 `;
 
 interface Props extends React.ComponentPropsWithoutRef<'div'> {
-  route: SlideInRoute;
+  route: IRoute;
 }
 
 const variant = {
@@ -153,8 +153,8 @@ const SlideIn = ({ children, route, ...props }: Props) => {
     }
     if (event.to.key === route.key) {
       if (
-        route.type === SlideInRouteType.STATIC ||
-        route.type === SlideInRouteType.ROOT
+        route.type === RouteType.STATIC ||
+        route.type === RouteType.ROOT
       ) {
         sY.set(variant.visible.y);
         setIsActive(true);
@@ -169,7 +169,7 @@ const SlideIn = ({ children, route, ...props }: Props) => {
     <motion.div style={{ y: sY }}>
       <Container
         className={clsx({
-          isFooter: route.variant === SlideInRouteVariant.FOOTER,
+          isFooter: route.variant === RouteVariant.FOOTER,
           isActive: isActive,
         })}
         ref={scope}

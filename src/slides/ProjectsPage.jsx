@@ -1,7 +1,7 @@
 'use client';
 import styled from '@emotion/styled';
 import { useEffect, useRef } from 'react';
-import ProjectThumbnailList from '../components/Project/ProjectThumbnailList';
+import ProjectList from '../components/Project/ProjectList';
 import useProjectsStore from '../stores/ProjectsStore';
 
 const Container = styled.div`
@@ -34,7 +34,7 @@ function ProjectsPage() {
   }, [projects]);
   return (
     <Container ref={ref}>
-      <ProjectThumbnailList />
+      <ProjectList />
     </Container>
   );
 }

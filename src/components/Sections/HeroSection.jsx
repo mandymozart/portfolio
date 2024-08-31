@@ -5,35 +5,43 @@ import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
 
 const Container = styled.section`
   position: relative;
-    min-height: 100vh;
+   min-height: 100vh;
    max-width: var(--content-width);
+   display: grid;
+   grid-template-columns: 4fr 2fr;
    margin: 0 auto;
-   scroll-snap-align: start;
-   h1 {
-    padding: 0 var(--grid-padding);
-    text-align: left;
-    font-weight: 400;
-    font-size: 4rem;
-    @media (max-width: ${BREAKPOINT_XS}) {
-      font-size: 2rem;
-      padding: 0;
+   gap: var(--grid-padding);
+   @media (max-width: ${BREAKPOINT_MD}) {
+     margin: 6rem;
+     display: block;
+   }
+   @media (max-width: ${BREAKPOINT_XS}) {
+     margin: 1rem;
+   }
+   div {
+     padding: 0 var(--grid-padding);
+     h1 {
+       text-align: left;
+       font-weight: 400;
+       font-size: 3rem;
+       @media (max-width: ${BREAKPOINT_XS}) {
+         font-size: 2rem;
+         padding: 0;
+        }
+      }
     }
-  }
-
-    @media (max-width: ${BREAKPOINT_MD}) {
-      margin: 6rem;
-    }
-    @media (max-width: ${BREAKPOINT_XS}) {
-      margin: 1rem;
-    }
+      
 `;
 
 const HeroSection = ({ ...props }) => {
   return (
     <Container {...props}>
+      <div>
+
         <h1 className='title'>
           I am Tilman Porschütz, a Vienna based developer and designer crafting both <i>functional</i> and <i>impactful</i> <b>UX/UI</b> for the web, humanity and all beings.
         </h1>
+      </div>
     </Container>
   );
 };

@@ -15,7 +15,7 @@ const Container = styled.button`
   transition: all 0.2s ease-in;
   &.active,
   &:hover {
-    color: var(--secondary);
+    /* color: var(--secondary); */
   }
 `;
 

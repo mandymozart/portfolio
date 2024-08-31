@@ -5,7 +5,7 @@ import { BREAKPOINT_MD } from '../../../config';
 import { playToneAtRoute } from '../../audio';
 import Arrow from '../Common/Icons/Arrow';
 import { staggerVariants } from './../../animations/site';
-import { routes } from './../../slideInRoutes';
+import { routes } from './../../routes';
 import useMenuStore from './../../stores/MenuStore';
 
 const Container = styled.header`

@@ -29,7 +29,7 @@ import {
 } from '../animations/site.js';
 import { playToneAtRoute } from '../audio.js';
 import { emitRouteChange } from '../events/routerEvents';
-import { routes } from '../slideInRoutes';
+import { routes } from '../routes.js';
 import ProjectTags from './../components/Project/ProjectTags';
 import RoleItem from './../components/Project/RoleItem';
 
@@ -122,6 +122,7 @@ const Container = styled.div`
         .links {
           display: grid;
           margin-top: 2rem;
+
           grid-template-columns: repeat(3, 1fr);
           @media (max-width: ${BREAKPOINT_MD}) {
             grid-template-columns: repeat(2, 1fr);
@@ -140,7 +141,7 @@ const Container = styled.div`
   }
   .video-reaction {
     width: auto;
-    height: 20rem;
+  height: 20rem;
     position: fixed;
     bottom: 0;
     left: 4rem;
@@ -150,6 +151,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: var(--grid-padding);
+    padding-bottom: 2rem;
     .link-item {
       padding: 0 var(--grid-padding);
     }
