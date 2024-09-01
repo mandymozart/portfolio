@@ -1,12 +1,12 @@
 'use client';
 import styled from '@emotion/styled';
 import { IoMoonOutline, IoSunnyOutline, IoVolumeHighOutline, IoVolumeMuteOutline } from 'react-icons/io5';
-import useMenuStore from '../../stores/MenuStore';
 import {
   BREAKPOINT_L,
   BREAKPOINT_SM,
   BREAKPOINT_XS
-} from './../../../config';
+} from '../../../config';
+import useMenuStore from '../../stores/MenuStore';
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +17,7 @@ import {
   playToneAtRoute,
   toggleMute,
 } from '../../audio';
-import { IRoute, routes } from '../../routes';
+import { routes } from '../../routes';
 import SynthControlPanel from '../SynthControlPanel';
 
 const Container = styled.div`
@@ -188,7 +188,7 @@ const NavMenu = () => {
     setIsNightMode((prevMode) => !prevMode);
   };
 
-  const navigateTo = (to: IRoute) => {
+  const navigateTo = (to) => {
     if (activeMenuItem.key === to.key) {
       playToneAtRoute();
     } else {

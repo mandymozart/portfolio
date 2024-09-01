@@ -1,6 +1,19 @@
 import { SynthTone } from './routes';
 // paramConfig.js
-export const paramConfig = {
+export interface ParamConfig {
+  label: string;
+  type: 'range' | 'select';
+  min?: number;
+  max?: number;
+  step?: number;
+  options?: string[];
+}
+export interface Config {
+  [section: string]: {
+    [paramName: string]: ParamConfig;
+  };
+}
+export const paramConfig:Config = {
   synth: {
     oscillatorType: {
       type: 'select',

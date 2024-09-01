@@ -2,16 +2,6 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Accordion } from '../components/Common/Accordion/Accordion';
-import PrimaryButton from '../components/Common/FormElements/PrimaryButton';
-import SecondaryButton from '../components/Common/FormElements/SecondaryButton';
-import PartnerItem from '../components/Common/Partners/PartnerItem';
-import Richtext from '../components/Common/Richtext/Richtext';
-import SkillItemAsync from '../components/Common/Skills/SkillItemAsync';
-import ScreenshotsSection from '../components/Sections/ScreenshotsSection';
-import docs from '../data/index.js';
-import { ProjectDocument } from '../data/types';
-import useMenuStore from '../stores/MenuStore';
 import {
   BASE_PATH,
   BREAKPOINT_L,
@@ -19,8 +9,18 @@ import {
   BREAKPOINT_SM,
   BREAKPOINT_XS,
   BREAKPOINT_XXS,
-} from './../../config';
-import MethodItem from './../components/Project/MethodItem';
+} from '../../config.js';
+import { Accordion } from '../components/Common/Accordion/Accordion.jsx';
+import PrimaryButton from '../components/Common/FormElements/PrimaryButton.jsx';
+import SecondaryButton from '../components/Common/FormElements/SecondaryButton.jsx';
+import PartnerItem from '../components/Common/Partners/PartnerItem.jsx';
+import Richtext from '../components/Common/Richtext/Richtext.jsx';
+import SkillItemAsync from '../components/Common/Skills/SkillItemAsync.js';
+import MethodItem from '../components/Project/MethodItem.js';
+import ScreenshotsSection from '../components/Sections/ScreenshotsSection.jsx';
+import docs from '../data/index.js';
+import { ProjectDocument } from '../data/types.js';
+import useMenuStore from '../stores/MenuStore.js';
 
 import {
   fastTranslateVariants,
@@ -28,10 +28,10 @@ import {
   translateVariants,
 } from '../animations/site.js';
 import { playToneAtRoute } from '../audio.js';
-import { emitRouteChange } from '../events/routerEvents';
+import ProjectTags from '../components/Project/ProjectTags.js';
+import RoleItem from '../components/Project/RoleItem.js';
+import { emitRouteChange } from '../events/routerEvents.js';
 import { routes } from '../routes.js';
-import ProjectTags from './../components/Project/ProjectTags';
-import RoleItem from './../components/Project/RoleItem';
 
 const Container = styled.div`
   padding-top: var(--header-height);

@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
-import { paramConfig } from './../audio.config';
+import { paramConfig, ParamConfig } from './../audio.config';
 import { useAudio } from './../hooks/useAudio';
+
+// Ensure the params and the handler have proper types
+interface Params {
+  [key: string]: number | string;
+}
 
 const Container = styled.div`
   position: fixed;
@@ -40,53 +45,12 @@ const Container = styled.div`
   }
 `;
 
-const ControlPanel = ({ params, onParamChange, config }) => (
-  <div className="control-grid">
-    {Object.keys(config).map((section) => (
-      <div key={section}>
-        <h3>{section.charAt(0).toUpperCase() + section.slice(1)}</h3>
-        {Object.entries(config[section]).map(([paramName, paramConfig]) => (
-          <label key={paramName}>
-            {paramConfig.label}:
-            {paramConfig.type === 'range' && (
-              <input
-                type="range"
-                name={paramName}
-                min={paramConfig.min}
-                max={paramConfig.max}
-                step={paramConfig.step}
-                value={params[paramName]}
-                onChange={(e) =>
-                  onParamChange({ [paramName]: parseFloat(e.target.value) })
-                }
-              />
-            )}
-            {paramConfig.type === 'select' && (
-              <select
-                name={paramName}
-                value={params[paramName]}
-                onChange={(e) =>
-                  onParamChange({ [paramName]: e.target.value })
-                }
-              >
-                {paramConfig.options.map((option) => (
-                  <option key={option} value={option}>
-                    {option.charAt(0).toUpperCase() + option.slice(1)}
-                  </option>
-                ))}
-              </select>
-            )}
-          </label>
-        ))}
-      </div>
-    ))}
-  </div>
-);
 
-const SynthControlPanel = () => {
-  const { params, updateParams } = useAudio();
 
-  const handleParamChange = (newParams) => {
+const SynthControlPanel: React.FC = () => {
+  const { params, updateParams }:{ params: ParamConfig, updateParams: Function} = useAudio();
+
+  const handleParamChange = (newParams: Params) => {
     updateParams(newParams);
   };
 
@@ -95,11 +59,46 @@ const SynthControlPanel = () => {
       <div className='json'>
         {JSON.stringify(params)}
       </div>
-      <ControlPanel 
-        params={params} 
-        onParamChange={handleParamChange} 
-        config={paramConfig} 
-      />
+      <div className="control-grid">
+        {Object.keys(paramConfig).map((section) => (
+          <div key={section}>
+            <h3>{section.charAt(0).toUpperCase() + section.slice(1)}</h3>
+            {Object.entries(paramConfig[section]).map(([paramName, paramConfig]) => (
+              <label key={paramName}>
+                {paramConfig.label}:
+                {paramConfig.type === 'range' && (
+                  <input
+                    type="range"
+                    name={paramName}
+                    min={paramConfig.min}
+                    max={paramConfig.max}
+                    step={paramConfig.step}
+                    value={params[paramName] as number}  // Cast to number since it's a range input
+                    onChange={(e) =>
+                      handleParamChange({ [paramName]: parseFloat(e.target.value) })
+                    }
+                  />
+                )}
+                {paramConfig.type === 'select' && (
+                  <select
+                    name={paramName}
+                    value={params[paramName] as string}  // Cast to string since it's a select input
+                    onChange={(e) =>
+                      handleParamChange({ [paramName]: e.target.value })
+                    }
+                  >
+                    {paramConfig.options?.map((option) => (
+                      <option key={option} value={option}>
+                        {option.charAt(0).toUpperCase() + option.slice(1)}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </label>
+            ))}
+          </div>
+        ))}
+      </div>
     </Container>
   );
 };

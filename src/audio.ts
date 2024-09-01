@@ -1,8 +1,36 @@
-import * as Tone from 'tone';
+import { Volume } from 'Tone/component/channel/Volume';
+import { Filter } from 'Tone/component/filter/Filter';
+import { Gain } from 'Tone/core/context/Gain';
+import { ToneAudioBuffer } from 'Tone/core/context/ToneAudioBuffer';
+import { getContext, start } from 'Tone/core/Global';
+import { Time } from 'Tone/core/type/Time';
+import { Chorus } from 'Tone/effect/Chorus';
+import { FeedbackDelay } from 'Tone/effect/FeedbackDelay';
+import { Reverb } from 'Tone/effect/Reverb';
+import { Sequence } from 'Tone/event/Sequence';
+import { PolySynth } from 'Tone/instrument/PolySynth';
+import { Synth } from 'Tone/instrument/Synth';
+import { Player } from 'Tone/source/buffer/Player';
+
 import { sameRouteTone } from './audio.config';
 import preset from './preset.json';
 import presetSharp from './presetSharp.json';
 import { routes, SynthTone } from './routes';
+
+export interface ParamConfig {
+  label: string;
+  type: 'range' | 'select';
+  min?: number;
+  max?: number;
+  step?: number;
+  options?: string[];
+}
+
+export interface Config {
+  [section: string]: {
+    [paramName: string]: ParamConfig;
+  };
+}
 
 const VOLUME_BED = -36;
 const VOLUME_SYNTH = -12;
@@ -11,33 +39,33 @@ const DETUNE_SENSITIVITY = 0.2; // Sensitivity factor for detune based on mouse 
 
 export let synthParams: any = preset; // Default to day mode preset
 
-let synth: Tone.PolySynth = null;
-let sequence: Tone.Sequence = null;
-let gain: Tone.Gain = null;
-let filter: Tone.Filter = null;
-let reverb: Tone.Reverb = null;
-let chorus: Tone.Chorus = null;
-let delay: Tone.FeedbackDelay = null;
+let synth: PolySynth<Synth> = null;
+let sequence: Sequence = null;
+let gain: Gain = null;
+let filter: Filter = null;
+let reverb: Reverb = null;
+let chorus: Chorus = null;
+let delay: FeedbackDelay = null;
 
-let ambient: Tone.Player = null; // To hold either arctic wind or owl hoots
+let ambient: Player = null; // To hold either arctic wind or owl hoots
 
 let lastMouseY = 0;
 let lastMouseTime = 0;
 
-let isMuted = false; 
-let isPlaying = false; 
+let isMuted = false;
+let isPlaying = false;
 let isAudioContextStarted = false;
 
 function startAudioContextWithPromise() {
   return new Promise((resolve) => {
     if (!isAudioContextStarted) {
-      Tone.start().then(() => {
+      start().then(() => {
         isAudioContextStarted = true;
         console.log('Audio context started.');
-        resolve();
+        resolve(null);
       });
     } else {
-      resolve();
+      resolve(null);
     }
   });
 }
@@ -53,11 +81,9 @@ export const toggleMute = () => {
 export const isAudioMuted = () => isMuted;
 
 export const initAudio = async (isNightMode: boolean) => {
-  // Choose preset based on night mode
   synthParams = isNightMode ? presetSharp : preset;
 
-  // Initialize the synth
-  synth = new Tone.PolySynth(Tone.Synth, {
+  synth = new PolySynth(Synth, {
     oscillator: {
       type: synthParams.oscillatorType,
     },
@@ -69,33 +95,58 @@ export const initAudio = async (isNightMode: boolean) => {
     },
   });
 
-  gain = new Tone.Gain(0.1);
-  filter = new Tone.Filter(synthParams.filterFrequency, synthParams.filterType);
-  delay = new Tone.FeedbackDelay(synthParams.delayTime, synthParams.delayFeedback);
-  reverb = new Tone.Reverb({ decay: synthParams.reverbDecay, wet: synthParams.reverbWet });
-  chorus = new Tone.Chorus(synthParams.chorusFrequency, synthParams.chorusDelayTime, synthParams.chorusDepth);
+  gain = new Gain(0.1);
+  filter = new Filter(synthParams.filterFrequency, synthParams.filterType);
+  delay = new FeedbackDelay(synthParams.delayTime, synthParams.delayFeedback);
+  reverb = new Reverb({
+    decay: synthParams.reverbDecay,
+    wet: synthParams.reverbWet,
+  });
+  chorus = new Chorus(
+    synthParams.chorusFrequency,
+    synthParams.chorusDelayTime,
+    synthParams.chorusDepth,
+  );
 
-  const vol = new Tone.Volume(VOLUME_SYNTH);
+  const vol = new Volume(VOLUME_SYNTH);
 
-  synth.chain(filter, delay, chorus, reverb, gain, vol, Tone.Destination);
+  synth.chain(
+    filter,
+    delay,
+    chorus,
+    reverb,
+    gain,
+    vol,
+    getContext().destination,
+  );
 
   if (ambient) {
     ambient.stop();
-    ambient.dispose();  // Properly dispose of the old player to free resources
+    ambient.dispose(); // Properly dispose of the old player to free resources
   }
 
-  ambient = new Tone.Player(isNightMode ? '/audio/owl-hoots-and-distant-dog.mp3' : '/audio/wind-howl-interior.mp3').toDestination();
+  ambient = new Player(
+    isNightMode
+      ? '/audio/owl-hoots-and-distant-dog.mp3'
+      : '/audio/wind-howl-interior.mp3',
+  ).toDestination();
   ambient.loop = true;
-  await Tone.loaded();
+  await ToneAudioBuffer.loaded();
   ambient.volume.value = isNightMode ? 0 : VOLUME_BED; // Start audible
+  if (ambient.state === 'started') {
+    ambient.stop();
+  }
   ambient.start();
-  
+  ambient.start();
+
   document.addEventListener('mousemove', handleMouseMove);
 
   console.log('Synth and audio players initialized and loaded');
 };
 
-export const updateSynthParams = (newParams: Partial<typeof synthParams>): void => {
+export const updateSynthParams = (
+  newParams: Partial<typeof synthParams>,
+): void => {
   Object.assign(synthParams, newParams);
 
   if (synth) {
@@ -122,7 +173,7 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
   if (reverb) {
     reverb.set({
       decay: synthParams.reverbDecay,
-      wet: synthParams.reverbWet,  // Update reverb wet
+      wet: synthParams.reverbWet, // Update reverb wet
     });
   }
 
@@ -135,7 +186,7 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
 
   if (chorus) {
     chorus.set({
-      frequency: synthParams.chorusFrequency,  // Update chorus parameters
+      frequency: synthParams.chorusFrequency, // Update chorus parameters
       delayTime: synthParams.chorusDelayTime,
       depth: synthParams.chorusDepth,
     });
@@ -144,15 +195,15 @@ export const updateSynthParams = (newParams: Partial<typeof synthParams>): void 
 
 export const playChord = (chord: SynthTone[]) => {
   if (isMuted) return;
-  console.log(isMuted)
+  console.log(isMuted);
   if (isPlaying) return;
   isPlaying = true;
 
-  const durationInMs = Tone.Time(chord[0].duration).toMilliseconds();
+  const durationInMs = Time(chord[0].duration).toMilliseconds();
 
   synth.triggerAttackRelease(
-    chord.map(t => t.note),
-    chord[0].duration
+    chord.map((t) => t.note),
+    chord[0].duration,
   );
 
   setTimeout(() => {
@@ -175,15 +226,15 @@ export const playChordAtRoute = (key?: string) => {
     chord = [sameRouteTone];
   }
 
-  playChord(chord)
+  playChord(chord);
 };
 
 export const playTheme = () => {
-  Tone.Transport.start();
+  getContext().transport.start();
 };
 
 export const pauseTheme = () => {
-  Tone.Transport.stop();
+  getContext().transport.stop();
 };
 
 export const playToneAtRoute = playChordAtRoute;
@@ -193,21 +244,16 @@ function handleMouseMove(event: MouseEvent) {
   const deltaY = event.clientY - lastMouseY;
   const deltaTime = currentTime - lastMouseTime;
 
-  // Calculate speed (pixels per millisecond)
   const speed = deltaY / deltaTime;
 
-  // Determine detune amount
   let detuneAmount = speed * DETUNE_SENSITIVITY * MAX_DETUNE;
 
-  // Clamp detune amount within the desired range
   detuneAmount = Math.max(-MAX_DETUNE, Math.min(MAX_DETUNE, detuneAmount));
 
-  // Apply detune to the synth
   if (synth) {
     synth.set({ detune: detuneAmount });
   }
 
-  // Update last mouse position and time
   lastMouseY = event.clientY;
   lastMouseTime = currentTime;
 }

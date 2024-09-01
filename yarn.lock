@@ -2126,6 +2126,11 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+lib-esm@~0.4.1:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/lib-esm/-/lib-esm-0.4.2.tgz#1f08ad1750b46c47d371d4f7e1a772b56db3324d"
+  integrity sha512-VGqaEGuryUbT7FLGxXg46nrSzkhLzyk+JQjYoYEORH5UtdIu3yf6DCOqh65FOR3bWOHHGINQH/vR5YGGIFBgJw==
+
 lines-and-columns@^1.1.6:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
@@ -2684,6 +2689,13 @@ utility-types@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.10.0.tgz#ea4148f9a741015f05ed74fd615e1d20e6bed82b"
   integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
+
+vite-plugin-resolve@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-resolve/-/vite-plugin-resolve-2.5.2.tgz#b8bcb069d3ef59dc01a6a7b4d2172d38160879c6"
+  integrity sha512-8twv20M+KIMxkZzAoF1eAUxxxB56NxKdYjIJ309A/30lZ3GAqgiAeGFjVVlLLEpeAcbAwfl9p7jztsQEw7C3Jg==
+  dependencies:
+    lib-esm "~0.4.1"
 
 vite@^5.0.8:
   version "5.0.11"

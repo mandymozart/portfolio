@@ -4,17 +4,17 @@ import styled from '@emotion/styled';
 import { useEffect, useRef } from 'react';
 import { playChord } from '../audio';
 import ClientListSimple from '../components/Common/Partners/ClientListSimple.jsx';
-import ContactSection from './../components/Sections/ContactSection';
-import FeatureProjectCollisionsSection from './../components/Sections/FeatureProjectCollisionsSection';
-import FeatureProjectEdmtSection from './../components/Sections/FeatureProjectEdmtSection';
-import FeatureProjectFourthGardenSection from './../components/Sections/FeatureProjectFourthGardenSection';
-import FeatureProjectLagerhausSection from './../components/Sections/FeatureProjectLagerhausSection';
-import FeatureProjectLiahSection from './../components/Sections/FeatureProjectLiahSection';
-import FeatureProjectNaivesAndVisionariesSection from './../components/Sections/FeatureProjectNaivesAndVisionariesSection';
-import FeatureProjectResRadio2Section from './../components/Sections/FeatureProjectResRadio2Section';
-import FeatureProjectSwmaSection from './../components/Sections/FeatureProjectSwmaSection';
-import HeroSection from './../components/Sections/HeroSection';
-import SubSection from './../components/Sections/SubSection';
+import ContactSection from '../components/Sections/ContactSection.jsx';
+import FeatureProjectCollisionsSection from '../components/Sections/FeatureProjectCollisionsSection.jsx';
+import FeatureProjectEdmtSection from '../components/Sections/FeatureProjectEdmtSection.jsx';
+import FeatureProjectFourthGardenSection from '../components/Sections/FeatureProjectFourthGardenSection.jsx';
+import FeatureProjectLagerhausSection from '../components/Sections/FeatureProjectLagerhausSection.jsx';
+import FeatureProjectLiahSection from '../components/Sections/FeatureProjectLiahSection.jsx';
+import FeatureProjectNaivesAndVisionariesSection from '../components/Sections/FeatureProjectNaivesAndVisionariesSection.jsx';
+import FeatureProjectResRadio2Section from '../components/Sections/FeatureProjectResRadio2Section.jsx';
+import FeatureProjectSwmaSection from '../components/Sections/FeatureProjectSwmaSection.jsx';
+import HeroSection from '../components/Sections/HeroSection.jsx';
+import SubSection from '../components/Sections/SubSection.jsx';
 
 const chordSequence = ['Bb','Bm','Bb','Bm','Bb','Eb','Cm','Bb','G0','Gm','Am7','Bm6',
   'Gm','Cm','Cm6','Gmadd2','Gm','Cm','Cm6','Gm/D','Gm7/D','Cm7/G','Eb','Gm','Eb','Cm'
@@ -34,7 +34,6 @@ const chordTonesMap = {
   'Gm7/D': [{ note: 'G4', duration: 1 }, { note: 'Bb4', duration: 1 }, { note: 'D5', duration: 1 }, { note: 'F5', duration: 1 }],
   'Cm7/G': [{ note: 'C4', duration: 1 }, { note: 'Eb4', duration: 1 }, { note: 'G4', duration: 1 }, { note: 'Bb4', duration: 1 }],
 };
-
 
 const Container = styled.section`
 overflow: hidden;
@@ -60,7 +59,7 @@ const Spacer = styled.div`
   height: 10rem;
 `;
 
-const HomePageNoGl = () => {
+const HomePage = () => {
   const sectionsRef = useRef([]);
   const chordIndexRef = useRef(0);
 
@@ -134,4 +133,4 @@ const HomePageNoGl = () => {
 };
 
 
-export default HomePageNoGl
+export default HomePage

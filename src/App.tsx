@@ -4,14 +4,14 @@ import { Outlet, Route, Routes } from 'react-router-dom';
 import PageTransition from './animations/PageTransition'; // Import the PageTransition component
 import NavMenu from './components/NavMenu/NavMenu';
 import ScrollToTop from './components/ScrollToTop';
-import AboutPage from './slides/AboutPage';
-import AttributionsPage from './slides/AttributionsPage';
-import HomePageNoGl from './slides/HomePageNoGl';
-import ImprintPage from './slides/ImprintPage';
-import NotFoundPage from './slides/NotFoundPage';
-import PrivacyPolicyPage from './slides/PrivacyPolicyPage';
-import ProjectPage from './slides/ProjectPage';
-import ProjectsPage from './slides/ProjectsPage';
+import AboutPage from './pages/AboutPage';
+import AttributionsPage from './pages/AttributionsPage';
+import HomePageNoGl from './pages/HomePage';
+import ImprintPage from './pages/ImprintPage';
+import NotFoundPage from './pages/NotFoundPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ProjectPage from './pages/ProjectPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (

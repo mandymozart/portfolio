@@ -37,6 +37,7 @@
     "tone": "^14.7.77",
     "use-capture": "^0.4.0",
     "usehooks-ts": "^2.9.2",
+    "vite-plugin-resolve": "^2.5.2",
     "zustand": "^4.5.5"
   },
   "devDependencies": {

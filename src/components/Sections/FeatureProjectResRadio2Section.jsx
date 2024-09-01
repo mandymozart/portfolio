@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { FC, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { BREAKPOINT_MD, BREAKPOINT_XS } from '../../../config';
+import { staggerVariants } from '../../animations/site';
 import { FeatureProjectHeader } from '../FeatureProject/FeatureProjectHeader';
-import { staggerVariants } from './../../animations/site';
 const Container = styled.section`
   position: relative;
   font-family: var(--font);
@@ -65,7 +65,7 @@ const project = {
   type: 'WebApp',
 };
 
-const FeatureProjectResRadio2Section: FC = forwardRef(({ ...props },ref) => {
+const FeatureProjectResRadio2Section = forwardRef(({ ...props },ref) => {
   return (
     <Container {...props}  ref={ref}>
       <div className='overlay'>

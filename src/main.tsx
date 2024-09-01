@@ -7,7 +7,7 @@ import './assets/css/index.css';
 import './assets/css/variables.css';
 import { initAudio } from './audio.ts';
 import { AudioProvider } from './hooks/useAudio.tsx';
-initAudio()
+initAudio(false)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
