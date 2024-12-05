@@ -1,15 +1,15 @@
-import styled from '@emotion/styled';
-import ExperienceList from '../components/Common/Experience/ExperienceList';
-import PrimaryButtonLink from '../components/Common/FormElements/PrimaryButtonLink';
-import SecondaryButtonLink from '../components/Common/FormElements/SecondaryButtonLink';
-import ListHeader from '../components/Common/ListHeader/ListHeader';
+import styled from "@emotion/styled";
+import ExperienceList from "../components/Common/Experience/ExperienceList";
+import PrimaryButtonLink from "../components/Common/FormElements/PrimaryButtonLink";
+import SecondaryButtonLink from "../components/Common/FormElements/SecondaryButtonLink";
+import ListHeader from "../components/Common/ListHeader/ListHeader";
 import {
   BREAKPOINT_L,
   BREAKPOINT_MD,
   BREAKPOINT_SM,
   BREAKPOINT_XS,
   BREAKPOINT_XXS,
-} from './../../config';
+} from "./../../config";
 
 const Container = styled.div`
   width: var(--content-width);
@@ -97,7 +97,7 @@ const Container = styled.div`
             clip-path: ellipse(60% 40% at 50% 50%);
           }
         }
-        
+
         .meta {
           margin-top: 2rem;
           margin-bottom: 3rem;
@@ -148,59 +148,54 @@ function AboutPage() {
   return (
     <Container>
       <h2>Résumé</h2>
-      <div className='body'>
-        <div className='left'>
-          <div className='stick'>
-            <div className='avatar'>
-              <img
-                src={'/images/portrait.avif'}
-                alt='avatar'
-              />
+      <div className="body">
+        <div className="left">
+          <div className="stick">
+            <div className="avatar">
+              <img src={"/images/portrait.avif"} alt="avatar" />
             </div>
             <div>
-              <div className='meta'>
+              <div className="meta">
                 <p>Living in Vienna, Austria</p>
                 <p>
                   also known as:
                   <br />
-                  <a
-                    href='https://www.mandymozart.com'
-                    target='_blank'>
+                  <a href="https://www.mandymozart.com" target="_blank">
                     Mandy Mozart
                   </a>
                 </p>
               </div>
 
               <SecondaryButtonLink
-                href='/docs/tilman-porschuetz-resume.pdf'
-                download>
+                href="/docs/tilman-porschuetz-resume.pdf"
+                download
+              >
                 Download Résumé
               </SecondaryButtonLink>
               <br />
-              <PrimaryButtonLink href='mailto:tilman@porschuetz.de'>
+              <PrimaryButtonLink href="mailto:tilman@porschuetz.de">
                 Contact me
               </PrimaryButtonLink>
             </div>
           </div>
         </div>
-        <div className='gap'></div>
-        <div className='right'>
+        <div className="gap"></div>
+        <div className="right">
           <section>
-            <div className='description'>
+            <div className="description">
               <p>
-                I am a versatile frontend developer and visual communicator with
-                more than 15+ years experience in the field of visualization,
-                interaction design, user interfaces, and immersive experiences.
-                I worked as a consultant, developer, digital designer, and
-                artist.
+                I am a visual communicator with more than 15+ years experience
+                in the field of visualization, interaction design, user
+                interfaces, and immersive experiences. I worked as a consultant,
+                developer, digital designer, and artist.
               </p>
               <p>
                 My focus lies in bridging human needs and digital realities
                 through responsible design, UX/UI, story telling and art. As a
                 developer I worked on single page applications, websites and
-                apps. As a CTO and project lead, I led interdisciplinary
-                teams of up to 15 people, working with boutique agencies,
-                startups, and corporations.
+                apps. As a CTO and project lead, I led interdisciplinary teams
+                of up to 15 people, working with boutique agencies, startups,
+                and corporations.
               </p>
               <p>
                 By regularily attending conferences and through my independent
@@ -212,8 +207,8 @@ function AboutPage() {
             </div>
           </section>
           <section>
-            <ListHeader title='Education' />
-            <ul className='list'>
+            <ListHeader title="Education" />
+            <ul className="list">
               <li>
                 <div>2022—2023</div>
                 <div>
@@ -243,8 +238,8 @@ function AboutPage() {
             </ul>
           </section>
           <section>
-            <ListHeader title='Awards' />
-            <ul className='list'>
+            <ListHeader title="Awards" />
+            <ul className="list">
               <li>
                 <div>2015</div>
                 <div>
@@ -272,13 +267,13 @@ function AboutPage() {
               </li>
             </ul>
           </section>
-          <ListHeader title='Experiences' />
+          <ListHeader title="Experiences" />
           <ExperienceList />
           {/* <ListHeader title='Skills' />
           <SkillsList /> */}
         </div>
       </div>
-      <div className='disclaimer'>
+      <div className="disclaimer">
         <h4>Disclaimer</h4>
         <p>
           If possible I am trying to use <b>They/Them</b> pronouns. I do this

@@ -3,6 +3,29 @@
     {
       "uid": "self-employed",
       "data": {
+        "company": "valantic",
+        "name": null,
+        "type": "UX Consultant",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "UX Assessments and Analysis for major swiss eCommerce clients with focus on metrics and performance optimisation.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "shortdescription": "UX Assessments and Analysis for major swiss eCommerce clients with focus on metrics and performance optimisation.",
+        "logo": {},
+        "contract": "Contract",
+        "location": "Dornbirn",
+        "startdate": "2024-11-01",
+        "enddate": "2025-01-31",
+        "projects": []
+      }
+    },
+    {
+      "uid": "self-employed",
+      "data": {
         "company": "Self-Employed",
         "name": null,
         "type": "Founder",
@@ -19,7 +42,7 @@
         "contract": "Freelance",
         "location": "Global",
         "startdate": "2014-02-01",
-        "enddate": "2023-12-31",
+        "enddate": "2024-12-31",
         "projects": [
           "edmt",
           "muriquee",
